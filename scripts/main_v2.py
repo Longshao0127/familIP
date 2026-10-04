@@ -9,7 +9,7 @@
      (vless/vmess/trojan/ss/hysteria2/tuic/anytls + reality + 全部传输层)
   2. 真实测活（sing-box v1.14 内核，逐节点 SOCKS 入站 + 节点出站）:
      - 阶段A 端口预检: TCP/QUIC 直连握手, 快速丢弃死端口 (削减 90% 无效工作)
-     - 阶段B 真实探测: 多 URL 探测 (gstatic 204 / cloudflare trace) 
+     - 阶段B 真实探测: 多 URL 探测 (gstatic 204 / cloudflare trace)
        + 经代理取真实出口 IP (api.ip.sb/geoip → 一次拿 country+asn+isp)
        + Cloudflare 限时下载测速 → 断流节点识别 (吞吐量不足)
        + cloudflare trace tls=VERIFIED → MITM/劫持节点识别
@@ -1380,7 +1380,7 @@ def run_liveness_test(candidates: list) -> list:
 
 # ═══════════════════════════════════════════N═══════════════════════
 # 阶段 B2: 家宽链式复测 (chain relay retest)
-# ════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════N═══════════════════════
 
 def chain_retest(test_results: list) -> list:
     """家宽链式复测: 模拟用户 v2rayN 链式 (前置 → 家宽节点 → 目标)
@@ -1413,7 +1413,7 @@ def chain_retest(test_results: list) -> list:
         t, c = classify_network_type(r["exit_ip"], r.get("exit_country_online"),
                                      r.get("exit_asn_online"),
                                      r.get("exit_asn_org_online"), rec or None)
-        if t in ("residential", "mobile") and c >= 60:
+        if t in ("residential", "mobile") and c >= 70:   # 方案A: 60 → 70
             res_candidates[(r["server"].lower(), r["port"], r["proto"])] = r
 
     if not res_candidates:
@@ -1539,11 +1539,57 @@ def get_rdns(ip: str) -> str:
         socket.setdefaulttimeout(old)
 
 
+# ====== 新增：通用辅助函数 ======
+def contains_any(text: str, keywords: list) -> bool:
+    if not text:
+        return False
+    s = str(text).lower()
+    return any(k.lower() in s for k in keywords if k)
+
+
+def has_cloud_or_datacenter_signal(org: str, rdns: str, ip_api_rec: dict = None) -> bool:
+    """硬否决：只要有云/机房/代理/中转信号，就不允许进入 residential"""
+    hay = " ".join([
+        str(org or ""),
+        str(rdns or ""),
+        str((ip_api_rec or {}).get("asname") or ""),
+        str((ip_api_rec or {}).get("org") or ""),
+    ]).lower()
+
+    if not hay:
+        return False
+
+    # 1) 直接云/IDC/代理池关键词
+    if contains_any(hay, IDC_NAME_PATTERNS):
+        return True
+
+    # 2) ip-api 的 hosting/proxy 直接硬否决
+    if ip_api_rec:
+        if bool(ip_api_rec.get("hosting")) or bool(ip_api_rec.get("proxy")):
+            return True
+
+    # 3) 典型伪装家宽的云商名字
+    cloud_like = (
+        "zenlayer", "bunny", "cloudflare", "akamai", "fastly",
+        "amazon", "google llc", "microsoft", "digitalocean", "vultr",
+        "hetzner", "ovh", "contabo", "leaseweb", "datacamp",
+        "serverius", "clouvider", "m247", "gcore", "g-core",
+        "choopa", "linode", "alibaba", "tencent", "huawei cloud"
+    )
+    if contains_any(hay, cloud_like):
+        return True
+
+    return False
+
+
 def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict = None) -> tuple:
     """
     返回 (net_type, confidence):
       net_type ∈ {datacenter, residential, mobile, cdn, unknown}
-    优先级: ip-api.com hosting/mobile 字段 > CDN 网段 > ASN 白/黑名单 > 名称关键词
+    新策略:
+      1) 先做硬否决: hosting/proxy/CDN/IDC ASN/云商关键词 -> datacenter
+      2) 再做 residential 判定: 必须有至少 2 个正向信号，且无硬否决
+      3) mobile 优先保留，单独判断，不混进 residential
     """
     ip_str = str(ip)
     try:
@@ -1551,7 +1597,7 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
     except ValueError:
         return "unknown", 0
 
-    # 1) CDN / Anycast 网段 (硬判据)
+    # 1) CDN / Anycast 网段 (硬判)
     for net in CLOUDFLARE_IP_NETWORKS:
         if ip_obj in net:
             return "cdn", 100
@@ -1583,43 +1629,43 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
             asn_int = int(m.group(1))
         org_lower = (ip_api_rec.get("asname") or ip_api_rec.get("org") or org_lower).lower()
 
+    # 3) 硬否决：机房 / 代理 / 移动
     if hosting_flag:
-        return "datacenter", 90
-    # ★ proxy/VPN/Tor 出口标志 (ip-api) — 硬否决家宽/民用
-    # 实测 AS62610 Zenlayer (收购 speakeasy DSL legacy 段): hosting=false 但 proxy=true
-    # 此类"机房收购家宽段"是假家宽主要形态, rDNS 带 dsl/pppoe 也不能信
+        return "datacenter", 95
     if proxy_flag:
-        return "datacenter", 88
+        return "datacenter", 92
+    if asn_int in DATACENTER_ASNS:
+        return "datacenter", 90
     if mobile_flag:
-        return "mobile", 85
+        return "mobile", 90
 
-    # 3) ASN 白/黑名单
-    if asn_int:
-        if asn_int in DATACENTER_ASNS:
-            return "datacenter", 80
-        if asn_int in RESIDENTIAL_ASNS:
-            return "residential", 82
-
-    # 4) ISP 名称关键词
-    if org_lower:
-        for kw in IDC_NAME_PATTERNS:
-            if kw in org_lower:
-                return "datacenter", 70
-        for kw in RESIDENTIAL_NAME_PATTERNS:
-            if kw in org_lower:
-                return "residential", 70
-
-    # 5) rDNS 兜底
+    # 4) 伪装家宽二次否决：org/rDNS 中出现云商 or 机房关键词 -> 不进 residential
     rdns = get_rdns(ip_str)
-    if rdns:
-        for kw in IDC_NAME_PATTERNS:
-            if kw in rdns:
-                return "datacenter", 60
-        for kw in RESIDENTIAL_NAME_PATTERNS:
-            if kw in rdns:
-                return "residential", 60
+    if has_cloud_or_datacenter_signal(org_lower, rdns, ip_api_rec):
+        return "datacenter", 85
 
-    return "unknown", 30
+    # 5) 正向信号计分：只有足够强的 family signal 才认 residential
+    positive = 0
+
+    if asn_int in RESIDENTIAL_ASNS:
+        positive += 2
+
+    if org_lower and contains_any(org_lower, RESIDENTIAL_NAME_PATTERNS):
+        positive += 2
+
+    if rdns and contains_any(rdns.lower(), RESIDENTIAL_NAME_PATTERNS):
+        positive += 1
+
+    # 国家级辅助信号
+    if country and country.upper() not in ("OTHER", "ZZ", "XX"):
+        positive += 1
+
+    # 6) 判定门槛：至少两个高强度正向信号，且无硬否决
+    if positive >= 3:
+        return "residential", min(95, 60 + positive * 8)
+
+    # 7) 兜底：有短语型家宽关键词，但不足以稳判 residential，给 unknown
+    return "unknown", 25
 
 
 # ═══════════════════════════════════════════N═══════════════════════
@@ -2096,17 +2142,17 @@ def classify_and_export(test_results: list):
         if vetoed:
             print(f"[*] ipapi.is 否决假家宽: {vetoed} 个 (云商收购家宽段伪装)")
 
-    # 风险分 >= 75 的家宽候选降级为普通 (fraud 池/被滥用 IP 绝不入家宽区)
+    # 风险分 >= 80 的家宽候选降级为普通 (fraud 池/被滥用 IP 绝不入家宽区)
     downgraded = 0
     for n in safe_nodes:
         sc = scam_scores.get(n["exit_ip"], -1)
         n["fraud_score"] = sc
-        if n["net_type"] in ("residential", "mobile") and sc >= 75:
+        if n["net_type"] in ("residential", "mobile") and sc >= 80:   # 方案A: 75 → 80
             n["net_type"] = "datacenter"  # 高 fraud 分: 大概率代理池滥用 IP
             n["confidence"] = 60
             downgraded += 1
     if downgraded:
-        print(f"[*] 高 fraud 分 (≥75) 家宽候选降级: {downgraded} 个")
+        print(f"[*] 高 fraud 分 (≥80) 家宽候选降级: {downgraded} 个")
 
     # ── 去重 (同出口IP+端口 只留最快) ──
     best_by_key = {}
@@ -2128,7 +2174,7 @@ def classify_and_export(test_results: list):
     residential = []
     res_seen_ip = set()
     for n in unique_nodes:
-        if n["net_type"] in ("residential", "mobile") and n["confidence"] >= 60:
+        if n["net_type"] in ("residential", "mobile") and n["confidence"] >= 70:   # 方案A: 60 → 70
             if n.get("raw") in chain_failed_raws:
                 n["net_type"] = "datacenter"
                 n["confidence"] = 70
@@ -2170,13 +2216,13 @@ def make_node_name(item, idx, force_residential=False):
     cc = item["country"]
     flag = get_country_flag(cc)
     cname = COUNTRY_NAMES.get(cc, cc)
-    is_res = item["net_type"] in ("residential", "mobile") and (item["confidence"] >= 60 or force_residential)
+    is_res = item["net_type"] in ("residential", "mobile") and (item["confidence"] >= 70 or force_residential)   # 方案A: 60 → 70
     tag = ""
     if is_res:
         tag = " (家宽)" if item["net_type"] == "residential" else " (移动家宽)"
     # Scamalytics 风控分: 高风险节点名内标注 (R分数), 低危不标 (保持简洁)
     fraud = item.get("fraud_score", -1)
-    risk_tag = f" R{fraud}" if 0 <= fraud < 75 and fraud >= 40 else (" ⚠R" if fraud >= 75 else "")
+    risk_tag = f" R{fraud}" if 0 <= fraud < 80 and fraud >= 40 else (" ⚠R" if fraud >= 80 else "")   # 方案A: 75 → 80
     return f"{flag} {cname} {idx:02d}{tag}{risk_tag} - xiaohe"
 
 
@@ -2352,7 +2398,7 @@ def update_readme(total_count, res_count):
 
 ## 🏠 按照家宽分类节点订阅 (住宅 IP 专区)
 
-> 家宽判定六重信号: ① ip-api.com `hosting` 字段 ② `mobile` 移动网络字段 ③ Cloudflare/主流 CDN Anycast 网段比对 ④ MaxMind GeoLite2 ASN 白/黑名单 (覆盖 60+ 国家主流民用运营商) ⑤ rDNS/ISP 名称特征 ⑥ Scamalytics 风控评分复核 (fraud ≥75 降级、≥90 剔除)。排除所有云主机/数据中心/CDN 任播, 保留真实民用宽带与移动网络。
+> 家宽判定六重信号: ① ip-api.com `hosting` 字段 ② `mobile` 移动网络字段 ③ Cloudflare/主流 CDN Anycast 网段比对 ④ MaxMind GeoLite2 ASN 白/黑名单 (覆盖 60+ 国家主流民用运营商) ⑤ rDNS/ISP 名称特征 ⑥ Scamalytics 风控评分复核 (fraud ≥80 降级、≥90 剔除)。排除所有云主机/数据中心/CDN 任播, 保留真实民用宽带与移动网络。
 
 | 家宽地区 | 节点数 | V2RayN 专属订阅 | Clash 专属订阅 | sing-box 专属订阅 |
 | :--- | :---: | :---: | :---: | :---: |
@@ -2411,178 +2457,3 @@ export default {{
     }});
   }}
 }}
-```
-
-### 3. 私有订阅链接映射方式
-部署后 Worker 会分配一个专属域名（例如 `my-sub.yourname.workers.dev`），你的客户端可以直接无感订阅：
-* **总 V2RayN 订阅**: `https://你的域名.workers.dev/v2ray.txt`
-* **总 Clash 订阅**: `https://你的域名.workers.dev/clash.yaml`
-* **总 sing-box 订阅**: `https://你的域名.workers.dev/singbox.json`
-* **台湾家宽 V2RayN**: `https://你的域名.workers.dev/residential-by-country/TW.txt`
-* **香港家宽 Clash**: `https://你的域名.workers.dev/residential-by-country/clash-HK.yaml`
-* **日本家宽 sing-box**: `https://你的域名.workers.dev/residential-by-country/singbox-JP.json`
-
----
-
-## ⭐ 项目热度
-
-[![Star History Chart](https://api.star-history.com/svg?repos={repo_name}&type=Date)](https://star-history.com/#{repo_name}&Date)
-
----
-
-## 🛠️ 项目使用说明
-1. **自动更新机制**：GitHub Actions 每 6 小时全自动运行并刷新上述全部订阅与数据。
-2. **测活标准**：节点必须通过 ① 端口预检 ② sing-box 实际隧道 3 个 generate_204 探测 ③ 真实出口 IP 穿透获取 ④ Cloudflare 5MB 限时下载 (吞吐 ≥ 70KB/s) ⑤ TLS 证书校验非 MITM, 方可入库。
-3. **多客户端兼容**：Clash / v2rayN / sing-box 全格式订阅。
-"""
-    with open(os.path.join(BASEDIR, "README.md"), "w", encoding="utf-8") as f:
-        f.write(readme)
-    print(f"[+] README.md 更新完毕: 总节点 {total_count}, 家宽 {res_count}")
-
-
-# ═══════════════════════════════════════════N═══════════════════════
-# 主流程
-# ═══════════════════════════════════════════N═══════════════════════
-
-def main():
-    t_start = time.time()
-    print(f"==== 免费节点测活订阅池 v2 · 启动于 {datetime.now(timezone.utc).isoformat()} ====")
-    ensure_directories()
-    setup_environment()
-
-    # 1. 抓取
-    raw_nodes = fetch_raw_nodes()
-
-    # 2. 解析
-    candidates = []
-    parse_fail = 0
-    for uri in raw_nodes:
-        parsed = parse_node_uri(uri)
-        if not parsed:
-            parse_fail += 1
-            continue
-        outbound, server, port, proto = parsed
-        # 屏蔽占位/广告节点
-        if BLACKLIST_NAME_HINTS.search(urllib.parse.unquote(uri.split("#", 1)[-1] if "#" in uri else "")):
-            continue
-        candidates.append((uri, outbound, server, port, proto))
-
-    # 2.5 ★ 测前强去重 (凭据指纹去重: 同 凭据+目标+协议 只测一次, 结果回填全部重复节点)
-    #     key = (server, port, proto, 凭据指纹): 凭据不同 → 服务端校验结果可能不同, 不可合并
-    #     凭据指纹: uuid/password 各协议的核心身份字段 (vless uuid / vmess id+alterId /
-    #               trojan password / ss 2022密钥 / hy2 auth / tuic uuid+passwd / anytls password)
-    #     完全相同 = 同一节点被多源重复收录 (免费池常态, 30+ 份不同名字) → 只测一次
-    def cred_fingerprint(outbound: dict, proto: str) -> str:
-        try:
-            if proto == "vless":
-                return f"{outbound.get('uuid','')}"
-            if proto == "vmess":
-                return f"{outbound.get('uuid','') or outbound.get('user_id','')}"
-            if proto == "trojan":
-                return f"{outbound.get('password','')}"
-            if proto == "shadowsocks":
-                return f"{outbound.get('method','')}|{outbound.get('password','')}"
-            if proto == "hysteria2":
-                return f"{outbound.get('password','') or ''}|{outbound.get('server_ports','')}"
-            if proto == "tuic":
-                return f"{outbound.get('uuid','')}|{outbound.get('password','')}"
-            if proto == "anytls":
-                return f"{outbound.get('password','')}"
-            return json.dumps({k: v for k, v in outbound.items()
-                              if k in ("uuid", "password", "user_id", "method")}, sort_keys=True)
-        except Exception:
-            return ""  # 指纹失败 → 不合并 (宁慢不错)
-
-    seen_keys, deduped, dup_count = {}, [], 0
-    for item in candidates:
-        uri, outbound, server, port, proto = item
-        key = (server.lower() if server else "", port, proto, cred_fingerprint(outbound, proto))
-        if key in seen_keys:
-            seen_keys[key].append(uri)  # 记录重复 URI, 测活后回填
-            dup_count += 1
-        else:
-            seen_keys[key] = [uri]
-            deduped.append(item)
-    if dup_count:
-        print(f"[*] 测前去重(凭据指纹): {len(candidates)} → {len(deduped)} (剔除重复 {dup_count} — 结果将回填)")
-    DEDUP_MAP = seen_keys  # 供测活后回填 (全局)
-    candidates = deduped
-
-    proto_stat = {}
-    for _, _, _, _, p in candidates:
-        proto_stat[p] = proto_stat.get(p, 0) + 1
-    print(f"[*] 解析成功(去重后): {len(candidates)} | 失败 {parse_fail} | 协议分布 {proto_stat}")
-
-    if not candidates:
-        print("[!] 无可测节点 (订阅源全部失效?) — 保留上次 output, 不覆盖订阅文件")
-        return
-
-    # 3. 端口预检
-    candidates = prefilter_candidates(candidates)
-
-    # 4. 真实测活 (只测去重后的代表节点)
-    test_results = run_liveness_test(candidates)
-
-    # 4.5 ★ 重复节点结果回填: 同 凭据+目标 的重复 URI 继承测活结果 (凭据相同 → 服务端表现一致)
-    if DEDUP_MAP:
-        result_by_key = {}
-        for r in test_results:
-            key = ((r["server"] or "").lower(), r["port"], r["proto"])
-            result_by_key[key] = r
-        expanded = list(test_results)
-        backfilled = 0
-        # 反向索引: server:port:proto → 原始 fingerprint (从 DEDUP_MAP 的 key 直接继承)
-        for key, uris in DEDUP_MAP.items():
-            if len(uris) <= 1:
-                continue
-            # 用 key 的前三段 (server, port, proto) 找测活结果
-            lookup = (key[0], key[1], key[2])
-            r = result_by_key.get(lookup)
-            if not r or not r.get("alive"):
-                continue
-            for extra_uri in uris[1:]:
-                clone = dict(r)
-                clone["raw"] = extra_uri
-                expanded.append(clone)
-                backfilled += 1
-        if backfilled:
-            print(f"[+] 重复节点回填: +{backfilled} (继承代表测活结果)")
-        test_results = expanded
-
-    # 5. ★ 家宽链式复测: 用最快存活节点做前置双跳复测家宽候选
-    #    (模拟用户 v2rayN 链式场景, 双跳失败的家宽降级普通区 — 提高链式可用率)
-    test_results = chain_retest(test_results)
-
-    # 6. 分类 + 导出 (无真活节点时保留上次 output, 不写空订阅覆盖线上数据)
-    if not test_results:
-        print("[!] 全部节点测活失败 — 保留上次 output, 不覆盖订阅文件")
-        return
-    unique_nodes, residential, non_residential = classify_and_export(test_results)
-    if not unique_nodes:
-        print("[!] 分类后无存活节点 — 保留上次 output")
-        return
-    total, res = export_all(unique_nodes, residential, non_residential)
-    update_readme(total, res)
-
-
-    # 统计报告
-    elapsed = time.time() - t_start
-    print("\n===== 运行报告 =====")
-    print(f"总耗时: {elapsed:.0f}s | 抓取 {len(raw_nodes)} → 解析成功 {len(candidates)} → 真活 {len(test_results)} → 去重后 {len(unique_nodes)} → 家宽 {len(residential)}")
-    by_type = {}
-    for n in unique_nodes:
-        by_type[n["net_type"]] = by_type.get(n["net_type"], 0) + 1
-    print(f"节点类型分布: {by_type}")
-    by_proto = {}
-    for n in unique_nodes:
-        by_proto[n["proto"]] = by_proto.get(n["proto"], 0) + 1
-    print(f"协议分布(出库): {by_proto}")
-    by_country = {}
-    for n in unique_nodes:
-        by_country[n["country"]] = by_country.get(n["country"], 0) + 1
-    top_c = sorted(by_country.items(), key=lambda x: -x[1])[:10]
-    print(f"国家 Top10: {top_c}")
-
-
-if __name__ == "__main__":
-    main()
