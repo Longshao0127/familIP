@@ -90,6 +90,14 @@ MAX_WORKERS_TEST    = 48
 MAX_WORKERS_FETCH   = 8
 MAX_WORKERS_CLASSIFY = 32
 
+# --- 纯净度过滤 (purity filter) ---
+PURITY_MAX_PER_SUBNET   = 5      # 同一 /24 子网最多保留节点数 (防单机房刷屏)
+PURITY_MAX_PER_ASN      = 20     # 同一 ASN 最多保留节点数 (防单一运营商/机房刷屏)
+PURITY_MAX_PER_COUNTRY  = 200    # 单国最多保留节点数 (防一国刷屏)
+PURITY_MAX_LATENCY_MS   = 8000   # 延迟超过此值剔除 (实际不可用)
+PURITY_DROP_WARP        = True   # 丢弃 warp 套壳节点
+PURITY_DROP_FRAUD_GE    = 80     # fraud 分 ≥ 此值全局剔除
+
 IP_API_BATCH_URL = "http://ip-api.com/batch?fields=status,countryCode,isp,org,as,asname,reverse,mobile,proxy,hosting,query"
 IP_API_BATCH_SIZE = 100
 IP_API_BATCH_RPS_INTERVAL = 4.2
@@ -408,7 +416,12 @@ def setup_environment():
 
     exe = SINGBOX_BIN + (".exe" if os.name == "nt" else "")
     if not os.path.exists(exe) or os.path.getsize(exe) < 1024:
-        system = "windows" if os.name == "nt" else "linux"
+        if os.name == "nt":
+            system = "windows"
+        elif platform.system() == "Darwin":
+            system = "darwin"
+        else:
+            system = "linux"
         ext = "zip" if system == "windows" else "tar.gz"
         url = (f"https://github.com/SagerNet/sing-box/releases/download/"
                f"{SINGBOX_VERSION}/sing-box-{SINGBOX_VERSION.lstrip('v')}-{system}-amd64.{ext}")
@@ -1065,8 +1078,6 @@ def test_single_node(item, keep_alive_check=True):
                    "https": f"socks5h://127.0.0.1:{socks_port}"}
 
         # --- 1) 活性探测 + TLS 证书校验 (MITM 检测合并进首击, 省一次往返) ---
-        # verify=True: 若代理链路被 TLS 中间人拦截, 首击请求会直接抛 SSLError → 立即淘汰
-        # 首击宽 (12s) 容慢启动节点; 后续 URL 窄 (4s) 快速放弃死节点
         alive_hits, latency_ms = 0, 99999
         mitm_risk = False
         t0 = time.time()
@@ -1079,11 +1090,9 @@ def test_single_node(item, keep_alive_check=True):
                     alive_hits += 1
                     latency_ms = min(latency_ms, (time.time() - t0) * 1000)
                     break
-                # 非 204/200 响应: 若返回重定向类状态码或非空 body → 疑似劫持
                 if r.status_code in (301, 302, 403, 407, 502, 503) or len(r.content) > 0:
                     mitm_risk = True
             except requests.exceptions.SSLError:
-                # TLS 证书校验失败 = 明确 MITM/劫持节点, 直接淘汰, 不再白跑后续步骤
                 return None
             except Exception:
                 continue
@@ -1143,7 +1152,6 @@ def test_single_node(item, keep_alive_check=True):
             pass
 
         # --- 4) 断流检测: 首端点优先, 失败再试备用 ---
-        # 断流签名: 连接建立 + 首包正常, 但中途停送数据 → 空闲超时强断
         speed_bps = 0
         for speed_url in SPEED_TEST_URLS:
             downloaded = 0
@@ -1160,12 +1168,12 @@ def test_single_node(item, keep_alive_check=True):
                                 last_chunk_time = now
                             if now - t_speed > SPEED_TEST_BUDGET:
                                 break
-                            if now - last_chunk_time > 2.0:   # 空闲 2s 无数据 → 断流
+                            if now - last_chunk_time > 2.0:
                                 break
                 elapsed = max(time.time() - t_speed, 0.001)
                 if downloaded > 0:
                     speed_bps = int(downloaded / elapsed)
-                    break   # 首端点成功即用, 不再试备用端点
+                    break
             except Exception:
                 continue
 
@@ -1411,14 +1419,6 @@ def has_cloud_or_datacenter_signal(org: str, rdns: str, ip_api_rec: dict = None)
 
 
 def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict = None) -> tuple:
-    """
-    返回 (net_type, confidence):
-      net_type ∈ {datacenter, residential, mobile, cdn, unknown}
-    策略:
-      1) 先做硬否决: hosting/proxy/CDN/IDC ASN/云商关键词 -> datacenter
-      2) 再做 residential 判定: 必须有至少 2 个正向信号，且无硬否决
-      3) mobile 优先保留，单独判断，不混进 residential
-    """
     ip_str = str(ip)
     try:
         ip_obj = ipaddress.ip_address(ip_str)
@@ -1492,9 +1492,29 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 # 节点 → 各客户端配置转换
 # ══════════════════════════════════════════════════════════════════
 
+def get_node_primary_port(node: dict):
+    """兼容单端口 server_port 与端口跳跃 server_ports (hysteria2 mport)。
+
+    server_ports 元素形如 "443:443" (单端口) 或 "20000:20100" (范围),
+    统一取范围下界作为代表端口; 两者均缺失时返回 None。
+    """
+    if "server_port" in node:
+        return node["server_port"]
+    ports = node.get("server_ports")
+    if ports:
+        try:
+            return int(str(ports[0]).split(":")[0])
+        except (ValueError, IndexError):
+            return None
+    return None
+
+
 def outbound_to_clash(node: dict, name: str) -> dict:
     t = node.get("type")
-    server, port = node["server"], node["server_port"]
+    server = node["server"]
+    port = get_node_primary_port(node)
+    if not port:
+        return None
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":
@@ -1609,11 +1629,8 @@ def outbound_to_clash(node: dict, name: str) -> dict:
 
 def outbound_to_v2ray_link(node: dict, name: str) -> str:
     t = node.get("type")
-    if "server_port" in node:
-        port = node["server_port"]
-    elif node.get("server_ports"):
-        port = int(str(node["server_ports"][0]).split(":")[0])
-    else:
+    port = get_node_primary_port(node)
+    if not port:
         return ""
     server = node["server"]
     tls = node.get("tls") or {}
@@ -1878,6 +1895,7 @@ def classify_and_export(test_results: list):
             "speed_bps": r["speed_bps"],
             "mitm_risk": r["mitm_risk"],
             "is_stalled": r["is_stalled"],
+            "is_warp": r.get("is_warp", False),
         })
 
     if country_reader:
@@ -1956,6 +1974,62 @@ def classify_and_export(test_results: list):
     dup_dropped = len(safe_nodes) - len(unique_nodes)
     print(f"[*] 去重: {len(safe_nodes)} → {len(unique_nodes)} (剔除重复 {dup_dropped})")
 
+    # ── 纯净度过滤 (purity filter) ──
+    # 按延迟升序排序 (先保最快); 然后从 6 个维度剔除"杂质节点":
+    #   1) warp 套壳节点 (非真实代理出口)
+    #   2) 高延迟僵尸 (latency > PURITY_MAX_LATENCY_MS, 实际不可用)
+    #   3) 全局 fraud 高危 (fraud >= PURITY_DROP_FRAUD_GE)
+    #   4) 同 /24 子网超限 (防单机房刷屏)
+    #   5) 同 ASN 超限 (防单一运营商/机房刷屏)
+    #   6) 同国家超限 (防一国刷屏)
+    unique_nodes.sort(key=lambda x: x["latency_ms"])
+    pf_nodes = []
+    subnet_cnt, asn_cnt, country_cnt = {}, {}, {}
+    pf_stats = {"warp": 0, "latency": 0, "fraud": 0, "subnet": 0, "asn": 0, "country": 0}
+    for n in unique_nodes:
+        if PURITY_DROP_WARP and n.get("is_warp"):
+            pf_stats["warp"] += 1
+            continue
+        if n["latency_ms"] > PURITY_MAX_LATENCY_MS:
+            pf_stats["latency"] += 1
+            continue
+        fs = n.get("fraud_score", -1)
+        if 0 <= fs >= PURITY_DROP_FRAUD_GE:
+            pf_stats["fraud"] += 1
+            continue
+        sub_key = None
+        if n.get("exit_ip"):
+            try:
+                sub_key = str(ipaddress.ip_network(f"{n['exit_ip']}/24", strict=False))
+            except Exception:
+                sub_key = None
+        if sub_key and subnet_cnt.get(sub_key, 0) >= PURITY_MAX_PER_SUBNET:
+            pf_stats["subnet"] += 1
+            continue
+        asn_key = n.get("asn") if isinstance(n.get("asn"), int) else None
+        if asn_key and asn_cnt.get(asn_key, 0) >= PURITY_MAX_PER_ASN:
+            pf_stats["asn"] += 1
+            continue
+        cc_key = n.get("country") or "OTHER"
+        if country_cnt.get(cc_key, 0) >= PURITY_MAX_PER_COUNTRY:
+            pf_stats["country"] += 1
+            continue
+        # 通过 → 计数并保留
+        if sub_key:
+            subnet_cnt[sub_key] = subnet_cnt.get(sub_key, 0) + 1
+        if asn_key:
+            asn_cnt[asn_key] = asn_cnt.get(asn_key, 0) + 1
+        country_cnt[cc_key] = country_cnt.get(cc_key, 0) + 1
+        pf_nodes.append(n)
+
+    dropped = len(unique_nodes) - len(pf_nodes)
+    if dropped:
+        print(f"[*] 纯净度过滤: {len(unique_nodes)} → {len(pf_nodes)} "
+              f"(warp {pf_stats['warp']} | 高延迟 {pf_stats['latency']} | "
+              f"高fraud {pf_stats['fraud']} | 同子网超限 {pf_stats['subnet']} | "
+              f"同ASN超限 {pf_stats['asn']} | 同国超限 {pf_stats['country']})")
+    unique_nodes = pf_nodes
+
     chain_failed_raws = set()
     for r in test_results:
         if r.get("_chain_failed"):
@@ -1971,11 +2045,6 @@ def classify_and_export(test_results: list):
             if n["exit_ip"] and n["exit_ip"] not in res_seen_ip:
                 res_seen_ip.add(n["exit_ip"])
                 residential.append(n)
-    before_total = len(unique_nodes)
-    unique_nodes = [n for n in unique_nodes if not (0 <= n.get("fraud_score", -1) >= 90)]
-    residential = [n for n in residential if not (0 <= n.get("fraud_score", -1) >= 90)]
-    if len(unique_nodes) < before_total:
-        print(f"[*] 极高危节点 (fraud≥90) 剔除: {before_total - len(unique_nodes)} 个")
 
     non_residential = [n for n in unique_nodes if n not in residential]
     print(f"[*] 家宽/移动网络节点: {len(residential)} | 普通(机房/CDN): {len(non_residential)}")
@@ -2159,6 +2228,7 @@ def update_readme(total_count, res_count):
 
 > 👤 **定制规范命名**: 所有订阅节点均重命名为 `国旗 地区 序号 (家宽) - xiaohe`
 > ⚡ **真实可用保障**: 所有节点由 `sing-box v{SINGBOX_VERSION}` 内核建立实际代理隧道, 完成真实 HTTPS 双向传输握手 + 出口 IP 穿透验证 + Cloudflare 限速下载断流检测 + TLS 证书校验 (MITM 劫持识别), 拒绝虚假通畅、断流节点与高危劫持节点。
+> 🧹 **纯净度过滤**: 同 /24 子网 ≤ {PURITY_MAX_PER_SUBNET} 个 · 同 ASN ≤ {PURITY_MAX_PER_ASN} 个 · 单国 ≤ {PURITY_MAX_PER_COUNTRY} 个 · 延迟 ≤ {PURITY_MAX_LATENCY_MS}ms · warp 套壳剔除 · fraud ≥ {PURITY_DROP_FRAUD_GE} 剔除。
 > 🛡️ **全协议支持**: VLESS (Reality/Vision) · VMESS · Trojan · Shadowsocks · Hysteria2 · TUIC · AnyTLS
 
 ---
@@ -2256,7 +2326,8 @@ export default {{
 ## 🛠️ 项目使用说明
 1. **自动更新机制**：GitHub Actions 每 6 小时全自动运行并刷新上述全部订阅与数据。
 2. **测活标准**：节点必须通过 ① 端口预检 ② sing-box 实际隧道 3 个 generate_204 探测 ③ 真实出口 IP 穿透获取 ④ Cloudflare 5MB 限时下载 (吞吐 ≥ 70KB/s) ⑤ TLS 证书校验非 MITM, 方可入库。
-3. **多客户端兼容**：Clash / v2rayN / sing-box 全格式订阅。
+3. **纯净度过滤**：同一 /24 子网 ≤ {PURITY_MAX_PER_SUBNET} · 同 ASN ≤ {PURITY_MAX_PER_ASN} · 单国 ≤ {PURITY_MAX_PER_COUNTRY} · 延迟 ≤ {PURITY_MAX_LATENCY_MS}ms · warp 套壳与 fraud ≥ {PURITY_DROP_FRAUD_GE} 一律剔除, 保证出库列表不被单机房/单运营商刷屏。
+4. **多客户端兼容**：Clash / v2rayN / sing-box 全格式订阅。
 """
     with open(os.path.join(BASEDIR, "README.md"), "w", encoding="utf-8") as f:
         f.write(readme)
@@ -2273,10 +2344,8 @@ def main():
     ensure_directories()
     setup_environment()
 
-    # 1. 抓取
     raw_nodes = fetch_raw_nodes()
 
-    # 2. 解析
     candidates = []
     parse_fail = 0
     for uri in raw_nodes:
@@ -2289,7 +2358,6 @@ def main():
             continue
         candidates.append((uri, outbound, server, port, proto))
 
-    # 2.5 测前强去重
     def cred_fingerprint(outbound: dict, proto: str) -> str:
         try:
             if proto == "vless":
@@ -2335,13 +2403,9 @@ def main():
         print("[!] 无可测节点 (订阅源全部失效?) — 保留上次 output, 不覆盖订阅文件")
         return
 
-    # 3. 端口预检
     candidates = prefilter_candidates(candidates)
-
-    # 4. 真实测活
     test_results = run_liveness_test(candidates)
 
-    # 4.5 重复节点结果回填
     if DEDUP_MAP:
         result_by_key = {}
         for r in test_results:
@@ -2365,10 +2429,8 @@ def main():
             print(f"[+] 重复节点回填: +{backfilled} (继承代表测活结果)")
         test_results = expanded
 
-    # 5. 家宽链式复测
     test_results = chain_retest(test_results)
 
-    # 6. 分类 + 导出
     if not test_results:
         print("[!] 全部节点测活失败 — 保留上次 output, 不覆盖订阅文件")
         return
