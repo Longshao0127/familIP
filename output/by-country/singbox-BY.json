@@ -6,27 +6,36 @@
     {
       "type": "vless",
       "tag": "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe",
-      "server": "89.125.96.80",
+      "server": "89.125.96.76",
       "server_port": 2053,
       "uuid": "6c713691-3ca2-0008-ad25-113d1bed6b03",
       "tls": {
         "enabled": true,
         "server_name": "wss.zazazuza.ru",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/vpn-wss/fluxor/59011/",
-        "headers": {
-          "Host": "wss.zazazuza.ru"
+        "path": "/vpn-wss/fluxor/59011/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇧🇾 白俄罗斯 (Belarus) 02 - xiaohe",
+      "server": "178.172.235.73",
+      "server_port": 443,
+      "uuid": "0c4e0fa4-d16e-47a2-8325-39a1a8fb04d8",
+      "tls": {
+        "enabled": true,
+        "server_name": "gfgfdgdfg.apruxdomain.online",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "httpupgrade"
       }
     },
     {
@@ -34,14 +43,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe"
+        "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe",
+        "🇧🇾 白俄罗斯 (Belarus) 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe"
+        "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe",
+        "🇧🇾 白俄罗斯 (Belarus) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

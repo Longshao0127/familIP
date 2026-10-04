@@ -13,6 +13,7 @@ proxies:
   tls: true
   servername: trackydev.site
   skip-cert-verify: false
+  client-fingerprint: random
   network: ws
   ws-opts:
     path: /
@@ -27,6 +28,8 @@ proxies:
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: free.sahanwickramasinghe.me
 proxy-groups:
 - name: PROXIES
   type: select
