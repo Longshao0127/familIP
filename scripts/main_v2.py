@@ -15,6 +15,7 @@ import uuid
 import base64
 import shutil
 import socket
+import threading
 import zipfile
 import tarfile
 import platform
@@ -60,11 +61,15 @@ RESIDENTIAL_COUNTRY_DIR = os.path.join(OUTPUT_DIR, "residential-by-country")
 
 SINGBOX_VERSION = "v1.14.0"
 WORKDIR = os.path.dirname(os.path.abspath(__file__))
-BASEDIR = os.path.dirname(WORKDIR)
+# 脚本位于 scripts/ 等子目录时, 以上级目录为项目根; 否则脚本同级即项目根
+# (避免脚本直接放在 Desktop 等目录时, README/runtime 被写到用户主目录)
+BASEDIR = (os.path.dirname(WORKDIR)
+           if os.path.basename(WORKDIR).lower() in ("scripts", "script", "tools", "bin")
+           else WORKDIR)
 RUNTIME_DIR = os.path.join(BASEDIR, "runtime")
 SINGBOX_BIN = os.path.join(RUNTIME_DIR, "sing-box")
 
-PROBE_TIMEOUT          = 12
+PROBE_TIMEOUT          = 6
 PROBE_RETRY_TIMEOUT    = 4
 PORT_KNOCK_TIMEOUT     = 2.5
 IP_ECHO_TIMEOUT        = 6.0
@@ -86,8 +91,14 @@ SPEED_TEST_URLS = [
     "https://cachefly.cachefly.net/10mb.test",
 ]
 TRACE_URL = "https://www.cloudflare.com/cdn-cgi/trace"
-MAX_WORKERS_TEST    = 48
+TIKTOK_PROBE_URL = "https://www.tiktok.com/"
+MAX_WORKERS_TEST    = 128
+SPEED_TEST_MAX_CONCURRENT = 32  # 测速并发上限 (防前置代理带宽争抢导致断流误杀)
+_SPEED_TEST_SEM = threading.BoundedSemaphore(SPEED_TEST_MAX_CONCURRENT)
 MAX_WORKERS_FETCH   = 8
+CACHE_DIR = ".cache"
+LIVENESS_CACHE_FILE = os.path.join(CACHE_DIR, "liveness_cache.json")
+LIVENESS_CACHE_TTL = 24 * 3600  # 24 小时缓存测活结果
 MAX_WORKERS_CLASSIFY = 32
 
 # --- 纯净度过滤 (purity filter) ---
@@ -315,9 +326,19 @@ def b64_decode(data: str) -> str:
         return ""
 
 
+# 前置代理: 中国大陆本地环境抓订阅源/下载内核时需走代理 (如 socks5://127.0.0.1:3067)
+# 测活链路中节点的前置代理另在 build_test_config() 内通过 sing-box detour 配置
+FRONT_PROXY = os.environ.get("FRONT_PROXY", "").strip()
+
 DIRECT_SESSION = requests.Session()
 DIRECT_SESSION.trust_env = True
 DIRECT_SESSION.headers.update({"User-Agent": USER_AGENT, "Accept": "*/*"})
+if FRONT_PROXY:
+    # socks5h = 代理解析 DNS, 避免 raw.githubusercontent.com 等域名本地 DNS 污染
+    _front_proxy_url = ("socks5h://" + FRONT_PROXY[len("socks5://"):]
+                        if FRONT_PROXY.startswith("socks5://") else FRONT_PROXY)
+    DIRECT_SESSION.proxies.update({"http": _front_proxy_url, "https": _front_proxy_url})
+    print(f"[*] 前置代理已启用 (DIRECT_SESSION): {FRONT_PROXY}")
 
 PROBE_SESSION = requests.Session()
 PROBE_SESSION.trust_env = False
@@ -958,8 +979,8 @@ def prefilter_candidates(candidates: list) -> list:
     with ThreadPoolExecutor(max_workers=64) as ex:
         for item, ok in zip(candidates, ex.map(_knock, candidates)):
             (passed if ok else deferred).append(item)
-    print(f"[+] 预检通过: {len(passed)} | 预检未过(保留低优先级待全测): {len(deferred)}")
-    return passed + deferred
+    print(f"[+] 预检通过: {len(passed)} | 预检未过(直接淘汰): {len(deferred)}")
+    return passed
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -1151,31 +1172,50 @@ def test_single_node(item, keep_alive_check=True):
         except Exception:
             pass
 
-        # --- 4) 断流检测: 首端点优先, 失败再试备用 ---
+        # --- 3.5) TikTok 可达性探测: 200 且非WAF挑战页/验证码页 = 未被风控拉黑 ---
+        # 注意: 无浏览器 UA 时 TikTok 一律回 1.4KB 的 Slardar WAF "Please wait" 挑战页
+        tiktok_ok = False
+        try:
+            r = PROBE_SESSION.get(TIKTOK_PROBE_URL, proxies=proxies,
+                                  headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"},
+                                  timeout=PROBE_RETRY_TIMEOUT, verify=True,
+                                  allow_redirects=False)
+            body = r.content[:300000].lower()
+            if r.status_code == 200 and len(r.content) > 5000 \
+                    and b"captcha" not in body and b"please wait" not in body:
+                tiktok_ok = True
+        except Exception:
+            pass
+
+        # --- 4) 断流检测: 首端点优先, 失败再试备用 (信号量限流, 防带宽争抢) ---
         speed_bps = 0
-        for speed_url in SPEED_TEST_URLS:
-            downloaded = 0
-            t_speed = time.time()
-            last_chunk_time = time.time()
-            try:
-                with PROBE_SESSION.get(speed_url, proxies=proxies,
-                                       timeout=(3, SPEED_TEST_BUDGET), stream=True) as r:
-                    if r.status_code == 200:
-                        for chunk in r.iter_content(chunk_size=65536):
-                            now = time.time()
-                            if chunk:
-                                downloaded += len(chunk)
-                                last_chunk_time = now
-                            if now - t_speed > SPEED_TEST_BUDGET:
-                                break
-                            if now - last_chunk_time > 2.0:
-                                break
-                elapsed = max(time.time() - t_speed, 0.001)
-                if downloaded > 0:
-                    speed_bps = int(downloaded / elapsed)
-                    break
-            except Exception:
-                continue
+        _SPEED_TEST_SEM.acquire()
+        try:
+            for speed_url in SPEED_TEST_URLS:
+                downloaded = 0
+                t_speed = time.time()
+                last_chunk_time = time.time()
+                try:
+                    with PROBE_SESSION.get(speed_url, proxies=proxies,
+                                           timeout=(3, SPEED_TEST_BUDGET), stream=True) as r:
+                        if r.status_code == 200:
+                            for chunk in r.iter_content(chunk_size=65536):
+                                now = time.time()
+                                if chunk:
+                                    downloaded += len(chunk)
+                                    last_chunk_time = now
+                                if now - t_speed > SPEED_TEST_BUDGET:
+                                    break
+                                if now - last_chunk_time > 2.0:
+                                    break
+                    elapsed = max(time.time() - t_speed, 0.001)
+                    if downloaded > 0:
+                        speed_bps = int(downloaded / elapsed)
+                        break
+                except Exception:
+                    continue
+        finally:
+            _SPEED_TEST_SEM.release()
 
         is_stalled = speed_bps < SPEED_MIN_BYTES_PER_S
 
@@ -1193,6 +1233,7 @@ def test_single_node(item, keep_alive_check=True):
             "exit_isp_online": (exit_isp or "")[:120],
             "mitm_risk": mitm_risk,
             "is_warp": is_warp,
+            "tiktok_ok": tiktok_ok,
             "speed_bps": speed_bps,
             "is_stalled": is_stalled,
         }
@@ -1213,28 +1254,118 @@ def test_single_node(item, keep_alive_check=True):
             pass
 
 
+def _cred_fingerprint(outbound: dict, proto: str) -> str:
+    """凭据指纹（与 main() 中去重逻辑保持一致）"""
+    try:
+        if proto == "vless":
+            return f"{outbound.get('uuid','')}"
+        if proto == "vmess":
+            return f"{outbound.get('uuid','') or outbound.get('user_id','')}"
+        if proto == "trojan":
+            return f"{outbound.get('password','')}"
+        if proto == "shadowsocks":
+            return f"{outbound.get('method','')}|{outbound.get('password','')}"
+        if proto == "hysteria2":
+            return f"{outbound.get('password','') or ''}|{outbound.get('server_ports','')}"
+        if proto == "tuic":
+            return f"{outbound.get('uuid','')}|{outbound.get('password','')}"
+        if proto == "anytls":
+            return f"{outbound.get('password','')}"
+        return json.dumps({k: v for k, v in outbound.items()
+                          if k in ("uuid", "password", "user_id", "method")}, sort_keys=True)
+    except Exception:
+        return ""
+
+
+def _load_liveness_cache() -> dict:
+    if not os.path.exists(LIVENESS_CACHE_FILE):
+        return {}
+    try:
+        with open(LIVENESS_CACHE_FILE, "r", encoding="utf-8") as f:
+            cache = json.load(f)
+        # 清理过期项
+        cutoff = time.time() - LIVENESS_CACHE_TTL
+        fresh = {k: v for k, v in cache.items() if v.get("ts", 0) > cutoff}
+        expired = len(cache) - len(fresh)
+        if expired:
+            print(f"[*] 缓存清理: 过期 {expired} 条")
+        return fresh
+    except Exception as e:
+        print(f"[!] 缓存读取失败，从头测活: {e}")
+        return {}
+
+
+def _save_liveness_cache(cache: dict):
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    with open(LIVENESS_CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=1)
+
+
 def run_liveness_test(candidates: list) -> list:
     print(f"[*] sing-box 全协议真实测活: {len(candidates)} 节点 (并发 {MAX_WORKERS_TEST}) ...")
-    results = []
+
+    # --- 增量缓存: 命中且未过期 → 直接复用结果, 跳过 sing-box 测试 ---
+    cache = _load_liveness_cache()
+    cache_key_to_item = {}  # key -> candidate item
+    to_test, from_cache = [], []
+    for item in candidates:
+        uri, outbound, server, port, proto = item
+        key = f"{server.lower() if server else ''}:{port}:{proto}:{_cred_fingerprint(outbound, proto)}"
+        cached = cache.get(key)
+        if cached and (time.time() - cached.get("ts", 0)) < LIVENESS_CACHE_TTL:
+            if cached["result"] is None:
+                continue  # 缓存判定为死节点, 24h 内不再重复测试
+            # 缓存命中，复用结果
+            result = dict(cached["result"])  # 拷贝防串改
+            result["raw"] = uri            # 本轮实际订阅链接（可能换了源但节点相同）
+            result["_cache_hit"] = True
+            from_cache.append(result)
+        else:
+            cache_key_to_item[key] = item
+            to_test.append(item)
+
+    cache_hits = len(from_cache)
+    cache_dead = len(candidates) - len(to_test) - cache_hits
+    if cache_hits or cache_dead:
+        print(f"[*] 增量缓存: 活节点命中 {cache_hits} | 死节点跳过 {cache_dead} | 实际测试 {len(to_test)} 节点")
+    else:
+        print(f"[*] 缓存为空或全过期，全部 {len(to_test)} 节点走真实测试")
+
+    results = list(from_cache)
     done_count = [0]
 
     def _work(item):
         return test_single_node(item)
 
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS_TEST) as ex:
-        futs = {ex.submit(_work, it): it for it in candidates}
-        for fut in as_completed(futs):
-            done_count[0] += 1
-            r = fut.result()
-            if r:
-                results.append(r)
-            if done_count[0] % 40 == 0:
-                print(f"[*] 测活进度: {done_count[0]}/{len(candidates)}, 通过 {len(results)}")
+    if to_test:
+        new_results = []  # (item, result) 配对列表，用于写缓存
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS_TEST) as ex:
+            futs = {ex.submit(_work, it): it for it in to_test}
+            for fut in as_completed(futs):
+                done_count[0] += 1
+                r = fut.result()
+                item = futs[fut]
+                new_results.append((item, r))
+                if r:
+                    results.append(r)
+                if done_count[0] % 40 == 0:
+                    print(f"[*] 测活进度: {done_count[0]}/{len(to_test)}, 通过 {len(results)}")
+
+        # 写回缓存（活节点存结果, 死节点存 None 占位, 24h 内均不重测）
+        for item, r in new_results:
+            _, outbound, server, port, proto = item
+            key = f"{server.lower() if server else ''}:{port}:{proto}:{_cred_fingerprint(outbound, proto)}"
+            if r and r.get("alive"):
+                cache[key] = {"ts": time.time(), "result": {k: v for k, v in r.items() if k != "raw"}}
+            else:
+                cache[key] = {"ts": time.time(), "result": None}
+        _save_liveness_cache(cache)
+        print(f"[*] 缓存已更新: {len(cache)} 条记录")
 
     alive = [r for r in results if r["alive"] and not r["is_stalled"]]
     mitm = sum(1 for r in results if r["mitm_risk"])
     stalled = sum(1 for r in results if r["is_stalled"])
-    print(f"[+] 测活完成: 真活 {len(alive)} | 断流淘汰 {stalled} | MITM 风险 {mitm}")
+    print(f"[+] 测活完成: 真活 {len(alive)} (含缓存 {cache_hits}) | 断流淘汰 {stalled} | MITM 风险 {mitm}")
     return results
 
 
@@ -1805,16 +1936,44 @@ def scamalytics_fraud_score(ip: str) -> int:
         return -1
 
 
-def ipapi_is_verify(ip: str) -> dict:
-    try:
-        r = DIRECT_SESSION.get(f"https://api.ipapi.is/?q={ip}", timeout=10)
-        if r.status_code != 200:
-            return {}
-        j = r.json()
-        return {"company": j.get("company") or "", "asn": j.get("asn") or "",
-                "country": j.get("country") or ""}
-    except Exception:
+PROXYCHECK_API_KEY = os.environ.get("PROXYCHECK_API_KEY", "")
+
+def proxycheck_batch_verify(ips: list) -> dict:
+    """proxycheck.io v2 批量风控核验 (每次 POST 最多 100 个 IP, 免费 1000/天, 需注册 key)"""
+    if not ips:
         return {}
+    url = "https://proxycheck.io/v2/?vpn=1&asn=1&risk=1&port=1&seen=1&days=7&tag=node-check"
+    if PROXYCHECK_API_KEY:
+        url += f"&key={PROXYCHECK_API_KEY}"
+    proxies = {"http": FRONT_PROXY, "https": FRONT_PROXY} if FRONT_PROXY else None
+    out = {}
+    chunk = 100
+    for i in range(0, len(ips), chunk):
+        batch = ips[i:i + chunk]
+        try:
+            r = DIRECT_SESSION.post(url, data={"ips": "\n".join(batch)},
+                                    timeout=30, proxies=proxies)
+            if r.status_code != 200:
+                continue
+            j = r.json()
+            for ip, info in j.items():
+                if not isinstance(info, dict):
+                    continue
+                ptype = (info.get("type") or "").lower()
+                out[ip] = {
+                    "is_proxy": info.get("proxy") == "yes",
+                    "is_vpn": "vpn" in ptype,
+                    "is_tor": "tor" in ptype,
+                    "is_datacenter": "hosting" in ptype or "data" in ptype or "vpn" in ptype,
+                    "is_abuser": info.get("risk", 0) > 50,
+                    "risk_score": info.get("risk", 0),
+                    "company": info.get("organisation") or info.get("provider") or "",
+                    "asn": info.get("asn") or "",
+                    "country": info.get("isocode") or "",
+                }
+        except Exception:
+            continue
+    return out
 
 
 def classify_and_export(test_results: list):
@@ -1896,6 +2055,7 @@ def classify_and_export(test_results: list):
             "mitm_risk": r["mitm_risk"],
             "is_stalled": r["is_stalled"],
             "is_warp": r.get("is_warp", False),
+            "tiktok_ok": r.get("tiktok_ok", False),
         })
 
     if country_reader:
@@ -1922,36 +2082,42 @@ def classify_and_export(test_results: list):
         got = sum(1 for v in scam_scores.values() if v >= 0)
         print(f"[+] Scamalytics 评分获得: {got}/{len(scam_candidates)}")
 
-    ipapi_verify = {}
-    verify_candidates = set()
+    # 风控核验: 优先 ip-api.com 批量数据 (proxy/hosting 字段), 本地 TLS 受限时备用
+    # ip-api.com 批量查询已包含 proxy/hosting 布尔值, 无需额外 API
+    pc_verify = {}
+    risk_dropped = 0
     for n in safe_nodes:
-        if n["net_type"] in ("residential", "mobile") and n["exit_ip"]:
-            verify_candidates.add(n["exit_ip"])
-    if verify_candidates:
-        print(f"[*] ipapi.is 交叉核验: {len(verify_candidates)} 个家宽候选 ...")
-        def _verify(ip):
-            return ip, ipapi_is_verify(ip)
-        with ThreadPoolExecutor(max_workers=4) as ex:
-            for ip, info in ex.map(_verify, verify_candidates):
-                ipapi_verify[ip] = info
-        vetoed = 0
-        for n in safe_nodes:
-            if n["net_type"] not in ("residential", "mobile"):
-                continue
-            info = ipapi_verify.get(n["exit_ip"]) or {}
-            comp_asn = (info.get("company", "") + " " + info.get("asn", "")).lower()
-            if any(kw in comp_asn for kw in (
-                "zenlayer", "bunny", "cloudflare", "akamai", "fastly",
-                "amazon", "google llc", "microsoft", "digitalocean", "vultr",
-                "hetzner", "ovh", "contabo", "leaseweb", "datacamp",
-                "serverius", "clouvider", "m247", "gcore", "g-core",
-                "choopa", "linode", "alibaba", "tencent", "huawei cloud",
-            )):
-                n["net_type"] = "datacenter"
-                n["confidence"] = 85
-                vetoed += 1
-        if vetoed:
-            print(f"[*] ipapi.is 否决假家宽: {vetoed} 个 (云商收购家宽段伪装)")
+        info = ip_api_info.get(n["exit_ip"]) or {}
+        if info.get("proxy") or info.get("hosting"):
+            n["_risk_drop"] = True
+            risk_dropped += 1
+    if risk_dropped:
+        safe_nodes = [n for n in safe_nodes if not n.get("_risk_drop")]
+        print(f"[*] ip-api.com 风控淘汰(proxy/hosting): {risk_dropped} 个")
+
+    vetoed = 0
+    for n in safe_nodes:
+        if n["net_type"] not in ("residential", "mobile"):
+            continue
+        info = ip_api_info.get(n["exit_ip"]) or {}
+        if info.get("hosting"):
+            n["net_type"] = "datacenter"
+            n["confidence"] = 85
+            vetoed += 1
+            continue
+        comp_asn = (info.get("org", "") + " " + info.get("as", "")).lower()
+        if any(kw in comp_asn for kw in (
+            "zenlayer", "bunny", "cloudflare", "akamai", "fastly",
+            "amazon", "google llc", "microsoft", "digitalocean", "vultr",
+            "hetzner", "ovh", "contabo", "leaseweb", "datacamp",
+            "serverius", "clouvider", "m247", "gcore", "g-core",
+            "choopa", "linode", "alibaba", "tencent", "huawei cloud",
+        )):
+            n["net_type"] = "datacenter"
+            n["confidence"] = 85
+            vetoed += 1
+    if vetoed:
+        print(f"[*] 否决假家宽: {vetoed} 个 (云商收购家宽段伪装)")
 
     downgraded = 0
     for n in safe_nodes:
@@ -2113,6 +2279,25 @@ def export_all(unique_nodes, residential, non_residential):
             if os.path.exists(p):
                 os.remove(p)
 
+    # ── TikTok 专属订阅: 住宅/移动 IP + TikTok 实测可达 + fraud<60 + 速度≥500KB/s ──
+    tiktok_nodes = [n for n in unique_nodes
+                    if n["net_type"] in ("residential", "mobile")
+                    and n["confidence"] >= 70
+                    and n.get("tiktok_ok")
+                    and (n.get("fraud_score", -1) < 60)
+                    and n.get("speed_bps", 0) >= 500_000]
+    tiktok_links, tiktok_proxies, tiktok_sb = build_group(tiktok_nodes, force_res=True)
+    with open(os.path.join(OUTPUT_DIR, "tiktok.txt"), "w", encoding="utf-8") as f:
+        f.write(base64.b64encode("\n".join(tiktok_links).encode()).decode())
+    if tiktok_proxies:
+        export_clash_yaml(tiktok_proxies, os.path.join(OUTPUT_DIR, "tiktok-clash.yaml"))
+        export_singbox_json(tiktok_sb, os.path.join(OUTPUT_DIR, "tiktok-singbox.json"))
+    else:
+        for fn in ("tiktok-clash.yaml", "tiktok-singbox.json"):
+            p = os.path.join(OUTPUT_DIR, fn)
+            if os.path.exists(p):
+                os.remove(p)
+
     shutil.rmtree(COUNTRY_DIR, ignore_errors=True)
     os.makedirs(COUNTRY_DIR, exist_ok=True)
     by_cc = {}
@@ -2137,7 +2322,7 @@ def export_all(unique_nodes, residential, non_residential):
         export_clash_yaml(p, os.path.join(RESIDENTIAL_COUNTRY_DIR, f"clash-{cc}.yaml"))
         export_singbox_json(s, os.path.join(RESIDENTIAL_COUNTRY_DIR, f"singbox-{cc}.json"))
 
-    print(f"[*] 导出完毕: 全量 {len(all_links)} | 家宽 {len(res_links)}")
+    print(f"[*] 导出完毕: 全量 {len(all_links)} | 家宽 {len(res_links)} | TikTok专属 {len(tiktok_links)}")
     return len(all_links), len(res_links)
 
 
