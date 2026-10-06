@@ -5,18 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  server: hinet1.2yly.com
-  port: 24215
-  udp: true
-  type: vless
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  tls: true
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
-  server: 104.20.36.205
+  server: 172.66.152.4
   port: 443
   udp: true
   type: vless
@@ -29,6 +18,16 @@ proxies:
     path: /e8e2cecb6188f7fb
     headers:
       Host: argo6.5671234.xyz
+- name: 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
+  server: 31.77.227.6
+  port: 52006
+  udp: true
+  type: vless
+  uuid: bc659d88-a1e0-076c-a49a-7b51b26a7a7f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: bigdick.gamegrow.ru
+  skip-cert-verify: false
 - name: 🇸🇬 新加坡 (Singapore) 03 (家宽) - xiaohe
   server: s3.huhiuh.space
   port: 18642
@@ -43,7 +42,7 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
   - 🇸🇬 新加坡 (Singapore) 03 (家宽) - xiaohe
 - name: AUTO
   type: url-test
@@ -51,7 +50,7 @@ proxy-groups:
   interval: 300
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
   - 🇸🇬 新加坡 (Singapore) 03 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

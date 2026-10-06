@@ -4,37 +4,32 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇩🇪 德国 (Germany) 01 - xiaohe",
-      "server": "185.177.229.128",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 02 - xiaohe",
-      "server": "177.1.186.117",
+      "tag": "🇩🇪 德国 (Germany) 01 - xiaohe",
+      "server": "189.24.82.195",
       "server_port": 443,
-      "uuid": "55ccbeb5-0bf4-4e4d-afcb-23c038e73e00",
-      "flow": "xtls-rprx-vision",
+      "uuid": "bf7ca7a3-a028-488e-b9f1-34e467d6d897",
       "tls": {
         "enabled": true,
-        "server_name": "rcge.67resserv67.info",
+        "server_name": "itunes.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Dx2F6ThyTXQpu07q1cECPCWBpQwWGNWy1WecyCI7ejA",
-          "short_id": "29455a3a790acbd0"
+          "public_key": "oXHb-GX9ExLRs-CcFwllm6zp99jpx7yAdxrvAV1sZ18",
+          "short_id": "3eaacc9b"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws"
       }
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 03 - xiaohe",
+      "tag": "🇩🇪 德国 (Germany) 02 - xiaohe",
       "server": "212.100.171.154",
       "server_port": 443,
       "uuid": "a5ce10af-5e95-4eb3-ab87-bf4f95cb059b",
@@ -55,28 +50,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 04 - xiaohe",
-      "server": "103.27.157.120",
-      "server_port": 443,
-      "uuid": "2412bd96-925b-43f2-81d1-0ed4f0793699",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "download.amd.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k0883nIGfstbzb8hES-dQ1yPcBwbUbnsyg4w-UA5gkA",
-          "short_id": "68aaa5222092bbea"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 05 - xiaohe",
+      "tag": "🇩🇪 德国 (Germany) 03 - xiaohe",
       "server": "82.118.19.153",
       "server_port": 443,
       "uuid": "adcaa148-7c66-4282-a81a-99ec8afa029d",
@@ -96,6 +70,39 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 04 - xiaohe",
+      "server": "162.249.126.37",
+      "server_port": 8443,
+      "password": "9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z",
+      "tls": {
+        "enabled": true,
+        "server_name": "hop-germany-september.dynuddns.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 05 - xiaohe",
+      "server": "177.1.186.117",
+      "server_port": 443,
+      "uuid": "55ccbeb5-0bf4-4e4d-afcb-23c038e73e00",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rcge.67resserv67.info",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Dx2F6ThyTXQpu07q1cECPCWBpQwWGNWy1WecyCI7ejA",
+          "short_id": "29455a3a790acbd0"
+        }
+      }
+    },
+    {
       "type": "vless",
       "tag": "🇩🇪 德国 (Germany) 06 - xiaohe",
       "server": "177.1.186.44",
@@ -107,39 +114,12 @@
         "server_name": "mcde.67resserv67.info",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
           "public_key": "4hvjCaGIMlFeWxMYoAWTNHQOaZkGvGQREOjB3Unn7iE",
           "short_id": "29455a3a790acbd0"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 德国 (Germany) 07 - xiaohe",
-      "server": "189.24.82.195",
-      "server_port": 443,
-      "uuid": "bf7ca7a3-a028-488e-b9f1-34e467d6d897",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "oXHb-GX9ExLRs-CcFwllm6zp99jpx7yAdxrvAV1sZ18",
-          "short_id": "3eaacc9b"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "itunes.apple.com"
         }
       }
     },
@@ -153,8 +133,7 @@
         "🇩🇪 德国 (Germany) 03 - xiaohe",
         "🇩🇪 德国 (Germany) 04 - xiaohe",
         "🇩🇪 德国 (Germany) 05 - xiaohe",
-        "🇩🇪 德国 (Germany) 06 - xiaohe",
-        "🇩🇪 德国 (Germany) 07 - xiaohe"
+        "🇩🇪 德国 (Germany) 06 - xiaohe"
       ]
     },
     {
@@ -166,8 +145,7 @@
         "🇩🇪 德国 (Germany) 03 - xiaohe",
         "🇩🇪 德国 (Germany) 04 - xiaohe",
         "🇩🇪 德国 (Germany) 05 - xiaohe",
-        "🇩🇪 德国 (Germany) 06 - xiaohe",
-        "🇩🇪 德国 (Germany) 07 - xiaohe"
+        "🇩🇪 德国 (Germany) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

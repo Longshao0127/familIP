@@ -25,13 +25,25 @@
       }
     },
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇯🇵 日本 (Japan) 02 - xiaohe",
-      "server": "goldcnmltyljgfwgov.vip57.wogcnmnnagfwgov.com",
-      "server_port": 11257,
-      "uuid": "605956ee-544d-308e-8b90-51e67c6ea8da",
-      "security": "auto",
-      "alter_id": 2
+      "server": "45.202.254.53",
+      "server_port": 443,
+      "uuid": "0cbb5fd1-f76b-44f5-ba6d-c1780a07290c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "kPWsR7ZqLC1gADJKZCEJYMUI3_wgWGcZYbLJvTvRMB4",
+          "short_id": "d61bf3ec8054f8de"
+        }
+      }
     },
     {
       "type": "selector",

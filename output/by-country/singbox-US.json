@@ -6,9 +6,9 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "154.12.38.159",
+      "server": "154.9.241.170",
       "server_port": 443,
-      "uuid": "12c465bd-11a3-4fd8-8aa9-19b20a883b9e",
+      "uuid": "30b98a28-ed4e-46eb-8548-54c25f4db53c",
       "tls": {
         "enabled": true,
         "server_name": "itunes.apple.com",
@@ -18,72 +18,8 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "iv4XmZKQUC4KEuMaWZxDmjJOlGEnS3rRw-Nk8h93zUU",
-          "short_id": "f61a3a8f"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "x.m-90.xyz",
-      "server_port": 443,
-      "uuid": "489f1717-d3c7-4940-ad68-bdbdbab857f4",
-      "tls": {
-        "enabled": true,
-        "server_name": "x.m-90.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "t.me/TEAMNETGRATISCOL",
-        "headers": {
-          "Host": "x.m-90.xyz"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "34.3.101.206",
-      "server_port": 443,
-      "uuid": "c64a5cfa-0fd6-4978-b062-6e89da013260",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "gateway.icloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "C4ky4RduL1cfjZ3okHXDkpD2Ns4DViMkB-mDlisBrzc",
-          "short_id": "8a17287288cf25e5"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "154.29.145.196",
-      "server_port": 443,
-      "uuid": "62fdae06-6692-4b79-8f34-470784e55fd6",
-      "tls": {
-        "enabled": true,
-        "server_name": "itunes.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0",
-          "short_id": "33b15a3e"
+          "public_key": "_E8d7s7B7xYfZImOkKmESW6MJDxwKxnsscu56jhE2EM",
+          "short_id": "3fb4e08c"
         }
       },
       "transport": {
@@ -96,7 +32,47 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "server": "38.150.33.232",
+      "server_port": 12329,
+      "uuid": "6faa980b-4a0f-4b4d-99f2-03b468da8541",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "dpG1tE9V93FM9IJeYC5-n_7RJxX7jOwrWLbQJgZpFFo",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "38.107.236.166",
+      "server_port": 8443,
+      "uuid": "48572af1-d091-457b-a86e-4a457e99927f",
+      "tls": {
+        "enabled": true,
+        "server_name": "3h-unitedstates3.09vpn.com",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "3h-unitedstates3.09vpn.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
       "server": "154.12.38.202",
       "server_port": 443,
       "uuid": "2a9ab69b-26e7-44d0-a325-e5056d849900",
@@ -123,47 +99,59 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "loky14-production.up.railway.app",
-      "server_port": 443,
-      "uuid": "0c8d75d0-515f-cbbc-efd4-534b01735653",
-      "tls": {
-        "enabled": true,
-        "server_name": "loky14-production.up.railway.app",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "172.64.42.85",
+      "server_port": 2086,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/ws/0c8d75d0-515f-cbbc-efd4-534b01735653",
+        "path": "/?ed=2560security=tls ",
         "headers": {
-          "Host": "loky14-production.up.railway.app"
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "154.9.241.170",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "154.29.145.196",
       "server_port": 443,
-      "uuid": "30b98a28-ed4e-46eb-8548-54c25f4db53c",
+      "uuid": "62fdae06-6692-4b79-8f34-470784e55fd6",
       "tls": {
         "enabled": true,
         "server_name": "itunes.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "_E8d7s7B7xYfZImOkKmESW6MJDxwKxnsscu56jhE2EM",
-          "short_id": "3fb4e08c"
+          "public_key": "h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0",
+          "short_id": "33b15a3e"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "154.12.38.159",
+      "server_port": 443,
+      "uuid": "12c465bd-11a3-4fd8-8aa9-19b20a883b9e",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iv4XmZKQUC4KEuMaWZxDmjJOlGEnS3rRw-Nk8h93zUU",
+          "short_id": "f61a3a8f"
         }
       },
       "transport": {
@@ -175,25 +163,55 @@
       }
     },
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "129.153.71.28",
-      "server_port": 28863,
-      "uuid": "6642b81e-8b9d-4f9c-b0ab-e26f72cc5c0e",
+      "server": "dog-us.kunlun01dns.com",
+      "server_port": 21010,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "155.117.19.17",
+      "server_port": 443,
+      "password": "5fa748137b6d822308eea4611f474ad5",
       "tls": {
         "enabled": true,
-        "server_name": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev",
-        "insecure": false,
+        "server_name": "www.bing.com",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "a39ca173b57ac7021b08bf3e3de9f1f6"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "server": "dog-us.kunlun01dns.com",
+      "server_port": 21009,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 11 - xiaohe",
+      "server": "jumpernode.online",
+      "server_port": 443,
+      "uuid": "ce7beb9a-5dc1-47b3-b3ff-94521430c446",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yp.amazon.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sDKrtAJk2VP_w1w7cFi2O86RdlvQ2E2An5xsRdJlgGE",
+          "short_id": "5ea30fc4"
         }
       }
     },
@@ -209,7 +227,10 @@
         "🇺🇸 美国 (United States) 05 - xiaohe",
         "🇺🇸 美国 (United States) 06 - xiaohe",
         "🇺🇸 美国 (United States) 07 - xiaohe",
-        "🇺🇸 美国 (United States) 08 - xiaohe"
+        "🇺🇸 美国 (United States) 08 - xiaohe",
+        "🇺🇸 美国 (United States) 09 - xiaohe",
+        "🇺🇸 美国 (United States) 10 - xiaohe",
+        "🇺🇸 美国 (United States) 11 - xiaohe"
       ]
     },
     {
@@ -223,7 +244,10 @@
         "🇺🇸 美国 (United States) 05 - xiaohe",
         "🇺🇸 美国 (United States) 06 - xiaohe",
         "🇺🇸 美国 (United States) 07 - xiaohe",
-        "🇺🇸 美国 (United States) 08 - xiaohe"
+        "🇺🇸 美国 (United States) 08 - xiaohe",
+        "🇺🇸 美国 (United States) 09 - xiaohe",
+        "🇺🇸 美国 (United States) 10 - xiaohe",
+        "🇺🇸 美国 (United States) 11 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
