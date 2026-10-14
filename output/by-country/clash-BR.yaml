@@ -5,6 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇷 巴西 (Brazil) 01 - xiaohe
+  server: 147.15.23.247
+  port: 20000
+  udp: true
+  type: hysteria2
+  password: CyG0RFxMjzs41uQD4OLuHQ==
+  sni: rmgyvpn.rest
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: CyG0RFxMjzs41uQD4OLuHQ==
+- name: 🇧🇷 巴西 (Brazil) 02 - xiaohe
   server: 35.199.90.53
   port: 443
   udp: true
@@ -22,11 +32,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇧🇷 巴西 (Brazil) 01 - xiaohe
+  - 🇧🇷 巴西 (Brazil) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 巴西 (Brazil) 01 - xiaohe
+  - 🇧🇷 巴西 (Brazil) 02 - xiaohe
 rules:
 - MATCH,PROXIES
