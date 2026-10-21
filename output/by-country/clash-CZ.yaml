@@ -25,7 +25,7 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇨🇿 捷克 (Czech) 03 - xiaohe
-  server: server.slavkiti.monster
+  server: 193.124.17.190
   port: 443
   udp: true
   type: vless
@@ -36,7 +36,7 @@ proxies:
     public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
     short-id: ee1716767f9b
   servername: www.tradingview.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
