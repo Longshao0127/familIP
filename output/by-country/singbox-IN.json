@@ -6,20 +6,6 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 01 - xiaohe",
-      "server": "13.140.56.100",
-      "server_port": 14430,
-      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
-      "transport": {
-        "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "13.140.56.100"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇳 印度 (India) 02 - xiaohe",
       "server": "194.61.31.126",
       "server_port": 2053,
       "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
@@ -39,6 +25,20 @@
     },
     {
       "type": "vless",
+      "tag": "🇮🇳 印度 (India) 02 - xiaohe",
+      "server": "13.140.56.100",
+      "server_port": 14430,
+      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "13.140.56.100"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇮🇳 印度 (India) 03 - xiaohe",
       "server": "165.99.222.161",
       "server_port": 443,
@@ -49,7 +49,7 @@
         "server_name": "in1.vkusnews.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -67,8 +67,9 @@
       "security": "auto",
       "transport": {
         "type": "ws",
+        "path": "/",
         "headers": {
-          "Host": "in-152.67.8.205-0202"
+          "Host": "in-152.67.8.205-0250"
         }
       }
     },
