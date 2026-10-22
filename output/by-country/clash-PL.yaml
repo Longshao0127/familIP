@@ -6,49 +6,50 @@ log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - xiaohe
   server: 217.30.10.44
+  port: 9042
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: S7KwUu7yBy58S3Ga
+- name: 🇵🇱 波兰 (Poland) 02 - xiaohe
+  server: 217.30.10.44
   port: 9062
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: tkhHVxxfM2QErBWe
-- name: 🇵🇱 波兰 (Poland) 02 - xiaohe
-  server: 31.133.0.186
+- name: 🇵🇱 波兰 (Poland) 03 - xiaohe
+  server: 217.30.10.44
+  port: 9063
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: aQqJbtwFGcCCaeL3
+- name: 🇵🇱 波兰 (Poland) 04 - xiaohe
+  server: pl2.dedushka.top
   port: 443
   udp: true
   type: trojan
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl2.dedushka.top
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 03 - xiaohe
-  server: 54.37.131.126
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇵🇱 波兰 (Poland) 04 - xiaohe
-  server: 31.133.0.182
+- name: 🇵🇱 波兰 (Poland) 05 - xiaohe
+  server: pl1.dedushka.top
   port: 443
   udp: true
   type: trojan
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   sni: pl1.dedushka.top
   skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 05 - xiaohe
-  server: 92.118.150.146
-  port: 443
-  udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: pl.tronsg.com
-  skip-cert-verify: false
 - name: 🇵🇱 波兰 (Poland) 06 - xiaohe
+  server: 78.17.128.153
+  port: 35076
+  udp: true
+  type: hysteria2
+  password: b4c8ee9caa74b7ba0a61
+  sni: scrap.halyvanedorogo.ru
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 07 - xiaohe
   server: 144.31.0.140
   port: 443
   udp: true
@@ -61,35 +62,27 @@ proxies:
     short-id: 7271129440ade8fa
   servername: api.sakhalin.fyi
   client-fingerprint: firefox
-- name: 🇵🇱 波兰 (Poland) 07 - xiaohe
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 - name: 🇵🇱 波兰 (Poland) 08 - xiaohe
-  server: 62.152.58.90
+  server: 92.118.150.146
   port: 443
   udp: true
-  type: vless
-  uuid: 1bb2af63-4472-44ed-9c70-8f316258b68b
-  tls: true
-  reality-opts:
-    public-key: JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k
-    short-id: 27e53bbcab7593d7
-  servername: 360.yandex.ru
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
+  type: trojan
+  password: Trojan@82164024
+  sni: pl.tronsg.com
+  skip-cert-verify: false
 - name: 🇵🇱 波兰 (Poland) 09 - xiaohe
-  server: site.teslamotor.site
-  port: 20001
+  server: 78.17.171.137
+  port: 443
   udp: true
-  type: vless
-  uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+  type: trojan
+  password: u93yPGuY2zgIsisJZKS2QzJzg
+  sni: 2.HI-L.IM
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /f2fc2a1f
 - name: 🇵🇱 波兰 (Poland) 10 - xiaohe
-  server: 2.26.225.89
+  server: pl.flen-vpn.xyz
   port: 8443
   udp: true
   type: vless
@@ -97,6 +90,19 @@ proxies:
   tls: true
   servername: pl.flen-vpn.xyz
   skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 11 - xiaohe
+  server: 54.37.131.126
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
@@ -112,6 +118,7 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 08 - xiaohe
   - 🇵🇱 波兰 (Poland) 09 - xiaohe
   - 🇵🇱 波兰 (Poland) 10 - xiaohe
+  - 🇵🇱 波兰 (Poland) 11 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -127,5 +134,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 08 - xiaohe
   - 🇵🇱 波兰 (Poland) 09 - xiaohe
   - 🇵🇱 波兰 (Poland) 10 - xiaohe
+  - 🇵🇱 波兰 (Poland) 11 - xiaohe
 rules:
 - MATCH,PROXIES
