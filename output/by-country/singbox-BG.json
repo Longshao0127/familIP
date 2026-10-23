@@ -15,9 +15,9 @@
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 02 - xiaohe",
       "server": "213.183.63.60",
-      "server_port": 9054,
+      "server_port": 9064,
       "method": "aes-256-cfb",
-      "password": "VcFuyXvND2yQWSFY"
+      "password": "cp8pRSUAyLhTfVWH"
     },
     {
       "type": "shadowsocks",
@@ -31,9 +31,9 @@
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe",
       "server": "213.183.63.60",
-      "server_port": 9064,
+      "server_port": 9054,
       "method": "aes-256-cfb",
-      "password": "cp8pRSUAyLhTfVWH"
+      "password": "VcFuyXvND2yQWSFY"
     },
     {
       "type": "selector",

@@ -6,12 +6,21 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 01 - xiaohe",
-      "server": "13.140.56.100",
-      "server_port": 14430,
-      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
-      "transport": {
-        "type": "ws",
-        "path": "/vless"
+      "server": "194.61.31.126",
+      "server_port": 2053,
+      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
+          "short_id": "9980e0609b0d3891"
+        }
       }
     },
     {
@@ -28,26 +37,38 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 03 - xiaohe",
-      "server": "194.61.31.126",
-      "server_port": 2053,
-      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
+      "server": "165.99.222.161",
+      "server_port": 443,
+      "uuid": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "in1.vkusnews.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
-          "short_id": "9980e0609b0d3891"
+          "public_key": "SC6AnZ_BlvDruiGFpDRno9b1V3wMmq9gjB-KEHHUlE4",
+          "short_id": ""
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 04 - xiaohe",
+      "server": "13.140.56.100",
+      "server_port": 14430,
+      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
+      "transport": {
+        "type": "ws",
+        "path": "/vless"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 05 - xiaohe",
       "server": "in.smrtai.top",
       "server_port": 443,
       "uuid": "6bdc8320-7eae-46fc-be08-f5f54e65dfc8",
@@ -67,7 +88,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇮🇳 印度 (India) 05 - xiaohe",
+      "tag": "🇮🇳 印度 (India) 06 - xiaohe",
       "server": "172.105.39.124",
       "server_port": 7002,
       "method": "aes-256-gcm",
@@ -75,7 +96,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇮🇳 印度 (India) 06 - xiaohe",
+      "tag": "🇮🇳 印度 (India) 07 - xiaohe",
       "server": "139.84.166.47",
       "server_port": 8388,
       "method": "aes-256-gcm",
@@ -91,7 +112,8 @@
         "🇮🇳 印度 (India) 03 - xiaohe",
         "🇮🇳 印度 (India) 04 - xiaohe",
         "🇮🇳 印度 (India) 05 - xiaohe",
-        "🇮🇳 印度 (India) 06 - xiaohe"
+        "🇮🇳 印度 (India) 06 - xiaohe",
+        "🇮🇳 印度 (India) 07 - xiaohe"
       ]
     },
     {
@@ -103,7 +125,8 @@
         "🇮🇳 印度 (India) 03 - xiaohe",
         "🇮🇳 印度 (India) 04 - xiaohe",
         "🇮🇳 印度 (India) 05 - xiaohe",
-        "🇮🇳 印度 (India) 06 - xiaohe"
+        "🇮🇳 印度 (India) 06 - xiaohe",
+        "🇮🇳 印度 (India) 07 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
