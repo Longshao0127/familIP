@@ -5,12 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 波兰 (Poland) 01 - xiaohe
-  server: 217.30.10.44
-  port: 9042
+  server: 78.17.128.153
+  port: 35076
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: S7KwUu7yBy58S3Ga
+  type: hysteria2
+  password: b4c8ee9caa74b7ba0a61
+  sni: scrap.halyvanedorogo.ru
+  skip-cert-verify: true
 - name: 🇵🇱 波兰 (Poland) 02 - xiaohe
   server: 82.118.22.161
   port: 443
@@ -25,13 +26,18 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: ''
 - name: 🇵🇱 波兰 (Poland) 03 - xiaohe
-  server: scrap.halyvanedorogo.ru
-  port: 35076
+  server: 54.37.131.126
+  port: 80
   udp: true
-  type: hysteria2
-  password: b4c8ee9caa74b7ba0a61
-  sni: scrap.halyvanedorogo.ru
-  skip-cert-verify: true
+  type: vmess
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 proxy-groups:
 - name: PROXIES
   type: select
