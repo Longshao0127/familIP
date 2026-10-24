@@ -2692,6 +2692,19 @@ export default {{
 # 主流程
 # ═══════════════════════════════════════════N═══════════════════════
 
+def _write_diag(stage, **info):
+    """把关键阶段计数写入 output/_run_diag.txt (会被 Actions commit 上去, 便于无权限时排查)"""
+    try:
+        ensure_directories()
+        payload = {"time": datetime.now(timezone.utc).isoformat(), "stage": stage,
+                   "platform": sys.platform, **info}
+        with open(os.path.join(OUTPUT_DIR, "_run_diag.txt"), "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2, default=str)
+        print(f"[diag] {stage} → {json.dumps(info, ensure_ascii=False, default=str)[:500]}")
+    except Exception as e:
+        print(f"[diag] 写入失败: {e}")
+
+
 def main():
     import traceback as _tb
     try:
@@ -2701,6 +2714,7 @@ def main():
         print(f"❌ main() 致命崩溃: {e}")
         print(f"{'='*60}")
         _tb.print_exc()
+        _write_diag("crash", error=str(e), traceback=_tb.format_exc()[-3000:])
         sys.exit(1)
 
 
@@ -2789,13 +2803,18 @@ def _main_body():
 
     if not candidates:
         print("[!] 无可测节点 (订阅源全部失效?) — 保留上次 output, 不覆盖订阅文件")
+        _write_diag("no_candidates", raw_fetched=len(raw_nodes), parse_fail=parse_fail)
         return
 
     # 3. 端口预检
+    pre_before = len(candidates)
     candidates = prefilter_candidates(candidates)
+    _write_diag("after_prefilter", before=pre_before, after=len(candidates),
+                front_proxy=bool(os.environ.get("FRONT_PROXY", "").strip()))
 
     # 4. 真实测活 (只测去重后的代表节点)
     test_results = run_liveness_test(candidates)
+    _write_diag("after_liveness", tested=len(candidates), alive=len(test_results))
 
     # 4.5 ★ 重复节点结果回填: 同 凭据+目标 的重复 URI 继承测活结果 (凭据相同 → 服务端表现一致)
     if DEDUP_MAP:
@@ -2830,14 +2849,18 @@ def _main_body():
     # 6. 分类 + 导出 (无真活节点时保留上次 output, 不写空订阅覆盖线上数据)
     if not test_results:
         print("[!] 全部节点测活失败 — 保留上次 output, 不覆盖订阅文件")
+        _write_diag("all_dead", tested=len(candidates), front_proxy=bool(os.environ.get("FRONT_PROXY", "").strip()))
         return
     unique_nodes, residential, non_residential = classify_and_export(test_results)
     if not unique_nodes:
         print("[!] 分类后无存活节点 — 保留上次 output")
+        _write_diag("no_unique", test_results=len(test_results))
         return
     total, res = export_all(unique_nodes, residential, non_residential)
     tiktok_cnt = export_tiktok(unique_nodes)
     update_readme(total, res, tiktok_cnt)
+    _write_diag("ok", total=total, residential=res, tiktok=tiktok_cnt,
+                elapsed=round(time.time() - t_start, 1))
 
 
     # 统计报告
