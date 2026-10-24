@@ -1,6 +1,9 @@
 name: Update Subscriptions
 
 on:
+  push:
+    branches: [main]
+    paths: ['scripts/**', '.github/workflows/update.yml']
   schedule:
     # 每天在 UTC 时间 0:00, 6:00, 12:00, 18:00 自动触发更新
     - cron: '0 */6 * * *'
