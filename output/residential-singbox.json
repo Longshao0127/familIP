@@ -4,33 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe",
-      "server": "56481.df6h451rh.xin",
-      "server_port": 443,
-      "password": "0324fbc29561",
-      "tls": {
-        "enabled": true,
-        "server_name": "images.ctfassets.net",
-        "insecure": true,
-        "alpn": [
-          "http/1.1"
-        ]
-      }
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) R50 - xiaohe",
+      "server": "23.160.56.99",
+      "server_port": 2087,
+      "uuid": "f1e7eafa-0d6f-441e-8565-29f34171aef2"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe"
+        "🇺🇸 美国 (United States) 01 (家宽) R50 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe"
+        "🇺🇸 美国 (United States) 01 (家宽) R50 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -37,24 +37,15 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
-      "server": "50.7.44.28",
-      "server_port": 2091,
-      "uuid": "76b6a658-ce80-4500-b24d-404c94639ac6",
-      "flow": "xtls-rprx-vision",
+      "server": "202.146.222.174",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k",
-          "short_id": "08a4b1f473932632"
-        }
+        "server_name": "https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3",
+        "insecure": true
       }
     },
     {
@@ -86,69 +77,29 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2üá",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
-      "server": "202.146.222.174",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "https%3a%2f%2ft.me%2fwangcai2",
-        "insecure": true
-      }
-    },
-    {
-      "type": "anytls",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe",
-      "server": "svip.skycon808.com",
-      "server_port": 24318,
-      "password": "87c6ad7b-e450-44a8-8088-bc2234d43de1",
-      "tls": {
-        "enabled": true,
-        "server_name": "hk08.jdddyy01.cc",
+        "server_name": "css.rbxcdn.com",
         "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe",
-      "server": "45.39.198.205",
-      "server_port": 8443,
-      "uuid": "4a3d18d7-dfbe-4077-986a-6b145e417568",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
+      "server": "50.7.252.50",
+      "server_port": 2091,
+      "uuid": "76b6a658-ce80-4500-b24d-404c94639ac6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "pOOWxG69IvNxQyZUtd4QDK0KEtFHVsjC-m5-zcsi5Do",
-          "short_id": "c5b8bed4faee8363"
+          "public_key": "1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k",
+          "short_id": "08a4b1f473932632"
         }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe",
-      "server": "nas.aizhzo.com",
-      "server_port": 5010,
-      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
-      "tls": {
-        "enabled": true,
-        "server_name": "nas.aizhzo.com",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
       }
     },
     {
@@ -161,10 +112,7 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ]
     },
     {
@@ -176,10 +124,7 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
