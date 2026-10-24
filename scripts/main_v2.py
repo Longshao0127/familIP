@@ -1213,6 +1213,9 @@ def test_single_node(item, keep_alive_check=True):
                              capture_output=True, text=True, timeout=15,
                              creationflags=(subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0))
         if chk.returncode != 0:
+            _bump("check_fail")
+            if not _DIAG["err_sample"]:
+                _DIAG["err_sample"] = f"check: {(chk.stderr or '')[:300]}"
             return None  # 配置级错误 → 该节点无法被 sing-box 使用, 必淘汰
     except Exception:
         pass  # check 本身失败不阻止后续 run 尝试
@@ -1238,6 +1241,9 @@ def test_single_node(item, keep_alive_check=True):
             except Exception:
                 time.sleep(0.15)
         if not ready:
+            _bump("port_not_ready" if proc.poll() is not None else "port_not_ready_slow")
+            if proc.poll() is not None and not _DIAG["err_sample"]:
+                _DIAG["err_sample"] = f"run exited rc={proc.returncode}"
             return None
 
         proxies = {"http": f"socks5h://127.0.0.1:{socks_port}",
@@ -1245,6 +1251,7 @@ def test_single_node(item, keep_alive_check=True):
 
         # --- 1) 活性探测: 分层超时重试 (首击宽 12s 容慢节点保准确率; 重试窄 4s 快速放弃死节点) ---
         alive_hits, latency_ms = 0, 99999
+        _last_err = ""
         t0 = time.time()
         for i, url in enumerate(LIVENESS_URLS):
             timeout = PROBE_TIMEOUT if i == 0 else PROBE_RETRY_TIMEOUT
@@ -1254,9 +1261,14 @@ def test_single_node(item, keep_alive_check=True):
                     alive_hits += 1
                     latency_ms = min(latency_ms, (time.time() - t0) * 1000)
                     break  # 任一成功即可
-            except Exception:
+                _last_err = f"HTTP {r.status_code} {url}"
+            except Exception as e:
+                _last_err = f"{type(e).__name__}: {e}"[:200]
                 continue
         if alive_hits == 0:
+            _bump("liveness_fail")
+            if not _DIAG["err_sample"]:
+                _DIAG["err_sample"] = f"liveness: {_last_err}"
             return None
 
         # --- 2) 真实出口 IP (多路冗余) ---
@@ -1424,7 +1436,11 @@ def test_single_node(item, keep_alive_check=True):
             "is_tiktok_ok": is_tiktok_ok,
         }
         return result
-    except Exception:
+    except Exception as _e:
+        _bump("exception")
+        if not _DIAG["err_sample"]:
+            import traceback as _tb2
+            _DIAG["err_sample"] = f"exception: {_tb2.format_exc()[-400:]}"
         return None
     finally:
         if proc and proc.poll() is None:
@@ -2692,15 +2708,29 @@ export default {{
 # 主流程
 # ═══════════════════════════════════════════N═══════════════════════
 
+_DIAG = {"stages": [], "fail": {}, "err_sample": ""}
+
+
+def _bump(reason):
+    try:
+        _DIAG["fail"][reason] = _DIAG["fail"].get(reason, 0) + 1
+    except Exception:
+        pass
+
+
 def _write_diag(stage, **info):
-    """把关键阶段计数写入 output/_run_diag.txt (会被 Actions commit 上去, 便于无权限时排查)"""
+    """把关键阶段计数写入 output/_run_diag.txt (会被 Actions commit 上去, 便于无日志权限时排查)
+    累积所有阶段, 不在覆盖中丢失早期信息。"""
     try:
         ensure_directories()
-        payload = {"time": datetime.now(timezone.utc).isoformat(), "stage": stage,
-                   "platform": sys.platform, **info}
+        _DIAG["stages"].append({"time": datetime.now(timezone.utc).isoformat(),
+                                "stage": stage, **info})
+        _DIAG["stages"] = _DIAG["stages"][-20:]
+        payload = {"platform": sys.platform, "history": _DIAG["stages"],
+                   "node_fail_reasons": _DIAG["fail"], "err_sample": _DIAG["err_sample"]}
         with open(os.path.join(OUTPUT_DIR, "_run_diag.txt"), "w", encoding="utf-8") as f:
             json.dump(payload, f, ensure_ascii=False, indent=2, default=str)
-        print(f"[diag] {stage} → {json.dumps(info, ensure_ascii=False, default=str)[:500]}")
+        print(f"[diag] {stage} → {json.dumps(info, ensure_ascii=False, default=str)[:400]}")
     except Exception as e:
         print(f"[diag] 写入失败: {e}")
 
