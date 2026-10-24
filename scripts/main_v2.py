@@ -2768,6 +2768,16 @@ def _main_body():
 
     setup_environment()
 
+    # SOCKS 代理解析依赖 (requests 走 socks5h:// 必需) — 缺失会让所有节点误判为死
+    try:
+        import socks  # noqa: F401
+        print("[+] PySocks 就绪 (SOCKS 代理可用)")
+    except ImportError:
+        _msg = "缺少 PySocks: requests 无法用 socks5h:// 代理, 所有节点会误判死亡。请安装 requests[socks]"
+        print(f"❌ {_msg}")
+        _write_diag("missing_pysocks", error=_msg)
+        sys.exit(2)
+
     # 1. 抓取
     raw_nodes = fetch_raw_nodes()
 
