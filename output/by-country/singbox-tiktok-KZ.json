@@ -5,22 +5,21 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe",
-      "server": "83.147.18.75",
+      "tag": "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe",
+      "server": "46.8.43.125",
       "server_port": 443,
-      "uuid": "5de0c218-0138-45d8-94d2-c2c3f37a1a6d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "846cedee-2a52-4a62-a0b9-11850ead6a8b",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "kz-central.v8x2b.lol",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc",
-          "short_id": "7f1e29593aa94ad1"
+          "public_key": "ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w",
+          "short_id": ""
         }
       }
     },
@@ -29,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe"
+        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe"
+        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
