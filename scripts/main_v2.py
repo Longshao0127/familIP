@@ -2484,8 +2484,8 @@ def export_tiktok(unique_nodes):
         l, p, s = _build_group(lst)
         with open(os.path.join(COUNTRY_DIR, f"tiktok-{cc}.txt"), "w", encoding="utf-8") as f:
             f.write(base64.b64encode("\n".join(l).encode()).decode())
-        export_clash_yaml(p, os.path.join(COUNTRY_DIR, f"tiktok-clash-{cc}.yaml"))
-        export_singbox_json(s, os.path.join(COUNTRY_DIR, f"tiktok-singbox-{cc}.json"))
+        export_clash_yaml(p, os.path.join(COUNTRY_DIR, f"clash-tiktok-{cc}.yaml"))
+        export_singbox_json(s, os.path.join(COUNTRY_DIR, f"singbox-tiktok-{cc}.json"))
 
     # 统计输出
     by_type = {}
