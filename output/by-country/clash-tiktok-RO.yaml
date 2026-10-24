@@ -28,12 +28,11 @@ proxies:
   obfs: salamander
   obfs-password: c1b4086fea89914496c7e10967a419216566
 - name: 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
-  server: 154.46.31.106
-  port: 443
+  server: edge10.cyrionflare.com
+  port: 2052
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select

@@ -6,7 +6,7 @@
     {
       "type": "vless",
       "tag": "🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe",
-      "server": "51.24.209.55",
+      "server": "16.60.44.179",
       "server_port": 22223,
       "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
@@ -21,6 +21,13 @@
       "type": "vless",
       "tag": "🎵 🇮🇪 爱尔兰 (Ireland) 03(机房) - xiaohe",
       "server": "51.24.209.55",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇮🇪 爱尔兰 (Ireland) 04(机房) - xiaohe",
+      "server": "51.24.209.55",
       "server_port": 22222,
       "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
@@ -31,7 +38,8 @@
         "auto",
         "🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe",
         "🎵 🇮🇪 爱尔兰 (Ireland) 02(机房) - xiaohe",
-        "🎵 🇮🇪 爱尔兰 (Ireland) 03(机房) - xiaohe"
+        "🎵 🇮🇪 爱尔兰 (Ireland) 03(机房) - xiaohe",
+        "🎵 🇮🇪 爱尔兰 (Ireland) 04(机房) - xiaohe"
       ]
     },
     {
@@ -40,7 +48,8 @@
       "outbounds": [
         "🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe",
         "🎵 🇮🇪 爱尔兰 (Ireland) 02(机房) - xiaohe",
-        "🎵 🇮🇪 爱尔兰 (Ireland) 03(机房) - xiaohe"
+        "🎵 🇮🇪 爱尔兰 (Ireland) 03(机房) - xiaohe",
+        "🎵 🇮🇪 爱尔兰 (Ireland) 04(机房) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

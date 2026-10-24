@@ -5,21 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
-  server: 128.241.25.11
-  port: 30021
-  udp: true
-  type: vless
-  uuid: 72fbb611-628d-4afa-8198-bda3e38021f9
-  tls: true
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-- name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   server: 185.253.116.33
   port: 14430
   udp: true
@@ -28,7 +13,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
+- name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   server: 130.49.161.70
   port: 443
   udp: true
@@ -38,22 +23,7 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  server: 57.129.52.47
-  port: 52014
-  udp: true
-  type: vless
-  uuid: ecc4675b-1607-4699-8b20-23af97b671af
-  tls: true
-  servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-- name: 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
+- name: 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   server: 84.235.244.108
   port: 22573
   udp: true
@@ -64,6 +34,17 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
+- name: 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
+  server: 95.174.68.188
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 95.174.68.188
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,7 +54,6 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -83,6 +63,5 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
 rules:
 - MATCH,PROXIES
