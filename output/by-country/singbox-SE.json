@@ -4,25 +4,30 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) R50 - xiaohe",
-      "server": "23.160.56.99",
-      "server_port": 2087,
-      "uuid": "f1e7eafa-0d6f-441e-8565-29f34171aef2"
+      "type": "hysteria2",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 - xiaohe",
+      "server": "promo.betust.net",
+      "server_port": 443,
+      "password": "d4ca9415f0eac7897472e1e5b86d2e96",
+      "tls": {
+        "enabled": true,
+        "server_name": "promo.betust.net",
+        "insecure": false
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) R50 - xiaohe"
+        "🇸🇪 瑞典 (Sweden) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) R50 - xiaohe"
+        "🇸🇪 瑞典 (Sweden) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

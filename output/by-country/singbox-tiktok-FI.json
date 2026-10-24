@@ -6,21 +6,25 @@
     {
       "type": "vless",
       "tag": "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-      "server": "95.216.27.15",
-      "server_port": 2053,
-      "uuid": "1c81f6d3-5771-4c5d-9fdd-1655eff50634",
+      "server": "2.29.101.158",
+      "server_port": 443,
+      "uuid": "9a0e84f8-4b58-477f-99da-5fac5a2e58e8",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
+        "server_name": "36a466g.fi1.h1clayd.click",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM",
-          "short_id": "d368b94e275ab080"
+          "public_key": "pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg",
+          "short_id": "b3c9d0c6bdd114a6"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "0adb9638509b"
       }
     },
     {

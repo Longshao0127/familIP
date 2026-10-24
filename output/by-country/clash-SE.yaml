@@ -4,28 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇨🇳 CN 01 - xiaohe
-  server: 120.48.133.162
-  port: 10086
+- name: 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+  server: promo.betust.net
+  port: 443
   udp: true
-  type: vmess
-  uuid: a01e5d56-464f-45b9-b600-164db4700162
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  type: hysteria2
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇨🇳 CN 01 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇨🇳 CN 01 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
 rules:
 - MATCH,PROXIES

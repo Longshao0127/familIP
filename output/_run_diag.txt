@@ -2,30 +2,30 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-10-24T06:26:34.582819+00:00",
+      "time": "2026-10-24T10:42:11.603216+00:00",
       "stage": "after_prefilter",
-      "before": 3192,
-      "after": 3192,
+      "before": 3176,
+      "after": 3176,
       "front_proxy": false
     },
     {
-      "time": "2026-10-24T06:31:10.050728+00:00",
+      "time": "2026-10-24T10:46:53.270296+00:00",
       "stage": "after_liveness",
-      "tested": 3192,
-      "alive": 625
+      "tested": 3176,
+      "alive": 547
     },
     {
-      "time": "2026-10-24T06:35:09.647035+00:00",
+      "time": "2026-10-24T10:51:10.471103+00:00",
       "stage": "ok",
-      "total": 414,
-      "residential": 2,
-      "tiktok": 382,
-      "elapsed": 535.5
+      "total": 372,
+      "residential": 1,
+      "tiktok": 333,
+      "elapsed": 557.9
     }
   ],
   "node_fail_reasons": {
-    "liveness_fail": 2510,
-    "check_fail": 58
+    "check_fail": 55,
+    "liveness_fail": 2574
   },
-  "err_sample": "liveness: ConnectionError: SOCKSHTTPConnectionPool(host='connectivitycheck.gstatic.com', port=80): Max retries exceeded with url: /generate_204 (Caused by NewConnectionError(\"SOCKSConnection(host='connectivityc"
+  "err_sample": "check: \u001b[31mFATAL\u001b[0m[0000] initialize outbound[0]: unknown uTLS fingerprint: unsafe\n"
 }
