@@ -500,12 +500,26 @@ def setup_environment():
     os.makedirs(RUNTIME_DIR, exist_ok=True)
 
     # --- sing-box ---
+    import platform as _platform
     exe = SINGBOX_BIN + (".exe" if os.name == "nt" else "")
     if not os.path.exists(exe) or os.path.getsize(exe) < 1024:
-        system = "windows" if os.name == "nt" else "linux"
+        # sys.platform 比 os.name 更准确: darwin / linux / win32
+        _pf = sys.platform
+        if _pf.startswith("darwin"):
+            system = "darwin"
+        elif _pf.startswith("linux"):
+            system = "linux"
+        elif _pf.startswith("win"):
+            system = "windows"
+        else:
+            system = "linux"  # 兜底
+        # 架构: arm64 (M1/M2/M3 Mac) 或 amd64
+        _machine = _platform.machine()
+        arch = "arm64" if _machine in ("arm64", "aarch64") else "amd64"
         ext = "zip" if system == "windows" else "tar.gz"
         url = (f"https://github.com/SagerNet/sing-box/releases/download/"
-               f"{SINGBOX_VERSION}/sing-box-{SINGBOX_VERSION.lstrip('v')}-{system}-amd64.{ext}")
+               f"{SINGBOX_VERSION}/sing-box-{SINGBOX_VERSION.lstrip('v')}-{system}-{arch}.{ext}")
+        print(f"[*] 下载 sing-box: system={system}, arch={arch}, url={url}")
         archive = os.path.join(RUNTIME_DIR, f"sing-box.{ext}")
         download_file(url, archive)
         if system == "windows":
@@ -2679,9 +2693,35 @@ export default {{
 # ═══════════════════════════════════════════N═══════════════════════
 
 def main():
+    import traceback as _tb
+    try:
+        _main_body()
+    except Exception as e:
+        print(f"\n{'='*60}")
+        print(f"❌ main() 致命崩溃: {e}")
+        print(f"{'='*60}")
+        _tb.print_exc()
+        sys.exit(1)
+
+
+def _main_body():
     t_start = time.time()
     print(f"==== 免费节点测活订阅池 v2 · 启动于 {datetime.now(timezone.utc).isoformat()} ====")
     ensure_directories()
+
+    # 清空旧 output (防上次假数据/mock 残留干扰)
+    import shutil as _shutil
+    for _entry in os.listdir(OUTPUT_DIR):
+        _path = os.path.join(OUTPUT_DIR, _entry)
+        try:
+            if os.path.isdir(_path):
+                _shutil.rmtree(_path)
+            else:
+                os.remove(_path)
+        except OSError:
+            pass
+    print("[*] 已清空旧 output/")
+
     setup_environment()
 
     # 1. 抓取
