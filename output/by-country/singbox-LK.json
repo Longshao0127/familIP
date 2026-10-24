@@ -29,11 +29,12 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "ws",
+        "path": "/",
         "headers": {
           "Host": "free.sahanwickramasinghe.me"
         }

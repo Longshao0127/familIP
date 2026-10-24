@@ -4,29 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe",
-      "server": "83.147.18.75",
-      "server_port": 443,
-      "uuid": "5de0c218-0138-45d8-94d2-c2c3f37a1a6d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc",
-          "short_id": "7f1e29593aa94ad1"
-        }
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇺🇦 乌克兰 (Ukraine) 02 - xiaohe",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe",
       "server": "staging.lastilhame.monster",
       "server_port": 49917,
       "method": "chacha20-ietf-poly1305",
@@ -34,7 +13,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇦 乌克兰 (Ukraine) 03 - xiaohe",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 02 - xiaohe",
       "server": "netx.smrtai.top",
       "server_port": 443,
       "uuid": "d8b58872-cc25-4bb2-badb-b86399c075fa",
@@ -54,14 +33,35 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇦 乌克兰 (Ukraine) 04 - xiaohe",
-      "server": "104.253.216.227",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 03 - xiaohe",
+      "server": "83.147.18.75",
       "server_port": 443,
-      "uuid": "de38389f-5651-4f2f-8276-5aabf3b861c9",
+      "uuid": "5de0c218-0138-45d8-94d2-c2c3f37a1a6d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.hollywoodreporter.com",
+        "server_name": "www.bing.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc",
+          "short_id": "7f1e29593aa94ad1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 04 - xiaohe",
+      "server": "104.253.216.227",
+      "server_port": 443,
+      "uuid": "317bc783-340f-453c-afb5-b6bf637c0b23",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tradingview.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -69,7 +69,7 @@
         "reality": {
           "enabled": true,
           "public_key": "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg",
-          "short_id": "225e930cfd4d"
+          "short_id": "fc994ae7eb10"
         }
       }
     },
