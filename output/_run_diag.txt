@@ -1,7 +1,29 @@
 {
-  "time": "2026-10-24T03:53:06.823160+00:00",
-  "stage": "all_dead",
   "platform": "linux",
-  "tested": 3175,
-  "front_proxy": false
+  "history": [
+    {
+      "time": "2026-10-24T04:00:10.805279+00:00",
+      "stage": "after_prefilter",
+      "before": 3175,
+      "after": 3175,
+      "front_proxy": false
+    },
+    {
+      "time": "2026-10-24T04:02:16.830970+00:00",
+      "stage": "after_liveness",
+      "tested": 3175,
+      "alive": 0
+    },
+    {
+      "time": "2026-10-24T04:02:16.831699+00:00",
+      "stage": "all_dead",
+      "tested": 3175,
+      "front_proxy": false
+    }
+  ],
+  "node_fail_reasons": {
+    "liveness_fail": 3113,
+    "check_fail": 61
+  },
+  "err_sample": "liveness: InvalidSchema: Missing dependencies for SOCKS support."
 }
