@@ -53,18 +53,23 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
-    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
+    # ══ 主要活跃订阅源 (GitHub raw) ═══════════════════════════
+    "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria",
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
-    "https://raw.githubusercontent.com/freefq/free/master/v2",
-    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
+    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
+    "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/v2ray-base64-TW.txt",
+    "https://raw.githubusercontent.com/ermao233/v2ray/main/v2",
     "https://www.ermao.net/sub/v2ray/ermao.net",
-    "https://raw.githubusercontent.com/ishalumi/proxy-node-collector/main/output/nodes_base64.txt",
+    # ══ 偏家宽/住宅 IP 的源 (免费池里收真实家宽的极少, 多抓总会有) ══
+    "https://raw.githubusercontent.com/peasontxx/free/main/sub",
+    "https://raw.githubusercontent.com/peasontxx/Pea-V2Ray/main/sub",
+    "https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray",
+    # ══ 备用源 (失败不致命) ══════════════════════════════════════
     "https://gist.githubusercontent.com/shuaidaoya/9e5cf2749c0ce79932dd9229d9b4162b/raw/base64.txt",
-    "https://shadowmere.akiel.dev/api/b64sub/",
+    "https://raw.githubusercontent.com/AiNi123/Free/main/v2ray.txt",
+    "https://raw.githubusercontent.com/Barabama/Free-nodes/main/sub",
 ]
 
 OUTPUT_DIR = "output"
@@ -1060,6 +1065,10 @@ def knock_port(server: str, port: int, protocol_type: str) -> bool:
 def prefilter_candidates(candidates: list) -> list:
     """端口预检: 通过者优先, 未通过者降级保留 (防止本地网络/GFW 视角误杀;
     真正生死由阶段B sing-box 全流程测活裁决 — Actions 海外视角)"""
+    # ★ 前置代理场景下跳过直连预检: 本地直连被 GFW 拦截 → 预检全假死, 无参考价值
+    if os.environ.get("FRONT_PROXY", "").strip():
+        print(f"[*] FRONT_PROXY 已启用, 跳过直连端口预检 (预检视角不准, 全靠 sing-box 真实链路)")
+        return candidates
     print(f"[*] 端口预检 (TCP {PORT_KNOCK_TIMEOUT}s): {len(candidates)} 候选 ...")
     passed, deferred = [], []
 
@@ -1127,8 +1136,27 @@ def build_test_config(outbound: dict, socks_port: int, chain_relay: dict = None)
             node["detour"] = "front-proxy"
             print_once("_FRONT_ENABLED", f"[*] 前置代理已启用: {front} (模拟 CI 海外视角)")
 
+    # ══ DNS 配置 (大陆本地环境防 GFW 污染) ═══════════════════════════════
+    # sing-box 默认用系统 DNS, 大陆环境被污染 → 即使 FRONT_PROXY 转发 TCP,
+    # 域名解析到假 IP 还是失败。解决: 强制用 Cloudflare DoH, 且 detour 走前置代理。
+    # 注意: DNS detour 只看 FRONT_PROXY (chain_relay 是 node 的 detour, 不影响 sing-box 进程 DNS 需求)
+    has_front_proxy = bool(front)
+    dns_servers = [{"tag": "remote-doh", "address": "https://1.1.1.1/dns-query"}]
+    if has_front_proxy:
+        dns_servers[0]["detour"] = "front-proxy"
+    dns_servers.append({"tag": "local", "address": "local"})
+    dns_config = {
+        "servers": dns_servers,
+        "rules": [
+            {"outbound": "any", "server": "remote-doh", "disable_cache": True},
+        ],
+        "final": "remote-doh",
+        "strategy": "ipv4_only",
+    }
+
     config = {
         "log": {"level": "warn"},   # 实测: silent 不是合法级别 (trace/debug/info/warn/error/fatal/panic)
+        "dns": dns_config,
         "inbounds": [{
             "type": "socks",
             "tag": "socks-in",
@@ -1317,6 +1345,59 @@ def test_single_node(item, keep_alive_check=True):
         # 断流判定: 连 70KB/s 都达不到 → 断流/极慢, 真实不可用
         is_stalled = speed_bps < SPEED_MIN_BYTES_PER_S
 
+        # --- 5) TikTok 纯净度检测: 经代理访问 TikTok, 判断节点出口是否可用 TikTok ---
+        # TikTok 风控极严: 机房/CDN IP 大量被封, 只有家宽/原生 IP 能正常访问
+        # 检测维度:
+        #   a. HTTP 200/302 (302 是跳转登录页, 仍算可用)
+        #   b. 响应体不含 "unsupported region" / "geographic restriction" / "not available in your area"
+        #   c. 重定向 Location 不含 geo/block/restrict 封锁特征
+        #   d. 出口国家不在 TikTok 明确封锁区 (伊朗/朝鲜/俄罗斯等)
+        is_tiktok_ok = False
+        try:
+            tiktok_resp = PROBE_SESSION.get(
+                "https://www.tiktok.com/",
+                proxies=proxies, timeout=PROBE_RETRY_TIMEOUT,
+                headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                         "Accept-Language": "en-US,en;q=0.9",
+                         "Referer": "https://www.tiktok.com/"},
+                allow_redirects=False,
+            )
+            status = tiktok_resp.status_code
+            body = (tiktok_resp.text or "")[:2000].lower()
+            loc = (tiktok_resp.headers.get("Location") or "").lower()
+
+            # 封锁特征判断
+            blocked_patterns = (
+                "unsupported region", "geographic restriction",
+                "not available", "geo-block", "regional restriction",
+                "this content is not available", "service not available in your region",
+                "location unsupported", "tiktok.com/explore?enter_method=restricted",
+                "restricted location",
+            )
+            has_blocked_body = any(p in body for p in blocked_patterns)
+            has_blocked_loc = any(p in loc for p in ("geo", "block", "restrict", "unsupported", "region"))
+
+            # TikTok 明确封锁的国家/地区代码
+            BLOCKED_TIKTOK_COUNTRIES = {"IR", "KP", "SU", "SY", "CU", "VE"}
+            # 俄罗斯 TikTok 于 2022 年被全面封锁
+            if exit_country == "RU":
+                is_tiktok_ok = False
+            elif exit_country in BLOCKED_TIKTOK_COUNTRIES:
+                is_tiktok_ok = False
+            # 302 跳转 → 正常 (通常跳到登录页或 app 下载页)
+            elif status in (200, 301, 302, 303, 307) and not has_blocked_body and not has_blocked_loc:
+                is_tiktok_ok = True
+            # 200 OK 且响应正常 → 可用
+            elif status == 200 and not has_blocked_body:
+                is_tiktok_ok = True
+            # 403/451 → 明确封锁
+            elif status in (403, 451):
+                is_tiktok_ok = False
+        except Exception:
+            # TikTok 检测超时/网络失败 → 标记 False, 不影响主流程
+            is_tiktok_ok = False
+
         result = {
             "raw": raw,
             "server": server,
@@ -1333,6 +1414,7 @@ def test_single_node(item, keep_alive_check=True):
             "is_warp": is_warp,
             "speed_bps": speed_bps,
             "is_stalled": is_stalled,
+            "is_tiktok_ok": is_tiktok_ok,
         }
         return result
     except Exception:
@@ -1372,7 +1454,9 @@ def run_liveness_test(candidates: list) -> list:
     alive = [r for r in results if r["alive"] and not r["is_stalled"]]
     mitm = sum(1 for r in results if r["mitm_risk"])
     stalled = sum(1 for r in results if r["is_stalled"])
-    print(f"[+] 测活完成: 真活 {len(alive)} | 断流淘汰 {stalled} | MITM 风险 {mitm}")
+    tiktok_ok = sum(1 for r in alive if r.get("is_tiktok_ok"))
+    warp_cnt = sum(1 for r in alive if r.get("is_warp"))
+    print(f"[+] 测活完成: 真活 {len(alive)} | 断流淘汰 {stalled} | MITM {mitm} | WARP 套壳 {warp_cnt} | TikTok 可用 {tiktok_ok}")
     return results  # 保留全部信息, 分类阶段再决定去留
 
 
@@ -2040,6 +2124,8 @@ def classify_and_export(test_results: list):
             "speed_bps": r["speed_bps"],
             "mitm_risk": r["mitm_risk"],
             "is_stalled": r["is_stalled"],
+            "is_warp": r.get("is_warp", False),
+            "is_tiktok_ok": r.get("is_tiktok_ok", False),
         })
 
     if country_reader:
@@ -2257,6 +2343,137 @@ def export_all(unique_nodes, residential, non_residential):
     return len(all_links), len(res_links)
 
 
+# ═══════════════════════════════════════════N═══════════════════════
+# TikTok 专区导出: 纯净节点 (TikTok 可达 + 家宽优先 + 低 fraud)
+# ═══════════════════════════════════════════N═══════════════════════
+
+# TikTok 明确可用的国家列表 (排除伊朗/朝鲜/俄罗斯/委内瑞拉等封锁区)
+TIKTOK_ALLOWED_COUNTRIES = {
+    "US", "GB", "DE", "FR", "JP", "KR", "SG", "TW", "HK", "CA", "AU",
+    "NL", "BE", "CH", "AT", "SE", "NO", "DK", "FI", "ES", "IT", "PL",
+    "PT", "IE", "GR", "RU",  # 俄罗斯 TikTok 2022 后有代理方案可用, 暂保留让 TikTok 检测裁决
+    "TR", "AE", "SA", "QA", "IL", "TH", "VN", "MY", "PH", "ID",
+    "BR", "MX", "AR", "CO", "PE", "CL", "ZA", "EG", "KE", "NG",
+    "IN", "PK", "BD", "UA", "CZ", "RO", "HU", "BG", "HR", "RS",
+    "EE", "LV", "LT", "SK", "SI", "CY", "MT", "LU", "IS", "NZ",
+    "GE", "AM", "AZ", "KZ", "UZ",
+}
+
+
+def export_tiktok(unique_nodes):
+    """TikTok 纯净节点导出: 严格筛选, 优先家宽/低 WARP/fraud"""
+    # ---- 筛选阶段 ----
+    # 第一层强过滤: TikTok 可达 + 非 WARP + MITM 已排除(在 classify 阶段)
+    tiktok_candidates = [
+        n for n in unique_nodes
+        if n.get("is_tiktok_ok")
+        and not n.get("is_warp")
+        and n.get("country", "OTHER") in TIKTOK_ALLOWED_COUNTRIES
+    ]
+
+    # 如果严格筛选后太少 (< 3), 降级放宽: 去掉 is_tiktok_ok 硬要求但保留家宽优先
+    if len(tiktok_candidates) < 3:
+        print(f"[*] TikTok 严格筛选仅 {len(tiktok_candidates)} 个, 放宽条件补足 ...")
+        # 放宽: 从非 WARP + 家宽/移动节点里补 (这些最可能 TikTok 可用)
+        residential_backup = [
+            n for n in unique_nodes
+            if not n.get("is_warp")
+            and n.get("net_type") in ("residential", "mobile")
+            and n.get("country", "OTHER") in TIKTOK_ALLOWED_COUNTRIES
+        ]
+        # 再放宽: 出口 IP 非 Cloudflare CDN 网段的 datacenter 节点也补
+        cdn_backup = [
+            n for n in unique_nodes
+            if not n.get("is_warp")
+            and n.get("net_type") == "datacenter"
+            and n.get("country", "OTHER") in TIKTOK_ALLOWED_COUNTRIES
+        ]
+        # 合并去重
+        merged = {id(n): n for n in (tiktok_candidates + residential_backup + cdn_backup[:10])}.values()
+        tiktok_candidates = list(merged)
+
+    # ---- 排序阶段: 家宽优先, 低 fraud, 低延迟 ----
+    def _tiktok_sort_key(n):
+        net_score = {"residential": 0, "mobile": 1, "datacenter": 2, "cdn": 3, "unknown": 4}
+        fraud_penalty = n.get("fraud_score", -1)
+        fraud_penalty = fraud_penalty if fraud_penalty >= 0 else 50  # 未知按中间值
+        return (
+            0 if n.get("is_tiktok_ok") else 1,  # TikTok 检测通过的排最前
+            net_score.get(n.get("net_type", "unknown"), 4),
+            fraud_penalty,
+            n.get("latency_ms", 99999),
+        )
+    tiktok_candidates.sort(key=_tiktok_sort_key)
+
+    if not tiktok_candidates:
+        print("[!] 无 TikTok 可用节点 (所有节点均被区域封锁/WARP 套壳/MITM)")
+        return 0
+
+    # ---- 导出阶段 ----
+    ensure_directories()
+
+    def _build_group(nodes_list):
+        links, proxies, sb_nodes = [], [], []
+        for idx, item in enumerate(nodes_list, start=1):
+            # TikTok 专属命名: 🎵 前缀 + 家宽标记
+            cc = item["country"]
+            flag = get_country_flag(cc)
+            is_res = item["net_type"] in ("residential", "mobile") and item.get("confidence", 0) >= 60
+            tag = "家宽" if item["net_type"] == "residential" else ("移动" if item["net_type"] == "mobile" else "机房")
+            fraud = item.get("fraud_score", -1)
+            risk = f" ⚠R{fraud}" if 70 <= fraud < 90 else ""
+            name = f"🎵 {flag} {COUNTRY_NAMES.get(cc, cc)} {idx:02d}({tag}){risk} - xiaohe"
+
+            ob = item.get("outbound")
+            if not ob:
+                parsed = parse_node_uri(item["raw"])
+                if parsed:
+                    ob = parsed[0]
+                    ob.pop("detour", None)
+                    item["outbound"] = ob
+            if not ob:
+                continue
+
+            links.append(outbound_to_v2ray_link(ob, name))
+            cp = outbound_to_clash(ob, name)
+            if cp:
+                proxies.append(cp)
+            sb_nodes.append(outbound_to_singbox(ob, name))
+        return links, proxies, sb_nodes
+
+    all_links, all_proxies, all_sb = _build_group(tiktok_candidates)
+
+    # v2rayN base64 格式
+    with open(os.path.join(OUTPUT_DIR, "tiktok.txt"), "w", encoding="utf-8") as f:
+        f.write(base64.b64encode("\n".join(all_links).encode()).decode())
+
+    # Clash YAML
+    export_clash_yaml(all_proxies, os.path.join(OUTPUT_DIR, "tiktok-clash.yaml"))
+
+    # sing-box JSON
+    export_singbox_json(all_sb, os.path.join(OUTPUT_DIR, "tiktok-singbox.json"))
+
+    # 国家分布
+    by_cc = {}
+    for n in tiktok_candidates:
+        by_cc.setdefault(n["country"], []).append(n)
+    for cc, lst in by_cc.items():
+        l, p, s = _build_group(lst)
+        with open(os.path.join(COUNTRY_DIR, f"tiktok-{cc}.txt"), "w", encoding="utf-8") as f:
+            f.write(base64.b64encode("\n".join(l).encode()).decode())
+        export_clash_yaml(p, os.path.join(COUNTRY_DIR, f"tiktok-clash-{cc}.yaml"))
+        export_singbox_json(s, os.path.join(COUNTRY_DIR, f"tiktok-singbox-{cc}.json"))
+
+    # 统计输出
+    by_type = {}
+    for n in tiktok_candidates:
+        by_type[n["net_type"]] = by_type.get(n["net_type"], 0) + 1
+    res_cnt = sum(1 for n in tiktok_candidates if n["net_type"] in ("residential", "mobile"))
+    direct_cnt = sum(1 for n in tiktok_candidates if n.get("is_tiktok_ok"))
+    print(f"[+] TikTok 专区导出: 共 {len(tiktok_candidates)} | TikTok 直测通过 {direct_cnt} | 家宽/移动 {res_cnt} | 类型分布 {by_type}")
+    return len(tiktok_candidates)
+
+
 def export_clash_yaml(clash_proxies, filepath):
     names = [p["name"] for p in clash_proxies]
     config = {
@@ -2296,7 +2513,7 @@ def export_singbox_json(sb_nodes, filepath):
 # README 生成
 # ═══════════════════════════════════════════N═══════════════════════
 
-def update_readme(total_count, res_count):
+def update_readme(total_count, res_count, tiktok_count=0):
     repo_name = os.environ.get("GITHUB_REPOSITORY", "hezhanleiok/freesub").strip()
     cache_bust = ""
     # 私有化部署 Worker 脚本里的仓库参数 (默认值兜底)
@@ -2367,6 +2584,20 @@ def update_readme(total_count, res_count):
 | 家宽地区 | 节点数 | V2RayN 专属订阅 | Clash 专属订阅 | sing-box 专属订阅 |
 | :--- | :---: | :---: | :---: | :---: |
 {res_table}
+
+---
+
+## 🎵 TikTok 纯净节点专区 (专为 TikTok/YouTube 高清打造)
+
+> **TikTok 专项检测**: 经代理实测访问 `www.tiktok.com` → 200/302 且不含区域封锁特征 (`unsupported region` / `geographic restriction` / 403/451)。同时排除 WARP 套壳节点、MITM 劫持、高 fraud 分。优先保留家宽/移动住宅 IP (机房 IP 大量被 TikTok 风控)。如果严格筛选不足 3 个则自动放宽到家宽 + 非 Cloudflare CDN 机房 IP。
+
+| 客户端 / 格式类型 | 节点总数 | TikTok 可用检测通过 | 家宽/移动 | 订阅直链 |
+| :--- | :---: | :---: | :---: | :--- |
+| 🚀 **V2RayN (Base64)** | `{tiktok_count}` | TikTok 实测通过优先 | 家宽优先 | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/tiktok.txt) |
+| ⚡ **Clash (YAML)** | `{tiktok_count}` | WARP/MITM/欺诈剔除 | 低 fraud 优先 | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/tiktok-clash.yaml) |
+| 📦 **sing-box (JSON)** | `{tiktok_count}` | 出口 IP 国家过滤 | 低延迟优先 | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/tiktok-singbox.json) |
+
+> 💡 **使用提示**: TikTok 对机房/VPN IP 风控极严，推荐选择「🎵 🇯🇵 日本 家宽」「🎵 🇹🇼 台湾 家宽」「🎵 🇺🇸 美国 家宽」等住宅 IP 节点，效果最佳。机房 IP 可能偶发可用但不稳定。
 
 ---
 
@@ -2572,13 +2803,14 @@ def main():
         print("[!] 分类后无存活节点 — 保留上次 output")
         return
     total, res = export_all(unique_nodes, residential, non_residential)
-    update_readme(total, res)
+    tiktok_cnt = export_tiktok(unique_nodes)
+    update_readme(total, res, tiktok_cnt)
 
 
     # 统计报告
     elapsed = time.time() - t_start
     print("\n===== 运行报告 =====")
-    print(f"总耗时: {elapsed:.0f}s | 抓取 {len(raw_nodes)} → 解析成功 {len(candidates)} → 真活 {len(test_results)} → 去重后 {len(unique_nodes)} → 家宽 {len(residential)}")
+    print(f"总耗时: {elapsed:.0f}s | 抓取 {len(raw_nodes)} → 解析成功 {len(candidates)} → 真活 {len(test_results)} → 去重后 {len(unique_nodes)} → 家宽 {len(residential)} → TikTok {tiktok_cnt}")
     by_type = {}
     for n in unique_nodes:
         by_type[n["net_type"]] = by_type.get(n["net_type"], 0) + 1

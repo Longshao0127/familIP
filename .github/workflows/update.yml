@@ -2,13 +2,14 @@ name: Update Subscriptions
 
 on:
   schedule:
-    - cron: '0 4,10,16,22 * * *'
-  workflow_dispatch:
-  
+    # 每天在 UTC 时间 0:00, 6:00, 12:00, 18:00 自动触发更新
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # 支持手动点击运行
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 55
     permissions:
       contents: write
 
@@ -27,12 +28,20 @@ jobs:
         run: |
           pip install -r scripts/requirements.txt
 
+      - name: Clean old sing-box temp configs
+        run: |
+          rm -f runtime/sb_*.json
+
       - name: Run Real-Prober and Classifier (sing-box v1.14 全协议)
         run: |
           python scripts/main_v2.py
         env:
           # 便于 ip-api 等识别限速; GitHub runner 出口为美国 Azure
           PYTHONUNBUFFERED: '1'
+          # ══ 可选: 海外前置代理 ══
+          # 如果你自己有海外代理服务器 (socks5://host:port), 在 GitHub Repo → Settings → Secrets and variables → Actions
+          # 添加 FRONT_PROXY = socks5://你的代理IP:端口, 这里会自动注入, 提升 Actions 上节点存活率
+          FRONT_PROXY: ${{ secrets.FRONT_PROXY }}
 
       - name: Upload test artifacts (调试用, 7天保留)
         uses: actions/upload-artifact@v4
@@ -62,7 +71,7 @@ jobs:
           REPO="${GITHUB_REPOSITORY}"
           p() { curl -s -o /dev/null "https://purge.jsdelivr.net/gh/${REPO}@main/$1" || true; }
           p README.md
-          for f in v2ray.txt clash.yaml singbox.json residential.txt residential-clash.yaml residential-singbox.json; do
+          for f in v2ray.txt clash.yaml singbox.json residential.txt residential-clash.yaml residential-singbox.json tiktok.txt tiktok-clash.yaml tiktok-singbox.json; do
             p "output/$f"
           done
           find output/residential-by-country output/by-country -type f 2>/dev/null | while read -r f; do
