@@ -1,0 +1,126 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe",
+      "server": "128.241.25.11",
+      "server_port": 30021,
+      "uuid": "72fbb611-628d-4afa-8198-bda3e38021f9",
+      "tls": {
+        "enabled": true,
+        "server_name": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe",
+      "server": "185.253.116.33",
+      "server_port": 14430,
+      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
+      "transport": {
+        "type": "ws",
+        "path": "/vless"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
+      "server": "130.49.161.70",
+      "server_port": 443,
+      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2.aspidnet.xyz",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe",
+      "server": "57.129.52.47",
+      "server_port": 52014,
+      "uuid": "ecc4675b-1607-4699-8b20-23af97b671af",
+      "tls": {
+        "enabled": true,
+        "server_name": "kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe",
+      "server": "84.235.244.108",
+      "server_port": 22573,
+      "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "uae.unixzone.us"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

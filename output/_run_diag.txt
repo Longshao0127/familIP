@@ -2,28 +2,30 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-10-24T04:00:10.805279+00:00",
+      "time": "2026-10-24T04:04:40.923746+00:00",
       "stage": "after_prefilter",
       "before": 3175,
       "after": 3175,
       "front_proxy": false
     },
     {
-      "time": "2026-10-24T04:02:16.830970+00:00",
+      "time": "2026-10-24T04:09:13.943412+00:00",
       "stage": "after_liveness",
       "tested": 3175,
-      "alive": 0
+      "alive": 692
     },
     {
-      "time": "2026-10-24T04:02:16.831699+00:00",
-      "stage": "all_dead",
-      "tested": 3175,
-      "front_proxy": false
+      "time": "2026-10-24T04:13:49.581123+00:00",
+      "stage": "ok",
+      "total": 450,
+      "residential": 3,
+      "tiktok": 417,
+      "elapsed": 569.1
     }
   ],
   "node_fail_reasons": {
-    "liveness_fail": 3113,
-    "check_fail": 61
+    "liveness_fail": 2423,
+    "check_fail": 60
   },
-  "err_sample": "liveness: InvalidSchema: Missing dependencies for SOCKS support."
+  "err_sample": "liveness: ConnectionError: SOCKSHTTPConnectionPool(host='connectivitycheck.gstatic.com', port=80): Max retries exceeded with url: /generate_204 (Caused by NewConnectionError(\"SOCKSConnection(host='connectivityc"
 }
