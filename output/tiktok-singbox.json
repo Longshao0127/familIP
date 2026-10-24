@@ -1,0 +1,94 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "server": "1.2.3.0",
+      "server_port": 443,
+      "uuid": "test-uuid-0",
+      "tls": {
+        "enabled": true,
+        "server_name": "1.2.3.0"
+      },
+      "tag": "🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe"
+    },
+    {
+      "type": "vless",
+      "server": "1.2.3.1",
+      "server_port": 443,
+      "uuid": "test-uuid-1",
+      "tls": {
+        "enabled": true,
+        "server_name": "1.2.3.1"
+      },
+      "tag": "🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe"
+    },
+    {
+      "type": "vless",
+      "server": "1.2.3.2",
+      "server_port": 443,
+      "uuid": "test-uuid-2",
+      "tls": {
+        "enabled": true,
+        "server_name": "1.2.3.2"
+      },
+      "tag": "🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe"
+    },
+    {
+      "type": "vless",
+      "server": "1.2.3.3",
+      "server_port": 443,
+      "uuid": "test-uuid-3",
+      "tls": {
+        "enabled": true,
+        "server_name": "1.2.3.3"
+      },
+      "tag": "🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe"
+    },
+    {
+      "type": "vless",
+      "server": "1.2.3.4",
+      "server_port": 443,
+      "uuid": "test-uuid-4",
+      "tls": {
+        "enabled": true,
+        "server_name": "1.2.3.4"
+      },
+      "tag": "🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe"
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

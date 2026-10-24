@@ -1136,27 +1136,18 @@ def build_test_config(outbound: dict, socks_port: int, chain_relay: dict = None)
             node["detour"] = "front-proxy"
             print_once("_FRONT_ENABLED", f"[*] 前置代理已启用: {front} (模拟 CI 海外视角)")
 
-    # ══ DNS 配置 (大陆本地环境防 GFW 污染) ═══════════════════════════════
-    # sing-box 默认用系统 DNS, 大陆环境被污染 → 即使 FRONT_PROXY 转发 TCP,
-    # 域名解析到假 IP 还是失败。解决: 强制用 Cloudflare DoH, 且 detour 走前置代理。
-    # 注意: DNS detour 只看 FRONT_PROXY (chain_relay 是 node 的 detour, 不影响 sing-box 进程 DNS 需求)
-    has_front_proxy = bool(front)
-    dns_servers = [{"tag": "remote-doh", "address": "https://1.1.1.1/dns-query"}]
-    if has_front_proxy:
-        dns_servers[0]["detour"] = "front-proxy"
-    dns_servers.append({"tag": "local", "address": "local"})
-    dns_config = {
-        "servers": dns_servers,
-        "rules": [
-            {"outbound": "any", "server": "remote-doh", "disable_cache": True},
-        ],
-        "final": "remote-doh",
-        "strategy": "ipv4_only",
-    }
+    # ══ DNS 配置 (已移除, 见下方注释) ═══════════════════════════════════
+    # 早期版本加了 DNS 配置防 GFW 污染, 但 sing-box v1.14 移除了旧格式,
+    # 新版 DNS rule 格式复杂且容易出错。
+    # 实际上:
+    #   - 大陆本地: FRONT_PROXY 的 socks5h 已经自带 DNS 代理, 不会被污染
+    #   - Actions 海外: 没有 GFW, 默认 DNS 就够用
+    # 所以直接移除 dns 配置, 让 sing-box 用默认行为。
+    dns_config = None
 
+    # 构造 config (有 dns 就加, 没有就跳过)
     config = {
         "log": {"level": "warn"},   # 实测: silent 不是合法级别 (trace/debug/info/warn/error/fatal/panic)
-        "dns": dns_config,
         "inbounds": [{
             "type": "socks",
             "tag": "socks-in",
@@ -1167,6 +1158,8 @@ def build_test_config(outbound: dict, socks_port: int, chain_relay: dict = None)
         "outbounds": outbounds,
         "route": {"rules": [], "final": "node"},
     }
+    if dns_config:
+        config["dns"] = dns_config
     return config
 
 
