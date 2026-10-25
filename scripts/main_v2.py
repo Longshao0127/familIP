@@ -472,9 +472,15 @@ def _cn_save(store):
 def _cn_tcp_ping(server, port, timeout=28):
     """向 Globalping 发起一次 TCP ping (1 个国内探测点), 返回 (ok, rtt, loss, probe)"""
     headers = {"User-Agent": "dsh-cn-probe/1.0"}
+    target = str(server)
+    if not is_ip_literal(target):
+        try:
+            target = socket.gethostbyname(target)   # 美国侧先解析, 避开国内探测点的 DNS 污染
+        except OSError:
+            pass
     body = {
         "type": "ping",
-        "target": str(server),
+        "target": target,
         "locations": [{"country": "CN", "tags": ["eyeball-network"]}],
         "limit": 1,
         "measurementOptions": {"protocol": "TCP", "port": int(port), "packets": 2},
@@ -2503,6 +2509,16 @@ def export_all(unique_nodes, residential, non_residential):
     export_clash_yaml(all_proxies, os.path.join(OUTPUT_DIR, "clash.yaml"))
     export_singbox_json(all_sb, os.path.join(OUTPUT_DIR, "singbox.json"))
 
+    # 1.5) 国内实测精选: 只保留中国探测点 TCP 可达的节点 (数量少, 但成功率高)
+    cn_nodes = [n for n in unique_nodes if n.get("cn_ok") is True]
+    if cn_nodes:
+        cn_links, cn_proxies, cn_sb = build_group(cn_nodes)
+        with open(os.path.join(OUTPUT_DIR, "v2ray-cn.txt"), "w", encoding="utf-8") as f:
+            f.write(base64.b64encode("\n".join(cn_links).encode()).decode())
+        export_clash_yaml(cn_proxies, os.path.join(OUTPUT_DIR, "clash-cn.yaml"))
+        export_singbox_json(cn_sb, os.path.join(OUTPUT_DIR, "singbox-cn.json"))
+        print(f"[+] 国内精选订阅: {len(cn_nodes)} 个节点 → output/clash-cn.yaml")
+
     # 2) 家宽总订阅
     res_links, res_proxies, res_sb = build_group(residential, force_res=True)
     with open(os.path.join(OUTPUT_DIR, "residential.txt"), "w", encoding="utf-8") as f:
@@ -2810,6 +2826,20 @@ def update_readme(total_count, res_count, tiktok_count=0, cn_count=0):
     res_table = table_rows(res_counts, "residential-by-country")
     normal_table = table_rows(normal_counts, "by-country")
 
+    cn_section = ""
+    if cn_count > 0:
+        cn_section = f"""
+## 🇨🇳 国内实测可用精选订阅
+
+> 仅包含通过国内探测点 TCP 可达性检测的节点（`{cn_count}` 个），数量少但成功率高；适合不想在几百个节点里逐个试的国内用户。
+
+| 客户端 | 节点数 | 免翻 CDN 直链 | 官方 Raw 直链 |
+| :--- | :---: | :--- | :--- |
+| 🚀 **Clash (YAML)** | `{cn_count}` | [下载](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/clash-cn.yaml) | [Raw](https://raw.githubusercontent.com/{repo_name}/main/output/clash-cn.yaml) |
+| ⚡ **V2RayN (Base64)** | `{cn_count}` | [下载](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/v2ray-cn.txt) | [Raw](https://raw.githubusercontent.com/{repo_name}/main/output/v2ray-cn.txt) |
+| 📦 **sing-box (JSON)** | `{cn_count}` | [下载](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/singbox-cn.json) | [Raw](https://raw.githubusercontent.com/{repo_name}/main/output/singbox-cn.json) |
+"""
+
     readme = f"""# 🚀 免费节点自动测活订阅池 (含真实家宽/住宅IP甄选)
 
 > 👤 **定制规范命名**: 所有订阅节点均重命名为 `国旗 地区 序号 (家宽) - xiaohe`
@@ -2827,6 +2857,7 @@ def update_readme(total_count, res_count, tiktok_count=0, cn_count=0):
 | 📦 **sing-box (JSON 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/singbox.json) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/singbox.json) |
 
 > 🇨🇳 **中国侧可达性实测**: 本轮有 `{cn_count}` 个节点通过国内电信/联通/移动探测点的 TCP 可达性检测，通过检测的节点会优先进入 Clash 的 `AUTO-CN` 组。GitHub Actions 位于美国，"海外测活通过"不等于"国内能连"；国内使用时请优先选 `AUTO-CN`，其次 `AUTO-TCP`（UDP 类 Hysteria2/TUIC 在部分运营商会被限速或阻断）。
+{cn_section}
 
 ---
 

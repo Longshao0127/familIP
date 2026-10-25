@@ -78,7 +78,7 @@ jobs:
           REPO="${GITHUB_REPOSITORY}"
           p() { curl -s -o /dev/null "https://purge.jsdelivr.net/gh/${REPO}@main/$1" || true; }
           p README.md
-          for f in v2ray.txt clash.yaml singbox.json residential.txt residential-clash.yaml residential-singbox.json tiktok.txt tiktok-clash.yaml tiktok-singbox.json; do
+          for f in v2ray.txt clash.yaml singbox.json v2ray-cn.txt clash-cn.yaml singbox-cn.json residential.txt residential-clash.yaml residential-singbox.json tiktok.txt tiktok-clash.yaml tiktok-singbox.json; do
             p "output/$f"
           done
           find output/residential-by-country output/by-country -type f 2>/dev/null | while read -r f; do
