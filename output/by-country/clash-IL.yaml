@@ -25,6 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇮🇱 以色列 (Israel) 01 - xiaohe
+  server: 185.95.231.156
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
+    short-id: a3a578ab
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇮🇱 以色列 (Israel) 02 - xiaohe
   server: 77.91.69.169
   port: 19226
   udp: true
@@ -36,8 +49,8 @@ proxies:
     public-key: PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk
     short-id: 7c
   servername: yahoo.com
-  client-fingerprint: firefox
-- name: 🇮🇱 以色列 (Israel) 02 - xiaohe
+  client-fingerprint: chrome
+- name: 🇮🇱 以色列 (Israel) 03 - xiaohe
   server: 177.3.208.65
   port: 443
   udp: true
@@ -52,19 +65,6 @@ proxies:
     path: /vless-il
     headers:
       Host: tgmansion.site
-- name: 🇮🇱 以色列 (Israel) 03 - xiaohe
-  server: 185.95.231.156
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
-    short-id: a3a578ab
-  servername: www.apple.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

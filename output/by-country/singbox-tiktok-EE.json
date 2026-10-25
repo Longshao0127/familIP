@@ -18,7 +18,7 @@
         "server_name": "ee1.mycloud1.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
