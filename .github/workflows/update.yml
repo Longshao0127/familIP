@@ -45,6 +45,9 @@ jobs:
           # 如果你自己有海外代理服务器 (socks5://host:port), 在 GitHub Repo → Settings → Secrets and variables → Actions
           # 添加 FRONT_PROXY = socks5://你的代理IP:端口, 这里会自动注入, 提升 Actions 上节点存活率
           FRONT_PROXY: ${{ secrets.FRONT_PROXY }}
+          # 中国侧可达性探测 (Globalping 免费额度 250/小时, 每轮 120 次)
+          CN_PROBE: '1'
+          CN_PROBE_BUDGET: '120'
 
       - name: Upload test artifacts (调试用, 7天保留)
         uses: actions/upload-artifact@v4
@@ -61,6 +64,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add -A output/ README.md
+          [ -d data ] && git add -A data/ || true
           if git diff --staged --quiet; then
             echo "没有节点变动与内容更新。"
           else

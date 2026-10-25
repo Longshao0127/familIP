@@ -37,6 +37,7 @@ import subprocess
 import ipaddress
 import urllib.parse
 import urllib.request
+import threading
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -81,6 +82,26 @@ WORKDIR = os.path.dirname(os.path.abspath(__file__))          # scripts/
 BASEDIR = os.path.dirname(WORKDIR)                              # repo root
 RUNTIME_DIR = os.path.join(BASEDIR, "runtime")                  # kernels & db
 SINGBOX_BIN = os.path.join(RUNTIME_DIR, "sing-box")
+
+# --- 中国侧可达性探测 (Globalping 免费 API, 从国内家宽/机房探测点做 TCP 握手) ---
+# GitHub Actions 位于美国, "海外能连" 不等于 "国内能连"; 这里补一层国内视角,
+# 只做增量标注 (cn_ok=True/False), 不阻塞主流程。预算默认 120 次/轮, 免费额度 250/小时。
+CN_PROBE_API   = "https://api.globalping.io/v1/measurements"
+CN_PROBE_STORE = os.path.join(BASEDIR, "data", "cn_probe.json")
+CN_PROBE_BUDGET = int(os.environ.get("CN_PROBE_BUDGET", "120") or 120)
+CN_PROBE_TTL    = 7 * 24 * 3600   # 结果有效期: 7 天
+
+# 合法 uTLS 指纹 (sing-box / Mihomo 均支持); 源里的非法值会直接让 sing-box 起不来
+UTLS_FINGERPRINTS = {"chrome", "firefox", "safari", "ios", "android", "edge", "360", "qq", "random"}
+
+
+def normalize_fp(fp, default="chrome"):
+    """把源里各种非法 uTLS 指纹收敛到内核认识的值 (unsafe/空值 → chrome)。"""
+    value = str(fp or "").strip().lower()
+    if value == "randomized":
+        value = "random"
+    return value if value in UTLS_FINGERPRINTS else default
+
 
 # --- 测活阈值 (毫秒/秒) ---
 # ★ 分层超时: 首击宽 (12s 容慢节点), 重试窄 (4s 快速放弃死节点)
@@ -416,6 +437,163 @@ def ensure_directories():
     os.makedirs(COUNTRY_DIR, exist_ok=True)
     os.makedirs(RESIDENTIAL_COUNTRY_DIR, exist_ok=True)
     os.makedirs(RUNTIME_DIR, exist_ok=True)
+    os.makedirs(os.path.dirname(CN_PROBE_STORE), exist_ok=True)
+
+
+# ══════════════════════════════════════════════════════════════════
+# 中国侧可达性探测 (Globalping)
+# ══════════════════════════════════════════════════════════════════
+
+def _cn_key(node):
+    """节点跨轮次稳定标识 (协议+地址+端口), 用于缓存国内探测结果。"""
+    return f"{node.get('proto', '')}:{node.get('server', '')}:{node.get('port', '')}"
+
+
+def _cn_load():
+    try:
+        with open(CN_PROBE_STORE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def _cn_save(store):
+    try:
+        os.makedirs(os.path.dirname(CN_PROBE_STORE), exist_ok=True)
+        tmp = CN_PROBE_STORE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(store, f, ensure_ascii=False, indent=0, sort_keys=True)
+        os.replace(tmp, CN_PROBE_STORE)
+    except OSError as e:
+        print(f"[!] 中国侧结果保存失败: {e}")
+
+
+def _cn_tcp_ping(server, port, timeout=28):
+    """向 Globalping 发起一次 TCP ping (1 个国内探测点), 返回 (ok, rtt, loss, probe)"""
+    headers = {"User-Agent": "dsh-cn-probe/1.0"}
+    body = {
+        "type": "ping",
+        "target": str(server),
+        "locations": [{"country": "CN", "tags": ["eyeball-network"]}],
+        "limit": 1,
+        "measurementOptions": {"protocol": "TCP", "port": int(port), "packets": 2},
+    }
+    r = requests.post(CN_PROBE_API, json=body, headers=headers, timeout=15)
+    if r.status_code == 429:
+        raise RuntimeError("globalping rate limited")
+    r.raise_for_status()
+    mid = (r.json() or {}).get("id")
+    if not mid:
+        raise RuntimeError("no measurement id")
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        time.sleep(1.0)
+        q = requests.get(f"{CN_PROBE_API}/{mid}", headers=headers, timeout=15)
+        q.raise_for_status()
+        data = q.json() or {}
+        status = data.get("status")
+        if status == "finished":
+            results = data.get("results") or []
+            if not results:
+                raise RuntimeError("no probes available")
+            item = results[0]
+            stats = (item.get("result") or {}).get("stats") or {}
+            probe = item.get("probe") or {}
+            recv = int(stats.get("rcv", 0) or 0)
+            return (recv > 0, stats.get("avg"), stats.get("loss"),
+                    f"{probe.get('city', '')}/{probe.get('network', '')}")
+        if status == "failed":
+            raise RuntimeError("measurement failed")
+    raise RuntimeError("measurement timeout")
+
+
+def cn_probe_reachability(nodes, budget=None):
+    """给节点打上 cn_ok 标记: True=国内探测点 TCP 可达, False=100% 丢包, None=未测/未知。
+
+    只测 TCP 类协议 (hysteria2/tuic 走 UDP, TCP 握手无意义)。
+    每轮最多测 budget 个, 优先未测/最久未测的节点, 结果落盘到 data/cn_probe.json 跨轮复用。
+    任何 API 异常只跳过, 不影响主流程。
+    """
+    budget = CN_PROBE_BUDGET if budget is None else budget
+    store = _cn_load()
+    now = time.time()
+
+    # 先用缓存给所有节点打标
+    for n in nodes:
+        rec = store.get(_cn_key(n))
+        if rec and (now - rec.get("checked", 0)) < CN_PROBE_TTL:
+            n["cn_ok"] = bool(rec.get("ok"))
+            n["cn_latency"] = rec.get("avg")
+        else:
+            n["cn_ok"] = None
+
+    if os.environ.get("CN_PROBE", "1").strip() == "0":
+        print("[*] CN_PROBE=0, 跳过中国侧探测")
+        return {"tested": 0, "ok": 0, "bad": 0, "err": 0,
+                "cn_total": sum(1 for n in nodes if n.get("cn_ok") is True)}
+
+    candidates = [n for n in nodes if n.get("proto") not in ("hysteria2", "tuic")]
+    candidates.sort(key=lambda n: (store.get(_cn_key(n), {}).get("checked", 0),
+                                   n.get("latency_ms", 99999)))
+    todo = candidates[:max(0, budget)]
+    if not todo:
+        return {"tested": 0, "ok": 0, "bad": 0, "err": 0,
+                "cn_total": sum(1 for n in nodes if n.get("cn_ok") is True)}
+
+    print(f"[*] 中国侧可达性探测: {len(todo)} 个节点 (Globalping TCP ping, 预算 {budget}) ...")
+
+    stop = threading.Event()
+
+    def worker(node):
+        if stop.is_set():
+            return node, None, "aborted"
+        try:
+            return node, _cn_tcp_ping(node["server"], node["port"]), None
+        except Exception as e:  # noqa: BLE001 — 单点失败不影响整轮
+            if "rate limited" in str(e):
+                stop.set()
+            return node, None, str(e)
+
+    ok = bad = err = 0
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        for node, result, error in ex.map(worker, todo):
+            if result is None:
+                err += 1
+                if err <= 3:
+                    print(f"    [!] {node.get('server')}:{node.get('port')} 探测跳过: {error}")
+                continue
+            reachable, rtt, loss, probe = result
+            store[_cn_key(node)] = {
+                "ok": bool(reachable), "avg": rtt, "loss": loss,
+                "checked": int(time.time()), "probe": probe,
+            }
+            node["cn_ok"] = bool(reachable)
+            node["cn_latency"] = rtt
+            if reachable:
+                ok += 1
+            else:
+                bad += 1
+            if (ok + bad) % 20 == 0:
+                print(f"    ... 已测 {ok + bad}/{len(todo)} | 可达 {ok} | 不可达 {bad}")
+
+    if ok + bad:
+        # 清理: 保留当前池内节点 + 14 天内的历史, 防止文件无限膨胀
+        pool = {_cn_key(n) for n in nodes}
+        store = {k: v for k, v in store.items()
+                 if k in pool or now - v.get("checked", 0) < 14 * 24 * 3600}
+        _cn_save(store)
+
+    cn_total = sum(1 for n in nodes if n.get("cn_ok") is True)
+    print(f"[+] 中国侧探测: 本轮 {ok + bad} | 可达 {ok} | 不可达 {bad} | 失败 {err} "
+          f"| 全量可达 {cn_total}/{len(nodes)}")
+    return {"tested": ok + bad, "ok": ok, "bad": bad, "err": err, "cn_total": cn_total}
+
+
+def cn_rank(node):
+    """排序权重: 国内可达 > 未测 > 国内不可达。"""
+    value = node.get("cn_ok")
+    return 0 if value is True else (1 if value is None else 2)
 
 
 def is_ip_literal(host: str) -> bool:
@@ -576,7 +754,7 @@ def _parse_tls_params(params: dict, host: str) -> dict:
         tls = {
             "enabled": True,
             "server_name": params.get("sni", params.get("peer", host)),
-            "utls": {"enabled": True, "fingerprint": params.get("fp", "chrome")},
+            "utls": {"enabled": True, "fingerprint": normalize_fp(params.get("fp"))},
             "reality": {"enabled": True, "public_key": pbk, "short_id": params.get("sid", "")},
         }
     elif security in ("tls", "xtls"):
@@ -587,7 +765,7 @@ def _parse_tls_params(params: dict, host: str) -> dict:
             "alpn": params.get("alpn", "").split(",") if params.get("alpn") else None,
         }
         if params.get("fp"):
-            tls["utls"] = {"enabled": True, "fingerprint": params["fp"]}
+            tls["utls"] = {"enabled": True, "fingerprint": normalize_fp(params["fp"])}
         if tls.get("alpn") is None:
             del tls["alpn"]
     return tls or None
@@ -737,7 +915,7 @@ def parse_trojan(uri: str):
     if params.get("alpn"):
         outbound["tls"]["alpn"] = params["alpn"].split(",")
     if params.get("fp"):
-        outbound["tls"]["utls"] = {"enabled": True, "fingerprint": params["fp"]}
+        outbound["tls"]["utls"] = {"enabled": True, "fingerprint": normalize_fp(params["fp"])}
     transport = _parse_transport(params)
     if transport:
         outbound["transport"] = transport
@@ -1762,13 +1940,13 @@ def outbound_to_clash(node: dict, name: str) -> dict:
                 proxy["reality-opts"]["short-id"] = tls["reality"]["short_id"]
             proxy["servername"] = tls.get("server_name") or server
             if tls.get("utls"):
-                proxy["client-fingerprint"] = tls["utls"].get("fingerprint", "chrome")
+                proxy["client-fingerprint"] = normalize_fp(tls["utls"].get("fingerprint"))
         elif tls.get("enabled"):
             proxy["tls"] = True
             proxy["servername"] = tls.get("server_name") or server
             proxy["skip-cert-verify"] = bool(tls.get("insecure"))
             if tls.get("utls"):
-                proxy["client-fingerprint"] = tls["utls"].get("fingerprint", "chrome")
+                proxy["client-fingerprint"] = normalize_fp(tls["utls"].get("fingerprint"))
         transport = node.get("transport") or {}
         if transport.get("type"):
             proxy["network"] = transport["type"]
@@ -1934,7 +2112,7 @@ def outbound_to_v2ray_link(node: dict, name: str) -> str:
             q["security"] = "reality"
             q["pbk"] = tls["reality"]["public_key"]
             q["sid"] = tls["reality"].get("short_id", "")
-            q["fp"] = (tls.get("utls") or {}).get("fingerprint", "chrome")
+            q["fp"] = normalize_fp((tls.get("utls") or {}).get("fingerprint"))
             if tls.get("server_name"):
                 q["sni"] = tls["server_name"]
         elif tls.get("enabled"):
@@ -1944,7 +2122,7 @@ def outbound_to_v2ray_link(node: dict, name: str) -> str:
             if tls.get("alpn"):
                 q["alpn"] = ",".join(tls["alpn"])
             if tls.get("utls"):
-                q["fp"] = tls["utls"].get("fingerprint", "chrome")
+                q["fp"] = normalize_fp(tls["utls"].get("fingerprint"))
             if tls.get("insecure"):
                 q["allowInsecure"] = "1"
         if node.get("flow"):
@@ -1958,7 +2136,7 @@ def outbound_to_v2ray_link(node: dict, name: str) -> str:
         if tls.get("alpn"):
             q["alpn"] = ",".join(tls["alpn"])
         if (tls.get("utls") or {}).get("fingerprint"):
-            q["fp"] = tls["utls"]["fingerprint"]
+            q["fp"] = normalize_fp(tls["utls"]["fingerprint"])
         if tls.get("insecure"):
             q["allowInsecure"] = "1"
         ttype = transport.get("type")
@@ -2312,6 +2490,8 @@ def export_all(unique_nodes, residential, non_residential):
             links.append(outbound_to_v2ray_link(ob, name))
             cp = outbound_to_clash(ob, name)
             if cp:
+                if item.get("cn_ok") is True:
+                    cp["_cn_ok"] = True
                 proxies.append(cp)
             sb_nodes.append(outbound_to_singbox(ob, name))
         return links, proxies, sb_nodes
@@ -2422,6 +2602,7 @@ def export_tiktok(unique_nodes):
         fraud_penalty = fraud_penalty if fraud_penalty >= 0 else 50  # 未知按中间值
         return (
             0 if n.get("is_tiktok_ok") else 1,  # TikTok 检测通过的排最前
+            cn_rank(n),                          # 其次国内可达优先
             net_score.get(n.get("net_type", "unknown"), 4),
             fraud_penalty,
             n.get("latency_ms", 99999),
@@ -2460,6 +2641,8 @@ def export_tiktok(unique_nodes):
             links.append(outbound_to_v2ray_link(ob, name))
             cp = outbound_to_clash(ob, name)
             if cp:
+                if item.get("cn_ok") is True:
+                    cp["_cn_ok"] = True
                 proxies.append(cp)
             sb_nodes.append(outbound_to_singbox(ob, name))
         return links, proxies, sb_nodes
@@ -2498,19 +2681,62 @@ def export_tiktok(unique_nodes):
 
 
 def export_clash_yaml(clash_proxies, filepath):
-    names = [p["name"] for p in clash_proxies]
+    names = []
+    cn_names = []
+    for p in clash_proxies:
+        names.append(p["name"])
+        if p.pop("_cn_ok", False):
+            cn_names.append(p["name"])
+
+    # TCP 类 / UDP 类分组: 国内不少运营商/网络会限 UDP, 单独拆开避免 AUTO 选中 UDP 节点后一直超时
+    udp_types = {"hysteria2", "tuic"}
+    tcp_names = [p["name"] for p in clash_proxies if p["type"] not in udp_types]
+    udp_names = [p["name"] for p in clash_proxies if p["type"] in udp_types]
+
+    def urltest(group_name, proxies):
+        return {"name": group_name, "type": "url-test",
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 300, "tolerance": 50, "lazy": False,
+                "proxies": proxies}
+
+    groups = []
+    select_order = []
+    if cn_names:
+        groups.append(urltest("AUTO-CN", cn_names))
+        select_order.append("AUTO-CN")
+    if tcp_names:
+        groups.append(urltest("AUTO-TCP", tcp_names))
+        select_order.append("AUTO-TCP")
+    groups.append(urltest("AUTO", names))
+    select_order.append("AUTO")
+    if udp_names:
+        groups.append(urltest("AUTO-UDP", udp_names))
+        select_order.append("AUTO-UDP")
+
     config = {
         "port": 7890,
         "socks-port": 7891,
         "allow-lan": True,
         "mode": "rule",
         "log-level": "info",
+        # 国内直连场景: 用国内 DNS 解析节点域名, fake-ip 避免 DNS 污染拖慢/拖死首连
+        "dns": {
+            "enable": True,
+            "ipv6": False,
+            "enhanced-mode": "fake-ip",
+            "fake-ip-range": "198.18.0.1/16",
+            "fake-ip-filter": [
+                "*.lan", "*.local", "localhost.",
+                "+.msftconnecttest.com", "+.msftncsi.com",
+            ],
+            "nameserver": ["223.5.5.5", "119.29.29.29", "114.114.114.114"],
+        },
+        "profile": {"store-selected": True, "store-fake-ip": True},
+        "tcp-concurrent": True,
+        "unified-delay": True,
         "proxies": clash_proxies,
-        "proxy-groups": [
-            {"name": "PROXIES", "type": "select", "proxies": ["AUTO"] + names},
-            {"name": "AUTO", "type": "url-test", "url": "https://www.gstatic.com/generate_204",
-             "interval": 300, "proxies": names},
-        ],
+        "proxy-groups": [{"name": "PROXIES", "type": "select",
+                          "proxies": select_order + names}] + groups,
         "rules": ["MATCH,PROXIES"],
     }
     with open(filepath, "w", encoding="utf-8") as f:
@@ -2522,11 +2748,13 @@ def export_singbox_json(sb_nodes, filepath):
     outbounds = sb_nodes + [
         {"type": "selector", "tag": "select", "outbounds": ["auto"] + names},
         {"type": "urltest", "tag": "auto", "outbounds": names,
-         "url": "https://www.gstatic.com/generate_204"},
+         "url": "http://www.gstatic.com/generate_204",
+         "interval": "5m", "tolerance": 50},
         {"type": "direct", "tag": "direct"},
         {"type": "block", "tag": "block"},
     ]
     config = {"log": {"level": "warn"},
+              "route": {"final": "select"},
               "outbounds": outbounds}
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
@@ -2536,7 +2764,7 @@ def export_singbox_json(sb_nodes, filepath):
 # README 生成
 # ═══════════════════════════════════════════N═══════════════════════
 
-def update_readme(total_count, res_count, tiktok_count=0):
+def update_readme(total_count, res_count, tiktok_count=0, cn_count=0):
     repo_name = os.environ.get("GITHUB_REPOSITORY", "hezhanleiok/freesub").strip()
     cache_bust = ""
     # 私有化部署 Worker 脚本里的仓库参数 (默认值兜底)
@@ -2597,6 +2825,8 @@ def update_readme(total_count, res_count, tiktok_count=0):
 | 🚀 **Clash (YAML 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/clash.yaml) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/clash.yaml) |
 | ⚡ **V2RayN (Base64 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/v2ray.txt) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/v2ray.txt) |
 | 📦 **sing-box (JSON 格式)** | `{total_count}` | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/singbox.json) | [官方 Raw 直链](https://raw.githubusercontent.com/{repo_name}/main/output/singbox.json) |
+
+> 🇨🇳 **中国侧可达性实测**: 本轮有 `{cn_count}` 个节点通过国内电信/联通/移动探测点的 TCP 可达性检测，通过检测的节点会优先进入 Clash 的 `AUTO-CN` 组。GitHub Actions 位于美国，"海外测活通过"不等于"国内能连"；国内使用时请优先选 `AUTO-CN`，其次 `AUTO-TCP`（UDP 类 Hysteria2/TUIC 在部分运营商会被限速或阻断）。
 
 ---
 
@@ -2896,11 +3126,22 @@ def _main_body():
         print("[!] 分类后无存活节点 — 保留上次 output")
         _write_diag("no_unique", test_results=len(test_results))
         return
+
+    # ★ 中国侧可达性: 海外测活通过 ≠ 国内可连。给节点打 cn_ok 标记并按“国内可达优先”重排。
+    cn_stats = {}
+    try:
+        cn_stats = cn_probe_reachability(unique_nodes)
+    except Exception as e:  # noqa: BLE001 — 国内探测失败绝不能挡住出库
+        print(f"[!] 中国侧探测异常(已忽略): {e}")
+    unique_nodes.sort(key=lambda x: (cn_rank(x), 0 if x in residential else 1, x["latency_ms"]))
+    residential.sort(key=lambda x: (cn_rank(x), x["latency_ms"]))
+    non_residential.sort(key=lambda x: (cn_rank(x), x["latency_ms"]))
+
     total, res = export_all(unique_nodes, residential, non_residential)
     tiktok_cnt = export_tiktok(unique_nodes)
-    update_readme(total, res, tiktok_cnt)
+    update_readme(total, res, tiktok_cnt, cn_stats.get("cn_total", 0))
     _write_diag("ok", total=total, residential=res, tiktok=tiktok_cnt,
-                elapsed=round(time.time() - t_start, 1))
+                cn=cn_stats, elapsed=round(time.time() - t_start, 1))
 
 
     # 统计报告
