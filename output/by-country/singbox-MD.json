@@ -2,6 +2,9 @@
   "log": {
     "level": "warn"
   },
+  "route": {
+    "final": "select"
+  },
   "outbounds": [
     {
       "type": "vless",
@@ -15,7 +18,7 @@
         "server_name": "www.bing.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -38,7 +41,9 @@
       "outbounds": [
         "🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe"
       ],
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "type": "direct",

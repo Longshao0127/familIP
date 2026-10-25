@@ -2,6 +2,9 @@
   "log": {
     "level": "warn"
   },
+  "route": {
+    "final": "select"
+  },
   "outbounds": [
     {
       "type": "shadowsocks",
@@ -35,7 +38,9 @@
         "🇿🇦 南非 (South Africa) 01 - xiaohe",
         "🇿🇦 南非 (South Africa) 02 - xiaohe"
       ],
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "type": "direct",

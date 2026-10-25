@@ -3,22 +3,28 @@ socks-port: 7891
 allow-lan: true
 mode: rule
 log-level: info
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - localhost.
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+profile:
+  store-selected: true
+  store-fake-ip: true
+tcp-concurrent: true
+unified-delay: true
 proxies:
 - name: 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  server: 185.156.44.99
-  port: 443
-  udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: css.rbxcdn.com
-  skip-cert-verify: true
-- name: 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
-  server: edge10.cyrionflare.com
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
   server: 162.249.125.133
   port: 443
   udp: true
@@ -28,30 +34,45 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 443
+- name: 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
+  server: edge10.cyrionflare.com
+  port: 2052
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-TCP
   - AUTO
+  - AUTO-UDP
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
-  url: https://www.gstatic.com/generate_204
+  url: http://www.gstatic.com/generate_204
   interval: 300
+  tolerance: 50
+  lazy: false
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

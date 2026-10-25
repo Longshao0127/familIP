@@ -3,6 +3,26 @@ socks-port: 7891
 allow-lan: true
 mode: rule
 log-level: info
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - localhost.
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+profile:
+  store-selected: true
+  store-fake-ip: true
+tcp-concurrent: true
+unified-delay: true
 proxies:
 - name: 🇳🇴 挪威 (Norway) 01 - xiaohe
   server: 185.213.23.63
@@ -15,12 +35,23 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-TCP
   - AUTO
+  - 🇳🇴 挪威 (Norway) 01 - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🇳🇴 挪威 (Norway) 01 - xiaohe
 - name: AUTO
   type: url-test
-  url: https://www.gstatic.com/generate_204
+  url: http://www.gstatic.com/generate_204
   interval: 300
+  tolerance: 50
+  lazy: false
   proxies:
   - 🇳🇴 挪威 (Norway) 01 - xiaohe
 rules:

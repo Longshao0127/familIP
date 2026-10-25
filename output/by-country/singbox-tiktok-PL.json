@@ -2,6 +2,9 @@
   "log": {
     "level": "warn"
   },
+  "route": {
+    "final": "select"
+  },
   "outbounds": [
     {
       "type": "vless",
@@ -72,7 +75,9 @@
         "🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe",
         "🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe"
       ],
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "type": "direct",

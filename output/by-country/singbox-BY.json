@@ -2,6 +2,9 @@
   "log": {
     "level": "warn"
   },
+  "route": {
+    "final": "select"
+  },
   "outbounds": [
     {
       "type": "vless",
@@ -60,7 +63,9 @@
         "🇧🇾 白俄罗斯 (Belarus) 02 - xiaohe",
         "🇧🇾 白俄罗斯 (Belarus) 03 - xiaohe"
       ],
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "type": "direct",

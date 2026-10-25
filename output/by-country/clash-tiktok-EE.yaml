@@ -3,30 +3,61 @@ socks-port: 7891
 allow-lan: true
 mode: rule
 log-level: info
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - localhost.
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+profile:
+  store-selected: true
+  store-fake-ip: true
+tcp-concurrent: true
+unified-delay: true
 proxies:
 - name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
-  server: 13.143.239.119
+  server: ee1.mycloud1.org
   port: 443
   udp: true
   type: vless
-  uuid: f36c82e2-e33e-4054-960a-34619d9fdd5b
+  uuid: 605dea9b-b485-45c9-af9b-cc2b0195023c
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: kYbLeoF13TKNPtlYwRsAqFQR3l7v6NMe6ydARMIfEC0
-    short-id: 7230e3b3f137543c
-  servername: www.transip.nl
+    public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E
+    short-id: afee962d
+  servername: ee1.mycloud1.org
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-TCP
   - AUTO
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
-  url: https://www.gstatic.com/generate_204
+  url: http://www.gstatic.com/generate_204
   interval: 300
+  tolerance: 50
+  lazy: false
   proxies:
   - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 rules:

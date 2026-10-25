@@ -2,6 +2,9 @@
   "log": {
     "level": "warn"
   },
+  "route": {
+    "final": "select"
+  },
   "outbounds": [
     {
       "type": "vless",
@@ -28,7 +31,9 @@
       "outbounds": [
         "🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe"
       ],
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "type": "direct",

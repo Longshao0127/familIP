@@ -2,31 +2,13 @@
   "log": {
     "level": "warn"
   },
+  "route": {
+    "final": "select"
+  },
   "outbounds": [
     {
       "type": "vless",
       "tag": "🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe",
-      "server": "185.95.231.156",
-      "server_port": 443,
-      "uuid": "1f8cf47a-b66a-4916-979f-26edfcf44eea",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To",
-          "short_id": "a3a578ab"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe",
       "server": "77.91.69.169",
       "server_port": 19226,
       "uuid": "f0b144bd-4c44-440d-b630-d79ec82cad3a",
@@ -47,7 +29,7 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇮🇱 以色列 (Israel) 03(机房) - xiaohe",
+      "tag": "🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe",
       "server": "177.3.208.65",
       "server_port": 443,
       "uuid": "4f34bc04-479c-49ba-91a8-6bb9ed15031c",
@@ -69,6 +51,27 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇮🇱 以色列 (Israel) 03(机房) - xiaohe",
+      "server": "185.95.231.156",
+      "server_port": 443,
+      "uuid": "1f8cf47a-b66a-4916-979f-26edfcf44eea",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To",
+          "short_id": "a3a578ab"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -86,7 +89,9 @@
         "🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe",
         "🎵 🇮🇱 以色列 (Israel) 03(机房) - xiaohe"
       ],
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "type": "direct",
