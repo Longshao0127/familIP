@@ -8,21 +8,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
-      "server": "hinet1.2yly.com",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tag": "🎵 🇲🇾 马来西亚 (Malaysia) 01(机房) - xiaohe",
+      "server": "forwarded.frnhk.xyz",
+      "server_port": 53002,
+      "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "addons.mozilla.org",
+        "server_name": "www.ens.psl.eu",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
-          "short_id": ""
+          "public_key": "3lswNoHV1RqK6yO--0ZWoYh1WqHkfhKQph3onxE_1So",
+          "short_id": "fc04"
         }
       }
     },
@@ -31,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
+        "🎵 🇲🇾 马来西亚 (Malaysia) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
+        "🎵 🇲🇾 马来西亚 (Malaysia) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

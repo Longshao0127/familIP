@@ -24,34 +24,15 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 01(家宽) - xiaohe
-  server: hinet1.2yly.com
-  port: 24215
-  udp: true
-  type: vless
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  tls: true
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  server: 160.187.100.109
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   server: 103.115.109.49
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
+  sni: https://t.me/oneclickvpnkeys
   skip-cert-verify: true
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
   server: tjtw.m2k699.com
   port: 24999
   udp: true
@@ -66,10 +47,8 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(家宽) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -77,8 +56,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(家宽) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -86,10 +64,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(家宽) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -97,7 +73,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -32,13 +32,34 @@ proxies:
   password: d4ca9415f0eac7897472e1e5b86d2e96
   sni: promo.betust.net
   skip-cert-verify: false
+- name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  server: 5.178.109.174
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -47,6 +68,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

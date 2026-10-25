@@ -24,16 +24,18 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  server: hinet1.2yly.com
-  port: 24215
+- name: 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  server: forwarded.frnhk.xyz
+  port: 53002
   udp: true
   type: vless
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  servername: addons.mozilla.org
+    public-key: 3lswNoHV1RqK6yO--0ZWoYh1WqHkfhKQph3onxE_1So
+    short-id: fc04
+  servername: www.ens.psl.eu
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -41,7 +43,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -49,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -57,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
 rules:
 - MATCH,PROXIES

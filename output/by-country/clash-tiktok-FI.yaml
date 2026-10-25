@@ -25,6 +25,32 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  server: hw3.divarkhaghazi.com.
+  port: 465
+  udp: true
+  type: vless
+  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
+  tls: true
+  servername: hw3.divarkhaghazi.com.
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw3.divarkhaghazi.com.
+- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  server: 46.62.204.134
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
   server: 45.149.147.213
   port: 4444
   udp: true
@@ -35,7 +61,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: kobedin-server1-trojan
-- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+- name: 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -47,7 +73,7 @@ proxies:
     short-id: d368b94e275ab080
   servername: www.google.com
   client-fingerprint: firefox
-- name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+- name: 🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe
   server: 2.27.203.251
   port: 443
   udp: true
@@ -59,21 +85,7 @@ proxies:
     public-key: QYdQmsVvUj4jwo9gH20nJA5x015gaAL0nGipORe6ZmY
   servername: edge-fi2.lovely.my
   client-fingerprint: chrome
-- name: 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
-  server: 65.109.212.121
-  port: 465
-  udp: true
-  type: vless
-  uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e
-  tls: true
-  servername: hw3.divarkhaghazi.com.
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hw3.divarkhaghazi.com.
-- name: 🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe
+- name: 🎵 🇫🇮 芬兰 (Finland) 06(机房) - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -95,6 +107,7 @@ proxy-groups:
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 06(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -107,6 +120,7 @@ proxy-groups:
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 06(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -119,5 +133,6 @@ proxy-groups:
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 06(机房) - xiaohe
 rules:
 - MATCH,PROXIES

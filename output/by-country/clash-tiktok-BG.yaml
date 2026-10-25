@@ -41,8 +41,17 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
