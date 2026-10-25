@@ -2,37 +2,37 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-10-25T15:55:00.829764+00:00",
+      "time": "2026-10-25T20:40:44.918226+00:00",
       "stage": "after_prefilter",
-      "before": 3124,
-      "after": 3124,
+      "before": 3131,
+      "after": 3131,
       "front_proxy": false
     },
     {
-      "time": "2026-10-25T16:00:32.142149+00:00",
+      "time": "2026-10-25T20:45:35.644489+00:00",
       "stage": "after_liveness",
-      "tested": 3124,
-      "alive": 632
+      "tested": 3131,
+      "alive": 659
     },
     {
-      "time": "2026-10-25T16:11:18.081594+00:00",
+      "time": "2026-10-25T20:58:06.382194+00:00",
       "stage": "ok",
-      "total": 410,
+      "total": 422,
       "residential": 2,
-      "tiktok": 359,
+      "tiktok": 372,
       "cn": {
         "tested": 120,
-        "ok": 40,
-        "bad": 80,
+        "ok": 30,
+        "bad": 90,
         "err": 0,
         "cn_total": 64
       },
-      "elapsed": 994.9
+      "elapsed": 1059.3
     }
   ],
   "node_fail_reasons": {
-    "check_fail": 10,
-    "liveness_fail": 2482
+    "liveness_fail": 2464,
+    "check_fail": 9
   },
-  "err_sample": "check: \u001b[31mFATAL\u001b[0m[0000] initialize outbound[0]: unsupported flow: xtls-rprx-vision-udp443\n"
+  "err_sample": "liveness: ConnectionError: SOCKSHTTPConnectionPool(host='connectivitycheck.gstatic.com', port=80): Max retries exceeded with url: /generate_204 (Caused by NewConnectionError(\"SOCKSConnection(host='connectivityc"
 }
