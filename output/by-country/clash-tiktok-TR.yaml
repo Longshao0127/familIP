@@ -25,18 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  server: 45.151.71.164
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: abuse.ozon.ru
-  client-fingerprint: firefox
-- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -55,7 +43,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -64,7 +51,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,6 +59,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

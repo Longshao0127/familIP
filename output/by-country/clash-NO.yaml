@@ -24,20 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
-  server: 64.177.90.30
-  port: 8388
+- name: 🇳🇴 挪威 (Norway) 01 - xiaohe
+  server: 185.213.23.63
+  port: 990
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: BWyPPTusFKhGgzKh
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇳🇴 挪威 (Norway) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇳🇴 挪威 (Norway) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇳🇴 挪威 (Norway) 01 - xiaohe
 rules:
 - MATCH,PROXIES

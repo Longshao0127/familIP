@@ -25,6 +25,14 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+  server: svip.skycon808.com
+  port: 60005
+  udp: true
+  type: anytls
+  password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  sni: svip.skycon808.com
+  skip-cert-verify: true
+- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
   server: 50.7.38.243
   port: 443
   udp: true
@@ -32,26 +40,24 @@ proxies:
   password: d4ca9415f0eac7897472e1e5b86d2e96
   sni: promo.betust.net
   skip-cert-verify: false
-- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  server: 5.178.109.174
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,7 +65,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,6 +82,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
 rules:
 - MATCH,PROXIES

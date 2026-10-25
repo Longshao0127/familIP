@@ -7,14 +7,15 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "trojan",
       "tag": "🇮🇳 印度 (India) 01 - xiaohe",
-      "server": "152.67.8.205",
-      "server_port": 80,
-      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
-      "security": "auto",
-      "transport": {
-        "type": "ws"
+      "server": "in.tronsg.com",
+      "server_port": 443,
+      "password": "Trojan@82164024",
+      "tls": {
+        "enabled": true,
+        "server_name": "127.0.0.1",
+        "insecure": true
       }
     },
     {

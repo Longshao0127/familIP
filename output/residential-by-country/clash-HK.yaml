@@ -24,22 +24,33 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
-  server: 194.36.37.59
-  port: 10004
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  server: hkgb707.ifastcdncache.com
+  port: 60852
   udp: true
-  type: vless
-  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
+  type: vmess
+  uuid: f8eca8df-a1a5-4918-a194-d34112a3673f
+  alterId: 2
+  cipher: auto
   network: ws
   ws-opts:
-    path: /vpnjantit
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -47,7 +58,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,6 +66,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

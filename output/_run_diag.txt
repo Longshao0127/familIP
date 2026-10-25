@@ -2,38 +2,37 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-10-25T11:07:19.472372+00:00",
+      "time": "2026-10-25T15:55:00.829764+00:00",
       "stage": "after_prefilter",
-      "before": 3137,
-      "after": 3137,
+      "before": 3124,
+      "after": 3124,
       "front_proxy": false
     },
     {
-      "time": "2026-10-25T11:12:22.852275+00:00",
+      "time": "2026-10-25T16:00:32.142149+00:00",
       "stage": "after_liveness",
-      "tested": 3137,
-      "alive": 626
+      "tested": 3124,
+      "alive": 632
     },
     {
-      "time": "2026-10-25T11:22:09.551741+00:00",
+      "time": "2026-10-25T16:11:18.081594+00:00",
       "stage": "ok",
-      "total": 384,
-      "residential": 1,
-      "tiktok": 346,
+      "total": 410,
+      "residential": 2,
+      "tiktok": 359,
       "cn": {
         "tested": 120,
-        "ok": 28,
-        "bad": 92,
+        "ok": 40,
+        "bad": 80,
         "err": 0,
-        "cn_total": 44
+        "cn_total": 64
       },
-      "elapsed": 912.4
+      "elapsed": 994.9
     }
   ],
   "node_fail_reasons": {
-    "liveness_fail": 2495,
-    "check_fail": 17,
-    "port_not_ready": 1
+    "check_fail": 10,
+    "liveness_fail": 2482
   },
-  "err_sample": "liveness: ConnectionError: SOCKSHTTPConnectionPool(host='connectivitycheck.gstatic.com', port=80): Max retries exceeded with url: /generate_204 (Caused by NewConnectionError(\"SOCKSConnection(host='connectivityc"
+  "err_sample": "check: \u001b[31mFATAL\u001b[0m[0000] initialize outbound[0]: unsupported flow: xtls-rprx-vision-udp443\n"
 }

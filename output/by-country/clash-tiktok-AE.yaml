@@ -56,15 +56,6 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  network: ws
-  ws-opts:
-    path: /vless
 proxy-groups:
 - name: PROXIES
   type: select
@@ -75,7 +66,6 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -85,7 +75,6 @@ proxy-groups:
   proxies:
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -96,7 +85,6 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

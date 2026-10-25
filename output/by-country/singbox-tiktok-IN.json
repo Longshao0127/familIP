@@ -7,8 +7,20 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🎵 🇮🇳 印度 (India) 01(机房) - xiaohe",
+      "server": "in.tronsg.com",
+      "server_port": 443,
+      "password": "Trojan@82164024",
+      "tls": {
+        "enabled": true,
+        "server_name": "127.0.0.1",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇮🇳 印度 (India) 02(机房) - xiaohe",
       "server": "13.140.56.100",
       "server_port": 14430,
       "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
@@ -25,14 +37,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇮🇳 印度 (India) 01(机房) - xiaohe"
+        "🎵 🇮🇳 印度 (India) 01(机房) - xiaohe",
+        "🎵 🇮🇳 印度 (India) 02(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇮🇳 印度 (India) 01(机房) - xiaohe"
+        "🎵 🇮🇳 印度 (India) 01(机房) - xiaohe",
+        "🎵 🇮🇳 印度 (India) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

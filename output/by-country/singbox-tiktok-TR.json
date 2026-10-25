@@ -9,27 +9,6 @@
     {
       "type": "vless",
       "tag": "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
-      "server": "45.151.71.164",
-      "server_port": 443,
-      "uuid": "8a1f8853-9a71-4ef2-a64c-4f0a94c2e14b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "abuse.ozon.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe",
       "server": "151.241.226.201",
       "server_port": 2053,
       "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
@@ -52,16 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
-        "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe"
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
-        "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe"
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

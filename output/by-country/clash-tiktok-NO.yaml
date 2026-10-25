@@ -24,22 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe
-  server: 194.36.37.59
-  port: 10004
+- name: 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  server: 185.213.23.63
+  port: 990
   udp: true
-  type: vless
-  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
-  network: ws
-  ws-opts:
-    path: /vpnjantit
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -47,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
