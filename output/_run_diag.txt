@@ -2,30 +2,30 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-10-24T20:33:33.511631+00:00",
+      "time": "2026-10-25T04:13:23.583391+00:00",
       "stage": "after_prefilter",
-      "before": 3137,
-      "after": 3137,
+      "before": 3181,
+      "after": 3181,
       "front_proxy": false
     },
     {
-      "time": "2026-10-24T20:38:15.915201+00:00",
+      "time": "2026-10-25T04:18:17.669892+00:00",
       "stage": "after_liveness",
-      "tested": 3137,
-      "alive": 557
+      "tested": 3181,
+      "alive": 691
     },
     {
-      "time": "2026-10-24T20:42:43.406641+00:00",
+      "time": "2026-10-25T04:22:05.008155+00:00",
       "stage": "ok",
-      "total": 388,
+      "total": 432,
       "residential": 1,
-      "tiktok": 346,
-      "elapsed": 570.3
+      "tiktok": 396,
+      "elapsed": 542.5
     }
   ],
   "node_fail_reasons": {
-    "check_fail": 105,
-    "liveness_fail": 2475
+    "check_fail": 95,
+    "liveness_fail": 2395
   },
   "err_sample": "check: \u001b[31mFATAL\u001b[0m[0000] initialize outbound[0]: unknown uTLS fingerprint: unsafe\n"
 }

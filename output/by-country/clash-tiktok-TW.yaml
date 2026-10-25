@@ -4,15 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
-  server: 160.187.100.109
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 01(移动) - xiaohe
+  server: gu232.izzzzzi.com
+  port: 20052
+  udp: true
+  type: trojan
+  password: e56e752c86a640cd
+  sni: gu232.izzzzzi.com
+  skip-cert-verify: true
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
+  server: 103.115.109.49
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-tw-002.fastervpn.world
+  sni: 103.115.109.49
   skip-cert-verify: true
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
+  server: vpn-tw-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: speedtest.tinkoff.ru
+  skip-cert-verify: true
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
   server: tjtw.m2k699.com
   port: 24999
   udp: true
@@ -20,34 +36,12 @@ proxies:
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
-  server: 60.248.219.78
-  port: 443
-  udp: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  tls: true
-  servername: ty986gfazs.cainiaohub.xyz
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
-  server: 103.115.109.49
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(移动) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
@@ -56,7 +50,7 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(移动) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
