@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇵🇭 菲律宾 (Philippines) 01 - xiaohe
-  server: ph001.zestapp778.com
+  server: 130.94.53.51
   port: 15656
   udp: true
   type: vless
@@ -33,21 +33,13 @@ proxies:
   tls: true
   servername: ph001.zestapp778.com
   skip-cert-verify: false
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇵🇭 菲律宾 (Philippines) 01 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🇵🇭 菲律宾 (Philippines) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test

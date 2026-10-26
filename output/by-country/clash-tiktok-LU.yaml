@@ -24,18 +24,17 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
-  server: forwarded.frnhk.xyz
-  port: 53002
+- name: 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
+  server: 107.189.7.176
+  port: 32752
   udp: true
   type: vless
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  flow: xtls-rprx-vision
+  uuid: 4970c1cd-13e1-498a-920a-61d07be2fa65
   tls: true
   reality-opts:
-    public-key: 3lswNoHV1RqK6yO--0ZWoYh1WqHkfhKQph3onxE_1So
-    short-id: fc04
-  servername: www.ens.psl.eu
+    public-key: pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA
+    short-id: d758a643034ad90e
+  servername: www.apple.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -43,7 +42,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +50,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +58,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

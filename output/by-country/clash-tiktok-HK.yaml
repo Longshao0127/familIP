@@ -25,28 +25,28 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   server: 202.146.222.174
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 'off'
+  sni: 202.146.222.174
   skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: speedtest.tinkoff.ru
+  sni: https://t.me/wangcai2üáüá
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/clashv8🇨🇳
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   server: 165.154.63.139
@@ -62,19 +62,6 @@ proxies:
   servername: www.amazon.com
   client-fingerprint: chrome
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
-  server: 50.7.44.28
-  port: 2091
-  udp: true
-  type: vless
-  uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
-    short-id: 08a4b1f473932632
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
   server: 151.242.85.236
   port: 443
   udp: true
@@ -86,9 +73,22 @@ proxies:
     public-key: gUu1n11Ef_GEoatNQzJJucvIjGTt4qxOWdxMzjoHwDM
     short-id: 9b6fa4047c24629f
   servername: addons.mozilla.org
+  client-fingerprint: firefox
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
+  server: 67.159.49.26
+  port: 2091
+  udp: true
+  type: vless
+  uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+    short-id: 08a4b1f473932632
+  servername: www.apple.com
   client-fingerprint: chrome
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
-  server: tjflb.m2k699.com
+  server: tjxg.m2k699.com
   port: 24999
   udp: true
   type: trojan

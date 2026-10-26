@@ -14,7 +14,7 @@
       "password": "84a506ca5aca505696a454d828420b3f",
       "tls": {
         "enabled": true,
-        "server_name": "off",
+        "server_name": "140.238.213.114",
         "insecure": true
       }
     },
@@ -27,60 +27,12 @@
       "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3"
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe",
-      "server": "79.137.199.52",
-      "server_port": 21,
-      "uuid": "763e2ddd-c830-4f4f-801c-f6f2c3418d4f",
-      "tls": {
-        "enabled": true,
-        "server_name": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "bapj1qapjk4.0sds0li1bwcz0i76it0gjxv1.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe",
-      "server": "54.179.79.12",
-      "server_port": 53646,
-      "uuid": "d57b9436-a238-4066-8b11-d23ae57c5982",
-      "tls": {
-        "enabled": true,
-        "server_name": "9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@Marisa_kristi",
-        "headers": {
-          "Host": "9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe"
+        "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe"
       ]
     },
     {
@@ -88,9 +40,7 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe"
+        "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

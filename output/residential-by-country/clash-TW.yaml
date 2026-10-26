@@ -25,12 +25,12 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  server: er8u54dh.df6h451rh.xin
-  port: 443
+  server: kw119.zxmm.eu.org
+  port: 20031
   udp: true
-  type: anytls
-  password: 0324fbc29561
-  sni: px.ads.linkedin.com
+  type: trojan
+  password: 00a72bf349e6479b
+  sni: kw119.zxmm.eu.org
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
