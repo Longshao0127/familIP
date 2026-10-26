@@ -33,28 +33,12 @@ proxies:
   sni: tjtw.m2k699.com
   skip-cert-verify: false
 - name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
-  server: er8u54dh.df6h451rh.xin
-  port: 443
-  udp: true
-  type: anytls
-  password: 0324fbc29561
-  sni: px.ads.linkedin.com
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   server: 103.115.109.49
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
-  server: 160.187.100.109
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 160.187.100.109
+  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -66,8 +50,6 @@ proxy-groups:
   - AUTO-UDP
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,7 +58,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -85,7 +66,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -95,8 +75,6 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -104,7 +82,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
 rules:
 - MATCH,PROXIES

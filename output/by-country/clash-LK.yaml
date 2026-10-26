@@ -24,28 +24,24 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇮🇳 印度 (India) 01 (家宽) - xiaohe
-  server: 122.176.216.52
-  port: 443
+- name: 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
+  server: support.zoom.us
+  port: 8080
   udp: true
   type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   network: ws
   ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    path: /
     headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+      Host: free.nadun.store
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇮🇳 印度 (India) 01 (家宽) - xiaohe
+  - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,7 +49,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇳 印度 (India) 01 (家宽) - xiaohe
+  - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -61,6 +57,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇳 印度 (India) 01 (家宽) - xiaohe
+  - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
 rules:
 - MATCH,PROXIES

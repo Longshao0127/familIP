@@ -1,0 +1,44 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "route": {
+    "final": "select"
+  },
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe",
+      "server": "213.183.63.60",
+      "server_port": 9085,
+      "method": "aes-256-cfb",
+      "password": "9ej82EKe2gq7gLAM"
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

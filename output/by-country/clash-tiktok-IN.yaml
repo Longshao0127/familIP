@@ -24,43 +24,7 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇮🇳 印度 (India) 01(家宽) - xiaohe
-  server: 122.176.216.52
-  port: 443
-  udp: true
-  type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-    headers:
-      Host: app-6ada5023.deploy.meerasolution.com
-- name: 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  server: 139.84.132.62
-  port: 443
-  udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: in.tronsg.com
-  skip-cert-verify: false
-- name: 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  server: 152.67.8.205
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: in-152.67.8.205-0242
-- name: 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
+- name: 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -69,18 +33,13 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 13.140.56.100
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇮🇳 印度 (India) 01(家宽) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -88,10 +47,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇮🇳 印度 (India) 01(家宽) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -99,9 +55,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇮🇳 印度 (India) 01(家宽) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

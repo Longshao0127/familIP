@@ -24,26 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
-  server: 138.124.180.137
-  port: 443
+- name: 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
+  server: 213.183.63.60
+  port: 9085
   udp: true
-  type: vless
-  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
-    short-id: 33acba1b
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-cfb
+  password: 9ej82EKe2gq7gLAM
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 rules:
 - MATCH,PROXIES

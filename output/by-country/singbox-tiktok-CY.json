@@ -8,22 +8,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe",
-      "server": "138.124.180.137",
-      "server_port": 443,
-      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
+      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
+      "server": "5.253.30.99",
+      "server_port": 40443,
+      "uuid": "511c1563-2cb6-4064-abc6-a59ee49818a8",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "deepl.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
-          "short_id": "33acba1b"
+          "public_key": "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0",
+          "short_id": "88b6"
         }
       }
     },
@@ -32,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

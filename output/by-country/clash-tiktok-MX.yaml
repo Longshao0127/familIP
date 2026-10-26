@@ -25,14 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  server: 64.177.90.30
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: BWyPPTusFKhGgzKh
-- name: 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
-  server: 149.104.90.21
+  server: mx001.zestapp778.com
   port: 19167
   udp: true
   type: vless
@@ -40,15 +33,22 @@ proxies:
   tls: true
   servername: mx001.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -57,7 +57,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -66,6 +65,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -33,30 +33,22 @@ proxies:
   tls: true
   servername: 2.26.6.1
   skip-cert-verify: false
-  client-fingerprint: chrome
 - name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
-  server: 201.10.91.127
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: pl2.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /PL2W
-    headers:
-      Host: pl2.pad-service.com
-- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
-  server: 191.217.211.128
-  port: 20270
+  server: 201.58.180.143
+  port: 4443
   udp: true
   type: hysteria2
-  password: dd56bf58-4c37-42e1-9e75-4b6c67939ffd
-  sni: pl1.song69.fun
+  password: c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3
+  sni: pl2.shvpn.ru
   skip-cert-verify: false
+- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  server: 45.144.48.32
+  port: 57072
+  udp: true
+  type: vmess
+  uuid: d8f45bbb-e84d-4ad5-aa63-970f1345b164
+  alterId: 0
+  cipher: auto
 - name: 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
   server: 77.232.135.141
   port: 8445
@@ -66,41 +58,11 @@ proxies:
   tls: true
   servername: ru1.radiolumens.uk
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: beru-pl
 - name: 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
-  server: 201.10.91.68
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: pl1.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /PL1W
-    headers:
-      Host: pl1.pad-service.com
-- name: 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
-  server: 201.10.91.98
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: pl3.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /PL3W
-    headers:
-      Host: pl3.pad-service.com
-- name: 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
   server: 54.37.131.126
   port: 80
   udp: true
@@ -113,12 +75,18 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
+- name: 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
   server: site.teslamotor.site
   port: 20001
   udp: true
   type: vless
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+- name: 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
+  server: edge10.cyrionflare.com
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
@@ -134,7 +102,6 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -143,7 +110,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -152,12 +118,11 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -172,7 +137,6 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -180,6 +144,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
