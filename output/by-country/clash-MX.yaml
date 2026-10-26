@@ -24,25 +24,40 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇪🇸 西班牙 (Spain) 01 - xiaohe
-  server: 212.227.235.66
-  port: 2053
+- name: 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  server: mx001.zestapp778.com
+  port: 19167
   udp: true
   type: vless
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  reality-opts:
-    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
-    short-id: 29e8dcd2b37aaa7f
-  servername: www.apple.com
+  servername: mx001.zestapp778.com
+  skip-cert-verify: false
   client-fingerprint: chrome
+- name: 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
+  server: 64.177.90.30
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇪🇸 西班牙 (Spain) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -50,7 +65,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,6 +74,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇸 西班牙 (Spain) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
 rules:
 - MATCH,PROXIES

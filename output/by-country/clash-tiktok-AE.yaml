@@ -25,6 +25,28 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
+  server: 31.57.190.34
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
+  server: 31.57.190.34
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   server: 130.49.161.70
   port: 443
   udp: true
@@ -34,7 +56,7 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
+- name: 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
   server: 185.253.116.33
   port: 14430
   udp: true
@@ -43,7 +65,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-- name: 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
+- name: 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
   server: 84.235.244.108
   port: 22573
   udp: true
@@ -54,7 +76,7 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
+- name: 🎵 🇦🇪 阿联酋 (UAE) 06(机房) - xiaohe
   server: 95.174.68.188
   port: 14430
   udp: true
@@ -63,10 +85,13 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
+    headers:
+      Host: 95.174.68.188
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
@@ -74,6 +99,17 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 06(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -81,9 +117,11 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 06(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -95,6 +133,8 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 06(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -102,6 +142,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

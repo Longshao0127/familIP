@@ -25,12 +25,35 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  server: 2.26.6.1
+  port: 2087
+  udp: true
+  type: vless
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  tls: true
+  servername: 2.26.6.1
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   server: 5.22.221.127
   port: 443
   udp: true
   type: vless
   uuid: 44dfa3a7-f648-4587-819b-e653c0823f28
-- name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
+- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  server: 77.232.135.141
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
+- name: 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
   server: 54.37.131.126
   port: 80
   udp: true
@@ -43,7 +66,7 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+- name: 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
   server: site.teslamotor.site
   port: 20001
   udp: true
@@ -53,11 +76,22 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,6 +102,8 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -78,5 +114,7 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -37,13 +37,6 @@ proxies:
     short-id: 33acba1b
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
-  server: 185.135.86.175
-  port: 9094
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: rpgbNnU9rDDU4aWZ
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,7 +44,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +52,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,6 +60,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -7,25 +7,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
-      "server": "5.253.29.254",
-      "server_port": 10443,
-      "uuid": "c7c27192-60a5-4ce1-b613-95270d82309d"
+      "type": "shadowsocks",
+      "tag": "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
+      "server": "location8.cpanel-host10.ir",
+      "server_port": 56134,
+      "method": "chacha20-ietf-poly1305",
+      "password": "uvKNudV-N8AUCrykPiyznA"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

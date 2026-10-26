@@ -24,15 +24,23 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe
-  server: 80.243.228.84
-  port: 2085
+- name: 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  server: mx001.zestapp778.com
+  port: 19167
   udp: true
   type: vless
-  uuid: a7c66f66-76b7-42ea-8d2b-890a37239368
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: mx001.zestapp778.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
+  server: 64.177.90.30
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
 proxy-groups:
 - name: PROXIES
   type: select
@@ -40,7 +48,8 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -48,7 +57,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -56,7 +65,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -64,6 +74,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

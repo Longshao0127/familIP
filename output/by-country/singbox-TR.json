@@ -7,29 +7,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe",
-      "server": "80.243.228.84",
-      "server_port": 2085,
-      "uuid": "a7c66f66-76b7-42ea-8d2b-890a37239368",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
+      "type": "shadowsocks",
+      "tag": "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
+      "server": "location8.cpanel-host10.ir",
+      "server_port": 56134,
+      "method": "chacha20-ietf-poly1305",
+      "password": "uvKNudV-N8AUCrykPiyznA"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe"
+        "🇹🇷 土耳其 (Turkey) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇸🇰 斯洛伐克 (Slovakia) 01(机房) - xiaohe"
+        "🇹🇷 土耳其 (Turkey) 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
