@@ -2627,7 +2627,7 @@ def export_tiktok(unique_nodes):
 
     if not tiktok_candidates:
         print("[!] 无 TikTok 可用节点 (所有节点均被区域封锁/WARP 套壳/MITM)")
-        return 0
+        return 0, 0
 
     # ---- 导出阶段 ----
     ensure_directories()
@@ -2675,6 +2675,16 @@ def export_tiktok(unique_nodes):
     # sing-box JSON
     export_singbox_json(all_sb, os.path.join(OUTPUT_DIR, "tiktok-singbox.json"))
 
+    # 国内实测可用 TikTok 纯净节点 (TikTok 检测通过 ∩ 国内探测点 TCP 可达)
+    cn_tiktok = [n for n in tiktok_candidates if n.get("cn_ok") is True]
+    if cn_tiktok:
+        cn_links, cn_proxies, cn_sb = _build_group(cn_tiktok)
+        with open(os.path.join(OUTPUT_DIR, "tiktok-cn.txt"), "w", encoding="utf-8") as f:
+            f.write(base64.b64encode("\n".join(cn_links).encode()).decode())
+        export_clash_yaml(cn_proxies, os.path.join(OUTPUT_DIR, "tiktok-cn-clash.yaml"))
+        export_singbox_json(cn_sb, os.path.join(OUTPUT_DIR, "tiktok-cn-singbox.json"))
+        print(f"[+] TikTok 纯净节点(国内实测): {len(cn_tiktok)} 个 → output/tiktok-cn-clash.yaml")
+
     # 国家分布
     by_cc = {}
     for n in tiktok_candidates:
@@ -2693,7 +2703,7 @@ def export_tiktok(unique_nodes):
     res_cnt = sum(1 for n in tiktok_candidates if n["net_type"] in ("residential", "mobile"))
     direct_cnt = sum(1 for n in tiktok_candidates if n.get("is_tiktok_ok"))
     print(f"[+] TikTok 专区导出: 共 {len(tiktok_candidates)} | TikTok 直测通过 {direct_cnt} | 家宽/移动 {res_cnt} | 类型分布 {by_type}")
-    return len(tiktok_candidates)
+    return len(tiktok_candidates), len(cn_tiktok)
 
 
 def export_clash_yaml(clash_proxies, filepath):
@@ -2780,7 +2790,7 @@ def export_singbox_json(sb_nodes, filepath):
 # README 生成
 # ═══════════════════════════════════════════N═══════════════════════
 
-def update_readme(total_count, res_count, tiktok_count=0, cn_count=0):
+def update_readme(total_count, res_count, tiktok_count=0, cn_count=0, tiktok_cn_count=0):
     repo_name = os.environ.get("GITHUB_REPOSITORY", "hezhanleiok/freesub").strip()
     cache_bust = ""
     # 私有化部署 Worker 脚本里的仓库参数 (默认值兜底)
@@ -2825,6 +2835,20 @@ def update_readme(total_count, res_count, tiktok_count=0, cn_count=0):
 
     res_table = table_rows(res_counts, "residential-by-country")
     normal_table = table_rows(normal_counts, "by-country")
+
+    tiktok_cn_section = ""
+    if tiktok_cn_count > 0:
+        tiktok_cn_section = f"""
+### 🎯 TikTok 纯净节点 · 国内实测可用
+
+> 同时满足「TikTok 专项检测通过」+「国内探测点 TCP 可达」，共 `{tiktok_cn_count}` 个；国内直连成功率最高，适合直接刷 TikTok/YouTube。
+
+| 客户端 | 节点数 | 免翻 CDN 直链 | 官方 Raw 直链 |
+| :--- | :---: | :--- | :--- |
+| 🚀 **Clash (YAML)** | `{tiktok_cn_count}` | [下载](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/tiktok-cn-clash.yaml) | [Raw](https://raw.githubusercontent.com/{repo_name}/main/output/tiktok-cn-clash.yaml) |
+| ⚡ **V2RayN (Base64)** | `{tiktok_cn_count}` | [下载](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/tiktok-cn.txt) | [Raw](https://raw.githubusercontent.com/{repo_name}/main/output/tiktok-cn.txt) |
+| 📦 **sing-box (JSON)** | `{tiktok_cn_count}` | [下载](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/tiktok-cn-singbox.json) | [Raw](https://raw.githubusercontent.com/{repo_name}/main/output/tiktok-cn-singbox.json) |
+"""
 
     cn_section = ""
     if cn_count > 0:
@@ -2882,6 +2906,7 @@ def update_readme(total_count, res_count, tiktok_count=0, cn_count=0):
 | 📦 **sing-box (JSON)** | `{tiktok_count}` | 出口 IP 国家过滤 | 低延迟优先 | [免翻 CDN 直链](https://cdn.jsdelivr.net/gh/{repo_name}@main/output/tiktok-singbox.json) |
 
 > 💡 **使用提示**: TikTok 对机房/VPN IP 风控极严，推荐选择「🎵 🇯🇵 日本 家宽」「🎵 🇹🇼 台湾 家宽」「🎵 🇺🇸 美国 家宽」等住宅 IP 节点，效果最佳。机房 IP 可能偶发可用但不稳定。
+{tiktok_cn_section}
 
 ---
 
@@ -3169,8 +3194,8 @@ def _main_body():
     non_residential.sort(key=lambda x: (cn_rank(x), x["latency_ms"]))
 
     total, res = export_all(unique_nodes, residential, non_residential)
-    tiktok_cnt = export_tiktok(unique_nodes)
-    update_readme(total, res, tiktok_cnt, cn_stats.get("cn_total", 0))
+    tiktok_cnt, tiktok_cn_cnt = export_tiktok(unique_nodes)
+    update_readme(total, res, tiktok_cnt, cn_stats.get("cn_total", 0), tiktok_cn_cnt)
     _write_diag("ok", total=total, residential=res, tiktok=tiktok_cnt,
                 cn=cn_stats, elapsed=round(time.time() - t_start, 1))
 
