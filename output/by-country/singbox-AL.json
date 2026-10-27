@@ -9,10 +9,10 @@
     {
       "type": "shadowsocks",
       "tag": "🇦🇱 AL 01 - xiaohe",
-      "server": "130.49.189.158",
-      "server_port": 43558,
+      "server": "dns22.m3hrzd.ir",
+      "server_port": 1348,
       "method": "chacha20-ietf-poly1305",
-      "password": "cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI="
+      "password": "LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn"
     },
     {
       "type": "selector",

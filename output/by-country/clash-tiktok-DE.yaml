@@ -32,40 +32,65 @@ proxies:
   cipher: 2022-blake3-aes-256-gcm
   password: U/jVh1z5NQ0cFCiCeLLxNAFBjmLBo/ECQ0dICfRFLbQ=:cZkXr9v4dFpHUetNse9xo72JumvR4N2GLz3bxiEh6Rk=
 - name: 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
-  server: 104.17.71.206
-  port: 8443
+  server: de-bots4.h1cloud.net
+  port: 25267
   udp: true
-  type: vless
-  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
-  tls: true
-  servername: free.sahanwickramasinghe.me
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free.sahanwickramasinghe.me
+  type: trojan
+  password: happybirthdaydaniel
+  sni: t.me/FuckTheWall
+  skip-cert-verify: true
 - name: 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
-  server: p1tun0.greewebservices.ir
-  port: 38820
+  server: de15.h1cloud.net
+  port: 25362
   udp: true
   type: vless
-  uuid: f234330e-f9df-46e3-8f60-b2af5173c147
+  uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
   tls: true
   reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    short-id: 66ded2
-  servername: play.google.com
-  client-fingerprint: ios
+    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
+    short-id: 23732d14a527990d
+  servername: www.chip.de
+  client-fingerprint: chrome
 - name: 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
+  server: 177.202.111.18
+  port: 56137
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+- name: 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
   server: 88.99.213.222
   port: 14444
   udp: true
   type: hysteria2
   password: mhsl
-  sni: 88.99.213.222
+  sni: bing.com
   skip-cert-verify: true
-- name: 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
+  server: 5.45.100.100
+  port: 51511
+  udp: true
+  type: hysteria2
+  password: miaoge110
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
+  server: derfderf.ru
+  port: 12824
+  udp: true
+  type: hysteria2
+  password: d62s7ghfehm742us
+  sni: derfderf.ru
+  skip-cert-verify: false
+- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
+  server: 3.76.221.4
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
   server: 18.193.79.104
   port: 443
   udp: true
@@ -73,33 +98,20 @@ proxies:
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 127.0.0.1
   skip-cert-verify: true
-- name: 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
-  server: 213.202.208.199
-  port: 7001
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
   server: 185.176.204.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
-  server: 91.107.128.44
-  port: 46928
+- name: 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
+  server: 168.222.43.53
+  port: 10000
   udp: true
   type: vless
-  uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
-- name: 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
-  server: 5.175.205.190
-  port: 27774
-  udp: true
-  type: vless
-  uuid: 653137c6-474e-4a3d-9a20-5a5afb3d4a4f
-- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
+  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
+- name: 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
   server: 91.107.128.44
   port: 36812
   udp: true
@@ -107,60 +119,25 @@ proxies:
   uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
   alterId: 0
   cipher: auto
-- name: 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
-  server: 185.226.172.8
-  port: 8008
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-- name: 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
-  server: 91.107.128.44
-  port: 24701
-  udp: true
-  type: vmess
-  uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
-  alterId: 0
-  cipher: auto
 - name: 🎵 🇩🇪 德国 (Germany) 13(机房) - xiaohe
-  server: 168.222.43.53
-  port: 10000
+  server: 91.107.128.44
+  port: 46928
   udp: true
   type: vless
-  uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
+  uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
 - name: 🎵 🇩🇪 德国 (Germany) 14(机房) - xiaohe
-  server: 213.202.208.199
-  port: 5000
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe
   server: 146.70.20.147
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe
-  server: 157.173.7.17
-  port: 443
-  udp: true
-  type: vless
-  uuid: d0c8aa8d-a535-432a-b521-21f0e561f643
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
-    short-id: 88d9dc52ef39c8bd
-  servername: node-fra03.rkitman.ru
-  client-fingerprint: firefox
-- name: 🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe
-  server: 213.152.165.201
+- name: 🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe
+  server: 213.152.165.197
   port: 2094
   udp: true
   type: vless
-  uuid: 2ddcb519-ac96-48fe-8f91-4af4254c7d90
+  uuid: 570775a8-9305-4768-ba9b-b78d73cf15f9
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -168,18 +145,7 @@ proxies:
     short-id: 55986a94e2228791
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
-  server: free.sahanwickramasinghe.me
-  port: 80
-  udp: true
-  type: vless
-  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free.sahanwickramasinghe.me
-- name: 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe
   server: 45.65.112.23
   port: 2087
   udp: true
@@ -194,20 +160,7 @@ proxies:
     path: /ws-tls
     headers:
       Host: b5.dl-netprime.com
-- name: 🎵 🇩🇪 德国 (Germany) 20(机房) - xiaohe
-  server: 82.39.171.12
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 21(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe
   server: 91.107.247.173
   port: 2083
   udp: true
@@ -216,13 +169,19 @@ proxies:
   tls: true
   servername: sino.bestsellers1.site
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: sino.bestsellers1.site
-- name: 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
+  server: 5.175.205.190
+  port: 27774
+  udp: true
+  type: vless
+  uuid: 653137c6-474e-4a3d-9a20-5a5afb3d4a4f
+- name: 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
   server: 91.107.188.129
   port: 2083
   udp: true
@@ -235,17 +194,48 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
-  server: 185.255.179.166
+- name: 🎵 🇩🇪 德国 (Germany) 20(机房) - xiaohe
+  server: 82.39.171.12
   port: 443
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🎵 🇩🇪 德国 (Germany) 21(机房) - xiaohe
+  server: 31.76.15.24
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50a98bb9-8680-44b3-9962-902fff4631cf
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YM1SjW-RyGtPYs_SgjtfaIxJpw2m-TZ8qnNFxkDxHV0
+    short-id: a5543a67f52ea8ab
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  server: 49.13.39.86
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6c688f63-fad4-45d8-a6a1-1e978ed26b8b
+  flow: xtls-rprx-vision
+  tls: true
+  servername: static.75.209.109.65.clients.your-server.de
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  server: 31.77.148.89
+  port: 45021
+  udp: true
+  type: vless
+  uuid: ad263f1c-199e-4aaf-bf22-c3ad0407d377
 proxy-groups:
 - name: PROXIES
   type: select
@@ -287,6 +277,7 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -297,10 +288,7 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
@@ -352,7 +340,10 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
 rules:
 - MATCH,PROXIES

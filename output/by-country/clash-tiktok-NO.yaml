@@ -24,21 +24,28 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  server: 13.143.239.84
-  port: 4443
+- name: 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  server: 185.213.23.63
+  port: 990
   udp: true
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: nl1.obxodvpn.us
-  skip-cert-verify: false
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-TCP
   - AUTO
-  - AUTO-UDP
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,14 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-- name: AUTO-UDP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

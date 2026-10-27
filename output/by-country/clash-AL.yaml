@@ -25,18 +25,27 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇦🇱 AL 01 - xiaohe
-  server: 130.49.189.158
-  port: 43558
+  server: dns22.m3hrzd.ir
+  port: 1348
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=
+  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🇦🇱 AL 01 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🇦🇱 AL 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
