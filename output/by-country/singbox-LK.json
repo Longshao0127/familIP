@@ -16,7 +16,7 @@
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "free.nadun.store"
+          "Host": "Free.nadun.store"
         }
       }
     },

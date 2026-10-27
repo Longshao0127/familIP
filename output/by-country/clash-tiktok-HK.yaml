@@ -25,14 +25,45 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
+  server: 43.254.166.147
+  port: 443
+  udp: true
+  type: vless
+  uuid: c6553c99-837d-490a-af1c-c526d8c38e99
+  tls: true
+  servername: usyun.cc
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /trial-gs-relay
+    headers:
+      Host: usyun.cc
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   server: 202.146.222.174
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.174
+  sni: 'off'
   skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 202.146.222.89
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 'off'
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   server: nas.aizhzo.com
   port: 5010
   udp: true
@@ -42,23 +73,7 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fclashv8%f0%9f%87%a8%f0%9f%87%b3
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.29
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
   server: 165.154.63.139
   port: 443
   udp: true
@@ -71,7 +86,7 @@ proxies:
     short-id: ca4aedd4
   servername: www.amazon.com
   client-fingerprint: chrome
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
   server: 50.7.44.28
   port: 2091
   udp: true
@@ -83,9 +98,9 @@ proxies:
     public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
     short-id: 08a4b1f473932632
   servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
-  server: tjterq.m2k699.com
+  client-fingerprint: chrome
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
+  server: tjyg.m2k699.com
   port: 24999
   udp: true
   type: trojan
@@ -96,6 +111,7 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
@@ -106,6 +122,15 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -113,9 +138,10 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -130,6 +156,7 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -137,9 +164,9 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
 rules:
 - MATCH,PROXIES

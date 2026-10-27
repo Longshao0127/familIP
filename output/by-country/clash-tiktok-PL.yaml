@@ -33,14 +33,20 @@ proxies:
   tls: true
   servername: 2.26.6.1
   skip-cert-verify: false
+  client-fingerprint: chrome
 - name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
-  server: pl2.shvpn.ru
-  port: 4443
+  server: 77.232.135.141
+  port: 8445
   udp: true
-  type: hysteria2
-  password: c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3
-  sni: pl2.shvpn.ru
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
 - name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
   server: 54.37.131.126
   port: 80
@@ -55,33 +61,12 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 - name: 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
-  server: 77.232.135.141
-  port: 8445
-  udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
-- name: 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
   server: site.teslamotor.site
   port: 20001
   udp: true
   type: vless
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
-- name: 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
-  server: 92.118.150.146
-  port: 443
-  udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: pl.tronsg.com
-  skip-cert-verify: false
-- name: 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
+- name: 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
   server: edge10.cyrionflare.com
   port: 2052
   udp: true
@@ -94,14 +79,11 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - AUTO-UDP
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -118,11 +100,10 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -135,15 +116,5 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
-- name: AUTO-UDP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
