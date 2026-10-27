@@ -24,15 +24,17 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
-  server: 130.94.53.51
-  port: 15656
+- name: 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
+  server: 107.189.7.176
+  port: 32752
   udp: true
   type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  uuid: 4970c1cd-13e1-498a-920a-61d07be2fa65
   tls: true
-  servername: ph001.zestapp778.com
-  skip-cert-verify: false
+  reality-opts:
+    public-key: pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA
+    short-id: d758a643034ad90e
+  servername: www.apple.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -40,7 +42,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -48,7 +50,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -56,6 +58,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

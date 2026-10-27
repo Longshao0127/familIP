@@ -7,26 +7,30 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe",
-      "server": "104.253.216.227",
-      "server_port": 49917,
-      "method": "chacha20-ietf-poly1305",
-      "password": "G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP"
+      "type": "hysteria2",
+      "tag": "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe",
+      "server": "13.143.239.84",
+      "server_port": 4443,
+      "password": "146d567c-6335-4e63-a8aa-7ec068642440",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl1.obxodvpn.us",
+        "insecure": false
+      }
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe"
+        "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe"
+        "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

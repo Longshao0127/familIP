@@ -25,15 +25,20 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
-  server: 38.60.254.50
-  port: 22222
+  server: 104.16.10.185
+  port: 443
   udp: true
   type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
   tls: true
-  servername: th001.zestapp778.com
+  servername: v2ray.simspeedup.com
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: v2ray.simspeedup.com
 - name: 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
   server: 45.154.26.63
   port: 443
@@ -47,14 +52,43 @@ proxies:
     short-id: 3c032a7e
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe
+  server: 38.60.254.50
+  port: 22222
+  udp: true
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: th001.zestapp778.com
+  skip-cert-verify: false
+- name: 🎵 🇹🇭 泰国 (Thailand) 04(机房) - xiaohe
+  server: v2ray.simspeedup.com
+  port: 80
+  udp: true
+  type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  network: ws
+  ws-opts:
+    path: /ws
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
   - 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 04(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -64,6 +98,8 @@ proxy-groups:
   proxies:
   - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
   - 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,5 +109,7 @@ proxy-groups:
   proxies:
   - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
   - 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 04(机房) - xiaohe
 rules:
 - MATCH,PROXIES

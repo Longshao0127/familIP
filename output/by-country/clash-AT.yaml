@@ -25,17 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇦🇹 奥地利 (Austria) 01 - xiaohe
-  server: 188.137.158.199
-  port: 443
-  udp: true
-  type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
-  flow: xtls-rprx-vision
-  tls: true
-  servername: softice.net
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇦🇹 奥地利 (Austria) 02 - xiaohe
   server: 82.110.60.9
   port: 19999
   udp: true
@@ -46,18 +35,8 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇦🇹 奥地利 (Austria) 01 - xiaohe
-  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -67,7 +46,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
-  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,6 +54,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
-  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
 rules:
 - MATCH,PROXIES

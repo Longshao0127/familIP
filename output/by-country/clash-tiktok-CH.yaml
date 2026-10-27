@@ -25,27 +25,31 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
-  server: 140.238.213.114
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 84a506ca5aca505696a454d828420b3f
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
   server: 132.243.175.144
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
+  server: 45.90.57.119
+  port: 8443
+  udp: true
+  type: vless
+  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI
+    short-id: 16036bbef04d0509
+  servername: twitch.tv
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - AUTO-UDP
   - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
 - name: AUTO-TCP
@@ -55,6 +59,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
@@ -65,13 +70,5 @@ proxy-groups:
   proxies:
   - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
-- name: AUTO-UDP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

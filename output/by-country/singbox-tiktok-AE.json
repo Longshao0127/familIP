@@ -31,7 +31,7 @@
       "tls": {
         "enabled": true,
         "server_name": "forshynewh.duckdns.org",
-        "insecure": true
+        "insecure": false
       }
     },
     {

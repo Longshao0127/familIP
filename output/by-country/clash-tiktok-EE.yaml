@@ -24,28 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
-  server: 104.253.216.227
-  port: 49917
+- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  server: 13.143.239.84
+  port: 4443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: nl1.obxodvpn.us
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-TCP
   - AUTO
-  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
-- name: AUTO-TCP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
+  - AUTO-UDP
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +46,14 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
