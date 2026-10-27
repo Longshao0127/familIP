@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
-  server: 136.148.218.108
+  server: se1-cl3.vless-fiberstasis.top
   port: 443
   udp: true
   type: vless
@@ -40,13 +40,39 @@ proxies:
   grpc-opts:
     grpc-service-name: grpc-se-3
 - name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  server: 201.58.177.159
+  port: 4443
+  udp: true
+  type: hysteria2
+  password: c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3
+  sni: se3.shvpn.ru
+  skip-cert-verify: false
+- name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
   server: promo.betust.net
   port: 443
   udp: true
   type: hysteria2
   password: d4ca9415f0eac7897472e1e5b86d2e96
   sni: promo.betust.net
-  skip-cert-verify: true
+  skip-cert-verify: false
+- name: 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
+  server: 70.34.212.124
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
+- name: 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
+  server: 5.178.109.174
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select
@@ -57,6 +83,9 @@ proxy-groups:
   - AUTO-UDP
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,6 +102,8 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -82,6 +113,9 @@ proxy-groups:
   proxies:
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -90,5 +124,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -15,11 +15,7 @@
       "tls": {
         "enabled": true,
         "server_name": "ph001.zestapp778.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "insecure": false
       }
     },
     {

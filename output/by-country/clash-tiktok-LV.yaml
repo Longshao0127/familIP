@@ -24,22 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
-  server: 194.36.37.59
-  port: 10004
+- name: 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
+  server: 138.124.180.137
+  port: 443
   udp: true
   type: vless
-  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
-  network: ws
-  ws-opts:
-    path: /vpnjantit
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+  servername: www.apple.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -47,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

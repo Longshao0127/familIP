@@ -25,13 +25,18 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇻🇳 越南 (Vietnam) 01 - xiaohe
-  server: user01.godvpn.lol
-  port: 12686
+  server: 154.21.203.106
+  port: 51279
   udp: true
-  type: anytls
-  password: db62309c-486a-4fd5-abc4-4e91ac495d38
-  sni: user01.godvpn.lol
-  skip-cert-verify: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
+    short-id: bb82c8
+  servername: www.tesla.com
+  client-fingerprint: random
 - name: 🇻🇳 越南 (Vietnam) 02 - xiaohe
   server: 150.95.109.109
   port: 2086
@@ -42,19 +47,10 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🇻🇳 越南 (Vietnam) 01 - xiaohe
   - 🇻🇳 越南 (Vietnam) 02 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇻🇳 越南 (Vietnam) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204

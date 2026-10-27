@@ -24,33 +24,28 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
-  server: 156.239.224.107
-  port: 57278
+- name: 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  server: 162.159.153.4
+  port: 443
   udp: true
-  type: vmess
-  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  tls: true
+  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: rAyAn-007.mAxImA.DpDnS.OrG
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,7 +53,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -66,6 +61,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

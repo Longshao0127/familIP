@@ -25,18 +25,18 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe
-  server: 152.70.58.201
+  server: 138.124.180.137
   port: 443
   udp: true
   type: vless
-  uuid: 8892e34a-339b-4526-b88d-cf68c516231c
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28
-    short-id: 52c723e0fad49689
-  servername: www.nvidia.com
-  client-fingerprint: chrome
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+  servername: www.apple.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select

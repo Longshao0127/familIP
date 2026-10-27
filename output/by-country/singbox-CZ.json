@@ -8,13 +8,25 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe",
-      "server": "194.36.37.59",
-      "server_port": 10004,
-      "uuid": "f7376394-cd54-11f1-bb6a-bff6d0326f6a",
+      "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
+      "server": "162.159.153.4",
+      "server_port": 443,
+      "uuid": "f2a73750-3087-48ff-a763-1348c15dce68",
+      "tls": {
+        "enabled": true,
+        "server_name": "rAyAn-007.mAxImA.DpDnS.OrG",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/vpnjantit"
+        "path": "/",
+        "headers": {
+          "Host": "rAyAn-007.mAxImA.DpDnS.OrG"
+        }
       }
     },
     {
@@ -22,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe"
+        "🇨🇿 捷克 (Czech) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇦🇲 亚美尼亚 (Armenia) 01(机房) - xiaohe"
+        "🇨🇿 捷克 (Czech) 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

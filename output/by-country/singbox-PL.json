@@ -21,7 +21,7 @@
     {
       "type": "hysteria2",
       "tag": "🇵🇱 波兰 (Poland) 02 - xiaohe",
-      "server": "201.58.180.143",
+      "server": "pl2.shvpn.ru",
       "server_port": 4443,
       "password": "c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3",
       "tls": {
@@ -33,10 +33,17 @@
     {
       "type": "vmess",
       "tag": "🇵🇱 波兰 (Poland) 03 - xiaohe",
-      "server": "45.144.48.32",
-      "server_port": 57072,
-      "uuid": "d8f45bbb-e84d-4ad5-aa63-970f1345b164",
-      "security": "auto"
+      "server": "54.37.131.126",
+      "server_port": 80,
+      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+        }
+      }
     },
     {
       "type": "vless",
@@ -46,15 +53,31 @@
       "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
     },
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇵🇱 波兰 (Poland) 05 - xiaohe",
+      "server": "92.118.150.146",
+      "server_port": 443,
+      "password": "Trojan@82164024",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl.tronsg.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 波兰 (Poland) 06 - xiaohe",
       "server": "edge10.cyrionflare.com",
       "server_port": 2052,
       "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 06 - xiaohe",
+      "tag": "🇵🇱 波兰 (Poland) 07 - xiaohe",
       "server": "77.232.135.141",
       "server_port": 8445,
       "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
@@ -70,21 +93,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "beru-pl"
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇵🇱 波兰 (Poland) 07 - xiaohe",
-      "server": "54.37.131.126",
-      "server_port": 80,
-      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
-        }
       }
     },
     {

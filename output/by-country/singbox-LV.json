@@ -9,21 +9,21 @@
     {
       "type": "vless",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe",
-      "server": "152.70.58.201",
+      "server": "138.124.180.137",
       "server_port": 443,
-      "uuid": "8892e34a-339b-4526-b88d-cf68c516231c",
+      "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.nvidia.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
-          "public_key": "Hg_ivwbClYmR-SEHdoGgq4yEk6ltbjS5c4yiQRa4_28",
-          "short_id": "52c723e0fad49689"
+          "public_key": "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c",
+          "short_id": "33acba1b"
         }
       }
     },

@@ -25,107 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
-  server: 62.83.41.69
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: au6.pad-sservice.lat
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /AU6W
-    headers:
-      Host: au6.pad-sservice.lat
-- name: 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
-  server: au2.pad-sservice.lat
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: au2.pad-sservice.lat
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /A11U
-    headers:
-      Host: au2.pad-service.com
-- name: 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
   server: 82.110.60.9
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇦🇹 奥地利 (Austria) 04(机房) - xiaohe
-  server: 62.83.19.127
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: au5.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /AU5W
-    headers:
-      Host: au5.pad-sservice.lat
-- name: 🎵 🇦🇹 奥地利 (Austria) 05(机房) - xiaohe
-  server: au7.pad-sservice.lat
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: au7.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /AU7W
-    headers:
-      Host: au7.pad-sservice.lat
-- name: 🎵 🇦🇹 奥地利 (Austria) 06(机房) - xiaohe
-  server: 152.53.1.40
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
-  tls: true
-  servername: au4.pad-sservice.lat
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /A14U
-    headers:
-      Host: au4.pad-service.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 04(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 05(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 06(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -134,11 +46,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 04(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 05(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 06(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -147,10 +54,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 04(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 05(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 06(机房) - xiaohe
 rules:
 - MATCH,PROXIES
