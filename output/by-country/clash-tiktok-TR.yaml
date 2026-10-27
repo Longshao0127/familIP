@@ -25,30 +25,37 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  server: 193.160.141.27
+  server: 93.180.132.116
   port: 443
   udp: true
   type: vless
-  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  flow: xtls-rprx-vision
+  tls: true
+  servername: flooraccount.net
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
+  server: location8.cpanel-host10.ir
+  port: 56134
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+- name: 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
+  server: 78.135.73.168
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: abuse.ozon.ru
-  client-fingerprint: chrome
-- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
+    public-key: w0yEuw7sPMCEwk9_vDVoqjBhJsGoPvR7TsxIZVJy3iw
+    short-id: f4b2a12c
+  servername: tr2.tv-quoralyx.top
+  client-fingerprint: firefox
+- name: 🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe
   server: 62.133.63.45
   port: 8444
   udp: true
@@ -63,19 +70,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe
-  server: tr2.tv-quoralyx.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: w0yEuw7sPMCEwk9_vDVoqjBhJsGoPvR7TsxIZVJy3iw
-    short-id: f4b2a12c
-  servername: tr2.tv-quoralyx.top
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -95,6 +89,8 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204

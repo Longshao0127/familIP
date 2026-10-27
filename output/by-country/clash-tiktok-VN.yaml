@@ -30,32 +30,6 @@ proxies:
   udp: true
   type: vless
   uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
-- name: 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
-  server: 154.21.203.106
-  port: 51279
-  udp: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
-    short-id: bb82c8
-  servername: www.tesla.com
-  client-fingerprint: safari
-- name: 🎵 🇻🇳 越南 (Vietnam) 03(机房) - xiaohe
-  server: funagfrdfs.alixxplay.com
-  port: 55688
-  udp: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: KeV1nArisy7FO5DjqTSmn0hBnlNd38rzhbIMMpe-MBw
-    short-id: a46bb5972cf50671
-  servername: bilibili-vn.biliimg.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,8 +37,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,8 +45,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -83,7 +53,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

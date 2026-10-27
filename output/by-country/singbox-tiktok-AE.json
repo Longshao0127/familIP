@@ -37,17 +37,6 @@
     {
       "type": "vless",
       "tag": "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
-      "server": "185.253.116.33",
-      "server_port": 14430,
-      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
-      "transport": {
-        "type": "ws",
-        "path": "/vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe",
       "server": "84.235.244.108",
       "server_port": 22573,
       "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
@@ -66,8 +55,7 @@
         "auto",
         "🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe",
         "🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe",
-        "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
-        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe"
+        "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe"
       ]
     },
     {
@@ -76,8 +64,7 @@
       "outbounds": [
         "🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe",
         "🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe",
-        "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
-        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe"
+        "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

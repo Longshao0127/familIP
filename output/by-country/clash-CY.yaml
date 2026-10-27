@@ -24,33 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
-  server: 107.189.7.176
-  port: 32752
+- name: 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
+  server: 194.76.147.34
+  port: 443
   udp: true
-  type: vless
-  uuid: 4970c1cd-13e1-498a-920a-61d07be2fa65
-  tls: true
-  reality-opts:
-    public-key: pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA
-    short-id: d758a643034ad90e
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 4b1be712-774c-4b65-8491-a3339e124a70
+  sni: hys-eu.letsconnectpoint.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-TCP
   - AUTO
-  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
-- name: AUTO-TCP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
+  - AUTO-UDP
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,6 +46,14 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
 rules:
 - MATCH,PROXIES

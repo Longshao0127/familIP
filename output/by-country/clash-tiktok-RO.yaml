@@ -46,9 +46,16 @@ proxies:
     public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
   server: 154.46.31.106
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+- name: 🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe
+  server: bogging-eyeteeth-fly.freesocks.work
   port: 443
   udp: true
   type: ss
@@ -64,6 +71,7 @@ proxy-groups:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,6 +81,7 @@ proxy-groups:
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -83,6 +92,7 @@ proxy-groups:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

@@ -34,7 +34,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -52,13 +52,22 @@
       "password": "QFWzCw2uX9B9i6qAYeFBIE"
     },
     {
+      "type": "shadowsocks",
+      "tag": "🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe",
+      "server": "bogging-eyeteeth-fly.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QFWzCw2uX9B9i6qAYeFBIE"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe",
         "🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe",
-        "🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe"
+        "🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe",
+        "🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe"
       ]
     },
     {
@@ -67,7 +76,8 @@
       "outbounds": [
         "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe",
         "🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe",
-        "🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe"
+        "🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe",
+        "🎵 🇷🇴 罗马尼亚 (Romania) 04(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

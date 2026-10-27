@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
-  server: softice.net
+  server: 188.137.158.199
   port: 443
   udp: true
   type: vless
@@ -34,7 +34,7 @@ proxies:
   tls: true
   servername: softice.net
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
   server: 82.110.60.9
   port: 19999
