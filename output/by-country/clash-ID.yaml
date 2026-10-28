@@ -24,20 +24,32 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
-  server: 185.213.23.63
-  port: 990
+- name: 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+  server: in001.zestapp778.com
+  port: 57353
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: in001.zestapp778.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,7 +57,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +65,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
 rules:
 - MATCH,PROXIES

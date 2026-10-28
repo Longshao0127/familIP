@@ -25,18 +25,31 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
-  server: 178.212.35.198
+  server: 139.84.145.241
+  port: 46362
+  udp: true
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: in002.zestapp778.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🎵 🇮🇳 印度 (India) 02(家宽) - xiaohe
+  server: 122.176.216.52
   port: 443
   udp: true
   type: vless
-  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   tls: true
-  reality-opts:
-    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
-    short-id: 6bdc8320
-  servername: www.cloudflare.com
+  servername: app-6ada5023.deploy.meerasolution.com
+  skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
+- name: 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
   server: 13.140.56.100
   port: 14430
   udp: true
@@ -45,38 +58,24 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  server: 152.67.8.205
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: in-152.67.8.205-0242
-- name: 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
-  server: 172.105.39.124
-  port: 7002
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 02(家宽) - xiaohe
   - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -85,9 +84,8 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 02(家宽) - xiaohe
   - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -96,8 +94,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 02(家宽) - xiaohe
   - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
 rules:
 - MATCH,PROXIES

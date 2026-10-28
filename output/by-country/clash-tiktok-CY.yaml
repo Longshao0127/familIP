@@ -25,27 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
-  server: 5.253.28.240
-  port: 2443
-  udp: true
-  type: vless
-  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
-  tls: true
-  reality-opts:
-    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
-    short-id: 92c32de179e5d908
-  servername: deepl.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: rex-eb0bf76b710ce763
-- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
-  server: 171.22.119.74
-  port: 8447
-  udp: true
-  type: vless
-  uuid: 6aed42ba-cd2d-4671-87d9-c949b6876888
-- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe
   server: 171.22.119.74
   port: 8446
   udp: true
@@ -56,7 +35,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-video-call
-- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 04(机房) - xiaohe
+- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
   server: hys-eu.letsconnectpoint.com
   port: 443
   udp: true
@@ -74,8 +53,6 @@ proxy-groups:
   - AUTO-UDP
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 04(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -84,8 +61,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -94,8 +69,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -105,8 +78,6 @@ proxy-groups:
   proxies:
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 04(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -114,6 +85,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 04(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

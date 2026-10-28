@@ -24,20 +24,37 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
-  server: 104.253.216.227
-  port: 49917
+- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  server: 217.60.182.138
+  port: 8843
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G9ZuLN5DE9qqouTZwYUcvYsDJx8gyL1nCu3N7yRZFjPmYKhzSi8GkpVuexmTHAz2uvcErKkex1K2ceR2GH3L444HRNnN1YpP
+  type: vless
+  uuid: f7274516-0050-4544-9462-0f1ca689db54
+  tls: true
+  reality-opts:
+    public-key: XD-GOGR9K3rGRCfpytDaJZmtXOr7ZO6OdczpjUE0Dh8
+    short-id: a4f8c92d
+  servername: myschoolonline.cvedcmimikal.space
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 46205b
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,7 +62,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +70,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
 rules:
 - MATCH,PROXIES

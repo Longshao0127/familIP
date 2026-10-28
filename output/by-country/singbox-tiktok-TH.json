@@ -9,7 +9,7 @@
     {
       "type": "vless",
       "tag": "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe",
-      "server": "104.16.10.185",
+      "server": "104.16.10.9",
       "server_port": 443,
       "uuid": "3c52e091-6714-4915-949f-2149fe69951b",
       "tls": {
@@ -32,14 +32,16 @@
     {
       "type": "vless",
       "tag": "🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe",
-      "server": "103.86.49.57",
-      "server_port": 80,
-      "uuid": "3c52e091-6714-4915-949f-2149fe69951b",
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "ais.speedtest.net"
+      "server": "38.60.254.50",
+      "server_port": 22222,
+      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
+      "tls": {
+        "enabled": true,
+        "server_name": "th001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
@@ -65,26 +67,13 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇹🇭 泰国 (Thailand) 04(机房) - xiaohe",
-      "server": "38.60.254.50",
-      "server_port": 22222,
-      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
-      "tls": {
-        "enabled": true,
-        "server_name": "th001.zestapp778.com",
-        "insecure": false
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe",
         "🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe",
-        "🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe",
-        "🎵 🇹🇭 泰国 (Thailand) 04(机房) - xiaohe"
+        "🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe"
       ]
     },
     {
@@ -93,8 +82,7 @@
       "outbounds": [
         "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe",
         "🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe",
-        "🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe",
-        "🎵 🇹🇭 泰国 (Thailand) 04(机房) - xiaohe"
+        "🎵 🇹🇭 泰国 (Thailand) 03(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

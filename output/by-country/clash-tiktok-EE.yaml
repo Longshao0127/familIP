@@ -24,21 +24,37 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇨🇱 智利 (Chile) 01 - xiaohe
-  server: 64.176.7.205
-  port: 443
+- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  server: 217.60.182.138
+  port: 8843
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
-  skip-cert-verify: false
+  type: vless
+  uuid: f7274516-0050-4544-9462-0f1ca689db54
+  tls: true
+  reality-opts:
+    public-key: XD-GOGR9K3rGRCfpytDaJZmtXOr7ZO6OdczpjUE0Dh8
+    short-id: a4f8c92d
+  servername: myschoolonline.cvedcmimikal.space
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 46205b
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇨🇱 智利 (Chile) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,7 +62,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇨🇱 智利 (Chile) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,6 +70,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇨🇱 智利 (Chile) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

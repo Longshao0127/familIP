@@ -24,13 +24,17 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇦🇱 AL 01 - xiaohe
-  server: dns22.m3hrzd.ir
-  port: 1348
+- name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
+  server: 46.8.43.125
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: LzEeLj2OP0DQmpPDtVTazdGC0cHcT0Kn
+  type: vless
+  uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
+  tls: true
+  reality-opts:
+    public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
+  servername: kz-central.v8x2b.lol
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -38,7 +42,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇦🇱 AL 01 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,7 +50,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇱 AL 01 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,7 +58,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇱 AL 01 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,6 +66,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇱 AL 01 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

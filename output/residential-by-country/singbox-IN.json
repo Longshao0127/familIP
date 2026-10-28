@@ -7,22 +7,25 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🌐 其他地区 (Other) 01 - xiaohe",
-      "server": "www.ubuntuupdates.com",
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 01 (家宽) - xiaohe",
+      "server": "122.176.216.52",
       "server_port": 443,
-      "uuid": "83b09a64-1eaf-4c4d-89ed-866d4b6b8115",
-      "security": "auto",
+      "uuid": "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88",
       "tls": {
         "enabled": true,
-        "server_name": "www.ubuntuupdates.com",
-        "insecure": false
+        "server_name": "app-6ada5023.deploy.meerasolution.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/truth",
+        "path": "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88",
         "headers": {
-          "Host": "www.ubuntuupdates.com"
+          "Host": "app-6ada5023.deploy.meerasolution.com"
         }
       }
     },
@@ -31,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 其他地区 (Other) 01 - xiaohe"
+        "🇮🇳 印度 (India) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 其他地区 (Other) 01 - xiaohe"
+        "🇮🇳 印度 (India) 01 (家宽) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

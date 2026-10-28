@@ -43,38 +43,25 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
+  sni: 202.146.222.174
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8🇨🇳
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: www.bing.com
+  sni: https://t.me/wangcai2рҹүрҹү
   skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
-  server: 165.154.63.139
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  server: 202.146.222.89
   port: 443
   udp: true
-  type: vless
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
-    short-id: ca4aedd4
-  servername: www.amazon.com
-  client-fingerprint: chrome
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vk.com
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   server: 50.7.44.28
   port: 2091
   udp: true
@@ -87,50 +74,19 @@ proxies:
     short-id: 08a4b1f473932632
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
-  server: 47.243.153.153
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
+  server: 165.154.63.139
   port: 443
-  udp: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: i2psm3knof5qjjix.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: i2psm3knof5qjjix.v.3dns.vip
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
-  server: 47.243.65.243
-  port: 443
-  udp: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: lcv8v9l7oyamxxfz.v.3dns.vip
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: lcv8v9l7oyamxxfz.v.3dns.vip
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
-  server: 38.22.88.248
-  port: 27509
   udp: true
   type: vless
-  uuid: 29d23018-3265-494c-b9fe-e320b619b1e2
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: nseaofwmjSciWUI2ZOXft9lUJutKvKEDUc-aSpE3e1M
-  servername: www.suffolk.edu
-  client-fingerprint: firefox
+    public-key: AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ
+    short-id: ca4aedd4
+  servername: www.amazon.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -145,9 +101,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -166,9 +119,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -182,9 +132,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

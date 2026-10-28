@@ -24,21 +24,32 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
-  server: 64.176.7.205
+- name: 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  server: 216.238.104.154
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
+  sni: findtemporaryworkandfreelancerprojectsonlineplatform.com
   skip-cert-verify: false
+- name: 🎵 🇧🇷 巴西 (Brazil) 02(机房) - xiaohe
+  server: br001.zestapp778.com
+  port: 15040
+  udp: true
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: br.zestapp778.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,7 +57,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,6 +66,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

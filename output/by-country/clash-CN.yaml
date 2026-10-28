@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇨🇳 CN 01 - xiaohe
-  server: 172.67.166.188
+  server: 8.35.211.242
   port: 443
   udp: true
   type: vless
@@ -33,6 +33,7 @@ proxies:
   tls: true
   servername: vpn.cintaku.qzz.io
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /vlessws
