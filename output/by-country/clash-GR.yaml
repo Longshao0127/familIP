@@ -24,35 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
-  server: 93.152.214.248
+- name: 🇬🇷 希腊 (Greece) 01 - xiaohe
+  server: 85.90.197.220
   port: 443
   udp: true
   type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: v36yrZJ-5Zikx9eh_SXaoDS2GuobOA4_WLagBVO0vxk
-    short-id: a9c3f7e2
-  servername: us5.pc-peervax.top
-  client-fingerprint: firefox
+    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
+    short-id: 94acb54627612d43
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+  - 🇬🇷 希腊 (Greece) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+  - 🇬🇷 希腊 (Greece) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+  - 🇬🇷 希腊 (Greece) 01 - xiaohe
 rules:
 - MATCH,PROXIES

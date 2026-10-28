@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
-  server: support.zoom.us
+  server: 170.114.45.6
   port: 8080
   udp: true
   type: vless

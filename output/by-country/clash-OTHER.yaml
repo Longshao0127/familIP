@@ -24,21 +24,17 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
-  server: 217.60.182.138
-  port: 8843
+- name: 🌐 其他地区 (Other) 01 - xiaohe
+  server: 188.114.97.5
+  port: 443
   udp: true
-  type: vless
-  uuid: f7274516-0050-4544-9462-0f1ca689db54
-  tls: true
-  reality-opts:
-    public-key: XD-GOGR9K3rGRCfpytDaJZmtXOr7ZO6OdczpjUE0Dh8
-    short-id: a4f8c92d
-  servername: myschoolonline.cvedcmimikal.space
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 46205b
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,7 +42,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🌐 其他地区 (Other) 01 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,7 +50,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🌐 其他地区 (Other) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,7 +58,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🌐 其他地区 (Other) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +66,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🌐 其他地区 (Other) 01 - xiaohe
 rules:
 - MATCH,PROXIES

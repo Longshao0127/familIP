@@ -25,6 +25,14 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
+  server: 66.163.114.114
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: 66.163.114.114
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   server: us007.zestapp778.com
   port: 18580
   udp: true
@@ -33,150 +41,15 @@ proxies:
   tls: true
   servername: us007.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
-  server: 172.64.145.202
-  port: 2083
+- name: 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
+  server: 216.152.156.49
+  port: 443
   udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: newwk1.f1w.de5.net
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: newwk1.f1w.de5.net
-- name: 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
-  server: 104.21.77.142
-  port: 2096
-  udp: true
-  type: vless
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-  tls: true
-  servername: courses.mftplus.qzz.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
-    headers:
-      Host: courses.mftplus.qzz.io
 - name: 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
-  server: 188.114.97.3
-  port: 2083
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: newwk1.f1w.de5.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: newwk1.f1w.de5.net
-- name: 🎵 🇧🇬 保加利亚 (Bulgaria) 05(机房) - xiaohe
-  server: 93.152.214.248
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: v36yrZJ-5Zikx9eh_SXaoDS2GuobOA4_WLagBVO0vxk
-    short-id: a9c3f7e2
-  servername: us5.pc-peervax.top
-  client-fingerprint: firefox
-- name: 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  server: 151.247.22.58
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: I45spoFEwSCaxR8FIP1HnrFj5KbR3keSAGMMdgt2AHY
-    short-id: b1c5a5e2
-  servername: usa.letsconnectpoint.com
-  client-fingerprint: firefox
-- name: 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
-  server: 162.159.228.255
-  port: 443
-  udp: true
-  type: vless
-  uuid: b135a1e0-ebdb-4d46-b3fa-bd1e78580244
-  tls: true
-  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
-- name: 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
-  server: 172.66.44.211
-  port: 2083
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: wk1.f1w.de5.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: wk1.f1w.de5.net
-- name: 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  server: 66.163.114.114
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  server: 66.163.122.113
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  server: 66.163.122.7
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
-  server: 45.63.53.81
-  port: 443
-  udp: true
-  type: vless
-  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
-  tls: true
-  reality-opts:
-    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
-    short-id: f436f707
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
   server: 66.163.114.45
   port: 443
   udp: true
@@ -184,24 +57,7 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: cdn.findconnectwithemployersandbuildprofessionalnetwork.com
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
-  server: 45.32.69.110
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
-  tls: true
-  reality-opts:
-    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
-    short-id: c5cde18f
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   server: 45.76.172.197
   port: 443
   udp: true
@@ -218,7 +74,41 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
+  server: 45.32.69.110
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
+  tls: true
+  reality-opts:
+    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
+    short-id: c5cde18f
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
+  server: 45.63.53.81
+  port: 443
+  udp: true
+  type: vless
+  uuid: c512dcbd-1847-40a2-9c99-989c8bfe4717
+  tls: true
+  reality-opts:
+    public-key: 6nTROV2ELz-3vNUl0A00hp378QngpYABrPgjCpUknD0
+    short-id: f436f707
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   server: www.windowsmsidownloads.com
   port: 443
   udp: true
@@ -232,63 +122,45 @@ proxies:
   network: ws
   ws-opts:
     path: /truth
-- name: 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
-  server: 202.50.253.90
-  port: 19999
+- name: 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
+  server: 172.66.0.1
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
-  server: 202.50.253.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
-  server: 202.50.253.72
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  server: 202.50.253.81
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  server: 202.50.253.27
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  server: 202.50.253.36
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   server: 202.50.253.99
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 24(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
+  server: 66.163.122.113
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: false
+- name: 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
   server: 202.50.253.45
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 25(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
   server: 185.14.30.98
   port: 8443
   udp: true
@@ -300,67 +172,36 @@ proxies:
     public-key: Q0dPyF2hFWgxL7hxntJWJammcb6zcRCyA-NOiOFrsAo
     short-id: 1433a38abea1191c
   servername: twitch.tv
-  client-fingerprint: chrome
-- name: 🎵 🇫🇷 法国 (France) 26(机房) - xiaohe
-  server: 104.16.71.213
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 27(机房) - xiaohe
-  server: 188.114.97.2
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
-  server: 37.114.34.108
+  client-fingerprint: safari
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 14(机房) - xiaohe
+  server: sw.golangwikito.cfd
   port: 443
   udp: true
   type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: sQ5tfuCzFSQ9RRoong5dDlHRupZRNjqPoNJU9-ytpDk
-    short-id: bb413f2d089a9654
-  servername: fi1-cl3.core-mirvante.top
-  client-fingerprint: firefox
-- name: 🎵 🇺🇸 美国 (United States) 29(机房) - xiaohe
-  server: nl.puflino.com
-  port: 8443
-  udp: true
-  type: vless
-  uuid: c7270753-bd18-4696-956d-57dbde1183fe
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
-    short-id: 1be482b8e08aa0ef
-  servername: nl2.reddotcorp.org
-  client-fingerprint: edge
-- name: 🎵 🇩🇪 德国 (Germany) 30(机房) - xiaohe
-  server: de001.zestapp778.com
-  port: 33770
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: de001.zestapp778.com
-  skip-cert-verify: false
+    public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg
+    short-id: a1037b25dcef6aa7
+  servername: sw.golangwikito.cfd
   client-fingerprint: chrome
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 31(机房) - xiaohe
-  server: 172.66.40.99
+- name: 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  server: 202.50.253.36
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  server: 202.50.253.81
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
+  server: 45.128.76.242
   port: 443
   udp: true
   type: trojan
@@ -370,254 +211,24 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 32(机房) - xiaohe
-  server: 217.60.182.138
-  port: 8843
-  udp: true
-  type: vless
-  uuid: f7274516-0050-4544-9462-0f1ca689db54
-  tls: true
-  reality-opts:
-    public-key: XD-GOGR9K3rGRCfpytDaJZmtXOr7ZO6OdczpjUE0Dh8
-    short-id: a4f8c92d
-  servername: myschoolonline.cvedcmimikal.space
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 46205b
-- name: 🎵 🇮🇪 爱尔兰 (Ireland) 33(机房) - xiaohe
-  server: ir-new-ded.failspace.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ir-new-ded.failspace.top
-  skip-cert-verify: false
-- name: 🎵 🇯🇵 日本 (Japan) 34(机房) - xiaohe
-  server: 57.129.130.63
-  port: 52014
-  udp: true
-  type: vless
-  uuid: d731cf09-79a6-4647-aabe-8e0fda4fe3be
-  tls: true
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-- name: 🎵 🇦🇪 阿联酋 (UAE) 35(机房) - xiaohe
-  server: ams1.rvpn.app
-  port: 8388
+- name: 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
+  server: 202.50.253.18
+  port: 19999
   udp: true
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: x2A6AsyZ-rAllz0wbKHzWA
-- name: 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
-  server: 31.76.5.137
-  port: 443
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇫🇷 法国 (France) 19(机房) - xiaohe
+  server: 15.236.109.186
+  port: 2053
   udp: true
   type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
   tls: true
-  servername: norw-mori-3.failspace.top
-  skip-cert-verify: true
-  client-fingerprint: firefox
-- name: 🎵 🇺🇸 美国 (United States) 37(机房) - xiaohe
-  server: 31.76.5.124
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: norway-2.failspace.top
-  skip-cert-verify: true
-  client-fingerprint: firefox
-- name: 🎵 🇸🇪 瑞典 (Sweden) 38(机房) - xiaohe
-  server: se1-cl3.vless-fiberstasis.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  tls: true
-  reality-opts:
-    public-key: qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo
-    short-id: 11d37dd92940329e
-  servername: se1-cl3.vless-fiberstasis.top
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-se-3
-- name: 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  server: 46.101.46.169
-  port: 486
-  udp: true
-  type: vless
-  uuid: 16bf3359-e7d8-4de6-86a0-6d65cf793b56
-  tls: true
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+  servername: w.geogame.ir
   skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-- name: 🎵 🇨🇿 捷克 (Czech) 40(机房) - xiaohe
-  server: cz-prg.dontblockmepls.com
-  port: 2063
-  udp: true
-  type: vless
-  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-  servername: rusbid.de
-  client-fingerprint: firefox
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 41(机房) - xiaohe
-  server: 172.67.155.222
-  port: 443
-  udp: true
-  type: vless
-  uuid: 82b279c6-5cba-3a96-f8bd-780a00000035
-  tls: true
-  servername: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: pi7ews-woj41w-7wx0gk.ho3ein13-3af.workers.dev
-- name: 🎵 🇯🇵 日本 (Japan) 42(机房) - xiaohe
-  server: 45.76.98.127
-  port: 443
-  udp: true
-  type: vless
-  uuid: 18ce1302-4e37-4eac-bd4f-e3e0a983e589
-  tls: true
-  reality-opts:
-    public-key: LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI
-    short-id: 49fa0dad
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 43(机房) - xiaohe
-  server: 5.9.117.252
-  port: 4433
-  udp: true
-  type: vless
-  uuid: ef286b0e-21ed-4e2b-9110-e2ddc7627892
-  tls: true
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-- name: 🎵 🇯🇵 日本 (Japan) 44(机房) - xiaohe
-  server: 104.21.0.87
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  tls: true
-  servername: jp3.yohototo.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: 🎵 🇯🇵 日本 (Japan) 45(机房) - xiaohe
-  server: 203.137.165.164
-  port: 57554
-  udp: true
-  type: vless
-  uuid: e5b2a063-a114-4bd0-802d-b2da1fe1d1da
-  tls: true
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-- name: 🎵 🇯🇵 日本 (Japan) 46(机房) - xiaohe
-  server: 5.75.195.83
-  port: 56879
-  udp: true
-  type: vless
-  uuid: f8847ac2-e586-400f-841b-00081ea4592e
-  tls: true
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-- name: 🎵 🇰🇷 韩国 (South Korea) 47(机房) - xiaohe
-  server: kr002.zestapp778.com
-  port: 37095
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: kr002.zestapp778.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🎵 🇦🇪 阿联酋 (UAE) 48(机房) - xiaohe
-  server: 91.132.48.136
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0d607d84-0ae0-4b9c-a4f3-1766ab456e02
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM
-    short-id: e7c5f2a9
-  servername: bunny.net
-  client-fingerprint: firefox
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 49(机房) - xiaohe
-  server: 72.56.242.232
-  port: 443
-  udp: true
-  type: vless
-  uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932
-  tls: true
-  servername: renderer-bridge-1-881.mirra.now
-  skip-cert-verify: false
-  client-fingerprint: ios
-  network: grpc
-  grpc-opts:
-    grpc-service-name: VideoRenderer
-- name: 🎵 🇦🇺 澳大利亚 (Australia) 50(机房) - xiaohe
-  server: au001.zestapp778.com
-  port: 35652
-  udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: au001.zestapp778.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🎵 🇪🇸 西班牙 (Spain) 51(机房) - xiaohe
+- name: 🎵 🇪🇸 西班牙 (Spain) 20(机房) - xiaohe
   server: 46.28.71.247
   port: 443
   udp: true
@@ -630,22 +241,38 @@ proxies:
     short-id: 0dfc23fe80778c00
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🎵 🇯🇵 日本 (Japan) 52(机房) - xiaohe
-  server: 109.120.155.155
-  port: 444
+- name: 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  server: 31.76.5.124
+  port: 443
   udp: true
   type: vless
-  uuid: 99ab6748-3d57-4562-9451-843c15960b9b
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
   tls: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  servername: norway-2.failspace.top
+  skip-cert-verify: true
+  client-fingerprint: firefox
+- name: 🎵 🇫🇷 法国 (France) 22(机房) - xiaohe
+  server: 104.18.33.97
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-- name: 🎵 🇲🇾 马来西亚 (Malaysia) 53(机房) - xiaohe
+    path: //assignment
+- name: 🎵 🇰🇷 韩国 (South Korea) 23(机房) - xiaohe
+  server: kr002.zestapp778.com
+  port: 37095
+  udp: true
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: kr002.zestapp778.com
+  skip-cert-verify: false
+- name: 🎵 🇲🇾 马来西亚 (Malaysia) 24(机房) - xiaohe
   server: my.wawojk.dpdns.org
   port: 8443
   udp: true
@@ -657,43 +284,74 @@ proxies:
     public-key: akVbcyv-ypq-YT4-bsi_ts85pkDwhAIapn5bCb_hj28
     short-id: 85f609aa0f0bead8
   servername: www.asus.com
-  client-fingerprint: chrome
-- name: 🎵 🇦🇺 澳大利亚 (Australia) 54(机房) - xiaohe
-  server: 45.63.30.142
+  client-fingerprint: firefox
+- name: 🎵 🇦🇪 阿联酋 (UAE) 25(机房) - xiaohe
+  server: ams1.rvpn.app
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: x2A6AsyZ-rAllz0wbKHzWA
+- name: 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
+  server: 202.50.253.72
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 27(机房) - xiaohe
+  server: 72.56.242.232
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 45.63.30.142
-  skip-cert-verify: true
-- name: 🎵 🇯🇵 日本 (Japan) 55(机房) - xiaohe
-  server: 84.22.150.39
-  port: 7443
+  type: vless
+  uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932
+  tls: true
+  servername: renderer-bridge-1-881.mirra.now
+  skip-cert-verify: false
+  client-fingerprint: ios
+  network: grpc
+  grpc-opts:
+    grpc-service-name: VideoRenderer
+- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 28(机房) - xiaohe
+  server: 5.253.28.240
+  port: 2443
   udp: true
   type: vless
-  uuid: 9d5cbb90-876b-448d-9874-27ab35bae6e7
+  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
   tls: true
-  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  reality-opts:
+    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
+    short-id: 92c32de179e5d908
+  servername: deepl.com
+  client-fingerprint: qq
+  network: grpc
+  grpc-opts:
+    grpc-service-name: rex-eb0bf76b710ce763
+- name: 🎵 🇹🇭 泰国 (Thailand) 29(机房) - xiaohe
+  server: 104.16.10.185
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  tls: true
+  servername: v2ray.simspeedup.com
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /@Marisa_kristi
+    path: /ws
     headers:
-      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-- name: 🎵 🇺🇸 美国 (United States) 56(机房) - xiaohe
-  server: f36f5ft.us4.h1clayd.click
-  port: 443
+      Host: v2ray.simspeedup.com
+- name: 🎵 🇮🇳 印度 (India) 30(机房) - xiaohe
+  server: 139.84.145.241
+  port: 46362
   udp: true
   type: vless
-  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  reality-opts:
-    public-key: 5KZVzOFqMgdL47--JzLlg5HmPlAYp-cmQsXxkTXngS0
-    short-id: 8d50d3a4df71468c
-  servername: f36f5ft.us4.h1clayd.click
-  client-fingerprint: chrome
-- name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 57(机房) - xiaohe
+  servername: in002.zestapp778.com
+  skip-cert-verify: false
+- name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 31(机房) - xiaohe
   server: 46.8.43.125
   port: 443
   udp: true
@@ -704,29 +362,37 @@ proxies:
     public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
   servername: kz-central.v8x2b.lol
   client-fingerprint: firefox
-- name: 🎵 🇮🇳 印度 (India) 58(机房) - xiaohe
-  server: 139.84.145.241
-  port: 46362
+- name: 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
+  server: 202.50.253.90
+  port: 19999
   udp: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-  tls: true
-  servername: in002.zestapp778.com
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇫🇷 法国 (France) 33(机房) - xiaohe
+  server: 5.44.46.142
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🎵 🇩🇪 德国 (Germany) 59(机房) - xiaohe
-  server: de15.h1cloud.net
-  port: 25362
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🎵 🇨🇿 捷克 (Czech) 34(机房) - xiaohe
+  server: 31.77.13.22
+  port: 2063
   udp: true
   type: vless
-  uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-    short-id: 23732d14a527990d
-  servername: www.chip.de
-  client-fingerprint: chrome
-- name: 🎵 🇫🇮 芬兰 (Finland) 60(机房) - xiaohe
+    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+  servername: rusbid.de
+  client-fingerprint: firefox
+- name: 🎵 🇫🇮 芬兰 (Finland) 35(机房) - xiaohe
   server: 77.42.12.225
   port: 443
   udp: true
@@ -741,121 +407,18 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: f345a414c040
-- name: 🎵 🇺🇸 美国 (United States) 61(机房) - xiaohe
-  server: 172.67.167.78
-  port: 8443
-  udp: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: 🎵 🇺🇸 美国 (United States) 62(机房) - xiaohe
-  server: 104.18.0.1
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
-  tls: true
-  servername: all.speedtest03.ccwu.cc
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: all.speedtest03.ccwu.cc
-- name: 🎵 🇺🇸 美国 (United States) 63(机房) - xiaohe
-  server: 104.24.31.89
-  port: 443
-  udp: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  tls: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🎵 🇺🇸 美国 (United States) 64(机房) - xiaohe
-  server: 104.24.30.89
-  port: 443
-  udp: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  tls: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🎵 🇫🇷 法国 (France) 65(机房) - xiaohe
-  server: 5.78.238.71
-  port: 443
-  udp: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-69547ad5c919
-  tls: true
-  servername: tuzbkaezua0s.bardia2626vosogh-b797.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/69547ad5c919
-    headers:
-      Host: tuzbkaezua0s.bardia2626vosogh-b797.workers.dev
-- name: 🎵 🇸🇬 新加坡 (Singapore) 66(机房) - xiaohe
-  server: 175.41.179.37
-  port: 51262
-  udp: true
-  type: vless
-  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
-  tls: true
-  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
-- name: 🎵 🇺🇸 美国 (United States) 67(机房) - xiaohe
-  server: 216.152.155.131
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
+  server: 188.114.97.2
   port: 443
   udp: true
   type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.nextjobopportunityandclaimyouridealrole.com
+  password: humanity
+  sni: www.pleadcourt.org
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 68(机房) - xiaohe
-  server: 216.152.155.176
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 216.152.155.176
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 69(机房) - xiaohe
-  server: 216.152.156.81
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 70(机房) - xiaohe
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 37(机房) - xiaohe
   server: 171.22.119.74
   port: 8446
   udp: true
@@ -866,37 +429,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-video-call
-- name: 🎵 🇩🇪 德国 (Germany) 71(机房) - xiaohe
-  server: 172.64.154.211
-  port: 443
-  udp: true
-  type: vless
-  uuid: e9a8c08b-6ff9-4794-adcc-35fe04bd57ee
-  tls: true
-  servername: nl.hupcloud.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: nl.hupcloud.com
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 72(机房) - xiaohe
-  server: nl-all.vless-bitrhythmia.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  tls: true
-  reality-opts:
-    public-key: WJrP73M7px11xkHKhmEMKnaqUR-DPZnKbR2m_N3TwEE
-    short-id: 724d6cab
-  servername: nl-all.vless-bitrhythmia.top
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-nl-stream
-- name: 🎵 🇮🇹 意大利 (Italy) 73(机房) - xiaohe
+- name: 🎵 🇮🇹 意大利 (Italy) 38(机房) - xiaohe
   server: 147.45.51.171
   port: 8443
   udp: true
@@ -909,27 +442,45 @@ proxies:
     short-id: e723d26df67888b9
   servername: twitch.tv
   client-fingerprint: firefox
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 74(机房) - xiaohe
-  server: hk2.open-bridonyx.top
-  port: 443
+- name: 🎵 🇹🇷 土耳其 (Turkey) 39(机房) - xiaohe
+  server: 62.133.63.45
+  port: 8444
   udp: true
   type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  flow: xtls-rprx-vision
+  uuid: a346c521-7a7f-452b-9356-a4893feb5982
   tls: true
   reality-opts:
-    public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
-    short-id: 3b74d85e
-  servername: hk2.open-bridonyx.top
-  client-fingerprint: qq
-- name: 🎵 🇮🇩 印尼 (Indonesia) 75(机房) - xiaohe
-  server: in001.zestapp778.com
-  port: 57353
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: 457fab2ac885dbe0
+  servername: github.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🎵 🇰🇷 韩国 (South Korea) 40(机房) - xiaohe
+  server: nickgus.cc.cd
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 56eee791-99e8-4e11-9d27-539b46c14368
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: nickgus.cc.cd
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /photos
+    headers:
+      Host: nickgus.cc.cd
+- name: 🎵 🇵🇭 菲律宾 (Philippines) 41(机房) - xiaohe
+  server: 130.94.52.94
+  port: 15656
   udp: true
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  servername: in001.zestapp778.com
+  servername: ph001.zestapp778.com
   skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
@@ -941,79 +492,45 @@ proxy-groups:
   - AUTO
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
+  - 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 24(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 25(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 26(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 19(机房) - xiaohe
+  - 🎵 🇪🇸 西班牙 (Spain) 20(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 22(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 23(机房) - xiaohe
+  - 🎵 🇲🇾 马来西亚 (Malaysia) 24(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 25(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 27(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 29(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 30(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 31(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 32(机房) - xiaohe
-  - 🎵 🇮🇪 爱尔兰 (Ireland) 33(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 34(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 35(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 37(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇨🇿 捷克 (Czech) 40(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 41(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 42(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 43(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 44(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 45(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 46(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 47(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 48(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 49(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 50(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 51(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 52(机房) - xiaohe
-  - 🎵 🇲🇾 马来西亚 (Malaysia) 53(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 54(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 55(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 56(机房) - xiaohe
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 57(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 58(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 59(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 60(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 61(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 62(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 63(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 64(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 65(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 66(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 67(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 68(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 69(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 70(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 71(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 72(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 73(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 74(机房) - xiaohe
-  - 🎵 🇮🇩 印尼 (Indonesia) 75(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 28(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 29(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 30(机房) - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 31(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 33(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 34(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 35(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 37(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 38(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 39(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 40(机房) - xiaohe
+  - 🎵 🇵🇭 菲律宾 (Philippines) 41(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -1023,79 +540,45 @@ proxy-groups:
   proxies:
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
+  - 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 24(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 25(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 26(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 19(机房) - xiaohe
+  - 🎵 🇪🇸 西班牙 (Spain) 20(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 22(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 23(机房) - xiaohe
+  - 🎵 🇲🇾 马来西亚 (Malaysia) 24(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 25(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 27(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 29(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 30(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 31(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 32(机房) - xiaohe
-  - 🎵 🇮🇪 爱尔兰 (Ireland) 33(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 34(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 35(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 37(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇨🇿 捷克 (Czech) 40(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 41(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 42(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 43(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 44(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 45(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 46(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 47(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 48(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 49(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 50(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 51(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 52(机房) - xiaohe
-  - 🎵 🇲🇾 马来西亚 (Malaysia) 53(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 54(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 55(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 56(机房) - xiaohe
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 57(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 58(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 59(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 60(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 61(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 62(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 63(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 64(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 65(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 66(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 67(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 68(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 69(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 70(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 71(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 72(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 73(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 74(机房) - xiaohe
-  - 🎵 🇮🇩 印尼 (Indonesia) 75(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 28(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 29(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 30(机房) - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 31(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 33(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 34(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 35(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 37(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 38(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 39(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 40(机房) - xiaohe
+  - 🎵 🇵🇭 菲律宾 (Philippines) 41(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -1105,79 +588,45 @@ proxy-groups:
   proxies:
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
+  - 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 24(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 25(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 26(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 19(机房) - xiaohe
+  - 🎵 🇪🇸 西班牙 (Spain) 20(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 22(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 23(机房) - xiaohe
+  - 🎵 🇲🇾 马来西亚 (Malaysia) 24(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 25(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 27(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 29(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 30(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 31(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 32(机房) - xiaohe
-  - 🎵 🇮🇪 爱尔兰 (Ireland) 33(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 34(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 35(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 37(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇨🇿 捷克 (Czech) 40(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 41(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 42(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 43(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 44(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 45(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 46(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 47(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 48(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 49(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 50(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 51(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 52(机房) - xiaohe
-  - 🎵 🇲🇾 马来西亚 (Malaysia) 53(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 54(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 55(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 56(机房) - xiaohe
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 57(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 58(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 59(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 60(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 61(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 62(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 63(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 64(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 65(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 66(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 67(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 68(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 69(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 70(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 71(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 72(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 73(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 74(机房) - xiaohe
-  - 🎵 🇮🇩 印尼 (Indonesia) 75(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 28(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 29(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 30(机房) - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 31(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 33(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 34(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 35(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 37(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 38(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 39(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 40(机房) - xiaohe
+  - 🎵 🇵🇭 菲律宾 (Philippines) 41(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -1187,78 +636,44 @@ proxy-groups:
   proxies:
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
+  - 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 24(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 25(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 26(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 19(机房) - xiaohe
+  - 🎵 🇪🇸 西班牙 (Spain) 20(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 22(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 23(机房) - xiaohe
+  - 🎵 🇲🇾 马来西亚 (Malaysia) 24(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 25(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 27(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 29(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 30(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 31(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 32(机房) - xiaohe
-  - 🎵 🇮🇪 爱尔兰 (Ireland) 33(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 34(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 35(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 37(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇨🇿 捷克 (Czech) 40(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 41(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 42(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 43(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 44(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 45(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 46(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 47(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 48(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 49(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 50(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 51(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 52(机房) - xiaohe
-  - 🎵 🇲🇾 马来西亚 (Malaysia) 53(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 54(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 55(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 56(机房) - xiaohe
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 57(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 58(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 59(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 60(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 61(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 62(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 63(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 64(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 65(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 66(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 67(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 68(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 69(机房) - xiaohe
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 70(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 71(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 72(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 73(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 74(机房) - xiaohe
-  - 🎵 🇮🇩 印尼 (Indonesia) 75(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 28(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 29(机房) - xiaohe
+  - 🎵 🇮🇳 印度 (India) 30(机房) - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 31(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 33(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 34(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 35(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 37(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 38(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 39(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 40(机房) - xiaohe
+  - 🎵 🇵🇭 菲律宾 (Philippines) 41(机房) - xiaohe
 rules:
 - MATCH,PROXIES

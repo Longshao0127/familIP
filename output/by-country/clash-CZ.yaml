@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: cz-prg.dontblockmepls.com
+  server: 31.77.13.22
   port: 2063
   udp: true
   type: vless

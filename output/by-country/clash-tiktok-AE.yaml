@@ -32,19 +32,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: x2A6AsyZ-rAllz0wbKHzWA
 - name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
-  server: 91.132.48.136
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0d607d84-0ae0-4b9c-a4f3-1766ab456e02
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _0hmzeEAGEx6boacV3d-FrFGaFBYfdvJno39FxveJwM
-    short-id: e7c5f2a9
-  servername: bunny.net
-  client-fingerprint: firefox
-- name: 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   server: forshynewh.duckdns.org
   port: 443
   udp: true
@@ -52,17 +39,8 @@ proxies:
   password: 329e13e4-ee7c-4802-ac72-5fcab79c2402
   sni: forshynewh.duckdns.org
   skip-cert-verify: false
-- name: 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  server: 95.174.68.188
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  network: ws
-  ws-opts:
-    path: /vless
-- name: 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
-  server: uae.unixzone.us
+- name: 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
+  server: 84.235.244.108
   port: 22573
   udp: true
   type: vless
@@ -83,8 +61,6 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -93,7 +69,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -102,9 +77,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -115,8 +88,6 @@ proxy-groups:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -124,6 +95,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
+  - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

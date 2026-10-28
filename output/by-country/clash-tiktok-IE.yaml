@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe
-  server: ir-new-ded.failspace.top
+  server: 50.7.5.188
   port: 443
   udp: true
   type: vless
@@ -38,17 +38,8 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test

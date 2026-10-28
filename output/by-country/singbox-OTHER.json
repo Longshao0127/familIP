@@ -7,23 +7,25 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe",
-      "server": "93.152.214.248",
+      "type": "trojan",
+      "tag": "🌐 其他地区 (Other) 01 - xiaohe",
+      "server": "188.114.97.5",
       "server_port": 443,
-      "uuid": "4b1be712-774c-4b65-8491-a3339e124a70",
-      "flow": "xtls-rprx-vision",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "us5.pc-peervax.top",
+        "server_name": "www.pleadcourt.org",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "v36yrZJ-5Zikx9eh_SXaoDS2GuobOA4_WLagBVO0vxk",
-          "short_id": "a9c3f7e2"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.pleadcourt.org"
         }
       }
     },
@@ -32,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
