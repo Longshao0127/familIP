@@ -18,7 +18,7 @@
         "server_name": "cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -36,36 +36,12 @@
       "tls": {
         "enabled": true,
         "server_name": "2.26.6.1",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe",
-      "server": "poland-new-new.failspace.top",
-      "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "poland-new-new.failspace.top",
-        "insecure": false,
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "insecure": false
       }
     },
     {
       "type": "vmess",
-      "tag": "🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe",
+      "tag": "🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe",
       "server": "54.37.131.126",
       "server_port": 80,
       "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
@@ -80,33 +56,17 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe",
-      "server": "155.117.5.208",
-      "server_port": 20001,
-      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe",
+      "tag": "🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe",
       "server": "168.222.43.53",
       "server_port": 2052,
       "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
     },
     {
-      "type": "trojan",
-      "tag": "🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe",
-      "server": "92.118.150.146",
-      "server_port": 443,
-      "password": "Trojan@82164024",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl.tronsg.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "type": "vless",
+      "tag": "🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe",
+      "server": "155.117.5.208",
+      "server_port": 20001,
+      "uuid": "8e8210b7-71a4-4799-8b9b-2e69698b1eaf"
     },
     {
       "type": "selector",
@@ -117,9 +77,7 @@
         "🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe",
         "🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe",
         "🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe"
+        "🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe"
       ]
     },
     {
@@ -130,9 +88,7 @@
         "🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe",
         "🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe",
         "🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe"
+        "🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

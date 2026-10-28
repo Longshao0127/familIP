@@ -24,26 +24,35 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇬🇷 希腊 (Greece) 01 - xiaohe
-  server: 85.90.197.220
+- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  server: xsru1.ddnsfree.com
   port: 443
   udp: true
   type: vless
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
-  flow: xtls-rprx-vision
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   tls: true
-  reality-opts:
-    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
-    short-id: 94acb54627612d43
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: xsru1.ddnsfree.com
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-ru
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇬🇷 希腊 (Greece) 01 - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +60,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇬🇷 希腊 (Greece) 01 - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +68,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇬🇷 希腊 (Greece) 01 - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

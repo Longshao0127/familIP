@@ -24,35 +24,19 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
-  server: my.wawojk.dpdns.org
-  port: 8443
+- name: 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  server: 150.95.109.109
+  port: 2086
   udp: true
   type: vless
-  uuid: 264bee07-e004-41c7-812f-aaf2daaad2c9
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: akVbcyv-ypq-YT4-bsi_ts85pkDwhAIapn5bCb_hj28
-    short-id: 85f609aa0f0bead8
-  servername: www.asus.com
-  client-fingerprint: firefox
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +44,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,6 +52,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

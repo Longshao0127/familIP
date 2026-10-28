@@ -25,6 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+- name: 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
+  server: 155.117.5.208
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+- name: 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
   server: 46.28.67.55
   port: 443
   udp: true
@@ -37,12 +50,6 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
-  server: 178.83.45.226
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,6 +58,7 @@ proxy-groups:
   - AUTO
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,6 +68,7 @@ proxy-groups:
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,5 +78,6 @@ proxy-groups:
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
   - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -8,23 +8,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇲🇾 马来西亚 (Malaysia) 01(机房) - xiaohe",
-      "server": "my.wawojk.dpdns.org",
-      "server_port": 8443,
-      "uuid": "264bee07-e004-41c7-812f-aaf2daaad2c9",
-      "flow": "xtls-rprx-vision",
+      "tag": "🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe",
+      "server": "xsru1.ddnsfree.com",
+      "server_port": 443,
+      "uuid": "c90395e6-2140-47ad-a54d-9b166729d3ef",
       "tls": {
         "enabled": true,
-        "server_name": "www.asus.com",
+        "server_name": "xsru1.ddnsfree.com",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "akVbcyv-ypq-YT4-bsi_ts85pkDwhAIapn5bCb_hj28",
-          "short_id": "85f609aa0f0bead8"
+          "fingerprint": "random"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-ru"
       }
     },
     {
@@ -32,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇲🇾 马来西亚 (Malaysia) 01(机房) - xiaohe"
+        "🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇲🇾 马来西亚 (Malaysia) 01(机房) - xiaohe"
+        "🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
