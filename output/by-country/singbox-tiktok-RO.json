@@ -7,8 +7,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe",
+      "server": "154.46.31.106",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QFWzCw2uX9B9i6qAYeFBIE"
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe",
       "server": "155.117.5.208",
       "server_port": 2052,
       "uuid": "1a8ecc41-6e62-431b-8eca-87c2fa4dc286"
@@ -18,14 +26,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe"
+        "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe",
+        "🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe"
+        "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe",
+        "🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

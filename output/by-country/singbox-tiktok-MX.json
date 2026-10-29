@@ -15,11 +15,19 @@
       "tls": {
         "enabled": true,
         "server_name": "connectwithtopemployersandfindidealjobs.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe",
+      "server": "mx001.zestapp778.com",
+      "server_port": 15083,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "mx001.zestapp778.com",
+        "insecure": true
       }
     },
     {
@@ -27,14 +35,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe"
+        "🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe",
+        "🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe"
+        "🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe",
+        "🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

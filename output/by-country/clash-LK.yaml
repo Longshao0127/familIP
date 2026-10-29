@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
-  server: 170.114.45.6
+  server: support.zoom.us
   port: 8080
   udp: true
   type: vless
@@ -34,7 +34,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: free.nadun.store
+      Host: Free.nadun.store
 proxy-groups:
 - name: PROXIES
   type: select
