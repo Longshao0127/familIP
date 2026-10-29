@@ -60,7 +60,7 @@ proxies:
     headers:
       Host: 13.140.56.100
 - name: 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
-  server: in.smrtai.top
+  server: 178.212.35.198
   port: 443
   udp: true
   type: vless
@@ -79,18 +79,6 @@ proxies:
   password: Trojan@82164024
   sni: 139.84.132.62
   skip-cert-verify: true
-- name: 🎵 🇮🇳 印度 (India) 06(机房) - xiaohe
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  tls: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-    short-id: 9980e0609b0d3891
-  servername: www.apple.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -103,7 +91,6 @@ proxy-groups:
   - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 05(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 06(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -124,7 +111,6 @@ proxy-groups:
   - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 05(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 06(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -137,6 +123,5 @@ proxy-groups:
   - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 04(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 05(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 06(机房) - xiaohe
 rules:
 - MATCH,PROXIES

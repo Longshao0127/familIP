@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇨🇳 CN 01 - xiaohe
-  server: 8.35.211.242
+  server: 104.21.91.49
   port: 443
   udp: true
   type: vless
@@ -40,7 +40,7 @@ proxies:
     headers:
       Host: vpn.cintaku.qzz.io
 - name: 🇨🇳 CN 02 - xiaohe
-  server: 104.21.91.49
+  server: 172.67.166.188
   port: 443
   udp: true
   type: vless

@@ -40,6 +40,21 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
+  server: 57.129.130.200
+  port: 52014
+  udp: true
+  type: vless
+  uuid: c8b0617e-010f-43a8-b3d0-d5358febf0c9
+  tls: true
+  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   server: 45.90.57.119
   port: 8443
   udp: true
@@ -51,8 +66,8 @@ proxies:
     public-key: L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI
     short-id: 16036bbef04d0509
   servername: twitch.tv
-  client-fingerprint: safari
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
+  client-fingerprint: firefox
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -63,8 +78,23 @@ proxies:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
     short-id: ad86e2d52ff40ebd
   servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
+  client-fingerprint: random
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  server: 188.34.142.174
+  port: 444
+  udp: true
+  type: vless
+  uuid: da46ec1f-84ad-4470-866f-010b58357b19
+  tls: true
+  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
   server: 149.33.15.213
   port: 443
   udp: true
@@ -86,6 +116,8 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -97,6 +129,8 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -109,6 +143,8 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

@@ -25,19 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
-  server: 45.148.119.127
-  port: 443
-  udp: true
-  type: vless
-  uuid: 329e13e4-ee7c-4802-ac72-5fcab79c2402
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
-    short-id: '50'
-  servername: cloudflare.com
-  client-fingerprint: firefox
-- name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   server: 2.26.6.1
   port: 2087
   udp: true
@@ -46,6 +33,18 @@ proxies:
   tls: true
   servername: 2.26.6.1
   skip-cert-verify: false
+- name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
+  server: ru1.radiolumens.uk
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
 - name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
   server: 54.37.131.126
   port: 80
