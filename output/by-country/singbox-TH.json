@@ -9,7 +9,7 @@
     {
       "type": "vless",
       "tag": "🇹🇭 泰国 (Thailand) 01 - xiaohe",
-      "server": "104.16.10.9",
+      "server": "104.16.10.185",
       "server_port": 443,
       "uuid": "3c52e091-6714-4915-949f-2149fe69951b",
       "tls": {
@@ -32,16 +32,14 @@
     {
       "type": "vless",
       "tag": "🇹🇭 泰国 (Thailand) 02 - xiaohe",
-      "server": "th001.zestapp778.com",
-      "server_port": 22222,
-      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
-      "tls": {
-        "enabled": true,
-        "server_name": "th001.zestapp778.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+      "server": "103.86.49.57",
+      "server_port": 80,
+      "uuid": "3c52e091-6714-4915-949f-2149fe69951b",
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "ais.speedtest.net"
         }
       }
     },
@@ -67,13 +65,43 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇹🇭 泰国 (Thailand) 04 - xiaohe",
+      "server": "th001.zestapp778.com",
+      "server_port": 33079,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "th001.zestapp778.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇭 泰国 (Thailand) 05 - xiaohe",
+      "server": "th001.zestapp778.com",
+      "server_port": 22222,
+      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
+      "tls": {
+        "enabled": true,
+        "server_name": "th001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇹🇭 泰国 (Thailand) 01 - xiaohe",
         "🇹🇭 泰国 (Thailand) 02 - xiaohe",
-        "🇹🇭 泰国 (Thailand) 03 - xiaohe"
+        "🇹🇭 泰国 (Thailand) 03 - xiaohe",
+        "🇹🇭 泰国 (Thailand) 04 - xiaohe",
+        "🇹🇭 泰国 (Thailand) 05 - xiaohe"
       ]
     },
     {
@@ -82,7 +110,9 @@
       "outbounds": [
         "🇹🇭 泰国 (Thailand) 01 - xiaohe",
         "🇹🇭 泰国 (Thailand) 02 - xiaohe",
-        "🇹🇭 泰国 (Thailand) 03 - xiaohe"
+        "🇹🇭 泰国 (Thailand) 03 - xiaohe",
+        "🇹🇭 泰国 (Thailand) 04 - xiaohe",
+        "🇹🇭 泰国 (Thailand) 05 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

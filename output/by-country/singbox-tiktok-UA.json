@@ -8,24 +8,20 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-      "server": "104.18.0.1",
-      "server_port": 443,
-      "uuid": "3ccba794-1c6d-48a8-acf2-f5caf0e69d86",
+      "tag": "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe",
+      "server": "216.24.57.225",
+      "server_port": 2083,
+      "uuid": "3bcbd7ef-e05b-4745-a1de-5ecf98dd2fb6",
       "tls": {
         "enabled": true,
-        "server_name": "all.speedtest03.ccwu.cc",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "pol.netvia.ir",
+        "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/wss",
         "headers": {
-          "Host": "all.speedtest03.ccwu.cc"
+          "Host": "pol.netvia.ir"
         }
       }
     },
@@ -34,14 +30,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
+        "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
+        "🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

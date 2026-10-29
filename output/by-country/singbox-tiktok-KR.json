@@ -27,30 +27,28 @@
       "tls": {
         "enabled": true,
         "server_name": "sg2-xr.zgrelay.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
+        "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/700gvl-kr3",
-        "headers": {
-          "Host": "sg2-xr.zgrelay.com"
-        }
+        "path": "/700gvl-kr3"
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vmess",
       "tag": "🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe",
-      "server": "152.70.237.123",
-      "server_port": 2053,
-      "password": "maintell",
+      "server": "nickgus.cc.cd",
+      "server_port": 443,
+      "uuid": "56eee791-99e8-4e11-9d27-539b46c14368",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "152.70.237.123",
-        "insecure": true
+        "server_name": "nickgus.cc.cd",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/photos"
       }
     },
     {
@@ -68,6 +66,18 @@
     {
       "type": "hysteria2",
       "tag": "🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe",
+      "server": "152.70.237.123",
+      "server_port": 2053,
+      "password": "maintell",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe",
       "server": "152.69.231.175",
       "server_port": 50160,
       "password": "1beb216e3f60aea9555dae60d219a5ca",
@@ -79,39 +89,47 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe",
-      "server": "152.67.200.82",
-      "server_port": 50160,
-      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
-      "tls": {
-        "enabled": true,
-        "server_name": "speedtest.tinkoff.ru",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
       "tag": "🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe",
-      "server": "150-230-252-217.liao.kdns.fr",
+      "server": "150.230.252.217",
       "server_port": 50160,
       "password": "9cfc9458e48c028ec03ff86ebc71c744",
       "tls": {
         "enabled": true,
         "server_name": "150-230-252-217.liao.kdns.fr",
-        "insecure": true
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe",
+      "server": "152.67.200.82",
+      "server_port": 50160,
+      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
+      "tls": {
+        "enabled": true,
+        "server_name": "152-67-200-82.liao.kdns.fr",
+        "insecure": false
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇰🇷 韩国 (South Korea) 08(家宽) - xiaohe",
-      "server": "218.237.185.234",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 09(家宽) - xiaohe",
+      "server": "49.254.204.133",
+      "server_port": 1774,
+      "method": "aes-256-cfb",
+      "password": "1234!@#$"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 10(家宽) - xiaohe",
+      "server": "p141.panda001.net",
       "server_port": 4652,
       "method": "aes-256-cfb",
       "password": "qwerREWQ@@"
     },
     {
       "type": "vless",
-      "tag": "🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe",
       "server": "152.69.226.63",
       "server_port": 25555,
       "uuid": "27c5483f-17f4-48ae-9a04-def53d88440d",
@@ -122,29 +140,9 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe",
-      "server": "151.245.106.49",
-      "server_port": 2053,
-      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
-          "short_id": "429499c03d4cc8a0"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe",
       "server": "3.39.4.109",
-      "server_port": 18967,
+      "server_port": 13672,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -152,7 +150,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -162,8 +160,49 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 13(机房) - xiaohe",
+      "server": "3.39.4.109",
+      "server_port": 18967,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 14(机房) - xiaohe",
+      "server": "151.245.106.49",
+      "server_port": 2053,
+      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
+          "short_id": "429499c03d4cc8a0"
+        }
+      }
+    },
+    {
       "type": "trojan",
-      "tag": "🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe",
+      "tag": "🎵 🇰🇷 韩国 (South Korea) 15(机房) - xiaohe",
       "server": "154.90.62.70",
       "server_port": 56127,
       "password": "p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B",
@@ -185,11 +224,14 @@
         "🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe",
         "🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe",
         "🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 08(家宽) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 09(家宽) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 10(家宽) - xiaohe",
         "🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe"
+        "🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 13(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 14(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 15(机房) - xiaohe"
       ]
     },
     {
@@ -203,11 +245,14 @@
         "🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe",
         "🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe",
         "🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 08(家宽) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 09(家宽) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 10(家宽) - xiaohe",
         "🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe",
-        "🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe"
+        "🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 13(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 14(机房) - xiaohe",
+        "🎵 🇰🇷 韩国 (South Korea) 15(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

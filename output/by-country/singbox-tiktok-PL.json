@@ -9,19 +9,7 @@
     {
       "type": "vless",
       "tag": "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe",
-      "server": "2.26.6.1",
-      "server_port": 2087,
-      "uuid": "b9fdc03f-389b-4cda-9be4-155b623bee15",
-      "tls": {
-        "enabled": true,
-        "server_name": "2.26.6.1",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe",
-      "server": "ru1.radiolumens.uk",
+      "server": "77.232.135.141",
       "server_port": 8445,
       "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
       "tls": {
@@ -31,11 +19,31 @@
         "alpn": [
           "h2",
           "http/1.1"
-        ]
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "grpc",
         "service_name": "beru-pl"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe",
+      "server": "2.26.6.1",
+      "server_port": 2087,
+      "uuid": "b9fdc03f-389b-4cda-9be4-155b623bee15",
+      "tls": {
+        "enabled": true,
+        "server_name": "2.26.6.1",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {

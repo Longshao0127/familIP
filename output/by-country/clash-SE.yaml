@@ -25,13 +25,13 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - xiaohe
-  server: 50.7.38.243
+  server: promo.betust.net
   port: 443
   udp: true
   type: hysteria2
   password: d4ca9415f0eac7897472e1e5b86d2e96
   sni: promo.betust.net
-  skip-cert-verify: true
+  skip-cert-verify: false
 - name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
   server: 5.178.109.174
   port: 14430
@@ -43,17 +43,6 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
-  server: 193.188.21.253
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 193.188.21.253
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,7 +52,6 @@ proxy-groups:
   - AUTO-UDP
   - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 03 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -72,7 +60,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -82,7 +69,6 @@ proxy-groups:
   proxies:
   - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 03 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

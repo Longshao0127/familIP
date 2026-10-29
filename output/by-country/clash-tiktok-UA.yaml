@@ -24,18 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  server: ee.h1cloud.net
-  port: 25895
+- name: 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
+  server: 216.24.57.225
+  port: 2083
   udp: true
   type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  uuid: 3bcbd7ef-e05b-4745-a1de-5ecf98dd2fb6
   tls: true
-  reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: a73f0410d728c823
-  servername: www.samsung.com
-  client-fingerprint: firefox
+  servername: pol.netvia.ir
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /wss
+    headers:
+      Host: pol.netvia.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,7 +45,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +53,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,7 +61,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -67,6 +69,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

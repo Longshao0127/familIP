@@ -25,7 +25,14 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
-  server: 218.237.185.234
+  server: 49.254.204.133
+  port: 1774
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
+  server: p141.panda001.net
   port: 4652
   udp: true
   type: ss
@@ -38,6 +45,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,6 +54,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,5 +63,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

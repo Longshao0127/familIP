@@ -7,37 +7,131 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe",
-      "server": "162.159.152.4",
-      "server_port": 443,
-      "uuid": "f2a73750-3087-48ff-a763-1348c15dce68",
+      "server": "de-bots4.h1cloud.net",
+      "server_port": 25267,
+      "password": "happybirthdaydaniel",
       "tls": {
         "enabled": true,
-        "server_name": "rayan-007.maxima.dpdns.org",
-        "insecure": false,
+        "server_name": "t.me/FuckTheWall",
+        "insecure": true,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rayan-007.maxima.dpdns.org"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe",
+      "server": "193.108.119.96",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.iloverussia2026.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe",
+      "server": "5.45.100.100",
+      "server_port": 51511,
+      "password": "miaoge110",
+      "tls": {
+        "enabled": true,
+        "server_name": "5.45.100.100",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe",
+      "server": "185.176.204.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe",
+      "server": "146.70.20.147",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe",
+      "server": "168.222.43.53",
+      "server_port": 10000,
+      "uuid": "a05ecf37-c661-4247-ab09-4432cf0f3cc1"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe",
+      "server": "169.150.210.233",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe",
+      "server": "193.148.253.194",
+      "server_port": 25362,
+      "uuid": "36fb6650-8a50-42b5-9f66-06538806f32c",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.chip.de",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA",
+          "short_id": "23732d14a527990d"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe",
-      "server": "162.159.153.4",
-      "server_port": 443,
-      "uuid": "f2a73750-3087-48ff-a763-1348c15dce68",
+      "tag": "🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe",
+      "server": "91.107.247.173",
+      "server_port": 2083,
+      "uuid": "7858128a-6b5e-4f86-9bff-52c1f1e6439d",
       "tls": {
         "enabled": true,
-        "server_name": "rAyAn-007.mAxImA.DpDnS.OrG",
+        "server_name": "sino.bestsellers1.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "sino.bestsellers1.site"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe",
+      "server": "91.107.180.176",
+      "server_port": 465,
+      "uuid": "d0d3d49c-56e8-40e1-9e83-793d03f83d93",
+      "tls": {
+        "enabled": true,
+        "server_name": "hw7.divarkhaghazi.com.",
         "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -47,136 +141,42 @@
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "rAyAn-007.mAxImA.DpDnS.OrG"
+          "Host": "hw7.divarkhaghazi.com."
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe",
-      "server": "104.18.35.86",
-      "server_port": 443,
-      "uuid": "1c7f675f-5923-463f-83fb-af4c898cecea",
-      "tls": {
-        "enabled": true,
-        "server_name": "0ee6woqz4w8w0cdqitgq6xz-q0o9r6o9.mertesswagger08.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiZWhuWFFGNWRISXBjSmRGWSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "0ee6woqz4w8w0cdqitgq6xz-q0o9r6o9.mertesswagger08.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe",
-      "server": "31.12.75.64",
-      "server_port": 443,
-      "uuid": "50414e45-4c5f-5a45-5553-15038a30cbef",
-      "tls": {
-        "enabled": true,
-        "server_name": "oizs5zecux0s.pouriayy1.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/stream/PANEL_ZEUS/15038a30cbef/loc-0",
-        "headers": {
-          "Host": "oizs5zecux0s.pouriayy1.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe",
-      "server": "fly.lumexa.ir",
-      "server_port": 443,
-      "uuid": "7a96136a-20ad-4aec-86bd-f6622fbb8ce6",
+      "tag": "🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe",
+      "server": "germany1.xorsand.eu",
+      "server_port": 10105,
+      "uuid": "ad3f4a0a-a89f-498e-9869-a93c8fa185b1",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dynu.com",
+        "server_name": "play.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "0E-OTXVHsukKvwgwynrI49nTaT5m6rxdaFPg4D_UszI",
-          "short_id": "9cc0"
+          "public_key": "PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es",
+          "short_id": "12e321badd07906e"
         }
       }
     },
     {
-      "type": "trojan",
-      "tag": "🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe",
-      "server": "de-bots4.h1cloud.net",
-      "server_port": 25267,
-      "password": "happybirthdaydaniel",
-      "tls": {
-        "enabled": true,
-        "server_name": "t.me/FuckTheWall",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe",
-      "server": "5.45.100.100",
-      "server_port": 51511,
-      "password": "miaoge110",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe",
-      "server": "derfderf.ru",
-      "server_port": 12824,
-      "password": "d62s7ghfehm742us",
-      "tls": {
-        "enabled": true,
-        "server_name": "derfderf.ru",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe",
-      "server": "3.69.232.199",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe",
-      "server": "185.176.204.18",
-      "server_port": 19999,
+      "tag": "🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe",
+      "server": "213.202.208.199",
+      "server_port": 7001,
       "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "password": "RexnBgU7EV5ADxG"
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe",
+      "tag": "🎵 🇩🇪 德国 (Germany) 13(机房) - xiaohe",
       "server": "185.226.172.8",
       "server_port": 8008,
       "method": "aes-256-gcm",
@@ -184,91 +184,81 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe",
-      "server": "168.222.43.53",
-      "server_port": 10000,
-      "uuid": "a05ecf37-c661-4247-ab09-4432cf0f3cc1"
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 13(机房) - xiaohe",
-      "server": "2.26.98.95",
-      "server_port": 443,
-      "uuid": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ge-s-1.pythonmakemigreat.wiki",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8",
-          "short_id": "2c9a2790ad5900b2"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🎵 🇩🇪 德国 (Germany) 14(机房) - xiaohe",
-      "server": "146.70.20.147",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe",
-      "server": "ov-germany1.09vpn.com",
-      "server_port": 80,
-      "uuid": "3cfa0d9b-6279-4b73-8533-09ad84e49c80",
-      "transport": {
-        "type": "ws",
-        "path": "/vless/"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe",
-      "server": "91.107.247.173",
-      "server_port": 2083,
-      "uuid": "7858128a-6b5e-4f86-9bff-52c1f1e6439d",
-      "tls": {
-        "enabled": true,
-        "server_name": "sino.bestsellers1.site",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe",
       "server": "91.107.188.129",
       "server_port": 2083,
       "uuid": "36592d47-b9f5-4e8f-949e-45ac05472aab",
       "tls": {
         "enabled": true,
         "server_name": "site.check-looks.space",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe",
+      "server": "82.39.171.12",
+      "server_port": 443,
+      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "short_id": "c39cc7310a"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe",
+      "server": "31.77.148.89",
+      "server_port": 45021,
+      "uuid": "ad263f1c-199e-4aaf-bf22-c3ad0407d377"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe",
+      "server": "8.211.196.252",
+      "server_port": 443,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4="
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe",
+      "server": "148.253.210.191",
+      "server_port": 443,
+      "uuid": "53f03acd-fec1-6685-fc8f-03baf9550cb8",
+      "tls": {
+        "enabled": true,
+        "server_name": "148-253-210-191.sslip.io",
         "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "ws"
+        "type": "ws",
+        "path": "/test-ws",
+        "headers": {
+          "Host": "148-253-210-191.sslip.io"
+        }
       }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe",
-      "server": "31.77.148.89",
-      "server_port": 45021,
-      "uuid": "ad263f1c-199e-4aaf-bf22-c3ad0407d377"
     },
     {
       "type": "selector",
