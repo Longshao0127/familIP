@@ -25,14 +25,45 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe
-  server: de-bots4.h1cloud.net
-  port: 25267
+  server: 188.114.96.3
+  port: 2096
   udp: true
   type: trojan
-  password: happybirthdaydaniel
-  sni: t.me/FuckTheWall
-  skip-cert-verify: true
+  password: vP!XvZBNdw.e*ddSgmH!
+  sni: n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/ZFttmjSqvda5ohOQ?ed=2560
 - name: 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
+  server: 94.249.195.81
+  port: 43000
+  udp: true
+  type: vless
+  uuid: 6ddd64ac-972b-4809-8399-9ada51b64837
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: pR4VpawT5rTi2LKtKvRtAiaW5p1ZGRNiao6_5TAkawI
+    short-id: c6552fdd
+  servername: 94.249.195.81
+  client-fingerprint: chrome
+- name: 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  server: 31.12.75.64
+  port: 443
+  udp: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-15038a30cbef
+  tls: true
+  servername: oizs5zecux0s.pouriayy1.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/15038a30cbef/loc-0
+    headers:
+      Host: oizs5zecux0s.pouriayy1.workers.dev
+- name: 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
   server: www.gptcloudai.com
   port: 443
   udp: true
@@ -48,19 +79,7 @@ proxies:
     path: /truth
     headers:
       Host: www.gptcloudai.com
-- name: 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
-  server: p1tun0.greewebservices.ir
-  port: 38820
-  udp: true
-  type: vless
-  uuid: f234330e-f9df-46e3-8f60-b2af5173c147
-  tls: true
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    short-id: 66ded2
-  servername: play.google.com
-  client-fingerprint: ios
-- name: 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
   server: 193.108.119.96
   port: 443
   udp: true
@@ -68,15 +87,23 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: learn.iloverussia2026.com
   skip-cert-verify: false
-- name: 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
-  server: 88.99.213.222
-  port: 14444
+- name: 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
+  server: 5.45.100.100
+  port: 51511
   udp: true
   type: hysteria2
-  password: mhsl
-  sni: 88.99.213.222
+  password: miaoge110
+  sni: 5.45.100.100
   skip-cert-verify: true
-- name: 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
+  server: 3.76.221.4
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 3.76.221.4
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
   server: derfderf.ru
   port: 12824
   udp: true
@@ -84,23 +111,15 @@ proxies:
   password: d62s7ghfehm742us
   sni: derfderf.ru
   skip-cert-verify: false
-- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
-  server: 3.76.221.4
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-de-002.fastervpn.world
-  skip-cert-verify: true
-- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
-  server: 3.69.232.199
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-de-002.fastervpn.world
-  skip-cert-verify: true
 - name: 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
+  server: 18.153.65.67
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-de-002.fastervpn.world
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
   server: 3.64.194.247
   port: 443
   udp: true
@@ -108,42 +127,77 @@ proxies:
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 127.0.0.1
   skip-cert-verify: true
-- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  server: 155.117.5.208
+- name: 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
+  server: vpn-de-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
+  server: 3.69.232.199
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-de-002.fastervpn.world
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 13(机房) - xiaohe
+  server: 213.202.208.199
+  port: 5000
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🎵 🇩🇪 德国 (Germany) 14(机房) - xiaohe
+  server: 185.176.204.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe
+  server: 168.222.43.53
   port: 10000
   udp: true
   type: vless
   uuid: a05ecf37-c661-4247-ab09-4432cf0f3cc1
-- name: 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe
+  server: 169.150.210.233
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe
   server: 146.70.20.147
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
-  server: 31.184.244.134
+- name: 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
+  server: 144.31.125.60
   port: 443
   udp: true
   type: vless
-  uuid: 62ff829a-d100-4c06-a324-90bfe2f47a52
-  tls: true
-  servername: jouakehof491.dop72.com
-  skip-cert-verify: false
-- name: 🎵 🇩🇪 德国 (Germany) 13(机房) - xiaohe
-  server: 91.107.179.0
-  port: 10105
-  udp: true
-  type: vless
-  uuid: ad3f4a0a-a89f-498e-9869-a93c8fa185b1
+  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: PFC3JN1er1JE2vAemwRhNjewz8I4NUWP4XHf2Dza4Es
-    short-id: 12e321badd07906e
-  servername: play.google.com
-  client-fingerprint: firefox
-- name: 🎵 🇩🇪 德国 (Germany) 14(机房) - xiaohe
+    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
+    short-id: 85c86a9863
+  servername: www.intel.com
+  client-fingerprint: chrome
+- name: 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
+  server: 185.226.172.8
+  port: 8008
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: 🎵 🇩🇪 德国 (Germany) 20(机房) - xiaohe
   server: 91.107.247.173
   port: 2083
   udp: true
@@ -155,7 +209,19 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 21(机房) - xiaohe
+  server: 91.107.188.129
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
+  tls: true
+  servername: site.check-looks.space
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
   server: 91.107.180.176
   port: 465
   udp: true
@@ -169,7 +235,7 @@ proxies:
     path: /
     headers:
       Host: hw7.divarkhaghazi.com.
-- name: 🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
   server: 82.39.171.12
   port: 443
   udp: true
@@ -181,8 +247,21 @@ proxies:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   servername: yahoo.com
-  client-fingerprint: ios
-- name: 🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe
+  client-fingerprint: chrome
+- name: 🎵 🇩🇪 德国 (Germany) 24(机房) - xiaohe
+  server: 217.60.151.187
+  port: 47443
+  udp: true
+  type: vless
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MnW49sASUaQ1Sm8SbCWlU8eKfNR8x1O03YSZdj5vM3Y
+    short-id: ae97223a8f799003
+  servername: ge-3.waspguard.ru
+  client-fingerprint: firefox
+- name: 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
   server: gernode.barnikle1.me
   port: 1412
   udp: true
@@ -195,23 +274,15 @@ proxies:
     short-id: 4ea6a183
   servername: www.dhl.de
   client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
-  server: 193.108.119.78
+- name: 🎵 🇩🇪 德国 (Germany) 26(机房) - xiaohe
+  server: 193.108.119.29
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.iloverussia2026.com
+  sni: blog.iloverussia2026.com
   skip-cert-verify: false
-- name: 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
-  server: 193.108.119.15
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.iloverussia2026.com
-  skip-cert-verify: false
-- name: 🎵 🇩🇪 德国 (Germany) 20(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
   server: 148.253.210.191
   port: 443
   udp: true
@@ -226,6 +297,14 @@ proxies:
     path: /test-ws
     headers:
       Host: 148-253-210-191.sslip.io
+- name: 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
+  server: 193.108.119.78
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.iloverussia2026.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -254,6 +333,14 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 20(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 21(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 24(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 26(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -265,6 +352,7 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -276,9 +364,7 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 13(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 14(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe
@@ -287,6 +373,14 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 20(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 21(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 24(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 26(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -314,6 +408,14 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 20(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 21(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 24(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 26(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 28(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -321,10 +423,12 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
 rules:
 - MATCH,PROXIES

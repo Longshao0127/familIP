@@ -32,27 +32,7 @@ proxies:
   password: 0324fbc29561
   sni: images.ctfassets.net
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
-  server: 112.169.175.199
-  port: 31157
-  udp: true
-  type: vless
-  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
-- name: 🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe
-  server: 49.254.204.133
-  port: 1774
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
-- name: 🇰🇷 韩国 (South Korea) 04 (家宽) - xiaohe
-  server: 218.237.185.234
-  port: 4652
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇮🇳 印度 (India) 05 (家宽) - xiaohe
+- name: 🇮🇳 印度 (India) 02 (家宽) - xiaohe
   server: 122.176.216.52
   port: 443
   udp: true
@@ -75,10 +55,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 04 (家宽) - xiaohe
-  - 🇮🇳 印度 (India) 05 (家宽) - xiaohe
+  - 🇮🇳 印度 (India) 02 (家宽) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -95,10 +72,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 04 (家宽) - xiaohe
-  - 🇮🇳 印度 (India) 05 (家宽) - xiaohe
+  - 🇮🇳 印度 (India) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -107,9 +81,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 04 (家宽) - xiaohe
-  - 🇮🇳 印度 (India) 05 (家宽) - xiaohe
+  - 🇮🇳 印度 (India) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
