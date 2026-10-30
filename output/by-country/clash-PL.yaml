@@ -57,27 +57,6 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇵🇱 波兰 (Poland) 05 - xiaohe
-  server: 92.118.150.146
-  port: 443
-  udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: pl.tronsg.com
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 06 - xiaohe
-  server: 77.232.135.141
-  port: 8445
-  udp: true
-  type: vless
-  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-  tls: true
-  servername: ru1.radiolumens.uk
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: beru-pl
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,8 +67,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02 - xiaohe
   - 🇵🇱 波兰 (Poland) 03 - xiaohe
   - 🇵🇱 波兰 (Poland) 04 - xiaohe
-  - 🇵🇱 波兰 (Poland) 05 - xiaohe
-  - 🇵🇱 波兰 (Poland) 06 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -101,8 +78,6 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02 - xiaohe
   - 🇵🇱 波兰 (Poland) 03 - xiaohe
   - 🇵🇱 波兰 (Poland) 04 - xiaohe
-  - 🇵🇱 波兰 (Poland) 05 - xiaohe
-  - 🇵🇱 波兰 (Poland) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -114,7 +89,5 @@ proxy-groups:
   - 🇵🇱 波兰 (Poland) 02 - xiaohe
   - 🇵🇱 波兰 (Poland) 03 - xiaohe
   - 🇵🇱 波兰 (Poland) 04 - xiaohe
-  - 🇵🇱 波兰 (Poland) 05 - xiaohe
-  - 🇵🇱 波兰 (Poland) 06 - xiaohe
 rules:
 - MATCH,PROXIES

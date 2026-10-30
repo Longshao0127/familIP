@@ -9,32 +9,6 @@
     {
       "type": "vless",
       "tag": "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-      "server": "65.109.210.221",
-      "server_port": 465,
-      "uuid": "924e20da-fcad-4e7e-8113-c62d27a0d01e",
-      "tls": {
-        "enabled": true,
-        "server_name": "hw3.divarkhaghazi.com.",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "hw3.divarkhaghazi.com."
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
       "server": "65.109.211.81",
       "server_port": 465,
       "uuid": "09f30c46-3964-41ce-882a-72aee83ddd42",
@@ -60,7 +34,7 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
       "server": "45.144.234.157",
       "server_port": 14430,
       "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
@@ -78,8 +52,7 @@
       "outbounds": [
         "auto",
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
       ]
     },
     {
@@ -87,8 +60,7 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

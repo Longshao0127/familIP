@@ -7,33 +7,25 @@
   },
   "outbounds": [
     {
-      "type": "anytls",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe",
-      "server": "56481.df6h451rh.xin",
-      "server_port": 443,
-      "password": "0324fbc29561",
-      "tls": {
-        "enabled": true,
-        "server_name": "images.ctfassets.net",
-        "insecure": true,
-        "alpn": [
-          "http/1.1"
-        ]
-      }
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe",
+      "server": "112.169.175.199",
+      "server_port": 31157,
+      "uuid": "bd2fb303-b4c7-49af-a8e3-5c6f11b005dd"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe"
+        "🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe"
+        "🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

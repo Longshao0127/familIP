@@ -33,6 +33,14 @@ proxies:
   sni: diffoscope.com
   skip-cert-verify: false
 - name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  server: promo.betust.net
+  port: 443
+  udp: true
+  type: hysteria2
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
+  skip-cert-verify: false
+- name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
   server: 31.172.65.4
   port: 8443
   udp: true
@@ -45,6 +53,17 @@ proxies:
     short-id: 0e7741edc378622f
   servername: www.bing.com
   client-fingerprint: qq
+- name: 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
+  server: 5.178.109.174
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.178.109.174
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,6 +73,8 @@ proxy-groups:
   - AUTO-UDP
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -61,7 +82,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -71,6 +93,8 @@ proxy-groups:
   proxies:
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -79,5 +103,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -24,26 +24,19 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  server: 154.21.203.106
-  port: 51279
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  server: 112.169.175.199
+  port: 31157
   udp: true
   type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
-    short-id: bb82c8
-  servername: www.tesla.com
-  client-fingerprint: firefox
+  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +44,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +52,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

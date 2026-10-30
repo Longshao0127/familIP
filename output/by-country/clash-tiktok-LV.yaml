@@ -49,6 +49,19 @@ proxies:
     public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
     short-id: 33acba1b
   servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
+  server: 31.58.171.53
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4d259556-57f7-4e5a-9a4a-48868787fb38
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: iCy_Y2B58KB39rw94EycaBO-aldt2PaMmWz62arreSo
+    short-id: f77f3068
+  servername: dl.google.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
@@ -59,6 +72,7 @@ proxy-groups:
   - AUTO
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
+  - 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,6 +90,7 @@ proxy-groups:
   proxies:
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
+  - 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -85,5 +100,6 @@ proxy-groups:
   proxies:
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
+  - 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -24,46 +24,19 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  server: 56481.df6h451rh.xin
-  port: 443
-  udp: true
-  type: anytls
-  password: 0324fbc29561
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-- name: 🇮🇳 印度 (India) 02 (家宽) - xiaohe
-  server: 122.176.216.52
-  port: 443
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  server: 112.169.175.199
+  port: 31157
   udp: true
   type: vless
-  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-  tls: true
-  servername: app-6ada5023.deploy.meerasolution.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
-    headers:
-      Host: app-6ada5023.deploy.meerasolution.com
+  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  - 🇮🇳 印度 (India) 02 (家宽) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -71,8 +44,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  - 🇮🇳 印度 (India) 02 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -80,7 +52,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  - 🇮🇳 印度 (India) 02 (家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
