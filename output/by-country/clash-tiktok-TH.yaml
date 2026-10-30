@@ -31,20 +31,7 @@ proxies:
   type: trojan
   password: 5t6i121em5lkmsmk
   sni: th001.zestapp778.com
-  skip-cert-verify: false
-- name: 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
-  server: 45.154.26.63
-  port: 443
-  udp: true
-  type: vless
-  uuid: ff85e702-b605-4109-884d-2c1f065d0954
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MiQ5B4j6In71lWvCi0vO_DkVSDb7sii34bh5efBMswk
-    short-id: 3c032a7e
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,7 +39,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
-  - 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -61,7 +47,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
-  - 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +55,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
-  - 🎵 🇹🇭 泰国 (Thailand) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

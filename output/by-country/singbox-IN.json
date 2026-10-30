@@ -15,7 +15,7 @@
       "tls": {
         "enabled": true,
         "server_name": "in002.zestapp778.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -43,7 +43,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -63,7 +63,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,

@@ -67,20 +67,11 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
