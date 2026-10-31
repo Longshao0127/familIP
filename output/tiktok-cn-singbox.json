@@ -11,7 +11,7 @@
       "tag": "🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe",
       "server": "fast.145779.xyz",
       "server_port": 2053,
-      "uuid": "e3149c82-00f6-4227-b2c0-b78f1dd81279",
+      "uuid": "c83f15bf-1817-4ec8-a19f-6393d226434c",
       "tls": {
         "enabled": true,
         "server_name": "fast.145779.xyz",
@@ -23,8 +23,44 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 02(机房) - xiaohe",
+      "server": "www.windowsmsidownloads.com",
+      "server_port": 443,
+      "uuid": "80be2deb-3b27-4775-9bd1-7f2a2b9c261b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.windowsmsidownloads.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/truth",
+        "headers": {
+          "Host": "www.windowsmsidownloads.com"
+        }
+      }
+    },
+    {
       "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 02(机房) - xiaohe",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe",
+      "server": "202.50.253.27",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe",
+      "server": "202.50.253.54",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe",
       "server": "202.50.253.45",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -32,14 +68,14 @@
     },
     {
       "type": "trojan",
-      "tag": "🎵 🇫🇷 法国 (France) 03(机房) - xiaohe",
-      "server": "141.101.115.104",
+      "tag": "🎵 🇫🇷 法国 (France) 06(机房) - xiaohe",
+      "server": "188.114.98.0",
       "server_port": 443,
       "password": "humanity",
       "tls": {
         "enabled": true,
         "server_name": "www.calmlunch.com",
-        "insecure": true
+        "insecure": false
       },
       "transport": {
         "type": "ws",
@@ -51,7 +87,7 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe",
+      "tag": "🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe",
       "server": "185.14.30.98",
       "server_port": 8443,
       "uuid": "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0",
@@ -71,9 +107,52 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe",
+      "server": "144.31.140.125",
+      "server_port": 8443,
+      "uuid": "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "twitch.tv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo",
+          "short_id": "168c15efac9df5fd"
+        }
+      }
+    },
+    {
       "type": "trojan",
-      "tag": "🎵 🇳🇱 荷兰 (Netherlands) 05(机房) - xiaohe",
-      "server": "104.18.37.127",
+      "tag": "🎵 🇳🇱 荷兰 (Netherlands) 09(机房) - xiaohe",
+      "server": "104.17.44.17",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.pleadcourt.org",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇳🇱 荷兰 (Netherlands) 10(机房) - xiaohe",
+      "server": "8.6.112.206",
       "server_port": 443,
       "password": "humanity",
       "tls": {
@@ -97,29 +176,107 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe",
-      "server": "13.143.180.104",
+      "type": "trojan",
+      "tag": "🎵 🇫🇷 法国 (France) 11(机房) - xiaohe",
+      "server": "5.44.46.142",
       "server_port": 443,
-      "uuid": "a0fa7e19-70ec-41e0-b0cc-bcc984d4201a",
-      "flow": "xtls-rprx-vision",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "s12.bsh-net.ru",
+        "server_name": "www.calmlunch.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 12(机房) - xiaohe",
+      "server": "5.253.28.240",
+      "server_port": 2443,
+      "uuid": "5e679ccd-1586-4d5f-b87b-48251046cad8",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg",
+          "short_id": "92c32de179e5d908"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "rex-eb0bf76b710ce763"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe",
+      "server": "chatgpt.com",
+      "server_port": 8443,
+      "uuid": "60441548-b68e-43b2-8191-e3b884be4b3c",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "v2ray1.dozapp.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/lMnsZUN4/",
+        "headers": {
+          "Host": "v2ray1.dozapp.xyz"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe",
+      "server": "202.50.253.90",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe",
+      "server": "79.182.39.57",
+      "server_port": 443,
+      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
+      "tls": {
+        "enabled": true,
+        "server_name": "a0688bt.us4.h1clayd.click",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk",
-          "short_id": "51079f144d661484"
+          "public_key": "5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E",
+          "short_id": "257420d9d430152a"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe",
+      "server": "202.50.253.72",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
       "type": "trojan",
-      "tag": "🎵 🇳🇱 荷兰 (Netherlands) 07(机房) - xiaohe",
+      "tag": "🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe",
       "server": "164.92.223.252",
       "server_port": 443,
       "password": "humanity",
@@ -145,7 +302,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe",
       "server": "202.50.253.63",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -153,16 +310,77 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe",
-      "server": "202.50.253.54",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe",
+      "server": "202.50.253.81",
       "server_port": 19999,
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
+      "type": "shadowsocks",
+      "tag": "🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe",
+      "server": "202.50.253.99",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 21(机房) - xiaohe",
+      "server": "152.175.6.229",
+      "server_port": 31884,
+      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk010.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 22(机房) - xiaohe",
+      "server": "95.56.251.12",
+      "server_port": 47443,
+      "uuid": "1fe01c8a-ab37-4e95-bbfc-95d4a608931e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "kz1.waspnest.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "z1GSwCEACvO9RLcMVpcURiT8er4oeIdeSJhraw_0cGU",
+          "short_id": "ae97223a8f799877"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe",
+      "server": "140.235.11.243",
+      "server_port": 56984,
+      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
+      "tls": {
+        "enabled": true,
+        "server_name": "sg1.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
       "type": "trojan",
-      "tag": "🎵 🇳🇱 荷兰 (Netherlands) 10(机房) - xiaohe",
-      "server": "162.159.133.152",
+      "tag": "🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe",
+      "server": "209.38.99.120",
       "server_port": 443,
       "password": "humanity",
       "tls": {
@@ -186,268 +404,34 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🎵 🇫🇷 法国 (France) 11(机房) - xiaohe",
-      "server": "185.220.100.168",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmlunch.com"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe",
-      "server": "104.16.10.72",
-      "server_port": 443,
-      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "tls": {
-        "enabled": true,
-        "server_name": "jp3.yohototo.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tyxyws",
-        "headers": {
-          "Host": "jp3.yohototo.top"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe",
-      "server": "202.50.253.81",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe",
-      "server": "79.182.39.57",
-      "server_port": 443,
-      "uuid": "056405e8-de9f-4d0d-8145-956f13cc34da",
-      "tls": {
-        "enabled": true,
-        "server_name": "a0688bt.us4.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E",
-          "short_id": "257420d9d430152a"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe",
-      "server": "104.17.70.206",
-      "server_port": 8443,
-      "uuid": "5f704d93-7e7f-45b5-81f5-08db4a946220",
-      "tls": {
-        "enabled": true,
-        "server_name": "free.sahanwickramasinghe.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "free.sahanwickramasinghe.com"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe",
-      "server": "202.50.253.27",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "vmess",
-      "tag": "🎵 🇺🇸 美国 (United States) 17(机房) - xiaohe",
-      "server": "104.21.91.53",
-      "server_port": 8443,
-      "uuid": "60441548-b68e-43b2-8191-e3b884be4b3c",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "v2ray1.dozapp.xyz",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/lMnsZUN4/",
-        "headers": {
-          "Host": "v2ray1.dozapp.xyz"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe",
-      "server": "202.50.253.36",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇵🇱 波兰 (Poland) 19(机房) - xiaohe",
-      "server": "87.242.119.253",
-      "server_port": 443,
-      "uuid": "aba9cdd4-026c-0001-87a9-9b3e5f24dd82",
-      "tls": {
-        "enabled": true,
-        "server_name": "hvtlr-ru-47sb.fade.mom",
-        "insecure": false,
-        "alpn": [
-          "http/1.1",
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe",
-      "server": "202.50.253.90",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe",
-      "server": "202.50.253.72",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇺🇸 美国 (United States) 22(机房) - xiaohe",
-      "server": "www.speedtest.net",
-      "server_port": 443,
-      "uuid": "ec23f217-23a1-4f62-b98d-ba56070de89c",
-      "tls": {
-        "enabled": true,
-        "server_name": "wallweb4.pages.dev",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/fp=chrome",
-        "headers": {
-          "Host": "wallweb4.pages.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 23(机房) - xiaohe",
-      "server": "95.56.251.12",
-      "server_port": 47443,
-      "uuid": "1fe01c8a-ab37-4e95-bbfc-95d4a608931e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "kz1.waspnest.space",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "z1GSwCEACvO9RLcMVpcURiT8er4oeIdeSJhraw_0cGU",
-          "short_id": "ae97223a8f799877"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇩🇪 德国 (Germany) 24(机房) - xiaohe",
-      "server": "195.141.65.98",
-      "server_port": 443,
-      "uuid": "53f03acd-fec1-6685-fc8f-03baf9550cb8",
-      "tls": {
-        "enabled": true,
-        "server_name": "148-253-210-191.sslip.io",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/test-ws",
-        "headers": {
-          "Host": "148-253-210-191.sslip.io"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 02(机房) - xiaohe",
-        "🎵 🇫🇷 法国 (France) 03(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe",
-        "🎵 🇳🇱 荷兰 (Netherlands) 05(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe",
-        "🎵 🇳🇱 荷兰 (Netherlands) 07(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe",
+        "🎵 🇨🇦 加拿大 (Canada) 02(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe",
+        "🎵 🇫🇷 法国 (France) 06(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe",
+        "🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe",
+        "🎵 🇳🇱 荷兰 (Netherlands) 09(机房) - xiaohe",
         "🎵 🇳🇱 荷兰 (Netherlands) 10(机房) - xiaohe",
         "🎵 🇫🇷 法国 (France) 11(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe",
-        "🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe",
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 12(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe",
         "🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 17(机房) - xiaohe",
+        "🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe",
         "🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 19(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe",
         "🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 22(机房) - xiaohe",
-        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 23(机房) - xiaohe",
-        "🎵 🇩🇪 德国 (Germany) 24(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 21(机房) - xiaohe",
+        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 22(机房) - xiaohe",
+        "🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe",
+        "🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe"
       ]
     },
     {
@@ -455,29 +439,29 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 02(机房) - xiaohe",
-        "🎵 🇫🇷 法国 (France) 03(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe",
-        "🎵 🇳🇱 荷兰 (Netherlands) 05(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe",
-        "🎵 🇳🇱 荷兰 (Netherlands) 07(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe",
+        "🎵 🇨🇦 加拿大 (Canada) 02(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe",
+        "🎵 🇫🇷 法国 (France) 06(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe",
+        "🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe",
+        "🎵 🇳🇱 荷兰 (Netherlands) 09(机房) - xiaohe",
         "🎵 🇳🇱 荷兰 (Netherlands) 10(机房) - xiaohe",
         "🎵 🇫🇷 法国 (France) 11(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe",
-        "🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe",
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 12(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe",
+        "🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe",
         "🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 17(机房) - xiaohe",
+        "🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe",
         "🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe",
-        "🎵 🇵🇱 波兰 (Poland) 19(机房) - xiaohe",
+        "🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe",
         "🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe",
-        "🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe",
-        "🎵 🇺🇸 美国 (United States) 22(机房) - xiaohe",
-        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 23(机房) - xiaohe",
-        "🎵 🇩🇪 德国 (Germany) 24(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 21(机房) - xiaohe",
+        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 22(机房) - xiaohe",
+        "🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe",
+        "🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

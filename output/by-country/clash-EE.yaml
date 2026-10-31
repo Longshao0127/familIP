@@ -25,14 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  server: 13.143.239.127
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 2a0fc918-9c61-451b-a9ad-e8f796e70f52
-  sni: nl1.obxodvpn.us
-  skip-cert-verify: true
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
   server: ee.h1cloud.net
   port: 25895
   udp: true
@@ -50,9 +42,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - AUTO-UDP
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,17 +50,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-- name: AUTO
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-- name: AUTO-UDP
+- name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300

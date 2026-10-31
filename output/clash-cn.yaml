@@ -25,40 +25,56 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: www.speedtest.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: ec23f217-23a1-4f62-b98d-ba56070de89c
-  tls: true
-  servername: wallweb4.pages.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: wallweb4.pages.dev
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
   server: fast.145779.xyz
   port: 2053
   udp: true
   type: vless
-  uuid: e3149c82-00f6-4227-b2c0-b78f1dd81279
+  uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
   tls: true
   servername: fast.145779.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /ws-tesla
+- name: 🇨🇦 加拿大 (Canada) 02 - xiaohe
+  server: www.windowsmsidownloads.com
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.windowsmsidownloads.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.windowsmsidownloads.com
 - name: 🇮🇹 意大利 (Italy) 03 - xiaohe
+  server: 202.50.253.27
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 04 - xiaohe
+  server: 202.50.253.54
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 05 - xiaohe
   server: 202.50.253.45
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪 德国 (Germany) 04 - xiaohe
-  server: 163.245.42.157
+- name: 🇩🇪 德国 (Germany) 06 - xiaohe
+  server: 9.247.23.209
   port: 443
   udp: true
   type: vless
@@ -69,30 +85,6 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: mother-earth.fyi
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 05 - xiaohe
-  server: 141.101.115.104
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 185.14.30.98
-  port: 8443
-  udp: true
-  type: vless
-  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Q0dPyF2hFWgxL7hxntJWJammcb6zcRCyA-NOiOFrsAo
-    short-id: 1433a38abea1191c
-  servername: twitch.tv
-  client-fingerprint: safari
 - name: 🇩🇪 德国 (Germany) 07 - xiaohe
   server: 9.247.23.209
   port: 443
@@ -106,7 +98,7 @@ proxies:
   servername: mother-earth.fyi
   client-fingerprint: chrome
 - name: 🇩🇪 德国 (Germany) 08 - xiaohe
-  server: 9.247.23.209
+  server: 163.245.42.157
   port: 443
   udp: true
   type: vless
@@ -129,14 +121,31 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: mother-earth.fyi
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 10 - xiaohe
-  server: 202.50.253.18
-  port: 19999
+- name: 🇫🇷 法国 (France) 10 - xiaohe
+  server: 188.114.98.0
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪 德国 (Germany) 11 - xiaohe
+  type: trojan
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇺🇸 美国 (United States) 11 - xiaohe
+  server: 185.14.30.98
+  port: 8443
+  udp: true
+  type: vless
+  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Q0dPyF2hFWgxL7hxntJWJammcb6zcRCyA-NOiOFrsAo
+    short-id: 1433a38abea1191c
+  servername: twitch.tv
+  client-fingerprint: safari
+- name: 🇩🇪 德国 (Germany) 12 - xiaohe
   server: edge.bookmai.com
   port: 443
   udp: true
@@ -147,33 +156,22 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: mother-earth.fyi
-  client-fingerprint: firefox
-- name: 🇳🇱 荷兰 (Netherlands) 12 - xiaohe
-  server: 104.18.37.127
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.trusteeforward.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇺🇸 美国 (United States) 13 - xiaohe
-  server: 13.143.180.104
-  port: 443
+  client-fingerprint: chrome
+- name: 🇩🇪 德国 (Germany) 13 - xiaohe
+  server: 144.31.140.125
+  port: 8443
   udp: true
   type: vless
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
+  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk
-    short-id: 51079f144d661484
-  servername: s12.bsh-net.ru
-  client-fingerprint: firefox
+    public-key: wgyw3OxZw4HEzedNdY_eHdcVkrtT7GEeZSHfzcZ8iDo
+    short-id: 168c15efac9df5fd
+  servername: twitch.tv
+  client-fingerprint: chrome
 - name: 🇳🇱 荷兰 (Netherlands) 14 - xiaohe
-  server: 164.92.223.252
+  server: 104.17.44.17
   port: 443
   udp: true
   type: trojan
@@ -183,8 +181,44 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇺🇸 美国 (United States) 15 - xiaohe
-  server: www.shopify.com
+- name: 🇳🇱 荷兰 (Netherlands) 15 - xiaohe
+  server: 8.6.112.206
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.trusteeforward.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇷🇺 俄罗斯 (Russia) 16 - xiaohe
+  server: 201.24.121.243
+  port: 443
+  udp: true
+  type: vless
+  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+  tls: true
+  servername: kk-ru24a1.testkknegr.online
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vlgrpc
+- name: 🇷🇺 俄罗斯 (Russia) 17 - xiaohe
+  server: 5.129.249.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: a5212bcb-ab85-459a-bec6-9f259eeeebfa
+  tls: true
+  reality-opts:
+    public-key: iT-HgkPRUHl7Tm-LUWAGD-zoNoZSkVc-M9sscIIomHY
+    short-id: a62228a1c8b3378f
+  servername: rue.tems.bet
+  client-fingerprint: firefox
+- name: 🇺🇸 美国 (United States) 18 - xiaohe
+  server: guanwang.awsno.com
   port: 443
   udp: true
   type: vmess
@@ -197,16 +231,7 @@ proxies:
   network: ws
   ws-opts:
     path: /hls/cctv5phd.m3u8
-    headers:
-      Host: guanwang.awsno.com
-- name: 🇮🇹 意大利 (Italy) 16 - xiaohe
-  server: 202.50.253.63
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🌐 其他地区 (Other) 17 - xiaohe
+- name: 🌐 其他地区 (Other) 19 - xiaohe
   server: www.gptcloudai.com
   port: 443
   udp: true
@@ -222,26 +247,8 @@ proxies:
     path: /truth
     headers:
       Host: www.gptcloudai.com
-- name: 🇮🇹 意大利 (Italy) 18 - xiaohe
-  server: 202.50.253.54
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇳🇱 荷兰 (Netherlands) 19 - xiaohe
-  server: 162.159.133.152
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.pleadcourt.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 - name: 🇫🇷 法国 (France) 20 - xiaohe
-  server: 185.220.100.168
+  server: 5.44.46.142
   port: 443
   udp: true
   type: trojan
@@ -251,67 +258,32 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-- name: 🇷🇺 俄罗斯 (Russia) 21 - xiaohe
-  server: 201.24.121.243
-  port: 443
+- name: 🇨🇾 塞浦路斯 (Cyprus) 21 - xiaohe
+  server: 5.253.28.240
+  port: 2443
   udp: true
   type: vless
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
   tls: true
-  servername: kk-ru24a1.testkknegr.online
-  skip-cert-verify: false
+  reality-opts:
+    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
+    short-id: 92c32de179e5d908
+  servername: deepl.com
   client-fingerprint: chrome
   network: grpc
   grpc-opts:
-    grpc-service-name: vlgrpc
-- name: 🇷🇺 俄罗斯 (Russia) 22 - xiaohe
-  server: 178.236.242.254
-  port: 8443
+    grpc-service-name: rex-eb0bf76b710ce763
+- name: 🇭🇰 中国香港 (Hong Kong) 22 - xiaohe
+  server: 152.175.6.229
+  port: 31884
   udp: true
   type: vless
-  uuid: c05ec3c7-2784-da2b-aa98-a3c132860fcb
-  flow: xtls-rprx-vision
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  reality-opts:
-    public-key: ZRTNgwFRP8viY4SQOgPTfWlLWJCwY3dr0aawA7vHwhU
-    short-id: a1b2c3d4e5f6a7b8
-  servername: xnod13x.artemida.live
-  client-fingerprint: chrome
-- name: 🇳🇱 荷兰 (Netherlands) 23 - xiaohe
-  server: 72.56.4.84
-  port: 443
-  udp: true
-  type: vless
-  uuid: Fluffy_VPN-zKZUa4Ie
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Im1i3eUtm7uDxUOA0rNWef9bILxsBvK_ElfejZTpQW0
-  servername: absolute-disaster.org
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 24 - xiaohe
-  server: 104.16.10.72
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  tls: true
-  servername: jp3.yohototo.top
+  servername: hk010.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: 🇮🇹 意大利 (Italy) 25 - xiaohe
-  server: 202.50.253.81
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 26 - xiaohe
+  client-fingerprint: firefox
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 23 - xiaohe
   server: 95.56.251.12
   port: 47443
   udp: true
@@ -323,94 +295,9 @@ proxies:
     public-key: z1GSwCEACvO9RLcMVpcURiT8er4oeIdeSJhraw_0cGU
     short-id: ae97223a8f799877
   servername: kz1.waspnest.space
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 27 - xiaohe
-  server: 79.182.39.57
-  port: 443
-  udp: true
-  type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  reality-opts:
-    public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
-    short-id: 257420d9d430152a
-  servername: a0688bt.us4.h1clayd.click
   client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 28 - xiaohe
-  server: 195.141.65.98
-  port: 443
-  udp: true
-  type: vless
-  uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-  tls: true
-  servername: 148-253-210-191.sslip.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /test-ws
-    headers:
-      Host: 148-253-210-191.sslip.io
-- name: 🇩🇪 德国 (Germany) 29 - xiaohe
-  server: 104.17.70.206
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 5f704d93-7e7f-45b5-81f5-08db4a946220
-  tls: true
-  servername: free.sahanwickramasinghe.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free.sahanwickramasinghe.com
-- name: 🇮🇹 意大利 (Italy) 30 - xiaohe
-  server: 202.50.253.27
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇳 CN 31 - xiaohe
-  server: 104.17.11.191
-  port: 443
-  udp: true
-  type: vless
-  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-  tls: true
-  servername: vpn.cintaku.qzz.io
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vlessws
-    headers:
-      Host: vpn.cintaku.qzz.io
-- name: 🇮🇹 意大利 (Italy) 32 - xiaohe
-  server: 202.50.253.99
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇳 CN 33 - xiaohe
-  server: 8.35.211.242
-  port: 443
-  udp: true
-  type: vless
-  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
-  tls: true
-  servername: vpn.cintaku.qzz.io
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vlessws
-    headers:
-      Host: vpn.cintaku.qzz.io
-- name: 🇺🇸 美国 (United States) 34 - xiaohe
-  server: 104.21.91.53
+- name: 🇺🇸 美国 (United States) 24 - xiaohe
+  server: chatgpt.com
   port: 8443
   udp: true
   type: vmess
@@ -425,49 +312,123 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- name: 🇮🇹 意大利 (Italy) 35 - xiaohe
-  server: 202.50.253.36
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇵🇱 波兰 (Poland) 36 - xiaohe
-  server: 87.242.119.253
-  port: 443
+- name: 🇸🇬 新加坡 (Singapore) 25 - xiaohe
+  server: 140.235.11.243
+  port: 56984
   udp: true
   type: vless
-  uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  servername: hvtlr-ru-47sb.fade.mom
+  servername: sg1.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: qq
-- name: 🇮🇹 意大利 (Italy) 37 - xiaohe
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
+  server: 209.38.99.120
+  port: 443
+  udp: true
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇮🇹 意大利 (Italy) 27 - xiaohe
   server: 202.50.253.90
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹 意大利 (Italy) 38 - xiaohe
+- name: 🇯🇵 日本 (Japan) 28 - xiaohe
+  server: 162.159.130.234
+  port: 2083
+  udp: true
+  type: vmess
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: cdn.sfacg.uk
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+- name: 🇺🇸 美国 (United States) 29 - xiaohe
+  server: 176.114.95.242
+  port: 443
+  udp: true
+  type: trojan
+  password: UAKWGor-h0woFsxKSWK92HptcM0g2k2h
+  sni: us-1.1984.love
+  skip-cert-verify: false
+- name: 🇨🇳 CN 30 - xiaohe
+  server: 8.35.211.242
+  port: 443
+  udp: true
+  type: vless
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
+  tls: true
+  servername: vpn.cintaku.qzz.io
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vlessws
+    headers:
+      Host: vpn.cintaku.qzz.io
+- name: 🇺🇸 美国 (United States) 31 - xiaohe
+  server: 79.182.39.57
+  port: 443
+  udp: true
+  type: vless
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  tls: true
+  reality-opts:
+    public-key: 5-9YzvyXcZ4J5Z4OaVTUbxUU2InvnwT17m0XY-Jse1E
+    short-id: 257420d9d430152a
+  servername: a0688bt.us4.h1clayd.click
+  client-fingerprint: firefox
+- name: 🇮🇹 意大利 (Italy) 32 - xiaohe
   server: 202.50.253.72
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇷🇺 俄罗斯 (Russia) 39 - xiaohe
-  server: 46.254.19.164
+- name: 🇳🇱 荷兰 (Netherlands) 33 - xiaohe
+  server: 164.92.223.252
   port: 443
   udp: true
-  type: vless
-  uuid: a5212bcb-ab85-459a-bec6-9f259eeeebfa
-  tls: true
-  reality-opts:
-    public-key: 3qgZ9UlB-y1i9jx_zQQBgiNgFHz6fPQdP9gMMl4zXiM
-    short-id: 8937c9ed2d470352
-  servername: wtb.tems.bet
-  client-fingerprint: firefox
+  type: trojan
+  password: humanity
+  sni: www.pleadcourt.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇮🇹 意大利 (Italy) 34 - xiaohe
+  server: 202.50.253.63
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 35 - xiaohe
+  server: 202.50.253.81
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 36 - xiaohe
+  server: 202.50.253.99
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -476,44 +437,41 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🇺🇸 美国 (United States) 01 - xiaohe
-  - 🇺🇸 美国 (United States) 02 - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 - xiaohe
   - 🇮🇹 意大利 (Italy) 03 - xiaohe
-  - 🇩🇪 德国 (Germany) 04 - xiaohe
-  - 🇫🇷 法国 (France) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 - xiaohe
+  - 🇮🇹 意大利 (Italy) 04 - xiaohe
+  - 🇮🇹 意大利 (Italy) 05 - xiaohe
+  - 🇩🇪 德国 (Germany) 06 - xiaohe
   - 🇩🇪 德国 (Germany) 07 - xiaohe
   - 🇩🇪 德国 (Germany) 08 - xiaohe
   - 🇩🇪 德国 (Germany) 09 - xiaohe
-  - 🇮🇹 意大利 (Italy) 10 - xiaohe
-  - 🇩🇪 德国 (Germany) 11 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 - xiaohe
+  - 🇫🇷 法国 (France) 10 - xiaohe
+  - 🇺🇸 美国 (United States) 11 - xiaohe
+  - 🇩🇪 德国 (Germany) 12 - xiaohe
+  - 🇩🇪 德国 (Germany) 13 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 14 - xiaohe
-  - 🇺🇸 美国 (United States) 15 - xiaohe
-  - 🇮🇹 意大利 (Italy) 16 - xiaohe
-  - 🌐 其他地区 (Other) 17 - xiaohe
-  - 🇮🇹 意大利 (Italy) 18 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 19 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 15 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 16 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 17 - xiaohe
+  - 🇺🇸 美国 (United States) 18 - xiaohe
+  - 🌐 其他地区 (Other) 19 - xiaohe
   - 🇫🇷 法国 (France) 20 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 21 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 22 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 23 - xiaohe
-  - 🇯🇵 日本 (Japan) 24 - xiaohe
-  - 🇮🇹 意大利 (Italy) 25 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇩🇪 德国 (Germany) 28 - xiaohe
-  - 🇩🇪 德国 (Germany) 29 - xiaohe
-  - 🇮🇹 意大利 (Italy) 30 - xiaohe
-  - 🇨🇳 CN 31 - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 21 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 22 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 23 - xiaohe
+  - 🇺🇸 美国 (United States) 24 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 25 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
+  - 🇮🇹 意大利 (Italy) 27 - xiaohe
+  - 🇯🇵 日本 (Japan) 28 - xiaohe
+  - 🇺🇸 美国 (United States) 29 - xiaohe
+  - 🇨🇳 CN 30 - xiaohe
+  - 🇺🇸 美国 (United States) 31 - xiaohe
   - 🇮🇹 意大利 (Italy) 32 - xiaohe
-  - 🇨🇳 CN 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 33 - xiaohe
+  - 🇮🇹 意大利 (Italy) 34 - xiaohe
   - 🇮🇹 意大利 (Italy) 35 - xiaohe
-  - 🇵🇱 波兰 (Poland) 36 - xiaohe
-  - 🇮🇹 意大利 (Italy) 37 - xiaohe
-  - 🇮🇹 意大利 (Italy) 38 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 39 - xiaohe
+  - 🇮🇹 意大利 (Italy) 36 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -522,44 +480,41 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇺🇸 美国 (United States) 01 - xiaohe
-  - 🇺🇸 美国 (United States) 02 - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 - xiaohe
   - 🇮🇹 意大利 (Italy) 03 - xiaohe
-  - 🇩🇪 德国 (Germany) 04 - xiaohe
-  - 🇫🇷 法国 (France) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 - xiaohe
+  - 🇮🇹 意大利 (Italy) 04 - xiaohe
+  - 🇮🇹 意大利 (Italy) 05 - xiaohe
+  - 🇩🇪 德国 (Germany) 06 - xiaohe
   - 🇩🇪 德国 (Germany) 07 - xiaohe
   - 🇩🇪 德国 (Germany) 08 - xiaohe
   - 🇩🇪 德国 (Germany) 09 - xiaohe
-  - 🇮🇹 意大利 (Italy) 10 - xiaohe
-  - 🇩🇪 德国 (Germany) 11 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 - xiaohe
+  - 🇫🇷 法国 (France) 10 - xiaohe
+  - 🇺🇸 美国 (United States) 11 - xiaohe
+  - 🇩🇪 德国 (Germany) 12 - xiaohe
+  - 🇩🇪 德国 (Germany) 13 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 14 - xiaohe
-  - 🇺🇸 美国 (United States) 15 - xiaohe
-  - 🇮🇹 意大利 (Italy) 16 - xiaohe
-  - 🌐 其他地区 (Other) 17 - xiaohe
-  - 🇮🇹 意大利 (Italy) 18 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 19 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 15 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 16 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 17 - xiaohe
+  - 🇺🇸 美国 (United States) 18 - xiaohe
+  - 🌐 其他地区 (Other) 19 - xiaohe
   - 🇫🇷 法国 (France) 20 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 21 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 22 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 23 - xiaohe
-  - 🇯🇵 日本 (Japan) 24 - xiaohe
-  - 🇮🇹 意大利 (Italy) 25 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇩🇪 德国 (Germany) 28 - xiaohe
-  - 🇩🇪 德国 (Germany) 29 - xiaohe
-  - 🇮🇹 意大利 (Italy) 30 - xiaohe
-  - 🇨🇳 CN 31 - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 21 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 22 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 23 - xiaohe
+  - 🇺🇸 美国 (United States) 24 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 25 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
+  - 🇮🇹 意大利 (Italy) 27 - xiaohe
+  - 🇯🇵 日本 (Japan) 28 - xiaohe
+  - 🇺🇸 美国 (United States) 29 - xiaohe
+  - 🇨🇳 CN 30 - xiaohe
+  - 🇺🇸 美国 (United States) 31 - xiaohe
   - 🇮🇹 意大利 (Italy) 32 - xiaohe
-  - 🇨🇳 CN 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 33 - xiaohe
+  - 🇮🇹 意大利 (Italy) 34 - xiaohe
   - 🇮🇹 意大利 (Italy) 35 - xiaohe
-  - 🇵🇱 波兰 (Poland) 36 - xiaohe
-  - 🇮🇹 意大利 (Italy) 37 - xiaohe
-  - 🇮🇹 意大利 (Italy) 38 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 39 - xiaohe
+  - 🇮🇹 意大利 (Italy) 36 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -568,44 +523,41 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇺🇸 美国 (United States) 01 - xiaohe
-  - 🇺🇸 美国 (United States) 02 - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 - xiaohe
   - 🇮🇹 意大利 (Italy) 03 - xiaohe
-  - 🇩🇪 德国 (Germany) 04 - xiaohe
-  - 🇫🇷 法国 (France) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 - xiaohe
+  - 🇮🇹 意大利 (Italy) 04 - xiaohe
+  - 🇮🇹 意大利 (Italy) 05 - xiaohe
+  - 🇩🇪 德国 (Germany) 06 - xiaohe
   - 🇩🇪 德国 (Germany) 07 - xiaohe
   - 🇩🇪 德国 (Germany) 08 - xiaohe
   - 🇩🇪 德国 (Germany) 09 - xiaohe
-  - 🇮🇹 意大利 (Italy) 10 - xiaohe
-  - 🇩🇪 德国 (Germany) 11 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 - xiaohe
+  - 🇫🇷 法国 (France) 10 - xiaohe
+  - 🇺🇸 美国 (United States) 11 - xiaohe
+  - 🇩🇪 德国 (Germany) 12 - xiaohe
+  - 🇩🇪 德国 (Germany) 13 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 14 - xiaohe
-  - 🇺🇸 美国 (United States) 15 - xiaohe
-  - 🇮🇹 意大利 (Italy) 16 - xiaohe
-  - 🌐 其他地区 (Other) 17 - xiaohe
-  - 🇮🇹 意大利 (Italy) 18 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 19 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 15 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 16 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 17 - xiaohe
+  - 🇺🇸 美国 (United States) 18 - xiaohe
+  - 🌐 其他地区 (Other) 19 - xiaohe
   - 🇫🇷 法国 (France) 20 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 21 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 22 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 23 - xiaohe
-  - 🇯🇵 日本 (Japan) 24 - xiaohe
-  - 🇮🇹 意大利 (Italy) 25 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇩🇪 德国 (Germany) 28 - xiaohe
-  - 🇩🇪 德国 (Germany) 29 - xiaohe
-  - 🇮🇹 意大利 (Italy) 30 - xiaohe
-  - 🇨🇳 CN 31 - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 21 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 22 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 23 - xiaohe
+  - 🇺🇸 美国 (United States) 24 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 25 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
+  - 🇮🇹 意大利 (Italy) 27 - xiaohe
+  - 🇯🇵 日本 (Japan) 28 - xiaohe
+  - 🇺🇸 美国 (United States) 29 - xiaohe
+  - 🇨🇳 CN 30 - xiaohe
+  - 🇺🇸 美国 (United States) 31 - xiaohe
   - 🇮🇹 意大利 (Italy) 32 - xiaohe
-  - 🇨🇳 CN 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 33 - xiaohe
+  - 🇮🇹 意大利 (Italy) 34 - xiaohe
   - 🇮🇹 意大利 (Italy) 35 - xiaohe
-  - 🇵🇱 波兰 (Poland) 36 - xiaohe
-  - 🇮🇹 意大利 (Italy) 37 - xiaohe
-  - 🇮🇹 意大利 (Italy) 38 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 39 - xiaohe
+  - 🇮🇹 意大利 (Italy) 36 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -614,43 +566,40 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇺🇸 美国 (United States) 01 - xiaohe
-  - 🇺🇸 美国 (United States) 02 - xiaohe
+  - 🇨🇦 加拿大 (Canada) 02 - xiaohe
   - 🇮🇹 意大利 (Italy) 03 - xiaohe
-  - 🇩🇪 德国 (Germany) 04 - xiaohe
-  - 🇫🇷 法国 (France) 05 - xiaohe
-  - 🇺🇸 美国 (United States) 06 - xiaohe
+  - 🇮🇹 意大利 (Italy) 04 - xiaohe
+  - 🇮🇹 意大利 (Italy) 05 - xiaohe
+  - 🇩🇪 德国 (Germany) 06 - xiaohe
   - 🇩🇪 德国 (Germany) 07 - xiaohe
   - 🇩🇪 德国 (Germany) 08 - xiaohe
   - 🇩🇪 德国 (Germany) 09 - xiaohe
-  - 🇮🇹 意大利 (Italy) 10 - xiaohe
-  - 🇩🇪 德国 (Germany) 11 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 12 - xiaohe
-  - 🇺🇸 美国 (United States) 13 - xiaohe
+  - 🇫🇷 法国 (France) 10 - xiaohe
+  - 🇺🇸 美国 (United States) 11 - xiaohe
+  - 🇩🇪 德国 (Germany) 12 - xiaohe
+  - 🇩🇪 德国 (Germany) 13 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 14 - xiaohe
-  - 🇺🇸 美国 (United States) 15 - xiaohe
-  - 🇮🇹 意大利 (Italy) 16 - xiaohe
-  - 🌐 其他地区 (Other) 17 - xiaohe
-  - 🇮🇹 意大利 (Italy) 18 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 19 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 15 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 16 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 17 - xiaohe
+  - 🇺🇸 美国 (United States) 18 - xiaohe
+  - 🌐 其他地区 (Other) 19 - xiaohe
   - 🇫🇷 法国 (France) 20 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 21 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 22 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 23 - xiaohe
-  - 🇯🇵 日本 (Japan) 24 - xiaohe
-  - 🇮🇹 意大利 (Italy) 25 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇩🇪 德国 (Germany) 28 - xiaohe
-  - 🇩🇪 德国 (Germany) 29 - xiaohe
-  - 🇮🇹 意大利 (Italy) 30 - xiaohe
-  - 🇨🇳 CN 31 - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 21 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 22 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 23 - xiaohe
+  - 🇺🇸 美国 (United States) 24 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 25 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
+  - 🇮🇹 意大利 (Italy) 27 - xiaohe
+  - 🇯🇵 日本 (Japan) 28 - xiaohe
+  - 🇺🇸 美国 (United States) 29 - xiaohe
+  - 🇨🇳 CN 30 - xiaohe
+  - 🇺🇸 美国 (United States) 31 - xiaohe
   - 🇮🇹 意大利 (Italy) 32 - xiaohe
-  - 🇨🇳 CN 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 33 - xiaohe
+  - 🇮🇹 意大利 (Italy) 34 - xiaohe
   - 🇮🇹 意大利 (Italy) 35 - xiaohe
-  - 🇵🇱 波兰 (Poland) 36 - xiaohe
-  - 🇮🇹 意大利 (Italy) 37 - xiaohe
-  - 🇮🇹 意大利 (Italy) 38 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 39 - xiaohe
+  - 🇮🇹 意大利 (Italy) 36 - xiaohe
 rules:
 - MATCH,PROXIES

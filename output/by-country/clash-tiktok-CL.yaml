@@ -24,26 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  server: xsru1.ddnsfree.com
+- name: 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
+  server: 64.176.7.205
   port: 443
   udp: true
-  type: vless
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-  tls: true
-  servername: xsru1.ddnsfree.com
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
   skip-cert-verify: false
-  client-fingerprint: random
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-ru
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +46,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

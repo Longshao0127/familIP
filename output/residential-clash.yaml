@@ -24,26 +24,28 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe
-  server: 5.252.179.15
+- name: 🇮🇳 印度 (India) 01 (家宽) - xiaohe
+  server: 122.176.216.52
   port: 443
   udp: true
   type: vless
-  uuid: 0ab273e4-cea6-41d0-bbab-41071d2fc455
-  flow: xtls-rprx-vision
+  uuid: 16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
   tls: true
-  reality-opts:
-    public-key: XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY
-    short-id: 296f27de82dad7ff
-  servername: www.bing.com
-  client-fingerprint: firefox
+  servername: app-6ada5023.deploy.meerasolution.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88
+    headers:
+      Host: app-6ada5023.deploy.meerasolution.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe
+  - 🇮🇳 印度 (India) 01 (家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +53,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe
+  - 🇮🇳 印度 (India) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +61,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe
+  - 🇮🇳 印度 (India) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
