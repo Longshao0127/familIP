@@ -38,19 +38,6 @@ proxies:
   servername: up7.uni-plan.com
   client-fingerprint: chrome
 - name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
-  server: 177.1.192.38
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 706bce83-91db-4260-b175-cba29145cd56
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: rczv8z0BFqH3QS9PfFAzLYZY8Iao1yEBhwcRskkQugo
-    short-id: b3e515e37815559d
-  servername: upnl.giftsbattle.vip
-  client-fingerprint: chrome
-- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
   server: 177.1.192.67
   port: 443
   udp: true
@@ -63,7 +50,33 @@ proxies:
     short-id: 830e615a39f4c811
   servername: up4.uni-plan.com
   client-fingerprint: chrome
+- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  server: 31.59.143.147
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Liu35gmIQJtbul5AeCrceJTjsmln4RaqxX6joKlaBjk
+    short-id: ae97223a8f799889
+  servername: pl2.waspnest.space
+  client-fingerprint: firefox
 - name: 🎵 🇵🇱 波兰 (Poland) 04(机房) - xiaohe
+  server: 177.1.192.38
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: rczv8z0BFqH3QS9PfFAzLYZY8Iao1yEBhwcRskkQugo
+    short-id: b3e515e37815559d
+  servername: upnl.giftsbattle.vip
+  client-fingerprint: chrome
+- name: 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
   server: 70.34.252.255
   port: 443
   udp: true
@@ -71,7 +84,20 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
   skip-cert-verify: false
-- name: 🎵 🇵🇱 波兰 (Poland) 05(机房) - xiaohe
+- name: 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
+  server: 177.1.192.90
+  port: 443
+  udp: true
+  type: vless
+  uuid: 706bce83-91db-4260-b175-cba29145cd56
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PA7rbht6SKwvUgysJka_ffHvVEzl4s4RPDO3uPeuLxc
+    short-id: e12ed4adc5aee929
+  servername: up6.uni-plan.com
+  client-fingerprint: firefox
+- name: 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
   server: 2.26.6.1
   port: 2087
   udp: true
@@ -80,8 +106,7 @@ proxies:
   tls: true
   servername: 2.26.6.1
   skip-cert-verify: false
-  client-fingerprint: ios
-- name: 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
+- name: 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
   server: 54.37.131.126
   port: 80
   udp: true
@@ -94,18 +119,18 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
-  server: 168.222.43.53
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
-- name: 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
+- name: 🎵 🇵🇱 波兰 (Poland) 09(机房) - xiaohe
   server: 155.117.5.208
   port: 20001
   udp: true
   type: vless
   uuid: 8e8210b7-71a4-4799-8b9b-2e69698b1eaf
+- name: 🎵 🇵🇱 波兰 (Poland) 10(机房) - xiaohe
+  server: 168.222.43.53
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
 proxy-groups:
 - name: PROXIES
   type: select
@@ -121,6 +146,8 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 09(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 10(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -144,6 +171,8 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 09(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 10(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -159,5 +188,7 @@ proxy-groups:
   - 🎵 🇵🇱 波兰 (Poland) 06(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 07(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 08(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 09(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 10(机房) - xiaohe
 rules:
 - MATCH,PROXIES
