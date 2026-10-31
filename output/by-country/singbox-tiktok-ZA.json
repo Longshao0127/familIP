@@ -9,14 +9,6 @@
     {
       "type": "shadowsocks",
       "tag": "🎵 🇿🇦 南非 (South Africa) 01(机房) - xiaohe",
-      "server": "139.84.247.164",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "tfAcRikawhNoZAhu"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe",
       "server": "102.133.165.160",
       "server_port": 16233,
       "method": "chacha20-ietf-poly1305",
@@ -24,7 +16,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇿🇦 南非 (South Africa) 03(机房) - xiaohe",
+      "tag": "🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe",
       "server": "102.37.156.224",
       "server_port": 443,
       "method": "chacha20-ietf-poly1305",
@@ -36,8 +28,7 @@
       "outbounds": [
         "auto",
         "🎵 🇿🇦 南非 (South Africa) 01(机房) - xiaohe",
-        "🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe",
-        "🎵 🇿🇦 南非 (South Africa) 03(机房) - xiaohe"
+        "🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe"
       ]
     },
     {
@@ -45,8 +36,7 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇿🇦 南非 (South Africa) 01(机房) - xiaohe",
-        "🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe",
-        "🎵 🇿🇦 南非 (South Africa) 03(机房) - xiaohe"
+        "🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

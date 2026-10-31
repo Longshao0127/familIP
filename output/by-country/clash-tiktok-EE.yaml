@@ -33,18 +33,17 @@ proxies:
   sni: nl1.obxodvpn.us
   skip-cert-verify: true
 - name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 02(机房) - xiaohe
-  server: 185.225.205.53
-  port: 443
+  server: ee.h1cloud.net
+  port: 25895
   udp: true
   type: vless
-  uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c
-  flow: xtls-rprx-vision
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   tls: true
   reality-opts:
-    public-key: 2XyUS3_ONl5REQ7NiwikdJphAe7oJ61-21zuqnN67y8
-    short-id: 2e82d7ac
-  servername: addons.mozilla.org
-  client-fingerprint: qq
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: a73f0410d728c823
+  servername: www.samsung.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

@@ -15,7 +15,7 @@
       "tls": {
         "enabled": true,
         "server_name": "connectwithtopemployersandfindidealjobs.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {

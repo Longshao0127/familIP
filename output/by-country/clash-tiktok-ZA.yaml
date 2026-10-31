@@ -25,20 +25,13 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇿🇦 南非 (South Africa) 01(机房) - xiaohe
-  server: 139.84.247.164
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: tfAcRikawhNoZAhu
-- name: 🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe
   server: 102.133.165.160
   port: 16233
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: Xsy8Ox4yOV3xLlpxtjzs3X
-- name: 🎵 🇿🇦 南非 (South Africa) 03(机房) - xiaohe
+- name: 🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe
   server: 102.37.156.224
   port: 443
   udp: true
@@ -53,7 +46,6 @@ proxy-groups:
   - AUTO
   - 🎵 🇿🇦 南非 (South Africa) 01(机房) - xiaohe
   - 🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe
-  - 🎵 🇿🇦 南非 (South Africa) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -63,7 +55,6 @@ proxy-groups:
   proxies:
   - 🎵 🇿🇦 南非 (South Africa) 01(机房) - xiaohe
   - 🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe
-  - 🎵 🇿🇦 南非 (South Africa) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,6 +64,5 @@ proxy-groups:
   proxies:
   - 🎵 🇿🇦 南非 (South Africa) 01(机房) - xiaohe
   - 🎵 🇿🇦 南非 (South Africa) 02(机房) - xiaohe
-  - 🎵 🇿🇦 南非 (South Africa) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

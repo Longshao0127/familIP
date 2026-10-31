@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  server: hw3.divarkhaghazi.com.
+  server: 65.109.210.221
   port: 465
   udp: true
   type: vless
@@ -37,22 +37,9 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
-  server: 65.109.211.81
-  port: 465
-  udp: true
-  type: vless
-  uuid: 09f30c46-3964-41ce-882a-72aee83ddd42
-  tls: true
-  servername: hw6.divarkhaghazi.com.
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
     headers:
-      Host: hw6.divarkhaghazi.com.
-- name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+      Host: hw3.divarkhaghazi.com.
+- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -71,7 +58,6 @@ proxy-groups:
   - AUTO
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -81,7 +67,6 @@ proxy-groups:
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -91,6 +76,5 @@ proxy-groups:
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES
