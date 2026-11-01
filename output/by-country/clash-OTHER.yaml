@@ -25,21 +25,21 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: www.gptcloudai.com
+  server: www.ubuntuupdates.com
   port: 443
   udp: true
   type: vmess
-  uuid: e70a5b70-f63c-4450-af8b-94990cdf80c0
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
   alterId: 0
   cipher: auto
   tls: true
-  servername: www.gptcloudai.com
+  servername: www.ubuntuupdates.com
   skip-cert-verify: false
   network: ws
   ws-opts:
     path: /truth
     headers:
-      Host: www.gptcloudai.com
+      Host: www.ubuntuupdates.com
 proxy-groups:
 - name: PROXIES
   type: select

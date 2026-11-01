@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
-  server: 155.117.5.208
+  server: 178.83.45.226
   port: 2052
   udp: true
   type: vless

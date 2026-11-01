@@ -41,50 +41,31 @@ proxies:
   sni: 152.69.231.175
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
-  server: 152.70.237.123
-  port: 2053
-  udp: true
-  type: hysteria2
-  password: maintell
-  sni: bing.com
-  skip-cert-verify: true
-- name: 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
   server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: vk.com
+  sni: google.com
+  skip-cert-verify: true
+- name: 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+  server: 152.70.237.123
+  port: 2053
+  udp: true
+  type: hysteria2
+  password: maintell
+  sni: 152.70.237.123
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
-  server: 112.169.175.199
-  port: 31157
+  server: 152.69.226.63
+  port: 25555
   udp: true
   type: vless
-  uuid: bd2fb303-b4c7-49af-a8e3-5c6f11b005dd
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  network: ws
+  ws-opts:
+    path: /
 - name: 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
-  server: 49.254.204.133
-  port: 1774
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 1234!@#$
-- name: 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
-  server: kr002.zestapp778.com
-  port: 48851
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: kr002.zestapp778.com
-  skip-cert-verify: true
-- name: 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
   server: 3.39.4.109
   port: 13672
   udp: true
@@ -96,17 +77,16 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: qq
-- name: 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
-  server: 152.69.226.63
-  port: 25555
+  client-fingerprint: chrome
+- name: 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
+  server: kr002.zestapp778.com
+  port: 48851
   udp: true
-  type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  network: ws
-  ws-opts:
-    path: /
-- name: 🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: kr002.zestapp778.com
+  skip-cert-verify: false
+- name: 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   server: 151.245.106.49
   port: 2053
   udp: true
@@ -118,7 +98,7 @@ proxies:
     short-id: 429499c03d4cc8a0
   servername: www.cloudflare.com
   client-fingerprint: random
-- name: 🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe
+- name: 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
   server: 3.39.4.109
   port: 18967
   udp: true
@@ -130,7 +110,7 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -147,9 +127,6 @@ proxy-groups:
   - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -162,9 +139,6 @@ proxy-groups:
   - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -181,9 +155,6 @@ proxy-groups:
   - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 11(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 12(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

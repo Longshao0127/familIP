@@ -38,19 +38,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: firefox
 - name: 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
-  server: 45.43.79.92
-  port: 443
-  udp: true
-  type: vless
-  uuid: 042b12d8-bac4-4b3a-b661-79e333f08e4e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M4Y9h339sntl5wEpiCa7f4IKhJ_8JLzPnAz2IzKlngM
-    short-id: af4ca5d16438c938
-  servername: vikt659.isgood.host
-  client-fingerprint: chrome
-- name: 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
   server: 31.58.171.53
   port: 443
   udp: true
@@ -71,7 +58,6 @@ proxy-groups:
   - AUTO
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -81,7 +67,6 @@ proxy-groups:
   proxies:
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -91,6 +76,5 @@ proxy-groups:
   proxies:
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES
