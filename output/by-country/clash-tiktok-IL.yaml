@@ -36,7 +36,7 @@ proxies:
     public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
     short-id: a3a578ab
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
   server: 64.176.163.182
   port: 443
@@ -45,6 +45,19 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: exploreeducationsectoropportunitiestodayandadvancecareers.com
   skip-cert-verify: true
+- name: 🎵 🇮🇱 以色列 (Israel) 03(机房) - xiaohe
+  server: 77.91.69.169
+  port: 19226
+  udp: true
+  type: vless
+  uuid: f0b144bd-4c44-440d-b630-d79ec82cad3a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PQjgf7GxBd2tDXf0zl9Z5rTZo7LdsWj0hGZLH-lJ-Uk
+    short-id: 7c
+  servername: yahoo.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,6 +66,7 @@ proxy-groups:
   - AUTO
   - 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
   - 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
+  - 🎵 🇮🇱 以色列 (Israel) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,6 +76,7 @@ proxy-groups:
   proxies:
   - 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
   - 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
+  - 🎵 🇮🇱 以色列 (Israel) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -71,5 +86,6 @@ proxy-groups:
   proxies:
   - 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
   - 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
+  - 🎵 🇮🇱 以色列 (Israel) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

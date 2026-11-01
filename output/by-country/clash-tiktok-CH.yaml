@@ -33,18 +33,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
-  server: 208.69.78.217
-  port: 2053
-  udp: true
-  type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
-  tls: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   server: 45.90.57.119
   port: 8443
   udp: true
@@ -56,7 +44,19 @@ proxies:
     public-key: L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI
     short-id: 16036bbef04d0509
   servername: twitch.tv
-  client-fingerprint: safari
+  client-fingerprint: firefox
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
+  server: 208.69.78.217
+  port: 2053
+  udp: true
+  type: vless
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  tls: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+    short-id: ad86e2d52ff40ebd
+  servername: www.apple.com
+  client-fingerprint: random
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   server: 45.90.59.15
   port: 443
@@ -71,12 +71,12 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
-  server: 208.69.78.60
+  server: 208.69.78.29
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.yourultimateprofessionalcareerhub.com
+  sni: learn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
   server: 208.69.78.208
@@ -87,14 +87,6 @@ proxies:
   sni: resources.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  server: 208.69.78.29
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
   server: 208.69.78.19
   port: 443
   udp: true
@@ -116,7 +108,6 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -130,7 +121,6 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -145,7 +135,6 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

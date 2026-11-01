@@ -10,34 +10,6 @@
       "type": "trojan",
       "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe",
       "server": "ench-snet-app.w-ctrip.cn",
-      "server_port": 45502,
-      "password": "b17e9b52db9623bd6c16eea3d7adb5b3",
-      "tls": {
-        "enabled": true,
-        "server_name": "cm.g.doubleclick.net",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe",
-      "server": "n04.jinggai.online",
-      "server_port": 8443,
-      "uuid": "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
-      "tls": {
-        "enabled": true,
-        "server_name": "n04.jinggai.online",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/nvl-n04-ws/e0577fe8fd7c8823"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
-      "server": "ench-snet-app.w-ctrip.cn",
       "server_port": 54815,
       "password": "b17e9b52db9623bd6c16eea3d7adb5b3",
       "tls": {
@@ -47,26 +19,38 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe",
-      "server": "160.187.100.109",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "type": "trojan",
+      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe",
+      "server": "ench-snet-app.w-ctrip.cn",
+      "server_port": 22003,
+      "password": "b17e9b52db9623bd6c16eea3d7adb5b3",
       "tls": {
         "enabled": true,
-        "server_name": "127.0.0.1",
+        "server_name": "cm.g.doubleclick.net",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 05(机房) - xiaohe",
+      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
+      "server": "160.187.100.109",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "160.187.100.109",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe",
       "server": "103.115.109.49",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "103.115.109.49",
+        "server_name": "t.me",
         "insecure": true
       }
     },
@@ -78,8 +62,7 @@
         "🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe",
         "🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe",
         "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 05(机房) - xiaohe"
+        "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe"
       ]
     },
     {
@@ -89,8 +72,7 @@
         "🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe",
         "🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe",
         "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 05(机房) - xiaohe"
+        "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
