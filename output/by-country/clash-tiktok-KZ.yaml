@@ -25,19 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
-  server: 95.56.251.12
-  port: 47443
-  udp: true
-  type: vless
-  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: z1GSwCEACvO9RLcMVpcURiT8er4oeIdeSJhraw_0cGU
-    short-id: ae97223a8f799877
-  servername: kz1.waspnest.space
-  client-fingerprint: firefox
-- name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 02(机房) - xiaohe
   server: 109.248.170.119
   port: 13447
   udp: true
@@ -53,18 +40,8 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 02(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -74,7 +51,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -83,6 +59,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

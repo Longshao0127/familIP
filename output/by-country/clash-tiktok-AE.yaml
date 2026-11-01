@@ -25,6 +25,15 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
+  server: uae.unixzone.us
+  port: 22573
+  udp: true
+  type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  network: ws
+  ws-opts:
+    path: /
+- name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   server: 95.174.68.188
   port: 14430
   udp: true
@@ -33,23 +42,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 95.174.68.188
-- name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
-  server: 89.22.224.146
-  port: 43788
-  udp: true
-  type: vless
-  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
-  tls: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select

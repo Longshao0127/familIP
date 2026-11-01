@@ -29,7 +29,7 @@
     {
       "type": "vmess",
       "tag": "🇨🇦 加拿大 (Canada) 02 - xiaohe",
-      "server": "23.162.200.198",
+      "server": "134.195.196.211",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto"
@@ -45,7 +45,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -55,28 +55,20 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇨🇦 加拿大 (Canada) 04 - xiaohe",
-      "server": "216.152.147.48",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "courses.connectingpeoplewithgreatjobs.com",
-        "insecure": true
-      }
+      "server": "137.184.174.93",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇨🇦 加拿大 (Canada) 05 - xiaohe",
-      "server": "ca001.zestapp778.com",
-      "server_port": 46977,
-      "password": "5t6i121em5lkmsmk",
-      "tls": {
-        "enabled": true,
-        "server_name": "ca001.zestapp778.com",
-        "insecure": true
-      }
+      "server": "149.22.95.183",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "trojan",
@@ -87,32 +79,28 @@
       "tls": {
         "enabled": true,
         "server_name": "api.connectingpeoplewithgreatjobs.com",
-        "insecure": false
+        "insecure": true
       }
     },
     {
       "type": "trojan",
       "tag": "🇨🇦 加拿大 (Canada) 07 - xiaohe",
-      "server": "216.152.147.93",
+      "server": "216.152.147.85",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "connectingpeoplewithgreatjobs.com",
+        "server_name": "cdn.connectingpeoplewithgreatjobs.com",
         "insecure": false
       }
     },
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇨🇦 加拿大 (Canada) 08 - xiaohe",
-      "server": "216.152.147.152",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.connectingpeoplewithgreatjobs.com",
-        "insecure": false
-      }
+      "server": "51.222.136.236",
+      "server_port": 8882,
+      "method": "aes-256-gcm",
+      "password": "kDWvXYZoTBcGkC4"
     },
     {
       "type": "vless",
@@ -138,54 +126,38 @@
     {
       "type": "vmess",
       "tag": "🇨🇦 加拿大 (Canada) 10 - xiaohe",
-      "server": "134.195.196.211",
+      "server": "23.162.200.198",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto"
     },
     {
-      "type": "shadowsocks",
+      "type": "trojan",
       "tag": "🇨🇦 加拿大 (Canada) 11 - xiaohe",
-      "server": "137.184.174.93",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 12 - xiaohe",
-      "server": "51.222.136.236",
-      "server_port": 8882,
-      "method": "aes-256-gcm",
-      "password": "kDWvXYZoTBcGkC4"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 13 - xiaohe",
-      "server": "149.22.95.183",
+      "server": "216.152.147.152",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 14 - xiaohe",
-      "server": "148.113.196.75",
-      "server_port": 8443,
-      "uuid": "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504",
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "ov-canada1.09vpn.com",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vless/"
+        "server_name": "learn.connectingpeoplewithgreatjobs.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇨🇦 加拿大 (Canada) 12 - xiaohe",
+      "server": "216.152.147.48",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "courses.connectingpeoplewithgreatjobs.com",
+        "insecure": false
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇨🇦 加拿大 (Canada) 15 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 13 - xiaohe",
       "server": "138.197.141.58",
       "server_port": 8080,
       "method": "rc4-md5",
@@ -193,14 +165,14 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 16 - xiaohe",
-      "server": "178.83.45.226",
+      "tag": "🇨🇦 加拿大 (Canada) 14 - xiaohe",
+      "server": "168.222.43.53",
       "server_port": 8080,
       "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 17 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 15 - xiaohe",
       "server": "103.106.229.37",
       "server_port": 21001,
       "uuid": "41b1c169-5905-4d98-b6a6-56896c25737c",
@@ -220,7 +192,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 18 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 16 - xiaohe",
       "server": "103.106.229.37",
       "server_port": 21004,
       "uuid": "41b1c169-5905-4d98-b6a6-56896c25737c",
@@ -229,7 +201,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -240,7 +212,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 19 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 17 - xiaohe",
       "server": "510.150333.xyz",
       "server_port": 21002,
       "uuid": "67952583-8572-42e1-943d-0602794f885b",
@@ -260,9 +232,9 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 20 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 18 - xiaohe",
       "server": "510.150333.xyz",
-      "server_port": 21004,
+      "server_port": 21003,
       "uuid": "67952583-8572-42e1-943d-0602794f885b",
       "tls": {
         "enabled": true,
@@ -274,33 +246,13 @@
         "reality": {
           "enabled": true,
           "public_key": "IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA",
-          "short_id": "4e0418d648f86141"
+          "short_id": "f3602a3a1cf928b7"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 21 - xiaohe",
-      "server": "511.150333.xyz",
-      "server_port": 21002,
-      "uuid": "41b1c169-5905-4d98-b6a6-56896c25737c",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU",
-          "short_id": "3ab8d93dd9b1a5be"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 22 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 19 - xiaohe",
       "server": "511.150333.xyz",
       "server_port": 21003,
       "uuid": "41b1c169-5905-4d98-b6a6-56896c25737c",
@@ -320,27 +272,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 23 - xiaohe",
-      "server": "510.150333.xyz",
-      "server_port": 21003,
-      "uuid": "67952583-8572-42e1-943d-0602794f885b",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA",
-          "short_id": "f3602a3a1cf928b7"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 24 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 20 - xiaohe",
       "server": "510.150333.xyz",
       "server_port": 21001,
       "uuid": "67952583-8572-42e1-943d-0602794f885b",
@@ -355,6 +287,46 @@
           "enabled": true,
           "public_key": "IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA",
           "short_id": "a51c3ccb2320024a"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 21 - xiaohe",
+      "server": "510.150333.xyz",
+      "server_port": 21004,
+      "uuid": "67952583-8572-42e1-943d-0602794f885b",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA",
+          "short_id": "4e0418d648f86141"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 加拿大 (Canada) 22 - xiaohe",
+      "server": "511.150333.xyz",
+      "server_port": 21002,
+      "uuid": "41b1c169-5905-4d98-b6a6-56896c25737c",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "HZwHZBP3x4Yo4UQiHcypRJIU_UdZY5OAapQM8RUqVAU",
+          "short_id": "3ab8d93dd9b1a5be"
         }
       }
     },
@@ -384,9 +356,7 @@
         "🇨🇦 加拿大 (Canada) 19 - xiaohe",
         "🇨🇦 加拿大 (Canada) 20 - xiaohe",
         "🇨🇦 加拿大 (Canada) 21 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 22 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 23 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 24 - xiaohe"
+        "🇨🇦 加拿大 (Canada) 22 - xiaohe"
       ]
     },
     {
@@ -414,9 +384,7 @@
         "🇨🇦 加拿大 (Canada) 19 - xiaohe",
         "🇨🇦 加拿大 (Canada) 20 - xiaohe",
         "🇨🇦 加拿大 (Canada) 21 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 22 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 23 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 24 - xiaohe"
+        "🇨🇦 加拿大 (Canada) 22 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
