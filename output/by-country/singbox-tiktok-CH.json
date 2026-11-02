@@ -19,20 +19,8 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe",
-      "server": "208.69.78.60",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.yourultimateprofessionalcareerhub.com",
-        "insecure": false
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe",
+      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe",
       "server": "45.90.57.119",
       "server_port": 8443,
       "uuid": "f5e70ce3-cfb4-4df1-b25c-d19bfae627c0",
@@ -42,7 +30,7 @@
         "server_name": "twitch.tv",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -53,7 +41,7 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe",
+      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe",
       "server": "208.69.78.217",
       "server_port": 2053,
       "uuid": "c0dd6d59-1573-43af-8b70-1470b2632a6d",
@@ -62,7 +50,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -72,47 +60,26 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe",
-      "server": "45.90.59.15",
-      "server_port": 443,
-      "uuid": "3950b45e-740d-4dca-ac95-505ec8534592",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY",
-          "short_id": "19253fae84102271"
-        }
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe",
-      "server": "208.69.78.208",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "resources.yourultimateprofessionalcareerhub.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe",
+      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe",
       "server": "208.69.78.19",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
         "server_name": "www.yourultimateprofessionalcareerhub.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe",
+      "server": "208.69.78.60",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.yourultimateprofessionalcareerhub.com",
         "insecure": false
       }
     },
@@ -125,9 +92,7 @@
         "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe",
         "🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe",
         "🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe"
+        "🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe"
       ]
     },
     {
@@ -138,9 +103,7 @@
         "🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe",
         "🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe",
         "🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe",
-        "🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe"
+        "🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

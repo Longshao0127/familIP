@@ -52,6 +52,14 @@ proxies:
     public-key: TefL2KtNcNLPmUY8TKlu5pA7ffipqgmbBN6gpyzyklk
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🎵 🇲🇽 墨西哥 (Mexico) 04(机房) - xiaohe
+  server: 149.104.87.33
+  port: 15083
+  udp: true
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: mx001.zestapp778.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -62,6 +70,7 @@ proxy-groups:
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
   - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
   - 🎵 🇲🇽 墨西哥 (Mexico) 03(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 04(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -80,6 +89,7 @@ proxy-groups:
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
   - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
   - 🎵 🇲🇽 墨西哥 (Mexico) 03(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -90,5 +100,6 @@ proxy-groups:
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
   - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
   - 🎵 🇲🇽 墨西哥 (Mexico) 03(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 04(机房) - xiaohe
 rules:
 - MATCH,PROXIES

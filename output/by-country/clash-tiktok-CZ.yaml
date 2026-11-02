@@ -24,18 +24,16 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  server: 154.21.203.106
-  port: 51279
+- name: 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  server: 178.208.89.190
+  port: 443
   udp: true
   type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
-    short-id: bb82c8
-  servername: www.tesla.com
+  servername: prod-eu-east-cz6.api-gateway.service-mesh.ingress-observability.speedtestinternet.link
+  skip-cert-verify: false
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
@@ -43,7 +41,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +49,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +57,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
