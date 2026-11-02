@@ -24,20 +24,7 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
-  server: tr2.h1cloud.net
-  port: 25021
-  udp: true
-  type: vless
-  uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg
-    short-id: 17fa3af0924c88b3
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
+- name: 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   server: 62.133.63.45
   port: 8444
   udp: true
@@ -52,7 +39,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
+- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -68,20 +55,10 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -89,9 +66,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -99,8 +75,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

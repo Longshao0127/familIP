@@ -17,7 +17,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -29,18 +29,6 @@
     {
       "type": "trojan",
       "tag": "🇪🇸 西班牙 (Spain) 02 - xiaohe",
-      "server": "66.163.118.244",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.discovergreatjobsandadvanceyourcareer.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇪🇸 西班牙 (Spain) 03 - xiaohe",
       "server": "66.163.118.166",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -51,9 +39,21 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🇪🇸 西班牙 (Spain) 03 - xiaohe",
+      "server": "66.163.118.62",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "courses.discovergreatjobsandadvanceyourcareer.com",
+        "insecure": false
+      }
+    },
+    {
       "type": "vless",
       "tag": "🇪🇸 西班牙 (Spain) 04 - xiaohe",
-      "server": "156.252.229.30",
+      "server": "156.252.229.11",
       "server_port": 8443,
       "uuid": "3e21e3d3-6d26-4155-b851-764dd8e8c6b5",
       "tls": {
@@ -61,7 +61,7 @@
         "server_name": "play.googleapis.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -73,7 +73,7 @@
     {
       "type": "vless",
       "tag": "🇪🇸 西班牙 (Spain) 05 - xiaohe",
-      "server": "156.252.229.11",
+      "server": "156.252.229.30",
       "server_port": 8443,
       "uuid": "3e21e3d3-6d26-4155-b851-764dd8e8c6b5",
       "tls": {
@@ -81,7 +81,7 @@
         "server_name": "play.googleapis.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,

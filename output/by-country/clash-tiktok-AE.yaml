@@ -33,17 +33,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: 95.174.68.188
-- name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
-  server: uae.unixzone.us
-  port: 22573
-  udp: true
-  type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  network: ws
-  ws-opts:
-    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,7 +40,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +48,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,6 +56,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
-  - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
