@@ -7,8 +7,23 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vmess",
       "tag": "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe",
+      "server": "54.37.131.126",
+      "server_port": 80,
+      "uuid": "059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe",
       "server": "70.34.252.255",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -23,14 +38,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe"
+        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe",
+        "🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe"
+        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe",
+        "🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

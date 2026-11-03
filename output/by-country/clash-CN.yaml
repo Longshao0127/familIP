@@ -24,19 +24,35 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  server: 89.169.47.96
+- name: 🇨🇳 CN 01 - xiaohe
+  server: 8.35.211.242
   port: 443
   udp: true
   type: vless
-  uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
   tls: true
-  servername: renderer-bridge-2-129.mirra.now
+  servername: vpn.cintaku.qzz.io
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: VideoRenderer
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vlessws
+    headers:
+      Host: vpn.cintaku.qzz.io
+- name: 🇨🇳 CN 02 - xiaohe
+  server: 104.21.91.49
+  port: 443
+  udp: true
+  type: vless
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
+  tls: true
+  servername: vpn.cintaku.qzz.io
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vlessws
+    headers:
+      Host: vpn.cintaku.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
@@ -44,7 +60,8 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🇨🇳 CN 01 - xiaohe
+  - 🇨🇳 CN 02 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -52,7 +69,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🇨🇳 CN 01 - xiaohe
+  - 🇨🇳 CN 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +78,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🇨🇳 CN 01 - xiaohe
+  - 🇨🇳 CN 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,6 +87,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🇨🇳 CN 01 - xiaohe
+  - 🇨🇳 CN 02 - xiaohe
 rules:
 - MATCH,PROXIES

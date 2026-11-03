@@ -25,6 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  server: 54.37.131.126
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   server: 70.34.252.255
   port: 443
   udp: true
@@ -39,6 +52,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -47,6 +61,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,5 +70,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
