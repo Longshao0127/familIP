@@ -23,16 +23,37 @@
       "password": "shadowsocks"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🎵 🇬🇧 英国 (United Kingdom) 03(机房) - xiaohe",
-      "server": "104.239.12.81",
-      "server_port": 43385,
-      "method": "chacha20-ietf-poly1305",
-      "password": "AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa"
+      "server": "132.243.207.154",
+      "server_port": 443,
+      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "get-37.topp-con.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "tVx2o1LD0BI7CCoXfFSv-Rr_etGde9XpQ-iNA9P3338",
+          "short_id": "59d2296aa6320c76"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇬🇧 英国 (United Kingdom) 04(机房) - xiaohe",
+      "server": "146.70.61.37",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "vless",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 04(机房) - xiaohe",
+      "tag": "🎵 🇬🇧 英国 (United Kingdom) 05(机房) - xiaohe",
       "server": "51.89.194.151",
       "server_port": 2053,
       "uuid": "8e790f25-1d71-4601-9fb0-d503931dcfca",
@@ -52,27 +73,28 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 05(机房) - xiaohe",
-      "server": "51.38.71.147",
-      "server_port": 8443,
-      "uuid": "c08f0056-7a6d-4931-813b-aaa3cdd00aed",
+      "tag": "🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe",
+      "server": "138.124.125.193",
+      "server_port": 10444,
+      "uuid": "e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "node-uk.connectsuite.org",
-        "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "ads.x5.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo",
+          "short_id": "8debcf36f1cc69ff"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe",
+      "tag": "🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe",
       "server": "191.44.108.31",
       "server_port": 443,
       "uuid": "558b26f6-061b-4079-9b84-ca13b3e90ae3",
@@ -93,14 +115,6 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe",
-      "server": "146.70.61.37",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe",
       "server": "98.98.207.163",
       "server_port": 8080,
@@ -108,28 +122,8 @@
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe",
-      "server": "51.38.71.147",
-      "server_port": 443,
-      "uuid": "fda89998-7e9a-4494-857a-cd0d00661b58",
-      "tls": {
-        "enabled": true,
-        "server_name": "uk1.connectsuite.org",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cdn-cgi/ws"
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe",
+      "tag": "🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe",
       "server": "98.98.142.161",
       "server_port": 8080,
       "method": "rc4-md5",
@@ -137,7 +131,7 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 11(机房) - xiaohe",
+      "tag": "🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe",
       "server": "46.250.250.149",
       "server_port": 2053,
       "uuid": "b4caaf57-ad77-4948-a6f5-51b3513799bf",
@@ -156,27 +150,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇬🇧 英国 (United Kingdom) 12(机房) - xiaohe",
-      "server": "87.239.249.137",
-      "server_port": 443,
-      "uuid": "67eb6b17-7797-4ded-bf52-423c4c5f6cbd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.foxsports.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY",
-          "short_id": "91af08b1ce1f"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -190,9 +163,7 @@
         "🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe",
         "🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe",
         "🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe",
-        "🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe",
-        "🎵 🇬🇧 英国 (United Kingdom) 11(机房) - xiaohe",
-        "🎵 🇬🇧 英国 (United Kingdom) 12(机房) - xiaohe"
+        "🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe"
       ]
     },
     {
@@ -208,9 +179,7 @@
         "🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe",
         "🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe",
         "🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe",
-        "🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe",
-        "🎵 🇬🇧 英国 (United Kingdom) 11(机房) - xiaohe",
-        "🎵 🇬🇧 英国 (United Kingdom) 12(机房) - xiaohe"
+        "🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

@@ -31,50 +31,18 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe",
-      "server": "45.86.60.174",
-      "server_port": 16443,
-      "uuid": "13e541f3-d09d-4633-89df-8513db0ced20"
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe",
-      "server": "5.253.28.240",
-      "server_port": 40443,
-      "uuid": "405b964e-a2d2-454f-aaaa-711cc218897c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0",
-          "short_id": "88b6"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe",
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe",
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 03(机房) - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

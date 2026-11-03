@@ -1,0 +1,59 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "route": {
+    "final": "select"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe",
+      "server": "89.169.47.96",
+      "server_port": 443,
+      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-bridge-2-129.mirra.now",
+        "insecure": false,
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "VideoRenderer"
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

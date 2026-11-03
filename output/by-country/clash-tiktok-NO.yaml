@@ -24,26 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇵🇪 秘鲁 (Peru) 01 - xiaohe
-  server: 134.185.81.5
-  port: 47881
+- name: 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  server: 185.213.23.63
+  port: 990
   udp: true
-  type: vless
-  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
-    short-id: 38d72071
-  servername: www.tesla.com
-  client-fingerprint: random
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇵🇪 秘鲁 (Peru) 01 - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇵🇪 秘鲁 (Peru) 01 - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇵🇪 秘鲁 (Peru) 01 - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
