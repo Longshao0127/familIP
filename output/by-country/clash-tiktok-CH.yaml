@@ -25,6 +25,21 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
+  server: 80.240.18.227
+  port: 10051
+  udp: true
+  type: vless
+  uuid: d161dcf1-fde2-44cc-b08d-d8944895e842
+  tls: true
+  servername: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
   server: 140.238.213.114
   port: 50160
   udp: true
@@ -32,19 +47,6 @@ proxies:
   password: 84a506ca5aca505696a454d828420b3f
   sni: www.bing.com
   skip-cert-verify: true
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
-  server: 45.90.57.119
-  port: 8443
-  udp: true
-  type: vless
-  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: L6DeK_a25_ZjPKFOrQLoCPWuXi5KCIH_EcRpARmCwkI
-    short-id: 16036bbef04d0509
-  servername: twitch.tv
-  client-fingerprint: firefox
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   server: 208.69.78.217
   port: 2053
@@ -56,14 +58,14 @@ proxies:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
     short-id: ad86e2d52ff40ebd
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
-  server: 208.69.78.19
+  server: 208.69.78.29
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.yourultimateprofessionalcareerhub.com
+  sni: learn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   server: 208.69.78.60
@@ -73,10 +75,27 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: cdn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  server: 208.69.78.19
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
+  server: 208.69.78.208
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
@@ -85,6 +104,16 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -92,10 +121,12 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -108,6 +139,8 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -115,6 +148,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
