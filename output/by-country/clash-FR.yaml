@@ -25,6 +25,22 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇫🇷 法国 (France) 01 - xiaohe
+  server: 104.21.86.152
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: www.ubuntuupdates.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.ubuntuupdates.com
+- name: 🇫🇷 法国 (France) 02 - xiaohe
   server: 13.36.234.11
   port: 443
   udp: true
@@ -32,7 +48,7 @@ proxies:
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 13.36.234.11
   skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 02 - xiaohe
+- name: 🇫🇷 法国 (France) 03 - xiaohe
   server: 62.210.7.139
   port: 60111
   udp: true
@@ -40,15 +56,6 @@ proxies:
   password: github.com/Alvin9999-newpac/fanqiang
   sni: …
   skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 03 - xiaohe
-  server: 138.124.70.41
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
 - name: 🇫🇷 法国 (France) 04 - xiaohe
   server: 54.36.174.140
   port: 443
@@ -57,19 +64,24 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: 6heexyz
 - name: 🇫🇷 法国 (France) 05 - xiaohe
-  server: 62.210.91.10
-  port: 23576
+  server: pl134.vpnbook.com
+  port: 443
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 6heexyz
+- name: 🇫🇷 法国 (France) 06 - xiaohe
+  server: 138.124.70.41
+  port: 14430
   udp: true
   type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 06 - xiaohe
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 138.124.70.41
+- name: 🇫🇷 法国 (France) 07 - xiaohe
   server: 62.210.91.2
   port: 23576
   udp: true
@@ -82,35 +94,7 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🇫🇷 法国 (France) 07 - xiaohe
-  server: 152.228.139.33
-  port: 35108
-  udp: true
-  type: vless
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
-  tls: true
-  reality-opts:
-    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
-    short-id: 52add08b86a5ccea
-  servername: www.nvidia.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-common3
 - name: 🇫🇷 法国 (France) 08 - xiaohe
-  server: 103.82.101.94
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-  servername: www.porsche.com
-  client-fingerprint: firefox
-- name: 🇫🇷 法国 (France) 09 - xiaohe
   server: 108.61.177.57
   port: 16778
   udp: true
@@ -118,19 +102,41 @@ proxies:
   password: 5t6i121em5lkmsmk
   sni: fr001.zestapp778.com
   skip-cert-verify: false
-- name: 🇫🇷 法国 (France) 10 - xiaohe
-  server: 54.37.136.194
-  port: 2053
+- name: 🇫🇷 法国 (France) 09 - xiaohe
+  server: 62.210.91.10
+  port: 23576
   udp: true
   type: vless
-  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
-    short-id: 50ba05992b05c1c3
-  servername: www.cloudflare.com
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
   client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 10 - xiaohe
+  server: 152.228.162.19
+  port: 80
+  udp: true
+  type: vless
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+  network: ws
+  ws-opts:
+    path: /vless/
 - name: 🇫🇷 法国 (France) 11 - xiaohe
+  server: 161.97.66.16
+  port: 443
+  udp: true
+  type: vless
+  uuid: 086bf957-9cd0-4e55-8280-bbef10435b41
+  tls: true
+  reality-opts:
+    public-key: R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc
+    short-id: 086bf957
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇫🇷 法国 (France) 12 - xiaohe
   server: 152.228.139.33
   port: 51671
   udp: true
@@ -145,7 +151,34 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc_common3
-- name: 🇫🇷 法国 (France) 12 - xiaohe
+- name: 🇫🇷 法国 (France) 13 - xiaohe
+  server: 152.228.139.33
+  port: 35108
+  udp: true
+  type: vless
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  tls: true
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  servername: www.nvidia.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-common3
+- name: 🇫🇷 法国 (France) 14 - xiaohe
+  server: 54.37.136.194
+  port: 2053
+  udp: true
+  type: vless
+  uuid: e8a432c8-5d84-49a5-b822-67ed761a58f9
+  tls: true
+  reality-opts:
+    public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
+    short-id: 50ba05992b05c1c3
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇫🇷 法国 (France) 15 - xiaohe
   server: 51.77.217.70
   port: 2053
   udp: true
@@ -161,6 +194,7 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
@@ -176,6 +210,17 @@ proxy-groups:
   - 🇫🇷 法国 (France) 10 - xiaohe
   - 🇫🇷 法国 (France) 11 - xiaohe
   - 🇫🇷 法国 (France) 12 - xiaohe
+  - 🇫🇷 法国 (France) 13 - xiaohe
+  - 🇫🇷 法国 (France) 14 - xiaohe
+  - 🇫🇷 法国 (France) 15 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇫🇷 法国 (France) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -183,7 +228,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇫🇷 法国 (France) 03 - xiaohe
+  - 🇫🇷 法国 (France) 01 - xiaohe
   - 🇫🇷 法国 (France) 04 - xiaohe
   - 🇫🇷 法国 (France) 05 - xiaohe
   - 🇫🇷 法国 (France) 06 - xiaohe
@@ -193,6 +238,9 @@ proxy-groups:
   - 🇫🇷 法国 (France) 10 - xiaohe
   - 🇫🇷 法国 (France) 11 - xiaohe
   - 🇫🇷 法国 (France) 12 - xiaohe
+  - 🇫🇷 法国 (France) 13 - xiaohe
+  - 🇫🇷 法国 (France) 14 - xiaohe
+  - 🇫🇷 法国 (France) 15 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -212,6 +260,9 @@ proxy-groups:
   - 🇫🇷 法国 (France) 10 - xiaohe
   - 🇫🇷 法国 (France) 11 - xiaohe
   - 🇫🇷 法国 (France) 12 - xiaohe
+  - 🇫🇷 法国 (France) 13 - xiaohe
+  - 🇫🇷 法国 (France) 14 - xiaohe
+  - 🇫🇷 法国 (France) 15 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -219,7 +270,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇫🇷 法国 (France) 01 - xiaohe
   - 🇫🇷 法国 (France) 02 - xiaohe
+  - 🇫🇷 法国 (France) 03 - xiaohe
 rules:
 - MATCH,PROXIES
