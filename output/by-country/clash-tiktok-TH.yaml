@@ -24,20 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
-  server: 185.213.23.63
-  port: 990
+- name: 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  server: 45.154.26.63
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  type: vless
+  uuid: ff85e702-b605-4109-884d-2c1f065d0954
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MiQ5B4j6In71lWvCi0vO_DkVSDb7sii34bh5efBMswk
+    short-id: 3c032a7e
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

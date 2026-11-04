@@ -24,37 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  server: qtir1.dnetsolutions.ru
+- name: 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
+  server: 64.176.7.205
   port: 443
   udp: true
-  type: vless
-  uuid: 63959ed7-d26f-48dd-8c7b-ebdb6ea68535
-  tls: true
-  reality-opts:
-    public-key: 9X-tgXeFaqxURY0nGxFNdz9bpNIo7DTXHoWXpBqiOj0
-    short-id: cbc638acc8ac87
-  servername: max.ru
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-90
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,7 +46,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -8,26 +8,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe",
-      "server": "qtir1.dnetsolutions.ru",
+      "tag": "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe",
+      "server": "46.28.67.55",
       "server_port": 443,
-      "uuid": "63959ed7-d26f-48dd-8c7b-ebdb6ea68535",
+      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "9X-tgXeFaqxURY0nGxFNdz9bpNIo7DTXHoWXpBqiOj0",
-          "short_id": "cbc638acc8ac87"
+          "public_key": "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU",
+          "short_id": "d06d78e974491b6e"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-90"
       }
     },
     {
@@ -35,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe"
+        "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇮🇪 爱尔兰 (Ireland) 01(机房) - xiaohe"
+        "🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
