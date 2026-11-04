@@ -25,6 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  server: 147.45.245.17
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 4GpOXPkTdvuF1mgBH6n9AFYRvGEh7K2ETgE8asmNASY
+    short-id: 38146bd64aece7a5
+  servername: defs-64.topp-con.xyz
+  client-fingerprint: firefox
+- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 02(机房) - xiaohe
   server: 141.0.187.15
   port: 443
   udp: true
@@ -36,8 +49,27 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
+  - AUTO-TCP
   - AUTO
   - AUTO-UDP
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 02(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
@@ -47,6 +79,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 02(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,6 +87,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
