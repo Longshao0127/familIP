@@ -49,24 +49,15 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🎵 🇪🇪 爱沙尼亚 (Estonia) 03(机房) - xiaohe",
-      "server": "109.71.247.200",
+      "server": "141.0.187.15",
       "server_port": 443,
-      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
-      "flow": "xtls-rprx-vision",
+      "password": "70043bfa-d6fb-4980-b27e-773e9e8b2004",
       "tls": {
         "enabled": true,
-        "server_name": "static-47.topp-con.xyz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU",
-          "short_id": "b9120cd53ffd7bba"
-        }
+        "server_name": "crt.onecloudstream.com",
+        "insecure": false
       }
     },
     {

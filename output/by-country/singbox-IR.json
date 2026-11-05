@@ -8,22 +8,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe",
-      "server": "45.154.26.63",
-      "server_port": 443,
-      "uuid": "ff85e702-b605-4109-884d-2c1f065d0954",
+      "tag": "🇮🇷 IR 01 - xiaohe",
+      "server": "198.16.113.220",
+      "server_port": 8443,
+      "uuid": "eb6fbbdd-669b-4055-9379-4eeba938578a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "MiQ5B4j6In71lWvCi0vO_DkVSDb7sii34bh5efBMswk",
-          "short_id": "3c032a7e"
+          "public_key": "8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE",
+          "short_id": "69984b9e02545831"
         }
       }
     },
@@ -32,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe"
+        "🇮🇷 IR 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe"
+        "🇮🇷 IR 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
