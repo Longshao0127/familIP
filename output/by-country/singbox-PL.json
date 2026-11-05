@@ -7,8 +7,32 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 01 - xiaohe",
+      "server": "77.232.135.141",
+      "server_port": 8445,
+      "uuid": "36cf792c-f07d-4500-97ea-a395e5178deb",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.radiolumens.uk",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "beru-pl"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇵🇱 波兰 (Poland) 02 - xiaohe",
       "server": "70.34.252.255",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -16,26 +40,6 @@
         "enabled": true,
         "server_name": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
         "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 波兰 (Poland) 02 - xiaohe",
-      "server": "84.23.52.120",
-      "server_port": 28450,
-      "uuid": "4d8132cb-f4e3-428c-91ff-2b4f7a868551",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl.sparxiecn.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/lovelive"
       }
     },
     {

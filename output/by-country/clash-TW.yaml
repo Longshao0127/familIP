@@ -25,43 +25,66 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
-  server: 103.115.109.49
-  port: 443
+  server: n04.jinggai.online
+  port: 8443
   udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/oneclickvpnkeys
-  skip-cert-verify: true
+  type: vless
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  tls: true
+  servername: n04.jinggai.online
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /nvl-n04-ws/e0577fe8fd7c8823
 - name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   server: vpn-tw-002.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-tw-002.fastervpn.world\u0026insecure=1\u0026allowinsecure=1
+  sni: css.rbxcdn.com
   skip-cert-verify: true
 - name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
-  server: 83.147.13.74
-  port: 8443
+  server: 103.115.109.49
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 103.115.109.49
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
+  server: 152.32.167.33
+  port: 443
   udp: true
   type: vless
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
-    short-id: 4ad2e4e660550e43
-  servername: github.githubassets.com
+    public-key: Q8QwBSGN6J-FqgDV1pYNm0VThS_xNRyQ3DPPa9YZ3j4
+    short-id: cff998a4
+  servername: www.amazon.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,7 +92,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -80,6 +104,7 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -87,7 +112,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
 rules:
 - MATCH,PROXIES

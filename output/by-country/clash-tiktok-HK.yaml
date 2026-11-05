@@ -33,12 +33,12 @@ proxies:
   sni: images.ctfassets.net
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
-  server: 202.146.222.89
+  server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vk.com
+  sni: https://t.me/wangcai2ⁿß«ⁿß
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   server: 202.146.222.174
@@ -46,16 +46,26 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2
+  sni: 202.146.222.174
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
-  server: 202.146.222.29
+  server: 202.146.222.89
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2рҹүҹү
+  sni: https://t.me/clashv8
   skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  server: 152.32.254.68
+  port: 5010
+  udp: true
+  type: hysteria2
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  sni: nas.aizhzo.com
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
 proxy-groups:
 - name: PROXIES
   type: select
@@ -68,6 +78,7 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -95,6 +106,7 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -105,5 +117,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
 rules:
 - MATCH,PROXIES

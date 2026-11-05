@@ -7,9 +7,44 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🎵 🇯🇵 日本 (Japan) 01(机房) - xiaohe",
-      "server": "vp3.yysyy.online",
+      "server": "104.21.6.186",
+      "server_port": 443,
+      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp3.yohototo.top",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tyxyws",
+        "headers": {
+          "Host": "jp3.yohototo.top"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
+      "server": "8.209.247.109",
+      "server_port": 443,
+      "password": "usqmqUKJFIlCmvkCNSY64L3k",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
+      "server": "45.32.10.7",
       "server_port": 443,
       "password": "96ab5cd282733fd4c312a61f972f330a",
       "tls": {
@@ -20,7 +55,19 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
+      "server": "138.3.208.26",
+      "server_port": 50160,
+      "password": "184cdec28da5a09450803c8debcd2cc9",
+      "tls": {
+        "enabled": true,
+        "server_name": "1",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
       "server": "freedom.chenlan.top",
       "server_port": 12765,
       "password": "STYyftThFn",
@@ -32,34 +79,10 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
-      "server": "138.3.208.26",
-      "server_port": 50160,
-      "password": "184cdec28da5a09450803c8debcd2cc9",
-      "tls": {
-        "enabled": true,
-        "server_name": "138.3.208.26",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
       "server": "8.211.175.236",
       "server_port": 8443,
       "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
-      "tls": {
-        "enabled": true,
-        "server_name": "8.211.175.236",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
-      "server": "8.209.247.109",
-      "server_port": 443,
-      "password": "usqmqUKJFIlCmvkCNSY64L3k",
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
@@ -68,39 +91,31 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
-      "server": "149.22.87.204",
+      "tag": "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
+      "server": "149.22.87.240",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe",
       "server": "149.22.87.241",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
     },
     {
-      "type": "trojan",
-      "tag": "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe",
-      "server": "167.179.108.225",
+      "type": "shadowsocks",
+      "tag": "🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe",
+      "server": "149.22.87.204",
       "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "discoverparttimepositionsandsupplementyourincomeguide.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe",
       "server": "ga1data.xyy123.bid",
       "server_port": 443,
       "uuid": "81f686e2-0700-4e7d-b3aa-2f7fc544bcc3",
@@ -120,26 +135,31 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe",
-      "server": "149.22.87.240",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe",
-      "server": "84.247.155.196",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv"
+      "server": "3.114.220.22",
+      "server_port": 18007,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
     },
     {
       "type": "shadowsocks",
       "tag": "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe",
       "server": "84.247.155.196",
-      "server_port": 80,
+      "server_port": 443,
       "method": "aes-256-gcm",
       "password": "3eOFeNssde7PYYMv"
     },
@@ -155,7 +175,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "ios"
         },
         "reality": {
           "enabled": true,
@@ -168,27 +188,6 @@
       "type": "vless",
       "tag": "🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe",
       "server": "3.114.220.22",
-      "server_port": 18007,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe",
-      "server": "3.114.220.22",
       "server_port": 10583,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
@@ -197,7 +196,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -224,8 +223,7 @@
         "🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 13(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe"
       ]
     },
     {
@@ -245,8 +243,7 @@
         "🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 13(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

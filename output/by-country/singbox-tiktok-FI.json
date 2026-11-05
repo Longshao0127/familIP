@@ -44,34 +44,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
-      "server": "89.144.53.4",
-      "server_port": 8445,
-      "uuid": "5c32201a-6c0e-451b-8f0a-24b4bd40df59",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "videos.porsche.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk",
-          "short_id": "1a2b3c4d"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
       ]
     },
     {
@@ -79,8 +57,7 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

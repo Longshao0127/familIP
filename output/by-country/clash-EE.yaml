@@ -25,32 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  server: 31.77.236.114
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-  servername: files.porsche.com
-  client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-  server: 147.45.245.17
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 4GpOXPkTdvuF1mgBH6n9AFYRvGEh7K2ETgE8asmNASY
-    short-id: 38146bd64aece7a5
-  servername: defs-64.topp-con.xyz
-  client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
   server: 141.0.187.15
   port: 443
   udp: true
@@ -62,31 +36,9 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
-  - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-- name: AUTO-TCP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -95,8 +47,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -104,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
 rules:
 - MATCH,PROXIES

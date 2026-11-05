@@ -25,22 +25,49 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
-  server: 178.208.89.21
+  server: 155.212.240.10
   port: 443
   udp: true
   type: vless
-  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
+  uuid: f27b6f65-6e59-4f89-b929-afa397ca587f
+  tls: true
+  servername: n.bitpulse.me
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /019bcbad-3813-7cce-8786-3ac0e418f128
+    headers:
+      Host: n.bitpulse.me
+- name: 🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe
+  server: 193.124.17.190
+  port: 443
+  udp: true
+  type: vless
+  uuid: fad0b9a6-187d-4fcc-96fc-498bc5b3135a
   flow: xtls-rprx-vision
   tls: true
-  servername: prod-eu-east-cz6.api-gateway.service-mesh.ingress-observability.speedtestinternet.link
-  skip-cert-verify: false
+  reality-opts:
+    public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
+    short-id: 8325360e8bd2
+  servername: www.foxsports.com
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -50,6 +77,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,5 +86,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
