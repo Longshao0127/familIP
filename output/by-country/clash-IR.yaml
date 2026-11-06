@@ -37,6 +37,19 @@ proxies:
     short-id: 69984b9e02545831
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇮🇷 IR 02 - xiaohe
+  server: 198.16.113.219
+  port: 8443
+  udp: true
+  type: vless
+  uuid: e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
+    short-id: 69984b9e02545831
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +58,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +67,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -61,6 +76,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,5 +85,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 rules:
 - MATCH,PROXIES

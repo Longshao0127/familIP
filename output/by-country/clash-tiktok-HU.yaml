@@ -24,26 +24,37 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇵🇪 秘鲁 (Peru) 01 - xiaohe
-  server: 134.185.81.5
-  port: 47881
+- name: 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
+  server: 172.67.131.125
+  port: 2083
   udp: true
   type: vless
-  uuid: 59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72
-  flow: xtls-rprx-vision
+  uuid: f418674e-f518-4318-8ff9-e10000000046
   tls: true
-  reality-opts:
-    public-key: 6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4
-    short-id: 38d72071
-  servername: www.tesla.com
+  servername: smart-edge-424.arti98399-1905.workers.dev
+  skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: smart-edge-424.arti98399-1905.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇵🇪 秘鲁 (Peru) 01 - xiaohe
+  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +62,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇵🇪 秘鲁 (Peru) 01 - xiaohe
+  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +70,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇵🇪 秘鲁 (Peru) 01 - xiaohe
+  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

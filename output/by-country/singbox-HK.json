@@ -9,36 +9,36 @@
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - xiaohe",
-      "server": "202.146.222.29",
+      "server": "202.146.222.174",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2ⁿß«ⁿß",
+        "server_name": "off",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 02 - xiaohe",
-      "server": "202.146.222.174",
+      "server": "202.146.222.89",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "202.146.222.174",
+        "server_name": "https://t.me/clashv8🇨🇳",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 03 - xiaohe",
-      "server": "202.146.222.89",
+      "server": "202.146.222.29",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/clashv8",
+        "server_name": "https%253a%252f%252ft.me%252fwangcai2%25d1%2580%25d2%25b9%25d2%25af%25d1%2591%25d1%2580%25d2%25b9%25d2%25af%25d1%2596",
         "insecure": true
       }
     },

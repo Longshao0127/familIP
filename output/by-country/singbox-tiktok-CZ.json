@@ -9,29 +9,6 @@
     {
       "type": "vless",
       "tag": "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe",
-      "server": "155.212.240.10",
-      "server_port": 443,
-      "uuid": "f27b6f65-6e59-4f89-b929-afa397ca587f",
-      "tls": {
-        "enabled": true,
-        "server_name": "n.bitpulse.me",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/019bcbad-3813-7cce-8786-3ac0e418f128",
-        "headers": {
-          "Host": "n.bitpulse.me"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe",
       "server": "193.124.17.190",
       "server_port": 443,
       "uuid": "fad0b9a6-187d-4fcc-96fc-498bc5b3135a",
@@ -55,16 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe",
-        "🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe"
+        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe",
-        "🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe"
+        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
