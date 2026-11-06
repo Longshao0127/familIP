@@ -25,7 +25,18 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  server: 104.24.0.1
+  server: 199.232.8.223
+  port: 443
+  udp: true
+  type: trojan
+  password: TtI1G9ChUwNxRuPgOxiPNwAd6FN4BlBJ
+  sni: community.fastly.steamstatic.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  server: 172.66.0.1
   port: 2053
   udp: true
   type: trojan
@@ -35,7 +46,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+- name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -46,6 +57,19 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
+  server: 6.bmi.ir.asopardaz.ir
+  port: 8443
+  udp: true
+  type: vless
+  uuid: fe4d2b3e-965f-4389-a6e4-05887ef5fd2b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
+    short-id: e915
+  servername: hostgator.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +79,8 @@ proxy-groups:
   - AUTO
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -63,6 +89,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -72,6 +99,8 @@ proxy-groups:
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -81,5 +110,7 @@ proxy-groups:
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 rules:
 - MATCH,PROXIES

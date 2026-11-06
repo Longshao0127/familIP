@@ -24,37 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
-  server: 172.67.131.125
-  port: 2083
+- name: 🇵🇭 菲律宾 (Philippines) 01 - xiaohe
+  server: ph001.zestapp778.com
+  port: 46298
   udp: true
-  type: vless
-  uuid: f418674e-f518-4318-8ff9-e10000000046
-  tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
+  type: trojan
+  password: 5t6i121em5lkmsmk
+  sni: ph001.zestapp778.com
   skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
+  - 🇵🇭 菲律宾 (Philippines) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,7 +46,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
+  - 🇵🇭 菲律宾 (Philippines) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇭🇺 匈牙利 (Hungary) 01(机房) - xiaohe
+  - 🇵🇭 菲律宾 (Philippines) 01 - xiaohe
 rules:
 - MATCH,PROXIES
