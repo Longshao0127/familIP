@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇦🇹 奥地利 (Austria) 01 - xiaohe
-  server: at1.japancase.site
+  server: 178.22.31.171
   port: 443
   udp: true
   type: vless

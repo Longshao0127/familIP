@@ -25,17 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  server: 199.232.8.223
-  port: 443
-  udp: true
-  type: trojan
-  password: TtI1G9ChUwNxRuPgOxiPNwAd6FN4BlBJ
-  sni: community.fastly.steamstatic.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   server: 172.66.0.1
   port: 2053
   udp: true
@@ -46,6 +35,14 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  server: 179.253.82.47
+  port: 4444
+  udp: true
+  type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  sni: fl3.nexfile.net
+  skip-cert-verify: false
 - name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
   server: 45.144.234.157
   port: 14430
@@ -57,19 +54,6 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
-  server: 6.bmi.ir.asopardaz.ir
-  port: 8443
-  udp: true
-  type: vless
-  uuid: fe4d2b3e-965f-4389-a6e4-05887ef5fd2b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs
-    short-id: e915
-  servername: hostgator.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -77,10 +61,10 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - AUTO-UDP
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -89,7 +73,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -98,9 +81,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -111,6 +92,13 @@ proxy-groups:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

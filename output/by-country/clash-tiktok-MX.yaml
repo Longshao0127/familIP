@@ -25,6 +25,13 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  server: 64.177.90.30
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
+- name: 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
   server: 216.238.80.100
   port: 443
   udp: true
@@ -39,6 +46,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -47,6 +55,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,5 +64,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -25,21 +25,47 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
-  server: 45.76.172.197
+  server: 104.18.0.1
   port: 443
   udp: true
   type: vless
-  uuid: b256c867-a020-48e0-be80-1b079f2613a2
+  uuid: 3ccba794-1c6d-48a8-acf2-f5caf0e69d86
   tls: true
-  reality-opts:
-    public-key: Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE
-    short-id: ff3597db
-  servername: itunes.apple.com
+  servername: all.speedtest03.ccwu.cc
+  skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /ws
+    path: /
+    headers:
+      Host: all.speedtest03.ccwu.cc
 - name: 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
+  server: 104.21.58.37
+  port: 2053
+  udp: true
+  type: vless
+  uuid: e3149c82-00f6-4227-b2c0-b78f1dd81279
+  tls: true
+  servername: fast.145779.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws-tesla
+    headers:
+      Host: fast.145779.xyz
+- name: 🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe
+  server: 208.103.161.16
+  port: 2096
+  udp: true
+  type: trojan
+  password: hWsj5AwIRPF8
+  sni: rayAnconfIg3-Bhl0ai7j-t2.raYan-coNfig-3.woRKers.dEV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+- name: 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
   server: 45.63.53.81
   port: 443
   udp: true
@@ -56,151 +82,99 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe
-  server: 202.50.253.90
-  port: 19999
+- name: 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
+  server: 45.76.172.197
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe
-  server: 202.50.253.72
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe
-  server: 202.50.253.36
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  uuid: b256c867-a020-48e0-be80-1b079f2613a2
+  tls: true
+  reality-opts:
+    public-key: Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE
+    short-id: ff3597db
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
 - name: 🎵 🇮🇹 意大利 (Italy) 06(机房) - xiaohe
-  server: 202.50.253.63
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 07(机房) - xiaohe
-  server: 202.50.253.27
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
-  server: 178.214.109.1
-  port: 443
-  udp: true
-  type: vless
-  uuid: 40a86b1b-239d-455e-b53f-4c270788ba6e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc
-    short-id: 1cfa55abe4d2dc7a
-  servername: promo-digital.wb.ru
-  client-fingerprint: edge
-- name: 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
-  server: 202.50.253.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  port: 443
-  udp: true
-  type: trojan
-  password: 6cddea99-9b18-4d42-8638-131bd9f5374f
-  sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  skip-cert-verify: true
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 11(机房) - xiaohe
-  server: 15b171g.nl7.h1clayd.click
-  port: 443
-  udp: true
-  type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  tls: true
-  reality-opts:
-    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
-    short-id: 50a749f0eccb628c
-  servername: 15b171g.nl7.h1clayd.click
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 5b79e8a94241
-- name: 🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe
-  server: 104.17.117.137
-  port: 443
-  udp: true
-  type: vless
-  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-  tls: true
-  servername: u.srilankangrill.online
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: u.srilankangrill.online
-- name: 🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe
-  server: 104.16.10.235
-  port: 443
-  udp: true
-  type: vless
-  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-  tls: true
-  servername: u.srilankangrill.online
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: u.srilankangrill.online
-- name: 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
   server: 202.50.253.45
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+- name: 🎵 🇮🇹 意大利 (Italy) 07(机房) - xiaohe
+  server: 202.50.253.36
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe
+  server: 202.50.253.27
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
+  server: 202.50.253.72
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   server: 202.50.253.54
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇮 芬兰 (Finland) 16(机房) - xiaohe
-  server: 199.232.8.223
-  port: 443
+- name: 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  server: 202.50.253.90
+  port: 19999
   udp: true
-  type: trojan
-  password: TtI1G9ChUwNxRuPgOxiPNwAd6FN4BlBJ
-  sni: community.fastly.steamstatic.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-- name: 🎵 🇫🇮 芬兰 (Finland) 17(机房) - xiaohe
-  server: 172.66.0.1
-  port: 2053
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  server: 202.50.253.81
+  port: 19999
   udp: true
-  type: trojan
-  password: gHQP0D7D15
-  sni: marvdasht.phonecomparisonblog.org
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 18(机房) - xiaohe
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
+  server: 202.50.253.99
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
+  server: 202.50.253.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  server: 202.50.253.63
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
+  server: 88.216.254.18
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   server: 15d7fft.nl11.h1clayd.click
   port: 443
   udp: true
@@ -212,16 +186,46 @@ proxies:
     short-id: c71118d9399fb8c2
   servername: 15d7fft.nl11.h1clayd.click
   client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
-  server: sdf65h46wr.df6h451rh.xin
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 18(机房) - xiaohe
+  server: 5d0319t.nl7.h1clayd.click
   port: 443
   udp: true
-  type: anytls
-  password: 0324fbc29561
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-- name: 🎵 🇯🇵 日本 (Japan) 20(机房) - xiaohe
-  server: 104.24.0.1
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
+  servername: 5d0319t.nl7.h1clayd.click
+  client-fingerprint: firefox
+- name: 🎵 🇫🇮 芬兰 (Finland) 19(机房) - xiaohe
+  server: 172.66.0.1
+  port: 2053
+  udp: true
+  type: trojan
+  password: gHQP0D7D15
+  sni: marvdasht.phonecomparisonblog.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🎵 🇸🇬 新加坡 (Singapore) 20(机房) - xiaohe
+  server: 104.16.10.199
+  port: 443
+  udp: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  tls: true
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: u.srilankangrill.online
+- name: 🎵 🇯🇵 日本 (Japan) 21(机房) - xiaohe
+  server: 104.16.10.48
   port: 443
   udp: true
   type: vless
@@ -229,28 +233,50 @@ proxies:
   tls: true
   servername: jp3.yohototo.top
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  server: 202.50.253.81
-  port: 19999
+- name: 🎵 🇸🇬 新加坡 (Singapore) 22(机房) - xiaohe
+  server: 104.24.0.184
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  server: 202.50.253.99
-  port: 19999
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  tls: true
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: u.srilankangrill.online
+- name: 🎵 🇺🇸 美国 (United States) 23(机房) - xiaohe
+  server: sdf65h46wr.df6h451rh.xin
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe
-  server: 141.193.213.21
+  type: anytls
+  password: 0324fbc29561
+  sni: images.ctfassets.net
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 24(机房) - xiaohe
+  server: 104.18.151.231
+  port: 443
+  udp: true
+  type: vless
+  uuid: eaf76557-2219-4799-8171-d7020adfefd0
+  tls: true
+  servername: steep-lake-615e.xeremed6978165.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: steep-lake-615e.xeremed6978165.workers.dev
+- name: 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
+  server: 141.193.213.20
   port: 8443
   udp: true
   type: vless
@@ -258,13 +284,13 @@ proxies:
   tls: true
   servername: u.srilankangrill.online
   skip-cert-verify: false
-  client-fingerprint: android
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: u.srilankangrill.online
-- name: 🎵 🇸🇪 瑞典 (Sweden) 24(机房) - xiaohe
+- name: 🎵 🇸🇪 瑞典 (Sweden) 26(机房) - xiaohe
   server: 138.124.86.230
   port: 48115
   udp: true
@@ -277,32 +303,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-- name: 🎵 🇦🇹 奥地利 (Austria) 25(机房) - xiaohe
-  server: at1.japancase.site
-  port: 443
-  udp: true
-  type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg
-    short-id: 41ae8e266bc3346f
-  servername: at1.japancase.site
-  client-fingerprint: edge
-- name: 🎵 🇹🇷 土耳其 (Turkey) 26(机房) - xiaohe
-  server: falmero.store
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8fb19a9e-ca2b-433a-8469-e4c7796033b2
-  tls: true
-  servername: falmero.store
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de1.v1
 proxy-groups:
 - name: PROXIES
   type: select
@@ -313,29 +313,29 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 06(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 07(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 11(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 16(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 17(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 18(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 24(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 25(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 26(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 19(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 20(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 21(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 22(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 23(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 24(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 26(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -346,29 +346,29 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 06(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 07(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 11(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 16(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 17(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 18(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 24(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 25(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 26(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 19(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 20(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 21(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 22(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 23(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 24(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 26(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -379,29 +379,29 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 06(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 07(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 11(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 16(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 17(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 18(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 24(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 25(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 26(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 19(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 20(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 21(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 22(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 23(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 24(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 26(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -412,28 +412,28 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 03(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 06(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 07(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 11(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 16(机房) - xiaohe
-  - 🎵 🇫🇮 芬兰 (Finland) 17(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 17(机房) - xiaohe
   - 🎵 🇳🇱 荷兰 (Netherlands) 18(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 23(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 24(机房) - xiaohe
-  - 🎵 🇦🇹 奥地利 (Austria) 25(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 26(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 19(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 20(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 21(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 22(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 23(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 24(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 26(机房) - xiaohe
 rules:
 - MATCH,PROXIES
