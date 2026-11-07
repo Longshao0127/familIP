@@ -25,19 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  server: 46.28.67.55
-  port: 443
-  udp: true
-  type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
   server: 194.68.44.42
   port: 64546
   udp: true
@@ -51,7 +38,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +46,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,6 +54,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

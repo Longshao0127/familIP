@@ -25,6 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  server: 2.26.255.215
+  port: 443
+  udp: true
+  type: vless
+  uuid: 69e41e64-a832-471a-b740-94577ca85520
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
+    short-id: '50'
+  servername: cloudflare.com
+  client-fingerprint: chrome
+- name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   server: 70.34.252.255
   port: 443
   udp: true
@@ -32,12 +45,36 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
   skip-cert-verify: false
+- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+  server: ru1.radiolumens.uk
+  port: 8445
+  udp: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+  tls: true
+  servername: ru1.radiolumens.uk
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: beru-pl
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -47,6 +84,8 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,5 +94,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
+  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES
