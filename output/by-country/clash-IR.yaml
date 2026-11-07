@@ -25,11 +25,11 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇮🇷 IR 01 - xiaohe
-  server: 198.16.113.220
+  server: 198.16.113.219
   port: 8443
   udp: true
   type: vless
-  uuid: eb6fbbdd-669b-4055-9379-4eeba938578a
+  uuid: e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -38,11 +38,11 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇮🇷 IR 02 - xiaohe
-  server: 198.16.113.219
+  server: 198.16.113.220
   port: 8443
   udp: true
   type: vless
-  uuid: e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4
+  uuid: eb6fbbdd-669b-4055-9379-4eeba938578a
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
@@ -67,7 +67,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇮🇷 IR 01 - xiaohe
-  - 🇮🇷 IR 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204

@@ -9,9 +9,9 @@
     {
       "type": "vless",
       "tag": "🇮🇷 IR 01 - xiaohe",
-      "server": "198.16.113.220",
+      "server": "198.16.113.219",
       "server_port": 8443,
-      "uuid": "eb6fbbdd-669b-4055-9379-4eeba938578a",
+      "uuid": "e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -30,9 +30,9 @@
     {
       "type": "vless",
       "tag": "🇮🇷 IR 02 - xiaohe",
-      "server": "198.16.113.219",
+      "server": "198.16.113.220",
       "server_port": 8443,
-      "uuid": "e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4",
+      "uuid": "eb6fbbdd-669b-4055-9379-4eeba938578a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,

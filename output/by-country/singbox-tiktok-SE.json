@@ -61,8 +61,28 @@
       }
     },
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe",
+      "server": "95.143.196.97",
+      "server_port": 443,
+      "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF",
+      "tls": {
+        "enabled": true,
+        "server_name": "connect-se.mimowhat.online",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇸🇪 瑞典 (Sweden) 06(机房) - xiaohe",
       "server": "194.104.94.141",
       "server_port": 443,
       "uuid": "6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6",
@@ -89,7 +109,8 @@
         "🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe",
         "🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe",
         "🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe",
-        "🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe"
+        "🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe",
+        "🎵 🇸🇪 瑞典 (Sweden) 06(机房) - xiaohe"
       ]
     },
     {
@@ -100,7 +121,8 @@
         "🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe",
         "🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe",
         "🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe",
-        "🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe"
+        "🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe",
+        "🎵 🇸🇪 瑞典 (Sweden) 06(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
