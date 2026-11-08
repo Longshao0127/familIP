@@ -25,16 +25,13 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  server: 172.66.0.1
-  port: 2053
+  server: fi1.obxodvpn.us
+  port: 443
   udp: true
-  type: trojan
-  password: gHQP0D7D15
-  sni: marvdasht.phonecomparisonblog.org
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: fi1.obxodvpn.us
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
 - name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   server: 45.144.234.157
   port: 14430
@@ -46,23 +43,29 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+  server: 5.129.249.155
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
+    short-id: b9120cd53ffd7bba
+  servername: assets-59.topp-con.xyz
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - AUTO-UDP
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,8 +73,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -81,5 +84,14 @@ proxy-groups:
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

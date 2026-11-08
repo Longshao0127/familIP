@@ -24,21 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
-  server: 130.94.51.219
-  port: 46298
+- name: 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
+  server: 87.228.61.175
+  port: 1443
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: ph001.zestapp778.com
-  skip-cert-verify: false
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: tAGGzgRCi6W95UwG0qerf6
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇵🇭 菲律宾 (Philippines) 01(机房) - xiaohe
+  - 🎵 🇱🇺 卢森堡 (Luxembourg) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
