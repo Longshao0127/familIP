@@ -25,6 +25,14 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
+  server: user02.godvpn.lol
+  port: 62405
+  udp: true
+  type: anytls
+  password: 4bbfa33a-449a-4a50-8dfc-6d0de880f7bc
+  sni: user02.godvpn.lol
+  skip-cert-verify: true
+- name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
   server: 45.63.30.142
   port: 443
   udp: true
@@ -36,8 +44,18 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -47,6 +65,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,5 +74,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
 rules:
 - MATCH,PROXIES

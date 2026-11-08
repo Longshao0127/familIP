@@ -7,69 +7,32 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe",
-      "server": "152.175.6.229",
-      "server_port": 31884,
-      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
-      "tls": {
-        "enabled": true,
-        "server_name": "hk010.zestapp778.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
-      "server": "dddz-3-z.473221.xyz",
-      "server_port": 13212,
-      "uuid": "65ec84f5-0dd4-4582-8b4f-592e50b22116",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "v1-dy.ixigua.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "4VguZbm-S2NkLpi7gLDsQMv2eDXP2LucxsvTiEt98yY",
-          "short_id": "961f7127a015ba"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe",
       "server": "202.146.222.89",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "202.146.222.89",
+        "server_name": "https://t.me/clashv8",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
       "server": "202.146.222.174",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2",
+        "server_name": "t.me",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
       "server": "152.32.254.68",
       "server_port": 5010,
       "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
@@ -85,19 +48,34 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
       "server": "202.146.222.29",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2ôøωôøωôøωôøω",
+        "server_name": "https://t.me/wangcai2≡ƒç¿≡ƒç│",
         "insecure": true
       }
     },
     {
+      "type": "vmess",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+      "server": "t.cnmjcn.cyou",
+      "server_port": 16632,
+      "uuid": "56a511bd-f207-48f4-be5b-4652afe178a4",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "686a7558df571afb1408b0e77ae4f687.mobgslb.tbcache.com"
+        }
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
       "server": "165.154.63.139",
       "server_port": 443,
       "uuid": "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
@@ -107,7 +85,7 @@
         "server_name": "www.amazon.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -126,8 +104,7 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ]
     },
     {
@@ -139,8 +116,7 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

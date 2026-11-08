@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  server: 104.16.186.130
+  server: 172.66.0.1
   port: 2053
   udp: true
   type: trojan

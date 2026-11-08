@@ -54,14 +54,37 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇨🇭 瑞士 (Switzerland) 05 - xiaohe
+  server: 147.45.42.73
+  port: 20443
+  udp: true
+  type: vless
+  uuid: f293db4d-7ab1-4faf-bb15-89540d8709cb
+  tls: true
+  servername: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev
+- name: 🇨🇭 瑞士 (Switzerland) 06 - xiaohe
+  server: 208.69.78.208
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 07 - xiaohe
   server: 208.69.78.33
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: courses.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: true
-- name: 🇨🇭 瑞士 (Switzerland) 06 - xiaohe
+  skip-cert-verify: false
+- name: 🇨🇭 瑞士 (Switzerland) 08 - xiaohe
   server: 208.69.78.60
   port: 443
   udp: true
@@ -69,7 +92,7 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: cdn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 07 - xiaohe
+- name: 🇨🇭 瑞士 (Switzerland) 09 - xiaohe
   server: 208.69.78.29
   port: 443
   udp: true
@@ -91,6 +114,8 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 05 - xiaohe
   - 🇨🇭 瑞士 (Switzerland) 06 - xiaohe
   - 🇨🇭 瑞士 (Switzerland) 07 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 08 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 09 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -104,6 +129,8 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 05 - xiaohe
   - 🇨🇭 瑞士 (Switzerland) 06 - xiaohe
   - 🇨🇭 瑞士 (Switzerland) 07 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 08 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 09 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -118,6 +145,8 @@ proxy-groups:
   - 🇨🇭 瑞士 (Switzerland) 05 - xiaohe
   - 🇨🇭 瑞士 (Switzerland) 06 - xiaohe
   - 🇨🇭 瑞士 (Switzerland) 07 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 08 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 09 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
