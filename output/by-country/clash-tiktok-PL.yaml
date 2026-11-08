@@ -25,17 +25,14 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
-  server: 2.26.255.215
-  port: 443
+  server: 2.26.6.1
+  port: 2087
   udp: true
   type: vless
-  uuid: 69e41e64-a832-471a-b740-94577ca85520
-  flow: xtls-rprx-vision
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
   tls: true
-  reality-opts:
-    public-key: pOHbbyo_PlUwH4DjC6bKvC3jB8RPnCdu-nL8trAP8CI
-    short-id: '50'
-  servername: cloudflare.com
+  servername: 2.26.6.1
+  skip-cert-verify: true
   client-fingerprint: chrome
 - name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   server: 70.34.252.255
@@ -62,20 +59,11 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
   - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204

@@ -24,40 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇮🇷 IR 01 - xiaohe
-  server: 198.16.113.219
-  port: 8443
+- name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
+  server: kz-cdn-prsv-forum.keno.su
+  port: 443
   udp: true
   type: vless
-  uuid: e3e0e1c3-599e-4ae1-8ad4-d9e90effacc4
+  uuid: dc95c1dd-2cd3-414c-8cf1-71ae86dad666
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
-    short-id: 69984b9e02545831
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇮🇷 IR 02 - xiaohe
-  server: 198.16.113.220
-  port: 8443
-  udp: true
-  type: vless
-  uuid: eb6fbbdd-669b-4055-9379-4eeba938578a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 8NkTRxC5Q7bptx-8ADobkuhPK-ZN0kEEbzv6tCFGMzE
-    short-id: 69984b9e02545831
-  servername: www.apple.com
-  client-fingerprint: chrome
+    public-key: Au1rmQdDRjlEJk17IfLQv5PBUEEosMWNhAlrWZj6mnY
+    short-id: '14324280'
+  servername: kz-cdn-prsv-forum.keno.su
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇮🇷 IR 01 - xiaohe
-  - 🇮🇷 IR 02 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -65,8 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇷 IR 01 - xiaohe
-  - 🇮🇷 IR 02 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -74,7 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇷 IR 01 - xiaohe
-  - 🇮🇷 IR 02 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
