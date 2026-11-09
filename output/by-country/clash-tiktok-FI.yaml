@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
-  server: fi1.obxodvpn.us
+  server: 177.202.75.56
   port: 443
   udp: true
   type: hysteria2
@@ -44,18 +44,20 @@ proxies:
     headers:
       Host: 45.144.234.157
 - name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
-  server: 5.129.249.155
+  server: 146.103.118.189
   port: 443
   udp: true
   type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
+  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
   tls: true
-  reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-  servername: assets-59.topp-con.xyz
-  client-fingerprint: chrome
+  servername: nl2.574ck.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /574ck-finland
+    headers:
+      Host: nl2.574ck.xyz
 proxy-groups:
 - name: PROXIES
   type: select

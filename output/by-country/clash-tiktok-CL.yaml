@@ -24,25 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  server: 151.241.226.201
-  port: 2053
+- name: 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
+  server: 64.176.7.205
+  port: 443
   udp: true
-  type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -50,7 +46,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🎵 🇨🇱 智利 (Chile) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
