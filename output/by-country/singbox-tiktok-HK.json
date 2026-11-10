@@ -9,28 +9,24 @@
     {
       "type": "hysteria2",
       "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe",
-      "server": "152.32.254.68",
-      "server_port": 5010,
-      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
-      "tls": {
-        "enabled": true,
-        "server_name": "nas.aizhzo.com",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
       "server": "202.146.222.89",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "202.146.222.89",
+        "server_name": "https://t.me/clashv8\\u0001f1e8\\u0001f1f3",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
+      "server": "202.146.222.174",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https%3a%2f%2ft.me%2foneclickvpnkeys",
         "insecure": true
       }
     },
@@ -49,18 +45,34 @@
     {
       "type": "hysteria2",
       "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
-      "server": "202.146.222.174",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "server": "152.32.254.68",
+      "server_port": 5010,
+      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2",
+        "server_name": "nas.aizhzo.com",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+      "server": "47.129.105.174",
+      "server_port": 50000,
+      "password": "g4EKHBpZQ9ckIhFRyi3gHDFh",
+      "tls": {
+        "enabled": true,
+        "server_name": "sg-transit-3.nebulacloud.win",
         "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
       "server": "209.33.160.122",
       "server_port": 39098,
       "uuid": "7852e4df-db54-4f75-a35e-3b8fbe89e56d",
@@ -88,7 +100,8 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ]
     },
     {
@@ -99,7 +112,8 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

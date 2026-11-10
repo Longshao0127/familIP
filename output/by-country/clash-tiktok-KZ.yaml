@@ -24,26 +24,35 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: server.slavkiti.monster
-  port: 443
+- name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
+  server: 185.246.155.91
+  port: 10403
   udp: true
   type: vless
-  uuid: 4d017db2-7655-4276-9557-e2ec25b04ee7
+  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
-    short-id: ee1716767f9b
-  servername: www.tradingview.com
+    public-key: obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko
+    short-id: 6859f5b59e55aa30
+  servername: www.apple.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +60,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +68,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

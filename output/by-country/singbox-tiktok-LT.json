@@ -25,18 +25,40 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇱🇹 立陶宛 (Lithuania) 02(机房) - xiaohe",
+      "server": "84.32.209.103",
+      "server_port": 443,
+      "uuid": "3f25b15b-1777-4c08-9ade-60336ac92a82",
+      "tls": {
+        "enabled": true,
+        "server_name": "edge-lt.lindenpixel.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe"
+        "🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe",
+        "🎵 🇱🇹 立陶宛 (Lithuania) 02(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe"
+        "🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe",
+        "🎵 🇱🇹 立陶宛 (Lithuania) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

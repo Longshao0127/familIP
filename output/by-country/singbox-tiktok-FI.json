@@ -19,16 +19,8 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-      "server": "65.108.240.210",
-      "server_port": 39018,
-      "uuid": "77fb7a80-4724-4e33-9558-4f20c1634c5a",
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
       "server": "45.144.234.157",
       "server_port": 14430,
       "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
@@ -46,8 +38,7 @@
       "outbounds": [
         "auto",
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
       ]
     },
     {
@@ -55,8 +46,7 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
