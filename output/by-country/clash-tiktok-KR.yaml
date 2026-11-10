@@ -38,7 +38,7 @@ proxies:
   udp: true
   type: hysteria2
   password: maintell
-  sni: 152.70.237.123
+  sni: bing.com
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
   server: 152.67.200.82
@@ -46,9 +46,16 @@ proxies:
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: google.com
+  sni: css.rbxcdn.com
   skip-cert-verify: true
-- name: 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+- name: 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
+  server: 49.254.204.133
+  port: 1774
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
+- name: 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   server: 140.238.2.250
   port: 443
   udp: true
@@ -56,14 +63,14 @@ proxies:
   uuid: 41a7089a-040b-4538-8b8d-010902405bde
   alterId: 0
   cipher: auto
-- name: 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
+- name: 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
   server: 211.178.105.134
   port: 6123
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-- name: 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
+- name: 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   server: 158.247.220.26
   port: 48851
   udp: true
@@ -71,7 +78,7 @@ proxies:
   password: 5t6i121em5lkmsmk
   sni: kr002.zestapp778.com
   skip-cert-verify: true
-- name: 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
+- name: 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   server: 152.69.226.63
   port: 25555
   udp: true
@@ -80,7 +87,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
+- name: 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
   server: 3.39.4.109
   port: 18967
   udp: true
@@ -92,8 +99,8 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: edge
-- name: 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
+  client-fingerprint: chrome
+- name: 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
   server: 3.39.4.109
   port: 13672
   udp: true
@@ -105,7 +112,7 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -116,12 +123,13 @@ proxy-groups:
   - 🎵 🇰🇷 韩国 (South Korea) 01(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 02(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -129,12 +137,13 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -145,12 +154,13 @@ proxy-groups:
   - 🎵 🇰🇷 韩国 (South Korea) 01(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 02(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 08(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 09(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 10(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

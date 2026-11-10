@@ -38,7 +38,7 @@ proxies:
   udp: true
   type: hysteria2
   password: maintell
-  sni: 152.70.237.123
+  sni: bing.com
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
   server: 152.67.200.82
@@ -46,7 +46,7 @@ proxies:
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: google.com
+  sni: css.rbxcdn.com
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
   server: 140.238.2.250
@@ -92,7 +92,7 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: edge
+  client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 09 - xiaohe
   server: 3.39.4.109
   port: 13672
@@ -105,7 +105,7 @@ proxies:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

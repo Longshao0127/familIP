@@ -24,20 +24,25 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
-  server: 87.228.61.175
-  port: 1443
+- name: 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
+  server: 45.81.252.143
+  port: 2053
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: tAGGzgRCi6W95UwG0qerf6
+  type: vless
+  uuid: 53555197-bf0a-49e6-bea1-211fcfc1d962
+  tls: true
+  servername: germany3.banovano.space
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
+  - 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,7 +50,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
+  - 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +58,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
+  - 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
