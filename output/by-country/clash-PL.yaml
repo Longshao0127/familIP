@@ -35,14 +35,6 @@ proxies:
   skip-cert-verify: true
   client-fingerprint: chrome
 - name: 🇵🇱 波兰 (Poland) 02 - xiaohe
-  server: 70.34.252.255
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: browseexecutivejobopeningsandenhanceleadershipcareer.com
-  skip-cert-verify: false
-- name: 🇵🇱 波兰 (Poland) 03 - xiaohe
   server: 201.58.189.104
   port: 2083
   udp: true
@@ -57,6 +49,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: google.storage.v2.Storage
+- name: 🇵🇱 波兰 (Poland) 03 - xiaohe
+  server: 2.26.224.174
+  port: 8443
+  udp: true
+  type: vless
+  uuid: a4e5f910-23f4-470f-82a7-ed9d7be71dec
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: d6qmF8ibk_PxtDJPzSa7LKw9VUI_mZ59DrTvmW3RaFc
+    short-id: 10983e6c816181c2
+  servername: teamdocs.su
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

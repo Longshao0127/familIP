@@ -25,14 +25,14 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇮🇹 意大利 (Italy) 01(机房) - xiaohe
-  server: 202.50.253.90
+  server: 202.50.253.27
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇮🇹 意大利 (Italy) 02(机房) - xiaohe
-  server: 202.50.253.18
+  server: 202.50.253.90
   port: 19999
   udp: true
   type: ss
@@ -46,21 +46,21 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇮🇹 意大利 (Italy) 04(机房) - xiaohe
-  server: 202.50.253.36
+  server: 202.50.253.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇮🇹 意大利 (Italy) 05(机房) - xiaohe
-  server: 202.50.253.63
+  server: 202.50.253.81
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇮🇹 意大利 (Italy) 06(机房) - xiaohe
-  server: 202.50.253.81
+  server: 202.50.253.45
   port: 19999
   udp: true
   type: ss
@@ -81,20 +81,37 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
-  server: 202.50.253.45
+  server: 202.50.253.63
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
+  server: 146.75.57.234
+  port: 443
+  udp: true
+  type: vless
+  uuid: e2e0de8b-c926-4f64-8e81-99acc66ea0a0
+  tls: true
+  servername: cdn.akamai.steamstatic.com
+  skip-cert-verify: false
+  client-fingerprint: ios
+- name: 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  server: 202.50.253.36
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
   server: 185.164.175.81
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+- name: 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
   server: 149.50.215.234
   port: 19999
   udp: true
@@ -119,6 +136,8 @@ proxy-groups:
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -135,6 +154,8 @@ proxy-groups:
   - 🎵 🇮🇹 意大利 (Italy) 07(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 08(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -153,6 +174,8 @@ proxy-groups:
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -171,5 +194,7 @@ proxy-groups:
   - 🎵 🇮🇹 意大利 (Italy) 09(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 10(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
 rules:
 - MATCH,PROXIES

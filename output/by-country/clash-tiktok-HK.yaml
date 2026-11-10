@@ -25,30 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8\u0001f1e8\u0001f1f3
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vk.com
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   server: 152.32.254.68
   port: 5010
   udp: true
@@ -58,31 +34,42 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
-  server: 47.129.105.174
-  port: 50000
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
+  server: 202.146.222.174
+  port: 443
   udp: true
   type: hysteria2
-  password: g4EKHBpZQ9ckIhFRyi3gHDFh
-  sni: sg-transit-3.nebulacloud.win
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 202.146.222.174
   skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  server: 209.33.160.122
-  port: 39098
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
+  server: 202.146.222.29
+  port: 443
   udp: true
-  type: vless
-  uuid: 7852e4df-db54-4f75-a35e-3b8fbe89e56d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DtOZ39u6MyQMG96tl13-M7-HeaqQzW2RLBVPk9py-Vg
-  servername: dash.cloudflare.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 'off'
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vk.com
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  server: 31.57.248.176
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: b0917015b656b3dd2286b5633af0c5c1
+  sni: www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
@@ -90,15 +77,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-- name: AUTO-TCP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -111,7 +89,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

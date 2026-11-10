@@ -9,18 +9,6 @@
     {
       "type": "hysteria2",
       "tag": "🎵 🇯🇵 日本 (Japan) 01(机房) - xiaohe",
-      "server": "138.3.208.26",
-      "server_port": 50160,
-      "password": "184cdec28da5a09450803c8debcd2cc9",
-      "tls": {
-        "enabled": true,
-        "server_name": "138.3.208.26",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
       "server": "freedom.chenlan.top",
       "server_port": 12765,
       "password": "STYyftThFn",
@@ -32,13 +20,25 @@
     },
     {
       "type": "hysteria2",
+      "tag": "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
+      "server": "138.3.208.26",
+      "server_port": 50160,
+      "password": "184cdec28da5a09450803c8debcd2cc9",
+      "tls": {
+        "enabled": true,
+        "server_name": "off",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
       "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
       "server": "8.211.175.236",
       "server_port": 8443,
       "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
       "tls": {
         "enabled": true,
-        "server_name": "8.211.175.236",
+        "server_name": "bing.com",
         "insecure": true
       }
     },
@@ -50,45 +50,8 @@
       "uuid": "eb8613e3-8393-4cff-a3ad-6501fd4adc63"
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
-      "server": "84.247.155.196",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
-      "server": "84.247.155.196",
-      "server_port": 80,
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv"
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
-      "server": "3.114.220.22",
-      "server_port": 19645,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe",
       "server": "3.114.220.22",
       "server_port": 10583,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -108,6 +71,35 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
+      "server": "3.114.220.22",
+      "server_port": 19645,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
+      "server": "149.22.87.241",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -118,8 +110,7 @@
         "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe"
       ]
     },
     {
@@ -132,8 +123,7 @@
         "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
