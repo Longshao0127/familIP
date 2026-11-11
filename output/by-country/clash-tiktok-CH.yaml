@@ -25,28 +25,22 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
-  server: 157.22.185.68
-  port: 2058
-  udp: true
-  type: vless
-  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
-    short-id: 937255313d6ce673
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
   server: 140.238.213.114
   port: 50160
   udp: true
   type: hysteria2
   password: 84a506ca5aca505696a454d828420b3f
-  sni: www.bing.com
+  sni: 'off'
   skip-cert-verify: true
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
   server: 79.127.184.104
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
+  server: 23.166.88.127
   port: 19999
   udp: true
   type: ss
@@ -60,29 +54,6 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
-  server: 23.166.88.127
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
-  server: 208.69.78.29
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  server: 208.69.78.19
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
   server: 208.69.78.217
   port: 2053
   udp: true
@@ -93,16 +64,16 @@ proxies:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
     short-id: ad86e2d52ff40ebd
   servername: www.apple.com
-  client-fingerprint: random
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 09(机房) - xiaohe
-  server: 208.69.78.33
+  client-fingerprint: firefox
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
+  server: 208.69.78.19
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.yourultimateprofessionalcareerhub.com
+  sni: www.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
-- name: 🎵 🇨🇭 瑞士 (Switzerland) 10(机房) - xiaohe
+- name: 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
   server: 208.69.78.158
   port: 443
   udp: true
@@ -114,7 +85,6 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
@@ -125,17 +95,6 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 09(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 10(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -143,15 +102,12 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 03(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 04(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 09(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 10(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -166,9 +122,6 @@ proxy-groups:
   - 🎵 🇨🇭 瑞士 (Switzerland) 05(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 06(机房) - xiaohe
   - 🎵 🇨🇭 瑞士 (Switzerland) 07(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 08(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 09(机房) - xiaohe
-  - 🎵 🇨🇭 瑞士 (Switzerland) 10(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -176,6 +129,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇭 瑞士 (Switzerland) 02(机房) - xiaohe
+  - 🎵 🇨🇭 瑞士 (Switzerland) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

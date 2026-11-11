@@ -24,24 +24,15 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  server: 150.95.109.109
-  port: 2086
+- name: 🎵 🇮🇩 印尼 (Indonesia) 01(机房) - xiaohe
+  server: 130.94.95.198
+  port: 57353
   udp: true
   type: vless
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
-- name: 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
-  server: 154.21.203.106
-  port: 51279
-  udp: true
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  flow: xtls-rprx-vision
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  reality-opts:
-    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
-    short-id: bb82c8
-  servername: www.tesla.com
+  servername: in001.zestapp778.com
+  skip-cert-verify: true
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
@@ -49,8 +40,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
+  - 🎵 🇮🇩 印尼 (Indonesia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,8 +48,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
+  - 🎵 🇮🇩 印尼 (Indonesia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -67,7 +56,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
-  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
+  - 🎵 🇮🇩 印尼 (Indonesia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

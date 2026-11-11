@@ -2,38 +2,37 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-11-10T23:05:32.340955+00:00",
+      "time": "2026-11-11T05:44:04.380883+00:00",
       "stage": "after_prefilter",
-      "before": 3201,
-      "after": 3201,
+      "before": 3186,
+      "after": 3186,
       "front_proxy": false
     },
     {
-      "time": "2026-11-10T23:09:51.565517+00:00",
+      "time": "2026-11-11T05:48:58.845987+00:00",
       "stage": "after_liveness",
-      "tested": 3201,
-      "alive": 585
+      "tested": 3186,
+      "alive": 577
     },
     {
-      "time": "2026-11-10T23:19:07.469719+00:00",
+      "time": "2026-11-11T05:59:12.884330+00:00",
       "stage": "ok",
-      "total": 408,
-      "residential": 4,
-      "tiktok": 370,
+      "total": 382,
+      "residential": 2,
+      "tiktok": 338,
       "cn": {
         "tested": 117,
-        "ok": 9,
-        "bad": 108,
+        "ok": 19,
+        "bad": 98,
         "err": 3,
-        "cn_total": 33
+        "cn_total": 34
       },
-      "elapsed": 835.1
+      "elapsed": 930.0
     }
   ],
   "node_fail_reasons": {
-    "check_fail": 18,
-    "liveness_fail": 2597,
-    "port_not_ready": 1
+    "liveness_fail": 2594,
+    "check_fail": 16
   },
-  "err_sample": "check: \u001b[31mFATAL\u001b[0m[0000] initialize outbound[0]: unsupported flow: xtls-rprx-vision-udp443\n"
+  "err_sample": "liveness: ConnectionError: SOCKSHTTPConnectionPool(host='connectivitycheck.gstatic.com', port=80): Max retries exceeded with url: /generate_204 (Caused by NewConnectionError(\"SOCKSConnection(host='connectivityc"
 }

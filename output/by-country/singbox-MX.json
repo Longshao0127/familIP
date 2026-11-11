@@ -15,16 +15,8 @@
       "password": "BWyPPTusFKhGgzKh"
     },
     {
-      "type": "vmess",
-      "tag": "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
-      "server": "38.60.224.173",
-      "server_port": 32153,
-      "uuid": "5cf1f470-3f70-4589-a2a4-4657ea3a1edf",
-      "security": "auto"
-    },
-    {
       "type": "trojan",
-      "tag": "🇲🇽 墨西哥 (Mexico) 03 - xiaohe",
+      "tag": "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
       "server": "mx001.zestapp778.com",
       "server_port": 15083,
       "password": "5t6i121em5lkmsmk",
@@ -40,8 +32,7 @@
       "outbounds": [
         "auto",
         "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 03 - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe"
       ]
     },
     {
@@ -49,8 +40,7 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 03 - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
