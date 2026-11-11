@@ -1,0 +1,90 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - localhost.
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+profile:
+  store-selected: true
+  store-fake-ip: true
+tcp-concurrent: true
+unified-delay: true
+proxies:
+- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  server: 201.51.12.98
+  port: 443
+  udp: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+- name: 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  server: vps3.nemnogogo.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO-CN
+  - AUTO-TCP
+  - AUTO
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+- name: AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+rules:
+- MATCH,PROXIES

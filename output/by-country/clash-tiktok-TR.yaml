@@ -36,18 +36,6 @@ proxies:
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
   client-fingerprint: random
-- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  server: 45.92.219.47
-  port: 443
-  udp: true
-  type: vless
-  uuid: ecc0e60a-f2cc-4266-8353-b228df89730a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GBO_paFyK9FihgPMH8r_vHa4IKMkSGfvAQ2fhPK_1H4
-  servername: ty.galactichub.online
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,7 +43,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -64,7 +51,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,6 +59,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
