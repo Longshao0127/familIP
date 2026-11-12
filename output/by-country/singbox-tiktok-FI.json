@@ -7,8 +7,25 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
+      "server": "85.119.147.10",
+      "server_port": 2443,
+      "uuid": "a60777ef-1a2e-429b-a45e-97c81492b4d8",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "next-ru9s.earthlink.work",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
       "server": "fi1.obxodvpn.us",
       "server_port": 443,
       "password": "146d567c-6335-4e63-a8aa-7ec068642440",
@@ -20,7 +37,28 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+      "server": "169.40.34.41",
+      "server_port": 443,
+      "uuid": "622654a4-b666-000b-9260-fb717e05154f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "key-master-saver.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY",
+          "short_id": "1c3e8241a8743df9"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe",
       "server": "65.109.208.183",
       "server_port": 443,
       "uuid": "5f07a2a1-82a5-494d-847b-b882e6903192",
@@ -40,7 +78,7 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe",
       "server": "45.144.234.157",
       "server_port": 14430,
       "uuid": "59b0d30e-9b29-4fda-a35c-b2901ec32db7",
@@ -53,13 +91,37 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 06(机房) - xiaohe",
+      "server": "66.bmi.ir.asopardaz.ir",
+      "server_port": 8443,
+      "uuid": "a564987a-380a-4c21-a462-a011863ca9be",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "hostgator.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "JtA0d5K6Jnmg35oWP9SDOsc1ceuqaxOsNg33fiPHJQs",
+          "short_id": "e915"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
         "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 06(机房) - xiaohe"
       ]
     },
     {
@@ -68,7 +130,10 @@
       "outbounds": [
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
         "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 05(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 06(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

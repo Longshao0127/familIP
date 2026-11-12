@@ -24,32 +24,29 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  server: 201.51.12.98
-  port: 443
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
+  server: 104.21.62.52
+  port: 2087
+  udp: true
+  type: trojan
+  password: 80d4cb87-ac70-e074-bc82-6313d2d1b539
+  sni: ayhanmansur-zedmeli.kdns.fr
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZXJaQklLRUh1R0UiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
+  server: 3h-kazakhstan1.09vpn.com
+  port: 8443
   udp: true
   type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  uuid: 2424febb-43cb-488d-bdd1-401e923c8e48
   tls: true
-  servername: vps3.nemnogogo.com
+  servername: 3h-kazakhstan1.09vpn.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
-  server: vps3.nemnogogo.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  tls: true
-  servername: vps3.nemnogogo.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
+  network: ws
+  ws-opts:
+    path: /vless/
 proxy-groups:
 - name: PROXIES
   type: select
@@ -57,8 +54,8 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -66,8 +63,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -75,8 +71,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -84,7 +80,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
 rules:
 - MATCH,PROXIES

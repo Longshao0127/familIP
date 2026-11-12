@@ -24,26 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
-  server: 216.106.191.201
-  port: 10303
+- name: 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  server: 185.213.23.63
+  port: 990
   udp: true
-  type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: suK-MYTtZhJ9IJgsxPLTHLQadNotDqYslQcd5BNV_EQ
-    short-id: 6aa50b0cc8d23464
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

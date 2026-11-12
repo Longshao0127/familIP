@@ -24,26 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
-  server: 84.32.209.103
-  port: 443
+- name: 🇳🇴 挪威 (Norway) 01 - xiaohe
+  server: 185.213.23.63
+  port: 990
   udp: true
-  type: vless
-  uuid: 3f25b15b-1777-4c08-9ade-60336ac92a82
-  tls: true
-  servername: edge-lt.lindenpixel.com
-  skip-cert-verify: false
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
+  - 🇳🇴 挪威 (Norway) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
+  - 🇳🇴 挪威 (Norway) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
+  - 🇳🇴 挪威 (Norway) 01 - xiaohe
 rules:
 - MATCH,PROXIES

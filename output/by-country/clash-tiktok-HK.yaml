@@ -40,34 +40,71 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.89
+  sni: t.me
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2≡ƒç¿≡ƒç│
+  sni: https://t.me/wangcai2ⁿß«ⁿß
   skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  server: 209.33.160.122
+  port: 39098
+  udp: true
+  type: vless
+  uuid: 7852e4df-db54-4f75-a35e-3b8fbe89e56d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DtOZ39u6MyQMG96tl13-M7-HeaqQzW2RLBVPk9py-Vg
+  servername: dash.cloudflare.com
+  client-fingerprint: firefox
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
+  server: doghkzf.zalolink.com
+  port: 28675
+  udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jgtiLXdCnQ9WRWMuu2gsuGQOQTCRZQpspnn228kjTSA
+    short-id: 9a79807253c040
+  servername: www.lamer.com.hk
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -79,6 +116,8 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

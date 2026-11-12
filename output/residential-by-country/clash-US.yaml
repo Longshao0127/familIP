@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
-  server: 130.94.20.17
+  server: 130.94.19.95
   port: 57277
   udp: true
   type: trojan

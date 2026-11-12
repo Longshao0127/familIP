@@ -9,12 +9,21 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 01 - xiaohe",
-      "server": "13.140.56.100",
-      "server_port": 14430,
-      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
-      "transport": {
-        "type": "ws",
-        "path": "/vless"
+      "server": "194.61.31.126",
+      "server_port": 2053,
+      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
+          "short_id": "9980e0609b0d3891"
+        }
       }
     },
     {
@@ -40,49 +49,20 @@
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 03 - xiaohe",
-      "server": "85.234.100.32",
-      "server_port": 443,
-      "uuid": "c1208c5a-2350-0003-affd-fc41b4319286",
-      "tls": {
-        "enabled": true,
-        "server_name": "decdn-28.nome-rkp.net",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "server": "13.140.56.100",
+      "server_port": 14430,
+      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
       "transport": {
         "type": "ws",
-        "path": "/media/ws/",
+        "path": "/vless",
         "headers": {
-          "Host": "decdn-28.nome-rkp.net"
+          "Host": "13.140.56.100"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇮🇳 印度 (India) 04 - xiaohe",
-      "server": "194.61.31.126",
-      "server_port": 2053,
-      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
-          "short_id": "9980e0609b0d3891"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇳 印度 (India) 05 - xiaohe",
       "server": "13.140.253.35",
       "server_port": 443,
       "uuid": "f1a7e2c8-b140-50d1-8acf-e62090f96599",
@@ -101,6 +81,17 @@
         "headers": {
           "Host": "xray-bprkdwje-clever-comet-4.cloady.io"
         }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇮🇳 印度 (India) 05 - xiaohe",
+      "server": "152.67.8.205",
+      "server_port": 80,
+      "uuid": "9db4c708-aef8-4359-821b-38e47990be0d",
+      "security": "auto",
+      "transport": {
+        "type": "ws"
       }
     },
     {
