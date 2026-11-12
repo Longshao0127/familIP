@@ -7,21 +7,25 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
-      "tag": "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe",
-      "server": "191.44.112.170.sslip.io",
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 01 (家宽) - xiaohe",
+      "server": "122.176.216.52",
       "server_port": 443,
-      "password": "46d221fa-e9b4-748c-4eae-019a88e42991",
+      "uuid": "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88",
       "tls": {
         "enabled": true,
-        "server_name": "orbylume.my.to",
-        "insecure": false
+        "server_name": "app-6ada5023.deploy.meerasolution.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/tvpn-trojan/bg",
+        "path": "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88",
         "headers": {
-          "Host": "orbylume.my.to"
+          "Host": "app-6ada5023.deploy.meerasolution.com"
         }
       }
     },
@@ -30,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
+        "🇮🇳 印度 (India) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
+        "🇮🇳 印度 (India) 01 (家宽) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

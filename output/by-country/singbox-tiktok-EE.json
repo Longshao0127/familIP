@@ -8,23 +8,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe",
-      "server": "170.114.46.6",
-      "server_port": 2096,
-      "uuid": "efd11a89-7506-44ce-95b6-6654859f155b",
+      "tag": "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe",
+      "server": "5.129.202.80",
+      "server_port": 443,
+      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pcloud.z-tas.com",
-        "insecure": false,
+        "server_name": "mirror-50.topp-con.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "pcloud.z-tas.com"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8",
+          "short_id": "2ef2b10d5143d798"
         }
       }
     },
@@ -33,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe"
+        "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe"
+        "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

@@ -25,17 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
-  server: 104.21.62.52
-  port: 2087
-  udp: true
-  type: trojan
-  password: 80d4cb87-ac70-e074-bc82-6313d2d1b539
-  sni: ayhanmansur-zedmeli.kdns.fr
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZXJaQklLRUh1R0UiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W10sInJlbGF5SWR4IjowfQ==
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
   server: 3h-kazakhstan1.09vpn.com
   port: 8443
   udp: true
@@ -51,18 +40,8 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -72,7 +51,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -81,6 +59,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -32,36 +32,13 @@ proxies:
   password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
   sni: speedtestmark.com
   skip-cert-verify: false
-- name: 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
-  server: 138.124.180.137
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
-    short-id: 33acba1b
-  servername: www.apple.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
-- name: AUTO-TCP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,7 +47,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 02(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
