@@ -8,23 +8,25 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe",
-      "server": "5.129.202.80",
+      "tag": "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe",
+      "server": "88.80.150.15",
       "server_port": 443,
-      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "1d46250c-f015-439d-a7fd-c4d9e2a4c63d",
       "tls": {
         "enabled": true,
-        "server_name": "mirror-50.topp-con.xyz",
+        "server_name": "bg2.oncloudvpn.com",
+        "insecure": false,
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8",
-          "short_id": "2ef2b10d5143d798"
+          "fingerprint": "edge"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
@@ -32,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe"
+        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe"
+        "🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

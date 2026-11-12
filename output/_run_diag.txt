@@ -2,36 +2,36 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-11-12T14:57:29.668846+00:00",
+      "time": "2026-11-12T23:26:31.325942+00:00",
       "stage": "after_prefilter",
-      "before": 3270,
-      "after": 3270,
+      "before": 3309,
+      "after": 3309,
       "front_proxy": false
     },
     {
-      "time": "2026-11-12T15:02:41.364870+00:00",
+      "time": "2026-11-12T23:31:01.226495+00:00",
       "stage": "after_liveness",
-      "tested": 3270,
-      "alive": 585
+      "tested": 3309,
+      "alive": 577
     },
     {
-      "time": "2026-11-12T15:11:46.347798+00:00",
+      "time": "2026-11-12T23:39:54.559072+00:00",
       "stage": "ok",
-      "total": 369,
+      "total": 390,
       "residential": 1,
-      "tiktok": 292,
+      "tiktok": 355,
       "cn": {
         "tested": 116,
-        "ok": 18,
-        "bad": 98,
+        "ok": 13,
+        "bad": 103,
         "err": 4,
-        "cn_total": 32
+        "cn_total": 30
       },
-      "elapsed": 878.0
+      "elapsed": 825.8
     }
   ],
   "node_fail_reasons": {
-    "liveness_fail": 2664,
+    "liveness_fail": 2710,
     "check_fail": 22
   },
   "err_sample": "liveness: ConnectionError: SOCKSHTTPConnectionPool(host='connectivitycheck.gstatic.com', port=80): Max retries exceeded with url: /generate_204 (Caused by NewConnectionError(\"SOCKSConnection(host='connectivityc"

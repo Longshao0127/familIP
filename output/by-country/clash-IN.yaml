@@ -34,18 +34,6 @@ proxies:
   ws-opts:
     path: /vless
 - name: 🇮🇳 印度 (India) 02 - xiaohe
-  server: 194.61.31.126
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
-  tls: true
-  reality-opts:
-    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
-    short-id: 9980e0609b0d3891
-  servername: www.apple.com
-  client-fingerprint: random
-- name: 🇮🇳 印度 (India) 03 - xiaohe
   server: 178.212.35.198
   port: 443
   udp: true
@@ -57,6 +45,18 @@ proxies:
     short-id: 6bdc8320
   servername: www.cloudflare.com
   client-fingerprint: firefox
+- name: 🇮🇳 印度 (India) 03 - xiaohe
+  server: 194.61.31.126
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 1d4e18bd-1f26-4915-b35a-7ace4826e76a
+  tls: true
+  reality-opts:
+    public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
+    short-id: 9980e0609b0d3891
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: 🇮🇳 印度 (India) 04 - xiaohe
   server: 13.140.253.35
   port: 443
@@ -66,7 +66,7 @@ proxies:
   tls: true
   servername: xray-bprkdwje-clever-comet-4.cloady.io
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /27dbf143acdd7bca

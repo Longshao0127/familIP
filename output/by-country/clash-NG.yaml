@@ -24,35 +24,30 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
-  server: 5.129.202.80
-  port: 443
+- name: 🇳🇬 尼日利亚 (Nigeria) 01 - xiaohe
+  server: sclass-c2.catcat321.com
+  port: 20051
   udp: true
-  type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8
-    short-id: 2ef2b10d5143d798
-  servername: mirror-50.topp-con.xyz
-  client-fingerprint: chrome
+  type: trojan
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  sni: hk.catxstar.com
+  skip-cert-verify: true
+- name: 🇳🇬 尼日利亚 (Nigeria) 02 - xiaohe
+  server: sclass-01.catcat321.com
+  port: 20103
+  udp: true
+  type: trojan
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  sni: hk.catxstar.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🇳🇬 尼日利亚 (Nigeria) 01 - xiaohe
+  - 🇳🇬 尼日利亚 (Nigeria) 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +55,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🇳🇬 尼日利亚 (Nigeria) 01 - xiaohe
+  - 🇳🇬 尼日利亚 (Nigeria) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,6 +64,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  - 🇳🇬 尼日利亚 (Nigeria) 01 - xiaohe
+  - 🇳🇬 尼日利亚 (Nigeria) 02 - xiaohe
 rules:
 - MATCH,PROXIES

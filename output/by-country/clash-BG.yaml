@@ -24,31 +24,19 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  server: 201.51.12.98
+- name: 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
+  server: 88.80.150.15
   port: 443
   udp: true
   type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
   tls: true
-  servername: vps3.nemnogogo.com
+  servername: bg2.oncloudvpn.com
   skip-cert-verify: false
+  client-fingerprint: edge
   network: grpc
   grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
-  server: 200.169.179.233
-  port: 443
-  udp: true
-  type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  tls: true
-  servername: vps3.nemnogogo.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
+    grpc-service-name: grpc
 proxy-groups:
 - name: PROXIES
   type: select
@@ -56,8 +44,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -65,7 +52,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -73,8 +60,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -82,7 +68,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  - 🎵 🇷🇺 俄罗斯 (Russia) 02(机房) - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 rules:
 - MATCH,PROXIES
