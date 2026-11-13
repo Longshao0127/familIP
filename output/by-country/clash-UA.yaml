@@ -24,34 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-- name: 🇷🇴 罗马尼亚 (Romania) 02 - xiaohe
-  server: 46.28.67.55
+- name: 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
+  server: 83.147.18.75
   port: 443
   udp: true
   type: vless
-  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
-    short-id: d06d78e974491b6e
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
+    short-id: 7f1e29593aa94ad1
+  servername: www.bing.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 02 - xiaohe
+  - 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,8 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 02 - xiaohe
+  - 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,7 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 02 - xiaohe
+  - 🇺🇦 乌克兰 (Ukraine) 01 - xiaohe
 rules:
 - MATCH,PROXIES

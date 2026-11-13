@@ -24,35 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
-  server: 88.80.150.15
+- name: 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
+  server: 83.147.18.75
   port: 443
   udp: true
   type: vless
-  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
+  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  flow: xtls-rprx-vision
   tls: true
-  servername: bg2.oncloudvpn.com
-  skip-cert-verify: false
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
+  reality-opts:
+    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
+    short-id: 7f1e29593aa94ad1
+  servername: www.bing.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
