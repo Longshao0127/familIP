@@ -24,19 +24,25 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
-  server: 45.86.60.174
-  port: 16443
+- name: 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
+  server: p1real5.greewebservices.ir
+  port: 1270
   udp: true
   type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  uuid: b0511969-f769-460b-963b-70c6b84b6967
+  tls: true
+  reality-opts:
+    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
+    short-id: 9b60d3
+  servername: play.googleapis.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -44,7 +50,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -52,6 +58,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇧🇬 保加利亚 (Bulgaria) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

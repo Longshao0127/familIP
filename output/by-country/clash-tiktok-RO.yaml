@@ -24,26 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
-  server: 83.147.18.75
+- name: 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
+  server: bogging-eyeteeth-fly.freesocks.work
   port: 443
   udp: true
-  type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
-    short-id: 7f1e29593aa94ad1
-  servername: www.bing.com
-  client-fingerprint: qq
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇺🇦 乌克兰 (Ukraine) 01(机房) - xiaohe
+  - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
