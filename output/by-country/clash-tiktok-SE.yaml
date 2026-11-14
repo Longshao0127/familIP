@@ -43,12 +43,13 @@ proxies:
     headers:
       Host: 5.178.109.174
 - name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
-  server: 62.182.193.228
-  port: 8388
+  server: 95.143.196.97
+  port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 2e555e46dbc421452416834962fd014f
+  type: trojan
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+  skip-cert-verify: false
 - name: 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
   server: 138.124.86.230
   port: 48115

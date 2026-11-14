@@ -40,21 +40,33 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  server: sclass-b1.catcat321.com
-  port: 20027
-  udp: true
-  type: trojan
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
-  skip-cert-verify: true
-- name: 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
-  server: sclass-b1.catcat321.com
+  server: 157.254.38.210
   port: 20028
   udp: true
   type: trojan
   password: d7563108-615c-4338-a7bd-77f359869a4a
   sni: hk.catxstar.com
   skip-cert-verify: false
+- name: 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
+  server: 157.254.38.210
+  port: 20027
+  udp: true
+  type: trojan
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  sni: hk.catxstar.com
+  skip-cert-verify: false
+- name: 🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe
+  server: 151.241.226.201
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
+  tls: true
+  reality-opts:
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+    short-id: 9e419c0759b54d6f
+  servername: www.apple.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -64,6 +76,7 @@ proxy-groups:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -74,6 +87,7 @@ proxy-groups:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -84,5 +98,6 @@ proxy-groups:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe
 rules:
 - MATCH,PROXIES

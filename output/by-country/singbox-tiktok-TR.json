@@ -33,19 +33,7 @@
     {
       "type": "trojan",
       "tag": "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe",
-      "server": "sclass-b1.catcat321.com",
-      "server_port": 20027,
-      "password": "d7563108-615c-4338-a7bd-77f359869a4a",
-      "tls": {
-        "enabled": true,
-        "server_name": "hk.catxstar.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe",
-      "server": "sclass-b1.catcat321.com",
+      "server": "157.254.38.210",
       "server_port": 20028,
       "password": "d7563108-615c-4338-a7bd-77f359869a4a",
       "tls": {
@@ -55,13 +43,50 @@
       }
     },
     {
+      "type": "trojan",
+      "tag": "🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe",
+      "server": "157.254.38.210",
+      "server_port": 20027,
+      "password": "d7563108-615c-4338-a7bd-77f359869a4a",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk.catxstar.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe",
+      "server": "151.241.226.201",
+      "server_port": 2053,
+      "uuid": "0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104",
+          "short_id": "9e419c0759b54d6f"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
         "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe",
-        "🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe"
+        "🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe",
+        "🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe"
       ]
     },
     {
@@ -70,7 +95,8 @@
       "outbounds": [
         "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
         "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe",
-        "🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe"
+        "🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe",
+        "🎵 🇹🇷 土耳其 (Turkey) 04(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

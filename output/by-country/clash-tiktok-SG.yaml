@@ -25,63 +25,56 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇸🇬 新加坡 (Singapore) 01(机房) - xiaohe
-  server: 149.88.106.74
-  port: 19999
+  server: 138.2.73.238
+  port: 50160
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: hysteria2
+  password: f87376e17da040ed04c9665ce8972930
+  sni: www.bing.com
+  skip-cert-verify: true
 - name: 🎵 🇸🇬 新加坡 (Singapore) 02(机房) - xiaohe
-  server: 15.235.182.183
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇬 新加坡 (Singapore) 03(机房) - xiaohe
-  server: 149.88.23.207
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🎵 🇸🇬 新加坡 (Singapore) 04(机房) - xiaohe
-  server: 68.183.227.236
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇸🇬 新加坡 (Singapore) 05(机房) - xiaohe
-  server: 68.183.235.122
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇸🇬 新加坡 (Singapore) 06(机房) - xiaohe
-  server: 149.88.107.47
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇬 新加坡 (Singapore) 07(机房) - xiaohe
-  server: 51.79.228.131
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇬 新加坡 (Singapore) 08(机房) - xiaohe
   server: 149.88.107.74
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇬 新加坡 (Singapore) 09(机房) - xiaohe
+- name: 🎵 🇸🇬 新加坡 (Singapore) 03(机房) - xiaohe
+  server: 51.79.228.131
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇸🇬 新加坡 (Singapore) 04(机房) - xiaohe
+  server: 149.88.107.47
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇸🇬 新加坡 (Singapore) 05(机房) - xiaohe
+  server: 149.88.106.74
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇸🇬 新加坡 (Singapore) 06(机房) - xiaohe
+  server: 15.235.182.183
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇸🇬 新加坡 (Singapore) 07(机房) - xiaohe
+  server: 68.183.227.4
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇸🇬 新加坡 (Singapore) 08(机房) - xiaohe
   server: 149.88.23.202
   port: 18000
   udp: true
@@ -89,6 +82,13 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
+- name: 🎵 🇸🇬 新加坡 (Singapore) 09(机房) - xiaohe
+  server: 68.183.235.122
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🎵 🇸🇬 新加坡 (Singapore) 10(机房) - xiaohe
   server: 15.235.164.133
   port: 19999
@@ -97,13 +97,47 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇸🇬 新加坡 (Singapore) 11(机房) - xiaohe
+  server: 149.88.23.207
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe
+  server: 68.183.227.236
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe
   server: 128.1.186.73
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe
+- name: 🎵 🇸🇬 新加坡 (Singapore) 14(机房) - xiaohe
+  server: 140.245.62.225
+  port: 36442
+  udp: true
+  type: vless
+  uuid: c6624b96-e346-490b-9145-74c2543a9483
+  flow: xtls-rprx-vision
+  tls: true
+  servername: xjpp.zjlo.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe
+  server: 149.28.130.108
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: searchcreativejobsandshowcaseyourartistictalents.com
+  skip-cert-verify: false
+- name: 🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe
   server: 5.34.177.164
   port: 443
   udp: true
@@ -115,67 +149,29 @@ proxies:
     public-key: cwWhNuekusD1iPZZ--7G891dU9PCacxyCYwsZxOApHA
     short-id: b2efed6d157e7bb0
   servername: gateway.icloud.com
-  client-fingerprint: firefox
-- name: 🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe
-  server: 68.183.227.4
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇸🇬 新加坡 (Singapore) 14(机房) - xiaohe
-  server: 68.183.235.240
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe
-  server: 149.28.130.108
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: searchcreativejobsandshowcaseyourartistictalents.com
-  skip-cert-verify: false
-- name: 🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe
-  server: 15.235.184.127
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: exploredigitaljobplatformandfindonlinework.com
-  skip-cert-verify: false
+  client-fingerprint: chrome
 - name: 🎵 🇸🇬 新加坡 (Singapore) 17(机房) - xiaohe
-  server: 140.245.62.225
-  port: 36442
+  server: 139.162.27.96
+  port: 2096
   udp: true
   type: vless
-  uuid: c6624b96-e346-490b-9145-74c2543a9483
-  flow: xtls-rprx-vision
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   tls: true
-  servername: xjpp.zjlo.top
+  servername: free-server.techsonic.dev
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🎵 🇸🇬 新加坡 (Singapore) 18(机房) - xiaohe
-  server: 54.251.9.130
-  port: 24146
-  udp: true
-  type: vless
-  uuid: 9d9a048b-3aea-4b3e-b106-1106bf301feb
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo
-    short-id: 7205d9079521832c
-  servername: www.intel.com
-  client-fingerprint: ios
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
+  - AUTO-UDP
   - 🎵 🇸🇬 新加坡 (Singapore) 01(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 02(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 03(机房) - xiaohe
@@ -193,7 +189,6 @@ proxy-groups:
   - 🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 17(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 18(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -201,7 +196,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇸🇬 新加坡 (Singapore) 01(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 02(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 03(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 04(机房) - xiaohe
@@ -218,7 +212,6 @@ proxy-groups:
   - 🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 17(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 18(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -243,6 +236,13 @@ proxy-groups:
   - 🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe
   - 🎵 🇸🇬 新加坡 (Singapore) 17(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 18(机房) - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇸🇬 新加坡 (Singapore) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
