@@ -25,34 +25,21 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
-  server: 162.35.38.156
+  server: 45.76.172.197
   port: 443
   udp: true
   type: vless
-  uuid: a88d4614-2134-404c-9479-6aba1ca9cdfd
-  flow: xtls-rprx-vision
+  uuid: b256c867-a020-48e0-be80-1b079f2613a2
   tls: true
   reality-opts:
-    public-key: UkUbCx7k5ykWTJTr1jqCOxns6TwvTAbfR0JvJzuALjM
-    short-id: a62b22480f962a1d
-  servername: 2499dbt.us12.h1clayd.click
-  client-fingerprint: firefox
-- name: 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
-  server: 172.67.183.149
-  port: 443
-  udp: true
-  type: vless
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  tls: true
-  servername: mao.kipfelmao.de5.net
-  skip-cert-verify: false
-  client-fingerprint: android
+    public-key: Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE
+    short-id: ff3597db
+  servername: itunes.apple.com
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /api/v1/guests/profiles/5de14443985f/
-    headers:
-      Host: mao.kipfelmao.de5.net
-- name: 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
+    path: /ws
+- name: 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   server: 45.63.53.81
   port: 443
   udp: true
@@ -69,80 +56,37 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
-  server: 169.40.42.202
+- name: 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
+  server: 104.21.80.241
   port: 443
   udp: true
   type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
+  uuid: FCEAD694-2E27-4EEB-8836-9D4ACF3E028B
   tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: random
-- name: 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
-  server: 156.229.167.109
-  port: 8443
-  udp: true
-  type: vless
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  tls: true
-  reality-opts:
-    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
-    short-id: 4ad2e4e660550e43
-  servername: github.githubassets.com
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  server: 45.76.172.197
-  port: 443
-  udp: true
-  type: vless
-  uuid: b256c867-a020-48e0-be80-1b079f2613a2
-  tls: true
-  reality-opts:
-    public-key: Ag8SQ5QdqfHO9pKWA93kqGmH5EQo7Xm5Z4RbPnwPBBE
-    short-id: ff3597db
-  servername: itunes.apple.com
-  client-fingerprint: chrome
+  servername: ws.liuzedong.ltd
+  skip-cert-verify: false
   network: ws
   ws-opts:
     path: /ws
-- name: 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
-  server: US032013.ssgreen.org
+    headers:
+      Host: ws.liuzedong.ltd
+- name: 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
+  server: 172.67.208.118
   port: 443
   udp: true
-  type: vmess
-  uuid: 4b6411e3-914d-4d6c-b486-58b1b88f5c5f
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 48eb716d-6121-43c1-9dd2-9a2a25bf3178
   tls: true
-  servername: US032013.ssgreen.org
+  servername: ws137.mydosss.ccwu.cc
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /wes
+    path: /3b575ddc8596
     headers:
-      Host: US032013.ssgreen.org
-- name: 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
-  server: 104.21.91.53
-  port: 8443
-  udp: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  server: fast.145779.xyz
+      Host: ws137.mydosss.ccwu.cc
+- name: 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
+  server: 104.21.58.37
   port: 2053
   udp: true
   type: vless
@@ -156,30 +100,27 @@ proxies:
     path: /ws-tesla
     headers:
       Host: fast.145779.xyz
-- name: 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  server: sdf65h46wr.df6h451rh.xin
+- name: 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
+  server: 196.245.52.187
   port: 443
   udp: true
-  type: anytls
-  password: 0324fbc29561
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  server: 173.244.56.6
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
+  servername: 04535dt.us8.h1clayd.click
+  client-fingerprint: firefox
+- name: 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
   server: 155.248.209.237
   port: 33333
   udp: true
   type: hysteria2
   password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: 155.248.209.237
+  sni: 155.248.209.2
   skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
   server: 47.89.232.46
   port: 8443
   udp: true
@@ -187,23 +128,15 @@ proxies:
   password: 4afd4e1b1b0edd429b10d800a1cf64a7
   sni: hysteria2.local
   skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
-  server: 192.255.152.147
-  port: 443
-  udp: true
-  type: hysteria2
-  password: yO8pug5XmwkBXBAjleYIaVt
-  sni: 192.255.152.147
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
   server: 66.94.121.46
   port: 443
   udp: true
   type: hysteria2
   password: gf1:gfhysteria2024
-  sni: vk.com
+  sni: 66.94.121.46
   skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
   server: 201.58.190.235
   port: 443
   udp: true
@@ -213,7 +146,23 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: sFQIE4F3SbaXCYoCQTY-4YvYiif8__By
-- name: 🎵 🇺🇸 美国 (United States) 17(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
+  server: bl1.nexfile.net
+  port: 4444
+  udp: true
+  type: hysteria2
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  sni: bl1.nexfile.net
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
+  server: 196.240.181.10
+  port: 25282
+  udp: true
+  type: hysteria2
+  password: b36a14f8-fc3f-4142-968f-48031cf5f330
+  sni: 314c8dt.us12.h1clayd.click
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
   server: promo.betust.net
   port: 443
   udp: true
@@ -221,428 +170,15 @@ proxies:
   password: d4ca9415f0eac7897472e1e5b86d2e96
   sni: promo.betust.net
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 18(机房) - xiaohe
-  server: bl1.nexfile.net
-  port: 4444
+- name: 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
+  server: starlink-ft.251313.xyz
+  port: 443
   udp: true
   type: hysteria2
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  sni: bl1.nexfile.net
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
-  server: 15.204.247.206
-  port: 4444
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-- name: 🎵 🇺🇸 美国 (United States) 20(机房) - xiaohe
-  server: 193.151.163.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
-  server: 69.164.240.85
-  port: 50875
-  udp: true
-  type: trojan
-  password: nwilryafgkyvuxauc8pz
-  sni: 69.164.240.85
+  password: https://xship.2fa.cat
+  sni: xship.top
   skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 22(机房) - xiaohe
-  server: 45.138.100.248
-  port: 14430
-  udp: true
-  type: vless
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 45.138.100.248
-- name: 🎵 🇺🇸 美国 (United States) 23(机房) - xiaohe
-  server: 167.17.69.171
-  port: 443
-  udp: true
-  type: vless
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
-    short-id: 0990d22f
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 24(机房) - xiaohe
-  server: 66.163.122.30
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 25(机房) - xiaohe
-  server: 45.86.51.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 26(机房) - xiaohe
-  server: 67.220.95.3
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🎵 🇺🇸 美国 (United States) 27(机房) - xiaohe
-  server: 169.40.42.74
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: firefox
-- name: 🎵 🇺🇸 美国 (United States) 28(机房) - xiaohe
-  server: 216.152.155.23
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 29(机房) - xiaohe
-  server: 138.199.42.68
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 30(机房) - xiaohe
-  server: 216.152.155.131
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 216.152.155.131
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 31(机房) - xiaohe
-  server: 66.163.122.26
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 32(机房) - xiaohe
-  server: 185.230.230.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 33(机房) - xiaohe
-  server: 156.146.38.170
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🎵 🇺🇸 美国 (United States) 34(机房) - xiaohe
-  server: 156.146.38.169
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🎵 🇺🇸 美国 (United States) 35(机房) - xiaohe
-  server: 193.151.160.9
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
-  server: 45.138.100.248
-  port: 10443
-  udp: true
-  type: vless
-  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-- name: 🎵 🇺🇸 美国 (United States) 37(机房) - xiaohe
-  server: 216.152.156.81
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 216.152.156.81
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 38(机房) - xiaohe
-  server: 156.146.38.167
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🎵 🇺🇸 美国 (United States) 39(机房) - xiaohe
-  server: 169.197.140.169
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 169.197.140.169
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 40(机房) - xiaohe
-  server: 216.152.156.212
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 216.152.156.212
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 41(机房) - xiaohe
-  server: 156.146.38.168
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🎵 🇺🇸 美国 (United States) 42(机房) - xiaohe
-  server: 169.197.140.218
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.discoverfreshgraduatejobsstartyourprofessionaljourney.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 43(机房) - xiaohe
-  server: 169.197.140.245
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.discoverfreshgraduatejobsstartyourprofessionaljourney.com
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 44(机房) - xiaohe
-  server: 216.152.155.50
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 45(机房) - xiaohe
-  server: 66.163.122.113
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 46(机房) - xiaohe
-  server: 66.163.122.25
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 47(机房) - xiaohe
-  server: 67.220.85.46
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🎵 🇺🇸 美国 (United States) 48(机房) - xiaohe
-  server: 170.101.101.131
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 49(机房) - xiaohe
-  server: 170.101.101.211
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 50(机房) - xiaohe
-  server: 170.101.101.19
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 51(机房) - xiaohe
-  server: 193.151.160.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 52(机房) - xiaohe
-  server: 66.23.203.21
-  port: 59689
-  udp: true
-  type: trojan
-  password: ae7eb4dwyaz25pxwgq59
-  sni: 66.23.203.21
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 53(机房) - xiaohe
-  server: 195.211.98.43
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-    short-id: 9c56fddf237e8eaf
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🎵 🇺🇸 美国 (United States) 54(机房) - xiaohe
-  server: 216.152.155.176
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 55(机房) - xiaohe
-  server: 216.152.156.42
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 56(机房) - xiaohe
-  server: 216.152.155.54
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 57(机房) - xiaohe
-  server: 69.48.201.136
-  port: 30016
-  udp: true
-  type: vless
-  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
-  network: ws
-  ws-opts:
-    path: /usserver
-    headers:
-      Host: zoom.us
-- name: 🎵 🇺🇸 美国 (United States) 58(机房) - xiaohe
-  server: 170.101.101.237
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 59(机房) - xiaohe
-  server: 169.40.42.35
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 60(机房) - xiaohe
-  server: 169.40.42.229
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🎵 🇺🇸 美国 (United States) 61(机房) - xiaohe
-  server: 169.40.42.90
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: edge
-- name: 🎵 🇺🇸 美国 (United States) 62(机房) - xiaohe
-  server: 38.91.107.49
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🎵 🇺🇸 美国 (United States) 63(机房) - xiaohe
-  server: 66.163.114.166
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 64(机房) - xiaohe
-  server: 169.197.142.22
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🎵 🇺🇸 美国 (United States) 65(机房) - xiaohe
-  server: 107.151.182.253
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 66(机房) - xiaohe
-  server: 169.197.140.224
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.discoverfreshgraduatejobsstartyourprofessionaljourney.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 67(机房) - xiaohe
-  server: 79.110.54.250
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 68(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
   server: 129.146.77.248
   port: 39495
   udp: true
@@ -653,97 +189,129 @@ proxies:
   network: ws
   ws-opts:
     path: /cctv13.m3u8
-- name: 🎵 🇺🇸 美国 (United States) 69(机房) - xiaohe
-  server: 216.152.156.49
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 70(机房) - xiaohe
-  server: 66.163.114.126
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 71(机房) - xiaohe
-  server: 66.163.112.121
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 66.163.112.121
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 72(机房) - xiaohe
-  server: 169.40.42.168
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 73(机房) - xiaohe
-  server: 66.163.112.31
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: unlockyourfuturefindyourperfectcareer.com
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 74(机房) - xiaohe
-  server: 107.151.182.197
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 75(机房) - xiaohe
-  server: 66.163.114.245
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 76(机房) - xiaohe
-  server: 79.110.53.169
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 77(机房) - xiaohe
-  server: 170.101.101.53
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 78(机房) - xiaohe
-  server: 95.215.201.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 79(机房) - xiaohe
+    headers:
+      Host: 129.146.77.248
+- name: 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
   server: 66.163.112.142
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: cdn.unlockyourfuturefindyourperfectcareer.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 80(机房) - xiaohe
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 17(机房) - xiaohe
+  server: 79.110.54.250
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 18(机房) - xiaohe
+  server: 95.215.201.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
+  server: 107.151.182.253
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 20(机房) - xiaohe
+  server: 107.151.182.197
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  server: 66.163.112.13
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 22(机房) - xiaohe
+  server: 156.146.38.168
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🎵 🇺🇸 美国 (United States) 23(机房) - xiaohe
+  server: 156.146.38.170
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🎵 🇺🇸 美国 (United States) 24(机房) - xiaohe
+  server: 156.146.38.167
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🎵 🇺🇸 美国 (United States) 25(机房) - xiaohe
+  server: 156.146.38.169
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🎵 🇺🇸 美国 (United States) 26(机房) - xiaohe
+  server: 107.155.57.11
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 27(机房) - xiaohe
+  server: 195.123.240.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+    short-id: 19296c9f1bf9c7b1
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🎵 🇺🇸 美国 (United States) 28(机房) - xiaohe
+  server: 79.110.53.169
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 29(机房) - xiaohe
+  server: 107.155.57.51
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 30(机房) - xiaohe
+  server: 38.107.236.166
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 48572af1-d091-457b-a86e-4a457e99927f
+  tls: true
+  servername: 3h-unitedstates3.09vpn.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: 3h-unitedstates3.09vpn.com
+- name: 🎵 🇺🇸 美国 (United States) 31(机房) - xiaohe
   server: 84.17.41.2
   port: 18000
   udp: true
@@ -751,87 +319,7 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-- name: 🎵 🇺🇸 美国 (United States) 81(机房) - xiaohe
-  server: 107.155.57.51
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 82(机房) - xiaohe
-  server: 23.230.52.119
-  port: 42878
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
-- name: 🎵 🇺🇸 美国 (United States) 83(机房) - xiaohe
-  server: 169.40.42.231
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 84(机房) - xiaohe
-  server: 169.40.42.163
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: ios
-- name: 🎵 🇺🇸 美国 (United States) 85(机房) - xiaohe
-  server: 66.163.122.46
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 86(机房) - xiaohe
-  server: 216.106.186.33
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 87(机房) - xiaohe
-  server: 66.163.112.171
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.unlockyourfuturefindyourperfectcareer.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 88(机房) - xiaohe
-  server: 216.106.186.66
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 89(机房) - xiaohe
-  server: 216.106.186.46
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 90(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 32(机房) - xiaohe
   server: 15.204.97.214
   port: 23576
   udp: true
@@ -841,84 +329,16 @@ proxies:
   tls: true
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
   servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 91(机房) - xiaohe
-  server: 138.199.43.159
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 92(机房) - xiaohe
-  server: 107.155.57.11
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 93(机房) - xiaohe
+  client-fingerprint: random
+- name: 🎵 🇺🇸 美国 (United States) 33(机房) - xiaohe
   server: 23.251.121.242
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇺🇸 美国 (United States) 94(机房) - xiaohe
-  server: 66.163.112.76
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 66.163.112.76
-  skip-cert-verify: true
-- name: 🎵 🇺🇸 美国 (United States) 95(机房) - xiaohe
-  server: 216.106.186.32
-  port: 443
-  udp: true
-  type: trojan
-  password: dba20dcb635e430fa4d3bfc303a149d2
-  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 96(机房) - xiaohe
-  server: 15.204.97.198
-  port: 23576
-  udp: true
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 97(机房) - xiaohe
-  server: www.findlocaljobnetworkandbuildcommunityconnections.com
-  port: 443
-  udp: true
-  type: trojan
-  password: 242a3d8eee5e4ed1a6bfa4141d549a25
-  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 98(机房) - xiaohe
-  server: 167.88.61.85
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.browseseniorrolesandenhanceyourcareertoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 99(机房) - xiaohe
-  server: 167.88.61.20
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.browseseniorrolesandenhanceyourcareertoday.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 100(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 34(机房) - xiaohe
   server: 15.204.97.206
   port: 23576
   udp: true
@@ -931,23 +351,7 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 101(机房) - xiaohe
-  server: 66.163.112.147
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.unlockyourfuturefindyourperfectcareer.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 102(机房) - xiaohe
-  server: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  port: 443
-  udp: true
-  type: trojan
-  password: dba20dcb635e430fa4d3bfc303a149d2
-  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 103(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 35(机房) - xiaohe
   server: 15.204.97.219
   port: 23576
   udp: true
@@ -960,23 +364,143 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🎵 🇺🇸 美国 (United States) 104(机房) - xiaohe
-  server: 66.163.114.106
+- name: 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
+  server: 66.163.114.114
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.findconnectwithemployersandbuildprofessionalnetwork.com
+  sni: 66.163.114.114
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 37(机房) - xiaohe
+  server: 216.106.186.32
+  port: 443
+  udp: true
+  type: trojan
+  password: dba20dcb635e430fa4d3bfc303a149d2
+  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 105(机房) - xiaohe
-  server: 167.88.61.52
+- name: 🎵 🇺🇸 美国 (United States) 38(机房) - xiaohe
+  server: 216.106.186.33
+  port: 443
+  udp: true
+  type: trojan
+  password: f0eb8c92ce8946aaba856569cff1a16b
+  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 39(机房) - xiaohe
+  server: 66.23.203.21
+  port: 59689
+  udp: true
+  type: trojan
+  password: ae7eb4dwyaz25pxwgq59
+  sni: 66.23.203.21
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 40(机房) - xiaohe
+  server: 66.163.114.166
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
+  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 106(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 41(机房) - xiaohe
+  server: 66.163.114.245
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: 66.163.114.245
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 42(机房) - xiaohe
+  server: 66.163.114.45
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.findconnectwithemployersandbuildprofessionalnetwork.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 43(机房) - xiaohe
+  server: 216.106.186.46
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 44(机房) - xiaohe
+  server: 216.106.186.32
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 45(机房) - xiaohe
+  server: 15.204.97.198
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🎵 🇺🇸 美国 (United States) 46(机房) - xiaohe
+  server: 193.151.160.9
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 47(机房) - xiaohe
+  server: 216.106.186.66
+  port: 443
+  udp: true
+  type: trojan
+  password: 242a3d8eee5e4ed1a6bfa4141d549a25
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 48(机房) - xiaohe
+  server: 45.138.100.248
+  port: 10443
+  udp: true
+  type: vless
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+- name: 🎵 🇺🇸 美国 (United States) 49(机房) - xiaohe
+  server: 67.220.85.46
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🎵 🇺🇸 美国 (United States) 50(机房) - xiaohe
+  server: 193.151.163.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 51(机房) - xiaohe
+  server: 216.152.156.212
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: 216.152.156.212
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 52(机房) - xiaohe
+  server: 138.199.43.159
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 53(机房) - xiaohe
   server: 216.152.156.65
   port: 443
   udp: true
@@ -984,28 +508,292 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 107(机房) - xiaohe
-  server: 169.197.140.214
+- name: 🎵 🇺🇸 美国 (United States) 54(机房) - xiaohe
+  server: 185.230.230.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 55(机房) - xiaohe
+  server: 38.110.1.246
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🎵 🇺🇸 美国 (United States) 56(机房) - xiaohe
+  server: 216.152.156.49
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.discoverfreshgraduatejobsstartyourprofessionaljourney.com
+  sni: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 57(机房) - xiaohe
+  server: 216.152.156.42
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 58(机房) - xiaohe
+  server: 216.106.186.155
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: api.findlocaljobnetworkandbuildcommunityconnections.com
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 108(机房) - xiaohe
-  server: 200.169.179.233
+- name: 🎵 🇺🇸 美国 (United States) 59(机房) - xiaohe
+  server: 45.86.51.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 60(机房) - xiaohe
+  server: 138.199.42.68
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇺🇸 美国 (United States) 61(机房) - xiaohe
+  server: 216.152.155.50
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 62(机房) - xiaohe
+  server: 193.151.160.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 63(机房) - xiaohe
+  server: 169.197.140.169
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: 169.197.140.169
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 64(机房) - xiaohe
+  server: 69.164.240.85
+  port: 50875
+  udp: true
+  type: trojan
+  password: nwilryafgkyvuxauc8pz
+  sni: 69.164.240.85
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 65(机房) - xiaohe
+  server: 45.138.100.248
+  port: 14430
+  udp: true
+  type: vless
+  uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.138.100.248
+- name: 🎵 🇺🇸 美国 (United States) 66(机房) - xiaohe
+  server: 159.89.87.21
+  port: 28190
+  udp: true
+  type: vless
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+- name: 🎵 🇺🇸 美国 (United States) 67(机房) - xiaohe
+  server: 170.101.101.19
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.explorecreativejobsandenhanceyourcareerportfolio.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 68(机房) - xiaohe
+  server: 167.17.69.171
   port: 443
   udp: true
   type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  uuid: 00144519-7e0d-476b-8d28-435576af9262
+  flow: xtls-rprx-vision
   tls: true
-  servername: vps3.nemnogogo.com
+  reality-opts:
+    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
+    short-id: 0990d22f
+  servername: www.cloudflare.com
+  client-fingerprint: edge
+- name: 🎵 🇺🇸 美国 (United States) 69(机房) - xiaohe
+  server: 170.101.101.237
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.explorecreativejobsandenhanceyourcareerportfolio.com
   skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 70(机房) - xiaohe
+  server: 66.163.122.46
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 71(机房) - xiaohe
+  server: 169.40.42.202
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: 🎵 🇺🇸 美国 (United States) 109(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 72(机房) - xiaohe
+  server: 66.163.122.26
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 73(机房) - xiaohe
+  server: 170.101.101.53
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.explorecreativejobsandenhanceyourcareerportfolio.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 74(机房) - xiaohe
+  server: 170.101.101.67
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.explorecreativejobsandenhanceyourcareerportfolio.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 75(机房) - xiaohe
+  server: 169.40.42.231
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🎵 🇺🇸 美国 (United States) 76(机房) - xiaohe
+  server: 169.40.42.90
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: random
+- name: 🎵 🇺🇸 美国 (United States) 77(机房) - xiaohe
+  server: 169.40.42.168
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: firefox
+- name: 🎵 🇺🇸 美国 (United States) 78(机房) - xiaohe
+  server: 15.204.247.206
+  port: 4444
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 🎵 🇺🇸 美国 (United States) 79(机房) - xiaohe
+  server: 69.48.201.136
+  port: 30016
+  udp: true
+  type: vless
+  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
+  network: ws
+  ws-opts:
+    path: /usserver
+    headers:
+      Host: zoom.us
+- name: 🎵 🇺🇸 美国 (United States) 80(机房) - xiaohe
+  server: 216.152.155.23
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
+- name: 🎵 🇺🇸 美国 (United States) 81(机房) - xiaohe
+  server: 169.40.42.74
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🎵 🇺🇸 美国 (United States) 82(机房) - xiaohe
+  server: 169.40.42.35
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🎵 🇺🇸 美国 (United States) 83(机房) - xiaohe
+  server: 169.40.42.229
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: ios
+- name: 🎵 🇺🇸 美国 (United States) 84(机房) - xiaohe
   server: clash.ddm4.cn
   port: 443
   udp: true
@@ -1021,42 +809,14 @@ proxies:
     path: /vmess
     headers:
       Host: clash.ddm4.cn
-- name: 🎵 🇺🇸 美国 (United States) 110(机房) - xiaohe
-  server: 195.123.240.65
-  port: 443
+- name: 🎵 🇺🇸 美国 (United States) 85(机房) - xiaohe
+  server: 23.230.52.119
+  port: 42878
   udp: true
-  type: vless
-  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
-    short-id: 19296c9f1bf9c7b1
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🎵 🇺🇸 美国 (United States) 111(机房) - xiaohe
-  server: 104.18.151.231
-  port: 443
-  udp: true
-  type: vless
-  uuid: eaf76557-2219-4799-8171-d7020adfefd0
-  tls: true
-  servername: hidden-star-98c5.tebohi79684008.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: hidden-star-98c5.tebohi79684008.workers.dev
-- name: 🎵 🇺🇸 美国 (United States) 112(机房) - xiaohe
-  server: 38.110.1.246
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🎵 🇺🇸 美国 (United States) 113(机房) - xiaohe
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
+- name: 🎵 🇺🇸 美国 (United States) 86(机房) - xiaohe
   server: 169.40.42.89
   port: 443
   udp: true
@@ -1068,8 +828,103 @@ proxies:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🎵 🇺🇸 美国 (United States) 87(机房) - xiaohe
+  server: www.findlocaljobnetworkandbuildcommunityconnections.com
+  port: 443
+  udp: true
+  type: trojan
+  password: 242a3d8eee5e4ed1a6bfa4141d549a25
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 88(机房) - xiaohe
+  server: 216.152.155.158
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 89(机房) - xiaohe
+  server: 169.197.140.218
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.discoverfreshgraduatejobsstartyourprofessionaljourney.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 90(机房) - xiaohe
+  server: 66.163.122.25
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 91(机房) - xiaohe
+  server: 200.169.179.233
+  port: 443
+  udp: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  tls: true
+  servername: vps3.nemnogogo.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+- name: 🎵 🇺🇸 美国 (United States) 92(机房) - xiaohe
+  server: 195.211.98.43
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+    short-id: 9c56fddf237e8eaf
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🎵 🇺🇸 美国 (United States) 93(机房) - xiaohe
+  server: 169.197.142.22
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🎵 🇺🇸 美国 (United States) 94(机房) - xiaohe
+  server: 169.40.42.163
+  port: 443
+  udp: true
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
   client-fingerprint: ios
-- name: 🎵 🇺🇸 美国 (United States) 114(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 95(机房) - xiaohe
+  server: 66.163.122.7
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: false
+- name: 🎵 🇺🇸 美国 (United States) 96(机房) - xiaohe
+  server: 38.91.107.49
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+- name: 🎵 🇺🇸 美国 (United States) 97(机房) - xiaohe
   server: 34.94.152.229
   port: 443
   udp: true
@@ -1077,35 +932,6 @@ proxies:
   password: '123456'
   sni: us.ctt25.uk
   skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 115(机房) - xiaohe
-  server: 129.153.71.28
-  port: 28863
-  udp: true
-  type: vless
-  uuid: 3e956106-7f92-4cbf-bf77-715d3890fa84
-  tls: true
-  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-- name: 🎵 🇺🇸 美国 (United States) 116(机房) - xiaohe
-  server: 38.107.236.166
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 48572af1-d091-457b-a86e-4a457e99927f
-  tls: true
-  servername: 3h-unitedstates3.09vpn.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: 3h-unitedstates3.09vpn.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -1211,25 +1037,6 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 95(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 96(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 97(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 98(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 99(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 100(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 101(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 102(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 103(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 104(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 105(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 106(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 107(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 108(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 109(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 110(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 111(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 112(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 113(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 114(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 115(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 116(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -1243,10 +1050,6 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -1260,11 +1063,10 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 06(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 17(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 18(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 19(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 20(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
@@ -1344,25 +1146,6 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 95(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 96(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 97(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 98(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 99(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 100(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 101(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 102(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 103(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 104(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 105(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 106(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 107(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 108(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 109(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 110(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 111(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 112(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 113(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 114(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 115(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 116(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -1467,25 +1250,6 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 95(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 96(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 97(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 98(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 99(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 100(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 101(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 102(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 103(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 104(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 105(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 106(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 107(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 108(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 109(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 110(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 111(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 112(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 113(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 114(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 115(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 116(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -1493,12 +1257,13 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 14(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 15(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 16(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 17(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 18(机房) - xiaohe
 rules:
 - MATCH,PROXIES

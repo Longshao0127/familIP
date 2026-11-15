@@ -37,13 +37,6 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
-  server: bogging-eyeteeth-fly.freesocks.work
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
 proxy-groups:
 - name: PROXIES
   type: select
@@ -51,7 +44,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,7 +52,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,6 +60,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇷🇴 罗马尼亚 (Romania) 01(机房) - xiaohe
-  - 🎵 🇷🇴 罗马尼亚 (Romania) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
