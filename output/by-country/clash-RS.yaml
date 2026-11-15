@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
-  server: s5.libertyrunet.store
+  server: 130.49.163.188
   port: 443
   udp: true
   type: hysteria2

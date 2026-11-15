@@ -24,29 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  server: 64.177.90.30
-  port: 8388
+- name: 🇵🇱 波兰 (Poland) 01 - xiaohe
+  server: 20.215.66.17
+  port: 2083
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: BWyPPTusFKhGgzKh
-- name: 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
-  server: 149.104.87.125
-  port: 15083
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: mx001.zestapp778.com
-  skip-cert-verify: true
+  type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  servername: www.apple.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,8 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -63,7 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
-  - 🎵 🇲🇽 墨西哥 (Mexico) 02(机房) - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 - xiaohe
 rules:
 - MATCH,PROXIES

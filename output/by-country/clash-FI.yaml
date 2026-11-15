@@ -33,17 +33,6 @@ proxies:
   sni: lakes.blog-forme.ru
   skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
-  server: 135.181.187.44
-  port: 443
-  udp: true
-  type: vless
-  uuid: beda6bd0-7ce4-477a-91f1-860d018dbfcb
-  flow: xtls-rprx-vision
-  tls: true
-  servername: sizipe.hagrid-connected.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -54,6 +43,17 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
+  server: 135.181.187.44
+  port: 443
+  udp: true
+  type: vless
+  uuid: beda6bd0-7ce4-477a-91f1-860d018dbfcb
+  flow: xtls-rprx-vision
+  tls: true
+  servername: sizipe.hagrid-connected.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
