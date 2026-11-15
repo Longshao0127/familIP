@@ -40,8 +40,8 @@ proxies:
   udp: true
   type: hysteria2
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: 94.183.164.119
-  skip-cert-verify: true
+  sni: lakes.blog-forme.ru
+  skip-cert-verify: false
 - name: 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
   server: 45.144.234.157
   port: 14430
@@ -53,6 +53,19 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
+  server: 132.243.163.119
+  port: 25749
+  udp: true
+  type: vless
+  uuid: e460e79d-5dd9-451d-8d1a-a84c8b70c9a7
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nmjOhfpVZtk9W-3GZk5JY0B-OvCFkjP2RvTVBNZO7lE
+    short-id: f6b3841eabafff9a
+  servername: 80aa2br.fi4.h1clayd.click
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -63,6 +76,7 @@ proxy-groups:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -71,6 +85,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -81,6 +96,7 @@ proxy-groups:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   - 🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

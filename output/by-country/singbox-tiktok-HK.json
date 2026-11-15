@@ -14,7 +14,7 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "t.me",
+        "server_name": "https://t.me/wangcai2🇨🇳",
         "insecure": true
       }
     },
@@ -26,7 +26,7 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "t.me",
+        "server_name": "vk.com",
         "insecure": true
       }
     },
@@ -38,7 +38,7 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "speedtest.tinkoff.ru",
+        "server_name": "https%3a%2f%2ft.me%2fwangcai2%e2%81%bf%c3%9f%c2%ab%e2%81%bf%c3%9f",
         "insecure": true
       }
     },
@@ -67,6 +67,27 @@
       "password": "DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY="
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe",
+      "server": "8.217.1.203",
+      "server_port": 8443,
+      "uuid": "8b17beac-b143-447d-aa68-14cbb121a602",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38",
+          "short_id": "0bf55f64"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -75,7 +96,8 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ]
     },
     {
@@ -86,7 +108,8 @@
         "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe"
+        "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
+        "🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
