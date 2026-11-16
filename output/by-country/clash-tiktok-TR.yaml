@@ -50,14 +50,6 @@ proxies:
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
   client-fingerprint: random
-- name: 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
-  server: 157.254.38.210
-  port: 20027
-  udp: true
-  type: trojan
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,7 +58,6 @@ proxy-groups:
   - AUTO
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,7 +67,6 @@ proxy-groups:
   proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -86,6 +76,5 @@ proxy-groups:
   proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
   - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES
