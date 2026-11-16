@@ -25,14 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
-  server: 130.49.163.188
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 307ee0e53ea04dfd86a7f2f9fcd53844
-  sni: s5.libertyrunet.store
-  skip-cert-verify: false
-- name: 🇷🇸 塞尔维亚 (Serbia) 02 - xiaohe
   server: 38.180.101.235
   port: 5443
   udp: true
@@ -46,9 +38,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - AUTO-UDP
   - 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
-  - 🇷🇸 塞尔维亚 (Serbia) 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -56,17 +46,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇷🇸 塞尔维亚 (Serbia) 02 - xiaohe
-- name: AUTO
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
-  - 🇷🇸 塞尔维亚 (Serbia) 02 - xiaohe
-- name: AUTO-UDP
+- name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300

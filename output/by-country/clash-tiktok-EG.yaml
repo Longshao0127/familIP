@@ -24,21 +24,19 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
-  server: 49930ag.es8.h1clayd.click
+- name: 🎵 🇪🇬 埃及 (Egypt) 01(机房) - xiaohe
+  server: 41.196.0.128
   port: 443
   udp: true
   type: vless
-  uuid: 88edfb30-a34b-41e1-a08f-985a93e3bc36
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: H_sPS4IJjHa4Wd7WLAtp_eamROtKBAj-G0UcMBHLHQw
-    short-id: 2437eeeb791b6d80
-  servername: 49930ag.es8.h1clayd.click
+    public-key: tyklNbOfb-FctP-J1OQa1yUHPY9p4co70RyYuRe9nR8
+    short-id: f68db13f
+  servername: eg1.gofizz.in
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 61c20be08f4f
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,7 +44,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🎵 🇪🇬 埃及 (Egypt) 01(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,7 +52,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🎵 🇪🇬 埃及 (Egypt) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,7 +60,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🎵 🇪🇬 埃及 (Egypt) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +68,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🎵 🇪🇬 埃及 (Egypt) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

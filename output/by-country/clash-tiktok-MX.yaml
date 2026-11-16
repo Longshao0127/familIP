@@ -24,21 +24,28 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  server: hy2-eee-1.aloranode.top
-  port: 443
+- name: 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  server: 64.177.90.30
+  port: 8388
   udp: true
-  type: hysteria2
-  password: b36a14f8-fc3f-4142-968f-48031cf5f330
-  sni: hy2-eee-1.aloranode.top
-  skip-cert-verify: false
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-TCP
   - AUTO
-  - AUTO-UDP
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+- name: AUTO-TCP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,14 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-- name: AUTO-UDP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

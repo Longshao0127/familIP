@@ -24,25 +24,19 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇻🇳 越南 (Vietnam) 01 - xiaohe
-  server: zfapi.zalolink.com
-  port: 55688
+- name: 🇪🇬 埃及 (Egypt) 01 - xiaohe
+  server: 41.196.0.128
+  port: 443
   udp: true
   type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 6dqd0hqbC0bht9RtsYamvlYdMpxyUbk7uXw0xtO8DzQ
-    short-id: 865c1b2c
-  servername: bilibili-vn.biliimg.com
-  client-fingerprint: chrome
-- name: 🇻🇳 越南 (Vietnam) 02 - xiaohe
-  server: 150.95.109.109
-  port: 2086
-  udp: true
-  type: vless
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+    public-key: tyklNbOfb-FctP-J1OQa1yUHPY9p4co70RyYuRe9nR8
+    short-id: f68db13f
+  servername: eg1.gofizz.in
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -50,8 +44,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇻🇳 越南 (Vietnam) 01 - xiaohe
-  - 🇻🇳 越南 (Vietnam) 02 - xiaohe
+  - 🇪🇬 埃及 (Egypt) 01 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,7 +52,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇻🇳 越南 (Vietnam) 01 - xiaohe
+  - 🇪🇬 埃及 (Egypt) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -67,8 +60,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇻🇳 越南 (Vietnam) 01 - xiaohe
-  - 🇻🇳 越南 (Vietnam) 02 - xiaohe
+  - 🇪🇬 埃及 (Egypt) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,7 +68,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇻🇳 越南 (Vietnam) 01 - xiaohe
-  - 🇻🇳 越南 (Vietnam) 02 - xiaohe
+  - 🇪🇬 埃及 (Egypt) 01 - xiaohe
 rules:
 - MATCH,PROXIES

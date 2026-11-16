@@ -8,26 +8,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe",
-      "server": "49930ag.es8.h1clayd.click",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 01 - xiaohe",
+      "server": "46.28.67.55",
       "server_port": 443,
-      "uuid": "88edfb30-a34b-41e1-a08f-985a93e3bc36",
+      "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "49930ag.es8.h1clayd.click",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "H_sPS4IJjHa4Wd7WLAtp_eamROtKBAj-G0UcMBHLHQw",
-          "short_id": "2437eeeb791b6d80"
+          "public_key": "i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU",
+          "short_id": "d06d78e974491b6e"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "61c20be08f4f"
       }
     },
     {
@@ -35,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe"
+        "🇷🇴 罗马尼亚 (Romania) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe"
+        "🇷🇴 罗马尼亚 (Romania) 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
