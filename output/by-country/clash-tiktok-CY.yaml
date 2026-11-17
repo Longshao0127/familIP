@@ -25,11 +25,29 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
-  server: 45.86.60.174
-  port: 16443
+  server: 5.253.42.164
+  port: 40443
   udp: true
   type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
+  servername: deepl.com
+  client-fingerprint: chrome
+- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
+  server: 132.243.212.204
+  port: 443
+  udp: true
+  type: vless
+  uuid: 352a250d-080b-47b5-b7db-f9f8fa31c551
+  flow: xtls-rprx-vision
+  tls: true
+  servername: 10w0wjw.virtual-network.lol
+  skip-cert-verify: false
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +55,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,6 +64,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,5 +73,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

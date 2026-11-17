@@ -25,6 +25,21 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
+  server: 104.18.155.229
+  port: 443
+  udp: true
+  type: vless
+  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
+  tls: true
+  servername: www.genflix.co.id.r3xxe.eu.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /au-do
+    headers:
+      Host: www.genflix.co.id.r3xxe.eu.cc
+- name: 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
   server: 45.63.30.142
   port: 443
   udp: true
@@ -36,8 +51,18 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
+  - 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -47,6 +72,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
+  - 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,5 +81,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
+  - 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
