@@ -37,17 +37,15 @@ proxies:
   servername: pl8.galioncc.com
   client-fingerprint: firefox
 - name: 🇵🇱 波兰 (Poland) 02 - xiaohe
-  server: 212.87.190.249
+  server: 45.194.66.177
   port: 443
   udp: true
   type: vless
-  uuid: 2208b003-78b1-453c-b5ca-ce847ff0efd6
+  uuid: 352a250d-080b-47b5-b7db-f9f8fa31c551
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: 0dAUffCns_r-xP3QP1V8qy2P29vBN5ROOoX96TxpvXA
-    short-id: b545243c33282b73
-  servername: d4a338t.pl8.h1clayd.click
+  servername: 31tawwo0.virtual-network.lol
+  skip-cert-verify: false
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
@@ -66,7 +64,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - xiaohe
-  - 🇵🇱 波兰 (Poland) 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204

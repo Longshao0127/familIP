@@ -24,33 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
-  server: www.true.th
-  port: 80
+- name: 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
+  server: 64.177.90.30
+  port: 8388
   udp: true
-  type: vless
-  uuid: f4c5605a-8424-441e-b23d-d6384d012c28
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: dcm4kwis2exkw.cloudfront.net
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -66,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  - 🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

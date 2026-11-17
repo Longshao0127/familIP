@@ -25,16 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  server: panel.autonetshop.ir
-  port: 43345
-  udp: true
-  type: hysteria2
-  password: d1gkicdgem3bsoaa
-  sni: panel.autonetshop.ir
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: km9oqmefh2km1i5n
-- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
   server: 62.133.63.45
   port: 8444
   udp: true
@@ -49,29 +39,13 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
-  server: 212.98.224.35
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9_UhwEt_9pf8WahM1K9O6-_0vAK6q0uiNGFoHBO7s3A
-    short-id: 0e3e4d96
-  servername: tr1.gofizzin.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - AUTO-UDP
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -79,19 +53,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
-- name: AUTO
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
-  - 🎵 🇹🇷 土耳其 (Turkey) 03(机房) - xiaohe
-- name: AUTO-UDP
+- name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300

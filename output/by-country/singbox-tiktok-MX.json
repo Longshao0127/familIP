@@ -7,32 +7,26 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇹🇭 泰国 (Thailand) 01 - xiaohe",
-      "server": "www.true.th",
-      "server_port": 80,
-      "uuid": "f4c5605a-8424-441e-b23d-d6384d012c28",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "dcm4kwis2exkw.cloudfront.net"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe",
+      "server": "64.177.90.30",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "BWyPPTusFKhGgzKh"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇭 泰国 (Thailand) 01 - xiaohe"
+        "🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇭 泰国 (Thailand) 01 - xiaohe"
+        "🎵 🇲🇽 墨西哥 (Mexico) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

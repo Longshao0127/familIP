@@ -53,6 +53,16 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe",
+      "server": "uae.unixzone.us",
+      "server_port": 22573,
+      "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
+      "transport": {
+        "type": "ws"
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -60,7 +70,8 @@
         "🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe",
         "🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe",
         "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
-        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe"
+        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe"
       ]
     },
     {
@@ -70,7 +81,8 @@
         "🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe",
         "🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe",
         "🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe",
-        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe"
+        "🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe",
+        "🎵 🇦🇪 阿联酋 (UAE) 05(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
