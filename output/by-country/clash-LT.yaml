@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
-  server: 84.32.248.124
+  server: 84.32.83.197
   port: 443
   udp: true
   type: vless
@@ -34,23 +34,14 @@ proxies:
   reality-opts:
     public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
     short-id: a7d309e4c16b825f
-  servername: net-io-api.galioncc.com
-  client-fingerprint: firefox
+  servername: api-dns-gw.galioncc.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
