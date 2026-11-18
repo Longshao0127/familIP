@@ -24,13 +24,13 @@
     {
       "type": "vless",
       "tag": "🇵🇱 波兰 (Poland) 02 - xiaohe",
-      "server": "45.194.66.177",
+      "server": "179.253.101.162",
       "server_port": 443,
-      "uuid": "352a250d-080b-47b5-b7db-f9f8fa31c551",
+      "uuid": "fd90e601-a56c-42b8-aab7-aa02d26fcb04",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "31tawwo0.virtual-network.lol",
+        "server_name": "app.streamru17.net",
         "insecure": false,
         "utls": {
           "enabled": true,

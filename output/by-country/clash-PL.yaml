@@ -38,14 +38,14 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
 - name: 🇵🇱 波兰 (Poland) 02 - xiaohe
-  server: 45.194.66.177
+  server: 179.253.101.162
   port: 443
   udp: true
   type: vless
-  uuid: 352a250d-080b-47b5-b7db-f9f8fa31c551
+  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
   flow: xtls-rprx-vision
   tls: true
-  servername: 31tawwo0.virtual-network.lol
+  servername: app.streamru17.net
   skip-cert-verify: false
   client-fingerprint: firefox
 proxy-groups:
