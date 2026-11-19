@@ -24,25 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
-  server: 84.32.83.197
+- name: 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  server: 216.238.104.154
   port: 443
   udp: true
-  type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  tls: true
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: a7d309e4c16b825f
-  servername: api-dns-gw.galioncc.com
-  client-fingerprint: chrome
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: findtemporaryworkandfreelancerprojectsonlineplatform.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -50,7 +46,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇱🇹 立陶宛 (Lithuania) 01(机房) - xiaohe
+  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES
