@@ -24,36 +24,19 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇭🇺 匈牙利 (Hungary) 01 - xiaohe
-  server: 172.67.131.125
-  port: 2083
+- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  server: 45.86.60.174
+  port: 16443
   udp: true
   type: vless
-  uuid: f418674e-f518-4318-8ff9-e10000000046
-  tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /syncfp=chrome
-    headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇭🇺 匈牙利 (Hungary) 01 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇭🇺 匈牙利 (Hungary) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -61,7 +44,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇭🇺 匈牙利 (Hungary) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -69,6 +52,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇭🇺 匈牙利 (Hungary) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

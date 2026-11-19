@@ -37,17 +37,6 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  server: 13.140.56.100
-  port: 14430
-  udp: true
-  type: vless
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
   server: xray-dmr3b3hy-calm-maple-7.cloady.io
   port: 443
   udp: true
@@ -70,7 +59,6 @@ proxy-groups:
   - AUTO
   - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -80,7 +68,6 @@ proxy-groups:
   proxies:
   - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -90,6 +77,5 @@ proxy-groups:
   proxies:
   - 🎵 🇮🇳 印度 (India) 01(机房) - xiaohe
   - 🎵 🇮🇳 印度 (India) 02(机房) - xiaohe
-  - 🎵 🇮🇳 印度 (India) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

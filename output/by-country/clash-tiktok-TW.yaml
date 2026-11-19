@@ -30,7 +30,7 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 160.187.100.109
+  sni: 127.0.0.1
   skip-cert-verify: true
 - name: 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
   server: 103.115.109.49
@@ -38,9 +38,9 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 103.115.109.49
+  sni: https://t.me/oneclickvpnkeys
   skip-cert-verify: true
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 03(家宽) - xiaohe
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
   server: 60.248.219.78
   port: 443
   udp: true
@@ -54,19 +54,6 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
-  server: 85.237.207.221
-  port: 443
-  udp: true
-  type: vless
-  uuid: b59bcb5b-5150-4c6b-9227-681886197014
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lJz7AGWUC-ZTEIJaU5y1GRrROWJ9J_VzQRyrYPmOygs
-    short-id: fd2fa5e06670120b
-  servername: dl.google.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -76,8 +63,7 @@ proxy-groups:
   - AUTO-UDP
   - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(家宽) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -85,8 +71,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(家宽) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -96,8 +81,7 @@ proxy-groups:
   proxies:
   - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(家宽) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
