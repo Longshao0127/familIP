@@ -24,21 +24,28 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
-  server: 216.238.104.154
+- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  server: 193.233.219.98
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: findtemporaryworkandfreelancerprojectsonlineplatform.com
+  type: vless
+  uuid: 265ecca2-4733-49de-b2c9-ed7f0e999655
+  tls: true
+  servername: daily-author.ru
   skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /api/vless
+    headers:
+      Host: vpn-rating.space
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,7 +53,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,6 +61,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

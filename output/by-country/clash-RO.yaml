@@ -24,26 +24,35 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
-  server: 138.124.180.137
+- name: 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
+  server: 176.108.245.73
   port: 443
   udp: true
   type: vless
-  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
-    short-id: 33acba1b
-  servername: www.apple.com
+    public-key: _qSbW4JL4Ffqvj25vX-6a2ul9Qlj6PBdlF0ghsf_0RQ
+    short-id: a9dc98a7dc87a7dc
+  servername: pawuk.belka.tv
   client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +60,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +68,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇱🇻 拉脱维亚 (Latvia) 01(机房) - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
 rules:
 - MATCH,PROXIES
