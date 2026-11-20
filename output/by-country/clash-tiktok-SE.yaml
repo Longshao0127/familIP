@@ -25,21 +25,13 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
-  server: 95.143.196.32
-  port: 443
-  udp: true
-  type: trojan
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  sni: connect-se.mimowhat.online
-  skip-cert-verify: true
-- name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   server: 138.199.55.243
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+- name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   server: 88.216.214.159
   port: 443
   udp: true
@@ -51,18 +43,15 @@ proxies:
     short-id: a7c92e4b10d6f835
   servername: api-svc-mgr.galioncc.com
   client-fingerprint: chrome
-- name: 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
-  server: 5.178.109.174
-  port: 14430
+- name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  server: 95.143.196.97
+  port: 443
   udp: true
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.178.109.174
-- name: 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
+  type: trojan
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+  skip-cert-verify: false
+- name: 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
   server: 138.124.86.230
   port: 48115
   udp: true
@@ -79,22 +68,12 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -106,7 +85,6 @@ proxy-groups:
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -118,6 +96,5 @@ proxy-groups:
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
-  - 🎵 🇸🇪 瑞典 (Sweden) 05(机房) - xiaohe
 rules:
 - MATCH,PROXIES

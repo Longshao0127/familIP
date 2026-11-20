@@ -24,20 +24,32 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
-  server: 64.177.90.30
-  port: 8388
+- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+  server: 136.148.83.69
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: BWyPPTusFKhGgzKh
+  type: vless
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+  tls: true
+  servername: szqbx-ru-77dc.my-fade.cloud
+  skip-cert-verify: false
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,7 +57,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,6 +65,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

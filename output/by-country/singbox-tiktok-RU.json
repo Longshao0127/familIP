@@ -9,27 +9,21 @@
     {
       "type": "vless",
       "tag": "🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe",
-      "server": "193.233.219.98",
+      "server": "200.169.179.233",
       "server_port": 443,
-      "uuid": "265ecca2-4733-49de-b2c9-ed7f0e999655",
+      "uuid": "38308ff1-5aa9-494f-a25a-0f2870d56b3e",
       "tls": {
         "enabled": true,
-        "server_name": "daily-author.ru",
+        "server_name": "vps3.nemnogogo.com",
         "insecure": false,
-        "alpn": [
-          "http"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/api/vless",
-        "headers": {
-          "Host": "vpn-rating.space"
-        }
+        "type": "grpc",
+        "service_name": "mobile.api.Event"
       }
     },
     {

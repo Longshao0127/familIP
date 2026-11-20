@@ -25,20 +25,18 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  server: 193.233.219.98
+  server: 200.169.179.233
   port: 443
   udp: true
   type: vless
-  uuid: 265ecca2-4733-49de-b2c9-ed7f0e999655
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
   tls: true
-  servername: daily-author.ru
+  servername: vps3.nemnogogo.com
   skip-cert-verify: false
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /api/vless
-    headers:
-      Host: vpn-rating.space
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
 proxy-groups:
 - name: PROXIES
   type: select
