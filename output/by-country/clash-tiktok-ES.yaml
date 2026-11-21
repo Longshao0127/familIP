@@ -32,28 +32,20 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe
-  server: 167.17.71.167
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe
   server: 66.163.118.103
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe
-  server: 66.163.118.166
-  port: 443
+- name: 🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe
+  server: 167.17.71.167
+  port: 19999
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: false
-- name: 🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe
   server: 66.163.118.115
   port: 443
   udp: true
@@ -61,27 +53,6 @@ proxies:
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: discovergreatjobsandadvanceyourcareer.com
   skip-cert-verify: false
-- name: 🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe
-  server: 66.163.118.251
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: false
-- name: 🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe
-  server: 7aa271t.es1.h1clayd.click
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
-    short-id: 42426c882c5fcd41
-  servername: 7aa271t.es1.h1clayd.click
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,9 +63,6 @@ proxy-groups:
   - 🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe
   - 🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe
   - 🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -106,9 +74,6 @@ proxy-groups:
   - 🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe
   - 🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe
   - 🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -120,8 +85,5 @@ proxy-groups:
   - 🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe
   - 🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe
   - 🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe
-  - 🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe
 rules:
 - MATCH,PROXIES

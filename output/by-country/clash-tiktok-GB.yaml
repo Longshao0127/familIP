@@ -25,19 +25,24 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇬🇧 英国 (United Kingdom) 01(机房) - xiaohe
-  server: 38.114.120.221
-  port: 19999
+  server: 13.143.187.220
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  uuid: 66c78912-4e2d-41dc-8742-aaae2590804e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: eDzVz3bxkv3IoN3BUCa_aA-RicoeG7ACylYSnmS2Pgg
+  servername: fi-s1.kadrhub.tech
+  client-fingerprint: firefox
 - name: 🎵 🇬🇧 英国 (United Kingdom) 02(机房) - xiaohe
-  server: 142.202.51.22
-  port: 19999
+  server: 158.173.24.73
+  port: 443
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🎵 🇬🇧 英国 (United Kingdom) 03(机房) - xiaohe
   server: 185.176.206.9
   port: 19999
@@ -46,40 +51,48 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇬🇧 英国 (United Kingdom) 04(机房) - xiaohe
-  server: 158.173.24.73
-  port: 443
+  server: 142.202.51.22
+  port: 19999
   udp: true
   type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇬🇧 英国 (United Kingdom) 05(机房) - xiaohe
+  server: 38.114.120.221
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe
   server: 141.98.101.181
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe
+- name: 🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe
   server: 141.98.101.178
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe
-  server: 94.156.250.148
-  port: 7001
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
 - name: 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
-  server: 98.98.142.161
-  port: 8080
+  server: 51.38.71.147
+  port: 443
   udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
+  type: vless
+  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  tls: true
+  servername: uk1.connectsuite.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /cdn-cgi/ws
+    headers:
+      Host: uk1.connectsuite.org
 - name: 🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe
   server: 146.70.61.37
   port: 8080
@@ -88,29 +101,19 @@ proxies:
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
 - name: 🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe
-  server: 57.129.132.223
-  port: 80
+  server: 98.98.142.161
+  port: 8080
   udp: true
-  type: vless
-  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: google.com
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🎵 🇬🇧 英国 (United Kingdom) 11(机房) - xiaohe
-  server: 107.181.151.128
-  port: 443
+  server: 98.98.207.163
+  port: 8080
   udp: true
-  type: vless
-  uuid: 88742d38-3f5c-4b9c-b256-7df5db8257ec
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-    short-id: 8f79726c5002
-  servername: www.mozilla.org
-  client-fingerprint: firefox
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
 - name: 🎵 🇬🇧 英国 (United Kingdom) 12(机房) - xiaohe
   server: 144.48.11.146
   port: 43000
@@ -124,10 +127,37 @@ proxies:
     short-id: ee4ea980
   servername: 144.48.11.146
   client-fingerprint: firefox
+- name: 🎵 🇬🇧 英国 (United Kingdom) 13(机房) - xiaohe
+  server: 45.43.153.33
+  port: 443
+  udp: true
+  type: vless
+  uuid: d6752c6b-80ae-4a91-b446-bb330f7f8177
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: _0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg
+    short-id: 88a13cf2655c
+  servername: www.foxsports.com
+  client-fingerprint: firefox
+- name: 🎵 🇬🇧 英国 (United Kingdom) 14(机房) - xiaohe
+  server: 107.181.151.128
+  port: 443
+  udp: true
+  type: vless
+  uuid: 88742d38-3f5c-4b9c-b256-7df5db8257ec
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
+    short-id: 8f79726c5002
+  servername: www.mozilla.org
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇬🇧 英国 (United Kingdom) 01(机房) - xiaohe
@@ -142,6 +172,16 @@ proxy-groups:
   - 🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 11(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 12(机房) - xiaohe
+  - 🎵 🇬🇧 英国 (United Kingdom) 13(机房) - xiaohe
+  - 🎵 🇬🇧 英国 (United Kingdom) 14(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇬🇧 英国 (United Kingdom) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -161,6 +201,8 @@ proxy-groups:
   - 🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 11(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 12(机房) - xiaohe
+  - 🎵 🇬🇧 英国 (United Kingdom) 13(机房) - xiaohe
+  - 🎵 🇬🇧 英国 (United Kingdom) 14(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -180,5 +222,7 @@ proxy-groups:
   - 🎵 🇬🇧 英国 (United Kingdom) 10(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 11(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 12(机房) - xiaohe
+  - 🎵 🇬🇧 英国 (United Kingdom) 13(机房) - xiaohe
+  - 🎵 🇬🇧 英国 (United Kingdom) 14(机房) - xiaohe
 rules:
 - MATCH,PROXIES
