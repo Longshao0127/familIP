@@ -38,7 +38,7 @@ proxies:
   udp: true
   type: hysteria2
   password: github.com/Alvin9999-newpac/fanqiang
-  sni: …
+  sni: bing.com
   skip-cert-verify: true
 - name: 🎵 🇫🇷 法国 (France) 03(机房) - xiaohe
   server: 198.244.201.129
@@ -55,28 +55,28 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇫🇷 法国 (France) 05(机房) - xiaohe
-  server: 167.17.64.22
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 06(机房) - xiaohe
   server: 167.17.64.27
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 07(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 06(机房) - xiaohe
   server: 172.99.189.142
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇫🇷 法国 (France) 07(机房) - xiaohe
+  server: 167.17.64.175
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇫🇷 法国 (France) 08(机房) - xiaohe
-  server: 38.109.228.110
+  server: 167.17.64.22
   port: 19999
   udp: true
   type: ss
@@ -90,12 +90,18 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇫🇷 法国 (France) 10(机房) - xiaohe
-  server: 167.17.64.175
-  port: 19999
+  server: 62.210.91.10
+  port: 23576
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
 - name: 🎵 🇫🇷 法国 (France) 11(机房) - xiaohe
   server: 62.210.91.2
   port: 23576
@@ -111,6 +117,21 @@ proxies:
   client-fingerprint: chrome
 - name: 🎵 🇫🇷 法国 (France) 12(机房) - xiaohe
   server: 152.228.139.33
+  port: 35108
+  udp: true
+  type: vless
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  tls: true
+  reality-opts:
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  servername: www.nvidia.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-common3
+- name: 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
+  server: 152.228.139.33
   port: 51671
   udp: true
   type: vless
@@ -120,23 +141,23 @@ proxies:
     public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
     short-id: 2fed44d8c59f7e71
   servername: www.sony.com
-  client-fingerprint: chrome
+  client-fingerprint: random
   network: grpc
   grpc-opts:
     grpc-service-name: grpc_common3
-- name: 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
-  server: 62.210.91.10
-  port: 23576
+- name: 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
+  server: 62.144.51.95
+  port: 443
   udp: true
   type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  servername: fuck.rkn
-  client-fingerprint: chrome
+  uuid: c657310e-d87c-4358-9cb7-200a0c3f35e8
+- name: 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
+  server: 38.109.228.110
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -157,6 +178,8 @@ proxy-groups:
   - 🎵 🇫🇷 法国 (France) 11(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 12(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -175,6 +198,8 @@ proxy-groups:
   - 🎵 🇫🇷 法国 (France) 11(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 12(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -195,6 +220,8 @@ proxy-groups:
   - 🎵 🇫🇷 法国 (France) 11(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 12(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

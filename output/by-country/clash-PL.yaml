@@ -24,28 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
-  server: 92.223.84.254
+- name: 🇵🇱 波兰 (Poland) 01 - xiaohe
+  server: 144.31.3.89
   port: 443
   udp: true
   type: vless
-  uuid: 740b2630-b42d-425c-bacd-37e7e30d78f1
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   tls: true
-  servername: subgift.gcorecdn.com
+  servername: clearingmatch.melodramaonline.net
   skip-cert-verify: false
   client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /t.me-SubGift
-    headers:
-      Host: subgift.gcorecdn.com
+    path: /media/ws/
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -61,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
+  - 🇵🇱 波兰 (Poland) 01 - xiaohe
 rules:
 - MATCH,PROXIES
