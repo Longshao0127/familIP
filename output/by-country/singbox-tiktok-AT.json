@@ -7,8 +7,40 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe",
+      "server": "212.109.193.194",
+      "server_port": 2096,
+      "uuid": "e436321f-24a9-4c38-b935-7d7dee0c3f68",
+      "tls": {
+        "enabled": true,
+        "server_name": "id.vk.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless-grpc-reality"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe",
+      "server": "152.53.1.57",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "AdawffFMHymlasRb0VOP3HFf7sTG5sJx"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe",
       "server": "82.110.60.9",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -16,7 +48,7 @@
     },
     {
       "type": "vmess",
-      "tag": "🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe",
+      "tag": "🎵 🇦🇹 奥地利 (Austria) 04(机房) - xiaohe",
       "server": "154.47.19.225",
       "server_port": 1270,
       "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
@@ -33,7 +65,9 @@
       "outbounds": [
         "auto",
         "🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe",
-        "🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe"
+        "🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe",
+        "🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe",
+        "🎵 🇦🇹 奥地利 (Austria) 04(机房) - xiaohe"
       ]
     },
     {
@@ -41,7 +75,9 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe",
-        "🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe"
+        "🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe",
+        "🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe",
+        "🎵 🇦🇹 奥地利 (Austria) 04(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

@@ -24,48 +24,7 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇩🇪 德国 (Germany) 01(移动) - xiaohe
-  server: 47.85.162.44
-  port: 443
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
-- name: 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
-  server: 172.235.37.168
-  port: 443
-  udp: true
-  type: vless
-  uuid: dbac71f3-ab05-4194-985b-f07088bf1a4a
-  tls: true
-  reality-opts:
-    public-key: 1iwAzh_XzSCYWZEVZ0lfczKFd--jXx3coCt5le58gEM
-    short-id: c52e85fe
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
-  server: 172.233.129.65
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9d91b606-9117-4f8f-8df7-dda7facf3a57
-  tls: true
-  reality-opts:
-    public-key: Z-RbKKLYcL0Rs6FgAjrrIyN6pAuZjP0JmaP9kLKoER0
-    short-id: 08d9f55d
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   server: 172.236.233.130
   port: 443
   udp: true
@@ -82,7 +41,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   server: 107.191.58.86
   port: 443
   udp: true
@@ -92,6 +51,57 @@ proxies:
   reality-opts:
     public-key: ZZwZGoX0Us8t6nLvckDWskC1c25F9rL0_nUXmd8BFxQ
     short-id: 8dd324c1
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
+  server: 45.32.70.42
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8c392beb-524d-4d0a-a3a6-4d542d54a1ff
+  tls: true
+  reality-opts:
+    public-key: cQZ-dTY4QSQteDYpngP2PavOsn9yY9lIP-OscwzwAio
+    short-id: 4dda4608
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
+  server: 172.233.142.149
+  port: 443
+  udp: true
+  type: vless
+  uuid: 61e3954d-0d66-4b69-b6cd-9b4fc2352303
+  tls: true
+  reality-opts:
+    public-key: f9D1ZzG6vP1HgjCaCIutbykWkab8VEDuitwuwaeuBgY
+    short-id: 4206512a
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇺🇸 美国 (United States) 05(机房) - xiaohe
+  server: 172.233.129.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9d91b606-9117-4f8f-8df7-dda7facf3a57
+  tls: true
+  reality-opts:
+    public-key: Z-RbKKLYcL0Rs6FgAjrrIyN6pAuZjP0JmaP9kLKoER0
+    short-id: 08d9f55d
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: ws
@@ -117,40 +127,6 @@ proxies:
     headers:
       Host: itunes.apple.com
 - name: 🎵 🇺🇸 美国 (United States) 07(机房) - xiaohe
-  server: 172.233.129.172
-  port: 443
-  udp: true
-  type: vless
-  uuid: 40a4b915-5e6f-4316-9bb1-e899f30608e3
-  tls: true
-  reality-opts:
-    public-key: LWfC_chpo4uDtzJ9VVnuTcf6zTzWKx-LCJAE2Ltl7h4
-    short-id: 5818adc3
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
-  server: 45.32.70.42
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8c392beb-524d-4d0a-a3a6-4d542d54a1ff
-  tls: true
-  reality-opts:
-    public-key: cQZ-dTY4QSQteDYpngP2PavOsn9yY9lIP-OscwzwAio
-    short-id: 4dda4608
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
   server: 172.236.227.60
   port: 443
   udp: true
@@ -167,16 +143,16 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  server: 172.233.142.149
+- name: 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
+  server: 172.235.37.168
   port: 443
   udp: true
   type: vless
-  uuid: 61e3954d-0d66-4b69-b6cd-9b4fc2352303
+  uuid: dbac71f3-ab05-4194-985b-f07088bf1a4a
   tls: true
   reality-opts:
-    public-key: f9D1ZzG6vP1HgjCaCIutbykWkab8VEDuitwuwaeuBgY
-    short-id: 4206512a
+    public-key: 1iwAzh_XzSCYWZEVZ0lfczKFd--jXx3coCt5le58gEM
+    short-id: c52e85fe
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: ws
@@ -184,24 +160,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  server: 172.236.241.130
-  port: 443
-  udp: true
-  type: vless
-  uuid: 21117a67-21c2-4e2a-ba8f-bc49e23b0ae8
-  tls: true
-  reality-opts:
-    public-key: ibi0jOH5SfYhh7ycxdBrqq5oN4ajN3-dNiHKWC2VYWs
-    short-id: 51ecfe9e
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
+- name: 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
   server: 172.235.48.245
   port: 443
   udp: true
@@ -218,32 +177,16 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  server: US032012.westmgreen.com
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 5decdd8c-5790-4d16-9ce9-5cd7fb1934fc
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: US032012.westmgreen.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /wes
-    headers:
-      Host: US032012.westmgreen.com
-- name: 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
-  server: 139.162.91.239
+- name: 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
+  server: 172.236.241.130
   port: 443
   udp: true
   type: vless
-  uuid: b0dc852a-97ec-4d4e-9179-f0e5c2ef1489
+  uuid: 21117a67-21c2-4e2a-ba8f-bc49e23b0ae8
   tls: true
   reality-opts:
-    public-key: 7PBmAR6CGAh2naIi09rlP_PtmLmqhlXF_toZEdAHmRo
-    short-id: 7c6d6833
+    public-key: ibi0jOH5SfYhh7ycxdBrqq5oN4ajN3-dNiHKWC2VYWs
+    short-id: 51ecfe9e
   servername: itunes.apple.com
   client-fingerprint: chrome
   network: ws
@@ -251,48 +194,145 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
-  server: 172.105.203.15
-  port: 443
-  udp: true
-  type: vless
-  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
-  tls: true
-  reality-opts:
-    public-key: HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA
-    short-id: 0784b134
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  server: 198.13.53.39
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
-  tls: true
-  reality-opts:
-    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
-    short-id: 7a7cc838
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
-  server: 57.131.27.21
-  port: 8388
+- name: 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  server: 202.50.253.36
+  port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
-  password: itzvpn@321
-- name: 🎵 🇯🇵 日本 (Japan) 18(机房) - xiaohe
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  server: 202.50.253.45
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
+  server: 202.50.253.81
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
+  server: 202.50.253.99
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  server: 202.50.253.63
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  server: 202.50.253.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  server: 202.50.253.54
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
+  server: 202.50.253.27
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
+  server: 202.50.253.90
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
+  server: 202.50.253.72
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  server: 172.233.129.172
+  port: 443
+  udp: true
+  type: vless
+  uuid: 40a4b915-5e6f-4316-9bb1-e899f30608e3
+  tls: true
+  reality-opts:
+    public-key: LWfC_chpo4uDtzJ9VVnuTcf6zTzWKx-LCJAE2Ltl7h4
+    short-id: 5818adc3
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  server: 49.12.36.119
+  port: 443
+  udp: true
+  type: vless
+  uuid: 05b8bddf-ff28-4504-b12a-33df21f52319
+  tls: true
+  servername: germanyhetz.onlineblog.ir
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  network: httpupgrade
+  httpupgrade-opts:
+    path: /
+    headers:
+      Host: germanyhetz.onlineblog.ir
+- name: 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  server: 176.98.176.60
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: mosaic.topp-con.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe
+  server: 104.171.135.229
+  port: 443
+  udp: true
+  type: vless
+  uuid: Fluffy_VPN-Oth8rOq3
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mpo4BIcoWiMXAQGt5a8IJ4MFkPJQyLC50dO_bXzC7z0
+  servername: absolute-disaster.org
+  client-fingerprint: chrome
+- name: 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  server: 188.225.78.178
+  port: 443
+  udp: true
+  type: vless
+  uuid: a4740bee-81ad-4a58-99c9-eca576ecb6e6
+  tls: true
+  servername: cadrin.wtf
+  skip-cert-verify: false
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cache.sync.v1
+- name: 🎵 🇯🇵 日本 (Japan) 26(机房) - xiaohe
   server: 139.162.125.126
   port: 443
   udp: true
@@ -309,137 +349,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 19(机房) - xiaohe
-  server: jp2api.jumpernode.site
-  port: 443
-  udp: true
-  type: vless
-  uuid: bc808d0e-aabb-47b9-9c5e-765a6e69f27f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GeKuYNeAqQQkTN9OMJxXA9I-rXs7IiGh4Sl82crCITc
-    short-id: 6281f3ef81187ad8
-  servername: us.amazon.com
-  client-fingerprint: chrome
-- name: 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  server: 202.50.253.72
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  server: 202.50.253.45
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  server: 202.50.253.54
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  server: 202.50.253.27
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇬 新加坡 (Singapore) 24(机房) - xiaohe
-  server: 172.104.48.194
-  port: 443
-  udp: true
-  type: vless
-  uuid: a28d0884-193d-4591-aa64-8638ba1481ce
-  tls: true
-  reality-opts:
-    public-key: u_4r8NRmRsN5Ndbt0koyC73DLC7mCcK4wAA0YiIR4ko
-    short-id: b0af872e
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
-  server: 139.180.221.53
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
-  tls: true
-  reality-opts:
-    public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
-    short-id: 2f6f6f87
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
-  server: 202.50.253.99
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
-  server: 176.98.176.60
-  port: 443
-  udp: true
-  type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: mosaic.topp-con.xyz
-  skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🎵 🇺🇸 美国 (United States) 28(机房) - xiaohe
-  server: jp2api.jumpernode.site
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2d95d999-891b-4bdb-920b-c3a55093a04e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: CKfGUIOy-k2OfwtxsqeHIQWwR29WAbypOvKH4bAVo18
-    short-id: 732d5d
-  servername: eu-images.shop.samsung.com
-  client-fingerprint: chrome
-- name: 🎵 🇮🇹 意大利 (Italy) 29(机房) - xiaohe
-  server: 202.50.253.36
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇯🇵 日本 (Japan) 30(机房) - xiaohe
-  server: 172.104.86.181
-  port: 443
-  udp: true
-  type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
-  tls: true
-  reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: c8559ca1
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 31(机房) - xiaohe
+- name: 🎵 🇯🇵 日本 (Japan) 27(机房) - xiaohe
   server: 45.76.222.108
   port: 443
   udp: true
@@ -456,21 +366,138 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
-  server: 202.50.253.81
-  port: 19999
+- name: 🎵 🇯🇵 日本 (Japan) 28(机房) - xiaohe
+  server: 172.105.203.15
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇮🇹 意大利 (Italy) 33(机房) - xiaohe
-  server: 202.50.253.18
-  port: 19999
+  type: vless
+  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
+  tls: true
+  reality-opts:
+    public-key: HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA
+    short-id: 0784b134
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇯🇵 日本 (Japan) 29(机房) - xiaohe
+  server: 198.13.53.39
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇺🇸 美国 (United States) 34(机房) - xiaohe
+  type: vless
+  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
+  tls: true
+  reality-opts:
+    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
+    short-id: 7a7cc838
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇫🇮 芬兰 (Finland) 30(机房) - xiaohe
+  server: 172.64.79.163
+  port: 2083
+  udp: true
+  type: vless
+  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+  tls: true
+  servername: vipfree.dr-ping.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vipfree.dr-ping.ir
+- name: 🎵 🇦🇹 奥地利 (Austria) 31(机房) - xiaohe
+  server: 212.109.193.194
+  port: 2096
+  udp: true
+  type: vless
+  uuid: e436321f-24a9-4c38-b935-7d7dee0c3f68
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: id.vk.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+- name: 🎵 🇯🇵 日本 (Japan) 32(机房) - xiaohe
+  server: 172.104.86.181
+  port: 443
+  udp: true
+  type: vless
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  tls: true
+  reality-opts:
+    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
+    short-id: c8559ca1
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇸🇬 新加坡 (Singapore) 33(机房) - xiaohe
+  server: 172.104.48.194
+  port: 443
+  udp: true
+  type: vless
+  uuid: a28d0884-193d-4591-aa64-8638ba1481ce
+  tls: true
+  reality-opts:
+    public-key: u_4r8NRmRsN5Ndbt0koyC73DLC7mCcK4wAA0YiIR4ko
+    short-id: b0af872e
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇸🇬 新加坡 (Singapore) 34(机房) - xiaohe
+  server: 139.162.20.241
+  port: 443
+  udp: true
+  type: vless
+  uuid: 7f0270f9-1abc-4c4f-960d-0a23e32f1eb8
+  tls: true
+  reality-opts:
+    public-key: fG1u2AZj5pgSNWO3MBmkoY6K61xBwnuYX3_z1fSeR0o
+    short-id: 640c807d
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇸🇬 新加坡 (Singapore) 35(机房) - xiaohe
+  server: 139.180.221.53
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
+  tls: true
+  reality-opts:
+    public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
+    short-id: 2f6f6f87
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
   server: 162.35.101.177
   port: 443
   udp: true
@@ -485,112 +512,79 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 99f2107b03f8
-- name: 🎵 🇮🇹 意大利 (Italy) 35(机房) - xiaohe
-  server: 202.50.253.63
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
-  server: 136.148.208.221
+- name: 🎵 🇯🇵 日本 (Japan) 37(机房) - xiaohe
+  server: 104.17.50.53
   port: 443
   udp: true
   type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 38(机房) - xiaohe
+  server: free.fugui.lol
+  port: 47396
+  udp: true
+  type: vless
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
-    short-id: 8d0d0679f42ffd98
-  servername: 8a2e72t.nl20.h1clayd.shop
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: fa514b83
+  servername: swdist.apple.com
   client-fingerprint: chrome
-- name: 🎵 🇮🇹 意大利 (Italy) 37(机房) - xiaohe
-  server: 202.50.253.90
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇬 新加坡 (Singapore) 38(机房) - xiaohe
-  server: 141.193.213.21
+- name: 🎵 🇺🇸 美国 (United States) 39(机房) - xiaohe
+  server: 188.114.96.3
   port: 8443
   udp: true
   type: vmess
-  uuid: bd67fcd2-ec34-40a6-aac6-67731f2d7011
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
   cipher: auto
   tls: true
-  servername: matrix.phonicsindia.mobi
+  servername: v2ray1.dozapp.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /
+    path: /lMnsZUN4/
     headers:
-      Host: matrix.phonicsindia.mobi
-- name: 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  server: 77.67.18.254
-  port: 25680
+      Host: v2ray1.dozapp.xyz
+- name: 🎵 🇳🇱 荷兰 (Netherlands) 40(机房) - xiaohe
+  server: 172.67.139.189
+  port: 443
   udp: true
   type: vless
-  uuid: af8e3c87-2a75-44fa-9a8b-0227a9d2cb82
-  flow: xtls-rprx-vision
+  uuid: 364D2D52-E61E-4E52-80EC-2BC6BDF15349
   tls: true
-  reality-opts:
-    public-key: hARhHGV09mnEUWA1a7pG6_K4lztUhKCK3iGeboGGP2g
-    short-id: 7ce8c8e1
-  servername: apple.com
-  client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 40(机房) - xiaohe
-  server: 172.64.144.52
-  port: 443
-  udp: true
-  type: trojan
-  password: 31703819-c5eb-44fe-98d5-07799c80bd70
-  sni: de01.node.qixi.best
+  servername: fr-free.fastestrelay.com
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /download
-- name: 🎵 🇺🇸 美国 (United States) 41(机房) - xiaohe
-  server: 216.152.155.59
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: false
-- name: 🎵 🇺🇸 美国 (United States) 42(机房) - xiaohe
-  server: 216.152.155.59
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: false
-- name: 🎵 🇩🇪 德国 (Germany) 43(机房) - xiaohe
-  server: 5.42.105.128
+    path: /700gvl
+    headers:
+      Host: fr-free.fastestrelay.com
+- name: 🎵 🇩🇪 德国 (Germany) 41(机房) - xiaohe
+  server: harbor.gerqix.online
   port: 443
   udp: true
   type: vless
   uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
   tls: true
-  servername: morningfen.merlano.monster
+  servername: harbor.gerqix.online
   skip-cert-verify: false
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de1.v1
-- name: 🎵 🇪🇪 爱沙尼亚 (Estonia) 44(机房) - xiaohe
-  server: 136.148.83.69
-  port: 443
-  udp: true
-  type: vless
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
-  tls: true
-  servername: szqbx-ru-77dc.my-fade.cloud
-  skip-cert-verify: false
-  client-fingerprint: qq
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /api/de1/stream
+    headers:
+      Host: harbor.gerqix.online
 proxy-groups:
 - name: PROXIES
   type: select
@@ -598,7 +592,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇩🇪 德国 (Germany) 01(移动) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
@@ -608,40 +602,37 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 18(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 19(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 24(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 28(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 29(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 30(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 31(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 33(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 34(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 35(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 37(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 40(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 41(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 42(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 43(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 44(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 26(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 27(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 28(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 29(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 30(机房) - xiaohe
+  - 🎵 🇦🇹 奥地利 (Austria) 31(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 32(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 33(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 34(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 35(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 37(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 38(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 39(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 40(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 41(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -649,7 +640,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇩🇪 德国 (Germany) 01(移动) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
@@ -659,40 +650,37 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 18(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 19(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 24(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 28(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 29(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 30(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 31(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 33(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 34(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 35(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 37(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 40(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 41(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 42(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 43(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 44(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 26(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 27(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 28(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 29(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 30(机房) - xiaohe
+  - 🎵 🇦🇹 奥地利 (Austria) 31(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 32(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 33(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 34(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 35(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 37(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 38(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 39(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 40(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 41(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -700,7 +688,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇩🇪 德国 (Germany) 01(移动) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
@@ -710,40 +698,37 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 18(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 19(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 24(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 28(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 29(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 30(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 31(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 33(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 34(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 35(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 37(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 40(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 41(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 42(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 43(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 44(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 26(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 27(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 28(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 29(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 30(机房) - xiaohe
+  - 🎵 🇦🇹 奥地利 (Austria) 31(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 32(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 33(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 34(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 35(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 37(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 38(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 39(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 40(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 41(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -751,7 +736,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇩🇪 德国 (Germany) 01(移动) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 01(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 02(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 03(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 04(机房) - xiaohe
@@ -761,39 +746,36 @@ proxy-groups:
   - 🎵 🇺🇸 美国 (United States) 08(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 09(机房) - xiaohe
   - 🎵 🇺🇸 美国 (United States) 10(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 11(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 12(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 13(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 18(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 19(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 11(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 12(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 13(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 14(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 15(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 16(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 17(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 18(机房) - xiaohe
+  - 🎵 🇮🇹 意大利 (Italy) 19(机房) - xiaohe
   - 🎵 🇮🇹 意大利 (Italy) 20(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 21(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 22(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 23(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 24(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 25(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 26(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 27(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 28(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 29(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 30(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 31(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 32(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 33(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 34(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 35(机房) - xiaohe
-  - 🎵 🇳🇱 荷兰 (Netherlands) 36(机房) - xiaohe
-  - 🎵 🇮🇹 意大利 (Italy) 37(机房) - xiaohe
-  - 🎵 🇸🇬 新加坡 (Singapore) 38(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 39(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 40(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 41(机房) - xiaohe
-  - 🎵 🇺🇸 美国 (United States) 42(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 43(机房) - xiaohe
-  - 🎵 🇪🇪 爱沙尼亚 (Estonia) 44(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 21(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 22(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 23(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 24(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 25(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 26(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 27(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 28(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 29(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 30(机房) - xiaohe
+  - 🎵 🇦🇹 奥地利 (Austria) 31(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 32(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 33(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 34(机房) - xiaohe
+  - 🎵 🇸🇬 新加坡 (Singapore) 35(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 36(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 37(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 38(机房) - xiaohe
+  - 🎵 🇺🇸 美国 (United States) 39(机房) - xiaohe
+  - 🎵 🇳🇱 荷兰 (Netherlands) 40(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 41(机房) - xiaohe
 rules:
 - MATCH,PROXIES

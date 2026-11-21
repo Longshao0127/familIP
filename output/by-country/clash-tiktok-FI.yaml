@@ -24,16 +24,32 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  server: 136.148.83.69
-  port: 443
+- name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  server: 172.64.79.163
+  port: 2083
   udp: true
   type: vless
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
+  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
   tls: true
-  servername: szqbx-ru-77dc.my-fade.cloud
+  servername: vipfree.dr-ping.ir
   skip-cert-verify: false
-  client-fingerprint: qq
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vipfree.dr-ping.ir
+- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
+  server: 45.144.234.157
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
 proxy-groups:
 - name: PROXIES
   type: select
@@ -41,7 +57,8 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -49,7 +66,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -57,7 +74,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -65,6 +83,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -25,57 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇯🇵 日本 (Japan) 01(机房) - xiaohe
-  server: 139.162.91.239
-  port: 443
-  udp: true
-  type: vless
-  uuid: b0dc852a-97ec-4d4e-9179-f0e5c2ef1489
-  tls: true
-  reality-opts:
-    public-key: 7PBmAR6CGAh2naIi09rlP_PtmLmqhlXF_toZEdAHmRo
-    short-id: 7c6d6833
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe
-  server: 172.105.203.15
-  port: 443
-  udp: true
-  type: vless
-  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
-  tls: true
-  reality-opts:
-    public-key: HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA
-    short-id: 0784b134
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe
-  server: 198.13.53.39
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
-  tls: true
-  reality-opts:
-    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
-    short-id: 7a7cc838
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe
   server: 139.162.125.126
   port: 443
   udp: true
@@ -92,37 +41,7 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe
-  server: jp2api.jumpernode.site
-  port: 443
-  udp: true
-  type: vless
-  uuid: bc808d0e-aabb-47b9-9c5e-765a6e69f27f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: GeKuYNeAqQQkTN9OMJxXA9I-rXs7IiGh4Sl82crCITc
-    short-id: 6281f3ef81187ad8
-  servername: us.amazon.com
-  client-fingerprint: chrome
-- name: 🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe
-  server: 172.104.86.181
-  port: 443
-  udp: true
-  type: vless
-  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
-  tls: true
-  reality-opts:
-    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
-    short-id: c8559ca1
-  servername: itunes.apple.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
+- name: 🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe
   server: 45.76.222.108
   port: 443
   udp: true
@@ -139,36 +58,72 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe
-  server: 77.67.18.254
-  port: 25680
+- name: 🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe
+  server: 172.105.203.15
+  port: 443
   udp: true
   type: vless
-  uuid: af8e3c87-2a75-44fa-9a8b-0227a9d2cb82
-  flow: xtls-rprx-vision
+  uuid: c8c9b995-b4b9-4915-9c7d-dee94aa733ba
   tls: true
   reality-opts:
-    public-key: hARhHGV09mnEUWA1a7pG6_K4lztUhKCK3iGeboGGP2g
-    short-id: 7ce8c8e1
-  servername: apple.com
+    public-key: HyAx05nhCz5mXxVxWXU1TrWRKdpYE0MHF4-V-LtyhTA
+    short-id: 0784b134
+  servername: itunes.apple.com
   client-fingerprint: chrome
-- name: 🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe
-  server: 8.211.175.236
-  port: 8443
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe
+  server: 198.13.53.39
+  port: 443
   udp: true
-  type: hysteria2
-  password: u63SxILNwtrQZ7Y1ZrFaZfsA
-  sni: 8.211.175.236
-  skip-cert-verify: true
-- name: 🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe
-  server: 138.3.208.26
-  port: 50160
+  type: vless
+  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
+  tls: true
+  reality-opts:
+    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
+    short-id: 7a7cc838
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe
+  server: 172.104.86.181
+  port: 443
   udp: true
-  type: hysteria2
-  password: 184cdec28da5a09450803c8debcd2cc9
-  sni: 'off'
-  skip-cert-verify: true
-- name: 🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe
+  type: vless
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  tls: true
+  reality-opts:
+    public-key: ujYDprigWFLxcj4BtitDNa-hoPjIbpSzrnEcqp3cgjk
+    short-id: c8559ca1
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe
+  server: 104.17.50.53
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
   server: 149.28.29.156
   port: 443
   udp: true
@@ -185,8 +140,38 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe
+- name: 🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe
+  server: 8.211.175.236
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  sni: 8.211.175.236
+  skip-cert-verify: true
+- name: 🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe
+  server: 138.3.208.26
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 184cdec28da5a09450803c8debcd2cc9
+  sni: 'off'
+  skip-cert-verify: true
+- name: 🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe
+  server: 84.247.155.196
+  port: 80
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+- name: 🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe
   server: 149.22.87.240
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe
+  server: 149.22.87.241
   port: 443
   udp: true
   type: ss
@@ -200,13 +185,6 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
-  server: 149.22.87.241
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
   server: 94.177.131.113
   port: 443
   udp: true
@@ -215,16 +193,22 @@ proxies:
   tls: true
   servername: kuruish.org
   skip-cert-verify: false
+- name: 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
+  server: jpg1api.jumpernode.site
+  port: 443
+  udp: true
+  type: vless
+  uuid: d508df52-3acb-483f-85d2-3fd5f6a76808
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I
+    short-id: 2c92d6
+  servername: buybox.amazon.com
+  client-fingerprint: chrome
 - name: 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
   server: 84.247.155.196
   port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🎵 🇯🇵 日本 (Japan) 17(机房) - xiaohe
-  server: 84.247.155.196
-  port: 80
   udp: true
   type: ss
   cipher: aes-256-gcm
@@ -253,7 +237,6 @@ proxy-groups:
   - 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 17(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -267,8 +250,6 @@ proxy-groups:
   - 🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -283,14 +264,13 @@ proxy-groups:
   - 🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe
+  - 🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 13(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 17(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -314,7 +294,6 @@ proxy-groups:
   - 🎵 🇯🇵 日本 (Japan) 14(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 15(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 16(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 17(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -322,7 +301,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe
   - 🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe
-  - 🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe
 rules:
 - MATCH,PROXIES
