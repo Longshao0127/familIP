@@ -32,16 +32,18 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
-  server: 5.178.109.174
-  port: 14430
+  server: 2.26.93.106
+  port: 443
   udp: true
   type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  tls: true
+  servername: depotchannel.lucheeebezlimitnoekino.stream
+  skip-cert-verify: false
+  client-fingerprint: edge
   network: ws
   ws-opts:
-    path: /vless
-    headers:
-      Host: 5.178.109.174
+    path: /media/ws/
 - name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
   server: 138.124.86.230
   port: 48115

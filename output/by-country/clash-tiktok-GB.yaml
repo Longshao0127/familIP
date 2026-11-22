@@ -60,18 +60,18 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe
-  server: 136.176.68.34
-  port: 443
+  server: 138.124.125.193
+  port: 10444
   udp: true
   type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
+  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Jcm0TjP_kw-KmJoiG5EGyY5sQ9RGeqlX9Ajd3ZCnSAo
-    short-id: a6040129ad7f4b74
-  servername: www.apple.com
-  client-fingerprint: chrome
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: ads.x5.ru
+  client-fingerprint: random
 - name: 🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe
   server: 146.70.61.37
   port: 8080
@@ -79,26 +79,6 @@ proxies:
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
-  server: 98.98.207.163
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe
-  server: 104.222.183.180
-  port: 443
-  udp: true
-  type: vless
-  uuid: a1cf2f59-ffe0-4cb3-8c68-e6abf44726fc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MYmnKEaJyfk1HrBaKg3AvYebp-sP3rZRNh9MnOcKgXY
-    short-id: 705f0a232571
-  servername: www.tradingview.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -112,8 +92,6 @@ proxy-groups:
   - 🎵 🇬🇧 英国 (United Kingdom) 05(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -128,8 +106,6 @@ proxy-groups:
   - 🎵 🇬🇧 英国 (United Kingdom) 05(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -144,7 +120,5 @@ proxy-groups:
   - 🎵 🇬🇧 英国 (United Kingdom) 05(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 06(机房) - xiaohe
   - 🎵 🇬🇧 英国 (United Kingdom) 07(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 08(机房) - xiaohe
-  - 🎵 🇬🇧 英国 (United Kingdom) 09(机房) - xiaohe
 rules:
 - MATCH,PROXIES

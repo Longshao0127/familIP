@@ -24,24 +24,29 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
-  server: 103.14.27.207
-  port: 1270
+- name: 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
+  server: 47.254.167.157
+  port: 443
   udp: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -49,7 +54,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -57,6 +62,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇧🇷 巴西 (Brazil) 01(机房) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
 rules:
 - MATCH,PROXIES

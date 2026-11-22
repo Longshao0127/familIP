@@ -7,30 +7,26 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🇨🇳 CN 01 - xiaohe",
-      "server": "39.108.113.127",
-      "server_port": 10086,
-      "uuid": "a625d148-e988-4008-b957-e9051a6371d2",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
+      "type": "shadowsocks",
+      "tag": "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe",
+      "server": "217.30.10.70",
+      "server_port": 9020,
+      "method": "aes-256-cfb",
+      "password": "BNmAXXxAHYpTRdzu"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇳 CN 01 - xiaohe"
+        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇳 CN 01 - xiaohe"
+        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

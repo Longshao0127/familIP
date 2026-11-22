@@ -17,15 +17,21 @@
     {
       "type": "vless",
       "tag": "🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe",
-      "server": "5.178.109.174",
-      "server_port": 14430,
-      "uuid": "80de563a-cac8-40ea-8cb0-4cb082dd92f9",
+      "server": "2.26.93.106",
+      "server_port": 443,
+      "uuid": "58e22afd-bf74-4736-984d-63a8ca03d7f0",
+      "tls": {
+        "enabled": true,
+        "server_name": "depotchannel.lucheeebezlimitnoekino.stream",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "5.178.109.174"
-        }
+        "path": "/media/ws/"
       }
     },
     {

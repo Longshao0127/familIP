@@ -25,30 +25,20 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
-  server: 13.55.52.44
-  port: 36712
+  server: 38.110.1.246
+  port: 18000
   udp: true
-  type: hysteria2
-  password: linlin-2026
-  sni: 13.55.52.44
-  skip-cert-verify: true
-- name: 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
-  server: 45.63.30.142
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: 45.63.30.142
-  skip-cert-verify: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - AUTO-UDP
   - 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -56,17 +46,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
-- name: AUTO
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
   - 🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe
-  - 🎵 🇦🇺 澳大利亚 (Australia) 02(机房) - xiaohe
-- name: AUTO-UDP
+- name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
