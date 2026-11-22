@@ -37,20 +37,6 @@ proxies:
     short-id: a3a578ab
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇮🇱 以色列 (Israel) 02 - xiaohe
-  server: 178.20.28.5
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 4fabeed0-790e-9724-8f12-138ed31ac60e
-  tls: true
-  reality-opts:
-    public-key: 4g8R0-Acc1LjppgvUopldH0Wg3JA2tPXvYB96aJnigo
-  servername: res.cdn.office.net
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
 proxy-groups:
 - name: PROXIES
   type: select
@@ -58,7 +44,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🇮🇱 以色列 (Israel) 01 - xiaohe
-  - 🇮🇱 以色列 (Israel) 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -67,7 +52,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇮🇱 以色列 (Israel) 01 - xiaohe
-  - 🇮🇱 以色列 (Israel) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,6 +60,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇮🇱 以色列 (Israel) 01 - xiaohe
-  - 🇮🇱 以色列 (Israel) 02 - xiaohe
 rules:
 - MATCH,PROXIES

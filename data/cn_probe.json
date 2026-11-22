@@ -92,7 +92,7 @@
 },
 "shadowsocks:107.155.57.11:8080": {
 "avg": null,
-"checked": 1795135251,
+"checked": 1795328576,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -232,10 +232,10 @@
 },
 "shadowsocks:138.199.55.243:19999": {
 "avg": null,
-"checked": 1795188226,
+"checked": 1795328733,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:141.164.45.187:5001": {
 "avg": null,
@@ -260,7 +260,7 @@
 },
 "shadowsocks:142.202.51.22:19999": {
 "avg": null,
-"checked": 1795135399,
+"checked": 1795328669,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -281,10 +281,10 @@
 },
 "shadowsocks:146.70.20.147:8080": {
 "avg": null,
-"checked": 1795135353,
+"checked": 1795328624,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:146.70.61.37:8080": {
 "avg": null,
@@ -384,13 +384,6 @@
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
-"shadowsocks:15.204.246.108:8881": {
-"avg": null,
-"checked": 1794088140,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
-},
 "shadowsocks:15.204.246.111:5498": {
 "avg": null,
 "checked": 1795047358,
@@ -419,13 +412,6 @@
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
-"shadowsocks:15.204.247.244:443": {
-"avg": null,
-"checked": 1794116711,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
-},
 "shadowsocks:15.204.247.244:4444": {
 "avg": null,
 "checked": 1795288314,
@@ -442,17 +428,17 @@
 },
 "shadowsocks:15.235.164.133:19999": {
 "avg": null,
-"checked": 1795188297,
+"checked": 1795328777,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:15.235.182.183:19999": {
 "avg": null,
-"checked": 1795188301,
+"checked": 1795328780,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:15.235.57.6:8080": {
 "avg": null,
@@ -545,6 +531,13 @@
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
+"shadowsocks:158.178.157.15:45819": {
+"avg": null,
+"checked": 1795328472,
+"loss": 100,
+"ok": false,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
 "shadowsocks:158.178.230.120:56927": {
 "avg": null,
 "checked": 1795188149,
@@ -561,10 +554,10 @@
 },
 "shadowsocks:161.153.38.61:50356": {
 "avg": null,
-"checked": 1795188086,
+"checked": 1795328684,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:162.251.62.31:19999": {
 "avg": null,
@@ -575,31 +568,31 @@
 },
 "shadowsocks:167.17.64.175:19999": {
 "avg": null,
-"checked": 1795188211,
-"loss": 100,
-"ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
-},
-"shadowsocks:167.17.64.22:19999": {
-"avg": null,
-"checked": 1795135401,
-"loss": 100,
-"ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
-},
-"shadowsocks:167.17.64.27:19999": {
-"avg": null,
-"checked": 1795188225,
-"loss": 100,
-"ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
-},
-"shadowsocks:167.17.71.167:19999": {
-"avg": null,
-"checked": 1795188227,
+"checked": 1795328718,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
+},
+"shadowsocks:167.17.64.22:19999": {
+"avg": null,
+"checked": 1795328671,
+"loss": 100,
+"ok": false,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
+"shadowsocks:167.17.64.27:19999": {
+"avg": null,
+"checked": 1795328730,
+"loss": 100,
+"ok": false,
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
+},
+"shadowsocks:167.17.71.167:19999": {
+"avg": null,
+"checked": 1795328743,
+"loss": 100,
+"ok": false,
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:167.88.62.203:19999": {
 "avg": null,
@@ -645,10 +638,10 @@
 },
 "shadowsocks:172.99.189.142:19999": {
 "avg": null,
-"checked": 1795135401,
+"checked": 1795328669,
 "loss": 100,
 "ok": false,
-"probe": "Changsha/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:173.244.56.6:443": {
 "avg": null,
@@ -764,10 +757,10 @@
 },
 "shadowsocks:186.190.215.251:19999": {
 "avg": null,
-"checked": 1795188211,
+"checked": 1795328728,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:193.108.119.2:19999": {
 "avg": null,
@@ -814,13 +807,6 @@
 "shadowsocks:193.29.139.132:8080": {
 "avg": null,
 "checked": 1795243895,
-"loss": 100,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
-"shadowsocks:193.29.139.147:8080": {
-"avg": null,
-"checked": 1794088160,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -890,17 +876,17 @@
 },
 "shadowsocks:198.244.201.129:19999": {
 "avg": null,
-"checked": 1795135387,
+"checked": 1795328655,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:198.244.202.215:19999": {
 "avg": null,
-"checked": 1795135387,
+"checked": 1795328653,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:198.98.53.130:443": {
 "avg": null,
@@ -924,11 +910,11 @@
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:202.50.253.36:19999": {
-"avg": 343.5,
-"checked": 1795135338,
+"avg": 377.2,
+"checked": 1795328620,
 "loss": 0,
 "ok": true,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:202.50.253.45:19999": {
 "avg": 296.1,
@@ -995,17 +981,17 @@
 },
 "shadowsocks:213.176.92.148:40647": {
 "avg": null,
-"checked": 1795135308,
+"checked": 1795328607,
 "loss": 100,
 "ok": false,
-"probe": "Changsha/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:213.202.208.199:7001": {
 "avg": null,
-"checked": 1795135156,
+"checked": 1795328559,
 "loss": 100,
 "ok": false,
-"probe": "Changsha/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:216.105.168.18:443": {
 "avg": null,
@@ -1030,17 +1016,17 @@
 },
 "shadowsocks:23.162.152.22:19999": {
 "avg": null,
-"checked": 1795135414,
+"checked": 1795328681,
 "loss": 100,
 "ok": false,
-"probe": "Guangzhou/China Telecom"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:23.166.88.127:19999": {
 "avg": null,
-"checked": 1795188221,
+"checked": 1795328730,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:23.230.52.119:42878": {
 "avg": null,
@@ -1114,14 +1100,14 @@
 },
 "shadowsocks:38.109.228.110:19999": {
 "avg": null,
-"checked": 1795188210,
+"checked": 1795328715,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:38.114.120.221:19999": {
 "avg": null,
-"checked": 1795135399,
+"checked": 1795328666,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
@@ -1217,6 +1203,13 @@
 "ok": true,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
+"shadowsocks:47.254.128.109:443": {
+"avg": 221.8,
+"checked": 1795328472,
+"loss": 0,
+"ok": true,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
 "shadowsocks:47.254.143.251:443": {
 "avg": null,
 "checked": 1795219483,
@@ -1287,13 +1280,6 @@
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
-"shadowsocks:51.102.203.129:443": {
-"avg": null,
-"checked": 1794088108,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
-},
 "shadowsocks:51.222.12.127:445": {
 "avg": null,
 "checked": 1795288531,
@@ -1324,10 +1310,10 @@
 },
 "shadowsocks:51.222.155.32:5003": {
 "avg": null,
-"checked": 1794843669,
+"checked": 1795328501,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:51.222.200.165:5000": {
 "avg": null,
@@ -1352,10 +1338,10 @@
 },
 "shadowsocks:51.79.228.131:19999": {
 "avg": null,
-"checked": 1795188301,
+"checked": 1795328790,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:51.79.49.116:8882": {
 "avg": null,
@@ -1391,13 +1377,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"shadowsocks:54.36.174.134:443": {
-"avg": null,
-"checked": 1794116822,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:54.36.174.140:443": {
 "avg": null,
@@ -1478,10 +1457,10 @@
 },
 "shadowsocks:66.163.118.103:19999": {
 "avg": null,
-"checked": 1795188286,
+"checked": 1795328764,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:68.183.227.236:8080": {
 "avg": null,
@@ -1548,10 +1527,10 @@
 },
 "shadowsocks:79.127.139.242:19999": {
 "avg": null,
-"checked": 1795188287,
+"checked": 1795328777,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:79.127.184.104:19999": {
 "avg": null,
@@ -1587,13 +1566,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
-},
-"shadowsocks:82.152.132.211:8044": {
-"avg": null,
-"checked": 1794116726,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:82.38.31.156:8080": {
 "avg": null,
@@ -1646,10 +1618,10 @@
 },
 "shadowsocks:82.38.31.176:8080": {
 "avg": null,
-"checked": 1795135293,
+"checked": 1795328593,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:82.38.31.179:8080": {
 "avg": null,
@@ -1688,7 +1660,7 @@
 },
 "shadowsocks:82.38.31.187:8080": {
 "avg": null,
-"checked": 1795188195,
+"checked": 1795328702,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -1702,7 +1674,7 @@
 },
 "shadowsocks:82.38.31.190:8080": {
 "avg": null,
-"checked": 1795188195,
+"checked": 1795328712,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -1737,10 +1709,10 @@
 },
 "shadowsocks:82.38.31.198:8080": {
 "avg": null,
-"checked": 1794662900,
+"checked": 1795328485,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:82.38.31.199:8080": {
 "avg": null,
@@ -1758,7 +1730,7 @@
 },
 "shadowsocks:82.38.31.201:8080": {
 "avg": null,
-"checked": 1795016335,
+"checked": 1795328514,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
@@ -1807,10 +1779,10 @@
 },
 "shadowsocks:82.38.31.208:8080": {
 "avg": null,
-"checked": 1794808957,
+"checked": 1795328495,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:82.38.31.210:8080": {
 "avg": null,
@@ -1870,10 +1842,10 @@
 },
 "shadowsocks:82.38.31.219:8080": {
 "avg": null,
-"checked": 1795047697,
+"checked": 1795328532,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:82.38.31.220:8080": {
 "avg": null,
@@ -1891,17 +1863,17 @@
 },
 "shadowsocks:82.38.31.39:8080": {
 "avg": null,
-"checked": 1795135338,
+"checked": 1795328620,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:82.38.31.46:8080": {
 "avg": null,
-"checked": 1795188316,
+"checked": 1795328792,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:82.38.31.47:8080": {
 "avg": null,
@@ -1933,10 +1905,10 @@
 },
 "shadowsocks:82.38.31.62:8080": {
 "avg": null,
-"checked": 1795135308,
+"checked": 1795328605,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:82.38.31.66:8080": {
 "avg": null,
@@ -1968,10 +1940,10 @@
 },
 "shadowsocks:84.247.155.196:80": {
 "avg": null,
-"checked": 1795135247,
+"checked": 1795328574,
 "loss": 100,
 "ok": false,
-"probe": "Guangzhou/Chinanet Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "shadowsocks:87.228.61.175:1443": {
 "avg": null,
@@ -1986,6 +1958,13 @@
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
+},
+"shadowsocks:91.201.65.122:9074": {
+"avg": null,
+"checked": 1795328444,
+"loss": 100,
+"ok": false,
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "shadowsocks:92.5.114.103:59924": {
 "avg": null,
@@ -2083,13 +2062,6 @@
 "checked": 1795243849,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
-"shadowsocks:twichcom.plus-hit.ru:1080": {
-"avg": 333.5,
-"checked": 1794116703,
-"loss": 0,
-"ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
 "trojan:104.105.23.170:443": {
@@ -2211,26 +2183,12 @@
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"trojan:158.247.220.26:48851": {
-"avg": null,
-"checked": 1794117004,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "trojan:158.247.253.243:443": {
 "avg": null,
 "checked": 1795243940,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"trojan:167.179.108.225:443": {
-"avg": null,
-"checked": 1794117039,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
 },
 "trojan:167.88.61.175:443": {
 "avg": null,
@@ -2241,17 +2199,17 @@
 },
 "trojan:167.88.61.193:443": {
 "avg": null,
-"checked": 1795016335,
+"checked": 1795328512,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:167.88.61.198:443": {
 "avg": null,
-"checked": 1795103371,
+"checked": 1795328547,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "trojan:167.88.61.20:443": {
 "avg": null,
@@ -2318,10 +2276,10 @@
 },
 "trojan:169.197.140.245:443": {
 "avg": null,
-"checked": 1795188180,
+"checked": 1795328700,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "trojan:170.101.101.112:443": {
 "avg": null,
@@ -2332,14 +2290,14 @@
 },
 "trojan:170.101.101.131:443": {
 "avg": null,
-"checked": 1795047682,
+"checked": 1795328529,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:170.101.101.19:443": {
 "avg": null,
-"checked": 1795135265,
+"checked": 1795328589,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
@@ -2535,7 +2493,7 @@
 },
 "trojan:208.69.78.29:443": {
 "avg": null,
-"checked": 1795103094,
+"checked": 1795328543,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -2556,10 +2514,10 @@
 },
 "trojan:216.106.186.155:443": {
 "avg": null,
-"checked": 1795135262,
+"checked": 1795328589,
 "loss": 100,
 "ok": false,
-"probe": "Changsha/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "trojan:216.106.186.32:443": {
 "avg": null,
@@ -2591,7 +2549,7 @@
 },
 "trojan:216.106.186.82:443": {
 "avg": null,
-"checked": 1795188255,
+"checked": 1795328759,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -2682,7 +2640,7 @@
 },
 "trojan:216.152.155.23:443": {
 "avg": null,
-"checked": 1795135310,
+"checked": 1795328609,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
@@ -2696,10 +2654,10 @@
 },
 "trojan:216.152.155.54:443": {
 "avg": null,
-"checked": 1795188271,
+"checked": 1795328761,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "trojan:216.152.155.59:443": {
 "avg": null,
@@ -2724,10 +2682,10 @@
 },
 "trojan:216.152.156.42:443": {
 "avg": null,
-"checked": 1795188286,
+"checked": 1795328774,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:216.152.156.49:443": {
 "avg": null,
@@ -2794,10 +2752,10 @@
 },
 "trojan:45.63.30.142:443": {
 "avg": null,
-"checked": 1795135357,
+"checked": 1795328637,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:47.242.93.89:12012": {
 "avg": null,
@@ -2871,14 +2829,14 @@
 },
 "trojan:66.163.112.31:443": {
 "avg": null,
-"checked": 1795135249,
+"checked": 1795328574,
 "loss": 100,
 "ok": false,
-"probe": "Guangzhou/China Telecom"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:66.163.112.76:443": {
 "avg": null,
-"checked": 1795135233,
+"checked": 1795328560,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
@@ -2941,7 +2899,7 @@
 },
 "trojan:66.163.118.131:443": {
 "avg": null,
-"checked": 1794963827,
+"checked": 1795328507,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -3025,10 +2983,10 @@
 },
 "trojan:66.163.122.7:443": {
 "avg": null,
-"checked": 1795135261,
+"checked": 1795328577,
 "loss": 100,
 "ok": false,
-"probe": "Guangzhou/Chinanet Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:66.163.122.81:443": {
 "avg": null,
@@ -3039,17 +2997,17 @@
 },
 "trojan:66.163.127.107:443": {
 "avg": null,
-"checked": 1795047484,
+"checked": 1795328523,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:66.163.127.154:443": {
 "avg": null,
-"checked": 1795188206,
+"checked": 1795328715,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "trojan:66.163.127.155:443": {
 "avg": null,
@@ -3184,13 +3142,6 @@
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"trojan:kr002.zestapp778.com:48851": {
-"avg": null,
-"checked": 1794088251,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "trojan:matrix.phonicsindia.mobi:48994": {
 "avg": 108,
 "checked": 1794550483,
@@ -3204,13 +3155,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
-},
-"trojan:ph001.zestapp778.com:46298": {
-"avg": null,
-"checked": 1794117019,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "trojan:resources.findlocaljobnetworkandbuildcommunityconnections.com:443": {
 "avg": null,
@@ -3324,13 +3268,6 @@
 "ok": true,
 "probe": "Guangzhou/Chinanet Backbone"
 },
-"vless:104.16.0.1:443": {
-"avg": 192.4,
-"checked": 1794088144,
-"loss": 0,
-"ok": true,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:104.16.10.135:443": {
 "avg": 183.8,
 "checked": 1794175260,
@@ -3394,19 +3331,19 @@
 "ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"vless:104.16.222.106:443": {
-"avg": 243.6,
-"checked": 1794116771,
-"loss": 0,
-"ok": true,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "vless:104.168.109.213:443": {
 "avg": null,
 "checked": 1794931357,
 "loss": 100,
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
+},
+"vless:104.17.147.208:443": {
+"avg": 200.4,
+"checked": 1795328419,
+"loss": 0,
+"ok": true,
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:104.17.3.81:443": {
 "avg": 3255,
@@ -3562,6 +3499,13 @@
 "ok": true,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
+"vless:104.21.219.160:443": {
+"avg": 245.7,
+"checked": 1795328459,
+"loss": 0,
+"ok": true,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
 "vless:104.21.23.29:443": {
 "avg": 233.4,
 "checked": 1794963735,
@@ -3582,13 +3526,6 @@
 "loss": 0,
 "ok": true,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
-},
-"vless:104.21.70.21:8080": {
-"avg": 264.8,
-"checked": 1794116690,
-"loss": 0,
-"ok": true,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
 },
 "vless:104.21.70.228:443": {
 "avg": 254.8,
@@ -3613,10 +3550,10 @@
 },
 "vless:104.222.183.180:443": {
 "avg": null,
-"checked": 1794352387,
+"checked": 1795328481,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/CHINA UNICOM Industrial Internet Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:104.24.30.89:443": {
 "avg": 180.6,
@@ -3696,11 +3633,11 @@
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
 "vless:104.27.109.16:443": {
-"avg": 180.1,
-"checked": 1795135267,
+"avg": 248.6,
+"checked": 1795328589,
 "loss": 0,
 "ok": true,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:104.27.46.35:443": {
 "avg": 214.8,
@@ -3835,6 +3772,13 @@
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
+"vless:13.141.51.2:443": {
+"avg": 1008,
+"checked": 1795328463,
+"loss": 0,
+"ok": true,
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
+},
 "vless:13.143.176.250:443": {
 "avg": 216.5,
 "checked": 1794722590,
@@ -3865,7 +3809,7 @@
 },
 "vless:130.12.242.106:443": {
 "avg": null,
-"checked": 1795135384,
+"checked": 1795328653,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -3940,13 +3884,6 @@
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
-"vless:136.0.197.99:49520": {
-"avg": null,
-"checked": 1794117013,
-"loss": 100,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:136.148.208.221:443": {
 "avg": 237.2,
 "checked": 1795047437,
@@ -3970,7 +3907,7 @@
 },
 "vless:136.176.68.34:443": {
 "avg": null,
-"checked": 1794274367,
+"checked": 1795328479,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -4094,13 +4031,6 @@
 "ok": true,
 "probe": "Guangzhou/Chinanet Backbone"
 },
-"vless:140.235.11.243:56984": {
-"avg": null,
-"checked": 1794088281,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
-},
 "vless:140.245.35.246:36442": {
 "avg": null,
 "checked": 1795188109,
@@ -4121,13 +4051,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:142.91.101.39:627": {
-"avg": null,
-"checked": 1794116720,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
 },
 "vless:143.246.195.46:443": {
 "avg": null,
@@ -4156,13 +4079,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
-},
-"vless:143.246.62.191:8443": {
-"avg": null,
-"checked": 1794116703,
-"loss": 100,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:144.31.0.101:443": {
 "avg": null,
@@ -4250,7 +4166,7 @@
 },
 "vless:146.19.254.171:8443": {
 "avg": null,
-"checked": 1795103315,
+"checked": 1795328545,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -4268,13 +4184,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:147.45.104.86:7443": {
-"avg": null,
-"checked": 1794088128,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "vless:147.45.108.45:443": {
 "avg": null,
@@ -4310,6 +4219,13 @@
 "loss": 100,
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
+},
+"vless:147.45.66.208:43000": {
+"avg": null,
+"checked": 1795328468,
+"loss": 100,
+"ok": false,
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:147.45.66.60:43000": {
 "avg": null,
@@ -4355,10 +4271,10 @@
 },
 "vless:15.204.97.195:23576": {
 "avg": null,
-"checked": 1795188317,
+"checked": 1795328793,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:15.204.97.197:23576": {
 "avg": null,
@@ -4451,13 +4367,6 @@
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"vless:152.175.6.229:31884": {
-"avg": 3091,
-"checked": 1794088203,
-"loss": 50,
-"ok": true,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:152.228.139.33:35108": {
 "avg": null,
 "checked": 1795135341,
@@ -4467,10 +4376,10 @@
 },
 "vless:152.228.139.33:51671": {
 "avg": null,
-"checked": 1795188241,
+"checked": 1795328746,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:152.228.162.19:80": {
 "avg": null,
@@ -4530,10 +4439,10 @@
 },
 "vless:153.52.85.198:443": {
 "avg": null,
-"checked": 1795047422,
+"checked": 1795328516,
 "loss": 100,
 "ok": false,
-"probe": "Changsha/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:153.56.229.188:443": {
 "avg": null,
@@ -4605,6 +4514,13 @@
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
+"vless:156.245.234.97:2096": {
+"avg": null,
+"checked": 1795328450,
+"loss": 100,
+"ok": false,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
 "vless:156.252.229.77:8443": {
 "avg": null,
 "checked": 1794376390,
@@ -4646,13 +4562,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
-},
-"vless:15d7fft.nl11.h1clayd.click:443": {
-"avg": null,
-"checked": 1794088421,
-"loss": 100,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:161.97.66.16:443": {
 "avg": null,
@@ -4732,11 +4641,11 @@
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
 "vless:163.245.42.56:443": {
-"avg": null,
-"checked": 1794880534,
-"loss": 100,
-"ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"avg": 208.1,
+"checked": 1795328501,
+"loss": 0,
+"ok": true,
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:163.245.42.5:443": {
 "avg": 191.4,
@@ -4751,13 +4660,6 @@
 "loss": 0,
 "ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:165.154.63.139:443": {
-"avg": null,
-"checked": 1794117028,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "vless:166.0.22.236:2053": {
 "avg": null,
@@ -4786,6 +4688,13 @@
 "loss": 100,
 "ok": false,
 "probe": "Guangzhou/Chinanet Backbone"
+},
+"vless:168.113.253.178:443": {
+"avg": 224.7,
+"checked": 1795328463,
+"loss": 0,
+"ok": true,
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:169.40.34.41:443": {
 "avg": null,
@@ -4838,7 +4747,7 @@
 },
 "vless:169.40.42.74:443": {
 "avg": null,
-"checked": 1795188240,
+"checked": 1795328746,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -4852,7 +4761,7 @@
 },
 "vless:169.40.42.90:443": {
 "avg": null,
-"checked": 1795135267,
+"checked": 1795328592,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -5349,10 +5258,10 @@
 },
 "vless:177.177.215.45:444": {
 "avg": null,
-"checked": 1795188272,
+"checked": 1795328762,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:177.202.71.55:2059": {
 "avg": null,
@@ -5405,10 +5314,10 @@
 },
 "vless:178.172.227.228:10444": {
 "avg": null,
-"checked": 1795047503,
+"checked": 1795328527,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:178.172.227.228:14430": {
 "avg": null,
@@ -5440,10 +5349,10 @@
 },
 "vless:178.212.35.198:443": {
 "avg": null,
-"checked": 1795135356,
+"checked": 1795328635,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:178.214.125.1:443": {
 "avg": 812.8,
@@ -5767,13 +5676,6 @@
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"vless:193.233.199.84:443": {
-"avg": null,
-"checked": 1794088123,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "vless:193.233.219.98:443": {
 "avg": null,
 "checked": 1795135168,
@@ -5963,6 +5865,13 @@
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
+"vless:196.245.52.183:443": {
+"avg": 327.8,
+"checked": 1795328468,
+"loss": 0,
+"ok": true,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
 "vless:196.245.52.187:443": {
 "avg": 466.1,
 "checked": 1794751253,
@@ -5983,13 +5892,6 @@
 "loss": 0,
 "ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:198.16.113.219:8443": {
-"avg": null,
-"checked": 1794088460,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
 },
 "vless:198.247.127.131:443": {
 "avg": null,
@@ -6039,13 +5941,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
-},
-"vless:2.26.255.215:443": {
-"avg": 217.6,
-"checked": 1794088158,
-"loss": 0,
-"ok": true,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "vless:2.26.6.1:2087": {
 "avg": null,
@@ -6125,8 +6020,8 @@
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
 "vless:201.51.12.98:443": {
-"avg": 189.9,
-"checked": 1795016243,
+"avg": 227.4,
+"checked": 1795328507,
 "loss": 0,
 "ok": true,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
@@ -6172,13 +6067,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:206.206.76.75:443": {
-"avg": null,
-"checked": 1794116912,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
 },
 "vless:207.148.124.12:8443": {
 "avg": null,
@@ -6264,19 +6152,12 @@
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"vless:213.182.201.18:3090": {
-"avg": null,
-"checked": 1794088094,
-"loss": 100,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:216.106.185.158:443": {
 "avg": null,
-"checked": 1795188086,
+"checked": 1795328684,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:216.106.191.201:10303": {
 "avg": null,
@@ -6530,6 +6411,13 @@
 "ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
+"vless:38.60.230.151:443": {
+"avg": null,
+"checked": 1795328449,
+"loss": 100,
+"ok": false,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
 "vless:382218.xyz:443": {
 "avg": 163.8,
 "checked": 1794880677,
@@ -6609,10 +6497,10 @@
 },
 "vless:45.144.234.157:14430": {
 "avg": null,
-"checked": 1795135368,
+"checked": 1795328638,
 "loss": 100,
 "ok": false,
-"probe": "Changsha/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:45.144.52.195:443": {
 "avg": null,
@@ -6735,17 +6623,10 @@
 },
 "vless:45.90.59.15:443": {
 "avg": null,
-"checked": 1795188251,
+"checked": 1795328749,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
-},
-"vless:45.91.248.239:443": {
-"avg": null,
-"checked": 1794088094,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:45.91.93.47:443": {
 "avg": null,
@@ -6979,11 +6860,11 @@
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:5.34.178.120:443": {
-"avg": null,
-"checked": 1794239895,
-"loss": 100,
-"ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"avg": 790.8,
+"checked": 1795328472,
+"loss": 0,
+"ok": true,
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:5.42.105.128:443": {
 "avg": 208.6,
@@ -7057,10 +6938,10 @@
 },
 "vless:51.158.206.103:23576": {
 "avg": null,
-"checked": 1795135341,
+"checked": 1795328622,
 "loss": 100,
 "ok": false,
-"probe": "Guangzhou/Chinanet Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:51.158.206.12:23576": {
 "avg": null,
@@ -7078,10 +6959,10 @@
 },
 "vless:51.158.206.20:23576": {
 "avg": null,
-"checked": 1795135372,
+"checked": 1795328650,
 "loss": 100,
 "ok": false,
-"probe": "Guangzhou/Chinanet Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:51.158.206.25:23576": {
 "avg": null,
@@ -7106,14 +6987,14 @@
 },
 "vless:51.158.206.34:23576": {
 "avg": null,
-"checked": 1795135245,
+"checked": 1795328562,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:51.158.206.80:23576": {
 "avg": null,
-"checked": 1795135338,
+"checked": 1795328622,
 "loss": 100,
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
@@ -7169,10 +7050,10 @@
 },
 "vless:51.38.71.147:443": {
 "avg": null,
-"checked": 1795135295,
+"checked": 1795328604,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:51.38.71.147:8443": {
 "avg": null,
@@ -7239,10 +7120,10 @@
 },
 "vless:511.150333.xyz:21001": {
 "avg": null,
-"checked": 1795103069,
+"checked": 1795328542,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:511.150333.xyz:21002": {
 "avg": null,
@@ -7393,10 +7274,10 @@
 },
 "vless:62.210.91.2:23576": {
 "avg": null,
-"checked": 1795135372,
+"checked": 1795328639,
 "loss": 100,
 "ok": false,
-"probe": "Changsha/CHINA UNICOM China169 Backbone"
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:64.188.66.181:443": {
 "avg": null,
@@ -7414,7 +7295,7 @@
 },
 "vless:66.163.113.9:443": {
 "avg": null,
-"checked": 1795188089,
+"checked": 1795328687,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -7432,13 +7313,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:66.90.106.28:443": {
-"avg": null,
-"checked": 1794088109,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
 },
 "vless:66.bmi.ir.asopardaz.ir:8443": {
 "avg": null,
@@ -7560,10 +7434,10 @@
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:79.182.39.131:443": {
-"avg": 3653,
-"checked": 1794809017,
-"loss": 0,
-"ok": true,
+"avg": null,
+"checked": 1795328496,
+"loss": 100,
+"ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:79.182.39.138:443": {
@@ -7582,10 +7456,10 @@
 },
 "vless:8.217.1.203:8443": {
 "avg": null,
-"checked": 1794722574,
+"checked": 1795328488,
 "loss": 100,
 "ok": false,
-"probe": "Wuhan/CHINA UNICOM China169 Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:8.6.112.0:8443": {
 "avg": 2234,
@@ -7618,13 +7492,6 @@
 "vless:81.171.14.72:443": {
 "avg": null,
 "checked": 1794880535,
-"loss": 100,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:82.148.255.201:8444": {
-"avg": null,
-"checked": 1794088139,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -7930,13 +7797,6 @@
 "ok": false,
 "probe": "Shanghai/CHINA UNICOM Industrial Internet Backbone"
 },
-"vless:89.105.218.148:443": {
-"avg": null,
-"checked": 1794116704,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "vless:89.105.218.154:443": {
 "avg": null,
 "checked": 1794443528,
@@ -8007,13 +7867,6 @@
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
-"vless:9.247.54.223:443": {
-"avg": 444.8,
-"checked": 1794116704,
-"loss": 0,
-"ok": true,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:91.107.179.0:10105": {
 "avg": null,
 "checked": 1794662831,
@@ -8056,20 +7909,6 @@
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"vless:92.42.201.155:14443": {
-"avg": null,
-"checked": 1794088125,
-"loss": 100,
-"ok": false,
-"probe": "Guangzhou/Chinanet Backbone"
-},
-"vless:92.42.201.160:14443": {
-"avg": null,
-"checked": 1794088124,
-"loss": 100,
-"ok": false,
-"probe": "Guangzhou/Chinanet Backbone"
-},
 "vless:93.123.85.103:443": {
 "avg": null,
 "checked": 1795047422,
@@ -8086,10 +7925,10 @@
 },
 "vless:94.177.131.113:443": {
 "avg": null,
-"checked": 1795188101,
+"checked": 1795328697,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:94.183.164.142:443": {
 "avg": null,
@@ -8104,13 +7943,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
-},
-"vless:94.247.142.1:443": {
-"avg": 242.9,
-"checked": 1794116690,
-"loss": 0,
-"ok": true,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "vless:94.249.195.155:43000": {
 "avg": 264.6,
@@ -8139,13 +7971,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/CHINA UNICOM Industrial Internet Backbone"
-},
-"vless:95.142.32.42:8444": {
-"avg": null,
-"checked": 1794116909,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "vless:95.174.68.188:14430": {
 "avg": null,
@@ -8238,13 +8063,6 @@
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
-"vless:at1.japancase.site:443": {
-"avg": null,
-"checked": 1794088424,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
-},
 "vless:base.hosamobenl.co.uk:443": {
 "avg": 273.6,
 "checked": 1794750933,
@@ -8308,27 +8126,6 @@
 "ok": true,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
-"vless:dddz-1-x.473221.xyz:43115": {
-"avg": null,
-"checked": 1794116738,
-"loss": null,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:dddz-2-y.473221.xyz:35761": {
-"avg": 59.83,
-"checked": 1794116738,
-"loss": 0,
-"ok": true,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
-},
-"vless:dddz-3-z.473221.xyz:13212": {
-"avg": 67.1,
-"checked": 1794116711,
-"loss": 0,
-"ok": true,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "vless:djj.zjlo.top:23169": {
 "avg": null,
 "checked": 1794526462,
@@ -8372,11 +8169,11 @@
 "probe": "Shanghai/CHINA UNICOM Industrial Internet Backbone"
 },
 "vless:f0d7aft.nl13.h1clayd.click:443": {
-"avg": 347.1,
-"checked": 1794550483,
+"avg": 331.6,
+"checked": 1795328481,
 "loss": 0,
 "ok": true,
-"probe": "Shanghai/CHINA UNICOM Industrial Internet Backbone"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:fast.145779.xyz:2053": {
 "avg": 231.2,
@@ -8394,7 +8191,7 @@
 },
 "vless:free-amsterdam-node-1.cloudwidecdn.com:443": {
 "avg": null,
-"checked": 1795188331,
+"checked": 1795328795,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -8457,10 +8254,10 @@
 },
 "vless:in.smrtai.top:443": {
 "avg": null,
-"checked": 1795188193,
+"checked": 1795328700,
 "loss": 100,
 "ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:jp01.cf.sh-cloudflare.sbs:2096": {
 "avg": 309.4,
@@ -8497,13 +8294,6 @@
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
-"vless:kz-cdn-prsv-forum.keno.su:443": {
-"avg": null,
-"checked": 1794116725,
-"loss": null,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:leviko-fr5882.shopingggg.ir:80": {
 "avg": null,
 "checked": 1795135113,
@@ -8518,26 +8308,12 @@
 "ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
-"vless:mhzedir.qzz.io:2059": {
-"avg": null,
-"checked": 1794088144,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "vless:msk5.gacvpn.site:443": {
 "avg": 208.6,
 "checked": 1794376397,
 "loss": 0,
 "ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:n04.jinggai.online:8443": {
-"avg": 179,
-"checked": 1794088281,
-"loss": 0,
-"ok": true,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "vless:n1.topingr.ir:443": {
 "avg": null,
@@ -8566,13 +8342,6 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
-},
-"vless:nl5.japancase.site:443": {
-"avg": null,
-"checked": 1794088266,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
 },
 "vless:novonl.subv.ru:443": {
 "avg": null,
@@ -8679,20 +8448,6 @@
 "ok": false,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
-"vless:ru1.radiolumens.uk:8445": {
-"avg": null,
-"checked": 1794088445,
-"loss": 100,
-"ok": false,
-"probe": "Nanning/CHINA UNICOM China169 Backbone"
-},
-"vless:s1-api.denmexa.ir:2789": {
-"avg": null,
-"checked": 1794116718,
-"loss": 100,
-"ok": false,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "vless:s1.berluno.ir:1155": {
 "avg": null,
 "checked": 1794598723,
@@ -8742,13 +8497,6 @@
 "ok": true,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
-"vless:smart2.khinikadze.com:443": {
-"avg": null,
-"checked": 1794088143,
-"loss": 100,
-"ok": false,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:snapp.ir:8880": {
 "avg": 236.6,
 "checked": 1794598616,
@@ -8770,12 +8518,12 @@
 "ok": false,
 "probe": "Guangzhou/Chinanet Backbone"
 },
-"vless:static.117.242.109.65.clients.your-server.de:443": {
-"avg": 222.9,
-"checked": 1794088144,
-"loss": 0,
-"ok": true,
-"probe": "Shanghai/China Unicom Shanghai network"
+"vless:static.58.252.109.65.clients.your-server.de:443": {
+"avg": null,
+"checked": 1795328444,
+"loss": 100,
+"ok": false,
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vless:subgift.gcorecdn.com:443": {
 "avg": null,
@@ -8796,6 +8544,13 @@
 "checked": 1794880580,
 "loss": 100,
 "ok": false,
+"probe": "Shanghai/China Unicom Shanghai network"
+},
+"vless:tachu37.top:443": {
+"avg": 255.6,
+"checked": 1795328419,
+"loss": 0,
+"ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
 "vless:uae.unixzone.us:22573": {
@@ -8889,16 +8644,9 @@
 "ok": false,
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
-"vless:xsru1.ddnsfree.com:443": {
-"avg": 186.7,
-"checked": 1794116792,
-"loss": 0,
-"ok": true,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
 "vless:xssite.webredirect.org:443": {
 "avg": null,
-"checked": 1795135173,
+"checked": 1795328559,
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -9002,8 +8750,8 @@
 "probe": "Wuhan/CHINA UNICOM China169 Backbone"
 },
 "vmess:104.21.91.53:8443": {
-"avg": 188,
-"checked": 1794963665,
+"avg": 211.2,
+"checked": 1795328501,
 "loss": 0,
 "ok": true,
 "probe": "Shanghai/China Unicom Shanghai network"
@@ -9169,25 +8917,11 @@
 "ok": true,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
-"vmess:172.67.161.144:8443": {
-"avg": 248.7,
-"checked": 1794116755,
-"loss": 0,
-"ok": true,
-"probe": "Jingzhou/CHINA UNICOM China169 Backbone"
-},
 "vmess:172.67.190.164:443": {
 "avg": 196.7,
 "checked": 1794694951,
 "loss": 0,
 "ok": true,
-"probe": "Shanghai/China Unicom Shanghai network"
-},
-"vmess:176.65.151.175:11674": {
-"avg": null,
-"checked": 1794088188,
-"loss": 100,
-"ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
 },
 "vmess:188.114.96.3:8443": {
@@ -9198,11 +8932,11 @@
 "probe": "Guangzhou/Chinanet Backbone"
 },
 "vmess:188.114.99.137:443": {
-"avg": 286.6,
-"checked": 1795102994,
+"avg": 191.1,
+"checked": 1795328532,
 "loss": 0,
 "ok": true,
-"probe": "Shanghai/China Unicom Shanghai network"
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vmess:188.166.81.135:1270": {
 "avg": null,
@@ -9280,6 +9014,13 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/CHINA UNICOM Industrial Internet Backbone"
+},
+"vmess:39.108.113.127:10086": {
+"avg": 35.22,
+"checked": 1795328444,
+"loss": 0,
+"ok": true,
+"probe": "Shanghai/China Unicom Shanghai network"
 },
 "vmess:43.228.126.187:47630": {
 "avg": null,
@@ -9414,6 +9155,13 @@
 "ok": true,
 "probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
+"vmess:afzuv.xiaoyan.io:16616": {
+"avg": null,
+"checked": 1795328463,
+"loss": 100,
+"ok": false,
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
+},
 "vmess:chatgpt.com:8443": {
 "avg": 724.3,
 "checked": 1795243895,
@@ -9427,6 +9175,13 @@
 "loss": 100,
 "ok": false,
 "probe": "Shanghai/China Unicom Shanghai network"
+},
+"vmess:d1eyz.xiaoyan.io:16648": {
+"avg": null,
+"checked": 1795328459,
+"loss": 100,
+"ok": false,
+"probe": "Changsha/CHINA UNICOM China169 Backbone"
 },
 "vmess:dp8yk.xiaoyan.io:16616": {
 "avg": 104.2,

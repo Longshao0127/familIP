@@ -8,22 +8,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe",
-      "server": "144.31.90.235",
-      "server_port": 8445,
-      "uuid": "cac10246-5b76-4809-9fd0-417c58a3ca90",
+      "tag": "🎵 🇩🇰 丹麦 (Denmark) 01(机房) - xiaohe",
+      "server": "135.136.33.134",
+      "server_port": 8443,
+      "uuid": "9a597d68-6688-4046-bf24-a5a541e115e0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "portal.gifmems.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "32eua16pKE179lLHv-VNZGrX287qQFMXA3n0VgEzNTQ",
-          "short_id": "b3a633bc754b648d"
+          "public_key": "6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU",
+          "short_id": "f8d0271b4b5f9efc"
         }
       }
     },
@@ -32,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe"
+        "🎵 🇩🇰 丹麦 (Denmark) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe"
+        "🎵 🇩🇰 丹麦 (Denmark) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

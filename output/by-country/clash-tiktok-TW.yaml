@@ -25,35 +25,22 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
-  server: dp8yk.xiaoyan.io
-  port: 16616
-  udp: true
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  server: vpn-tw-002.fastervpn.world
+  server: 160.187.100.109
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-tw-002.fastervpn.world\u0026insecure=1\u0026allowinsecure=1
+  sni: 160.187.100.109
   skip-cert-verify: true
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
   server: 103.115.109.49
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
+  sni: 103.115.109.49
   skip-cert-verify: true
-- name: 🎵 🇹🇼 中国台湾 (Taiwan) 04(家宽) - xiaohe
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
   server: 60.248.219.78
   port: 443
   udp: true
@@ -67,26 +54,30 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
+- name: 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
+  server: afzuv.xiaoyan.io
+  port: 16616
+  udp: true
+  type: vmess
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
   - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(家宽) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -94,8 +85,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(家宽) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -106,7 +97,7 @@ proxy-groups:
   - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(家宽) - xiaohe
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -114,7 +105,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🎵 🇹🇼 中国台湾 (Taiwan) 01(机房) - xiaohe
   - 🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe
-  - 🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

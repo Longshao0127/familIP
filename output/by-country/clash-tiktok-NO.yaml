@@ -24,26 +24,20 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
-  server: 144.31.90.235
-  port: 8445
+- name: 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
+  server: 185.213.23.63
+  port: 990
   udp: true
-  type: vless
-  uuid: cac10246-5b76-4809-9fd0-417c58a3ca90
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 32eua16pKE179lLHv-VNZGrX287qQFMXA3n0VgEzNTQ
-    short-id: b3a633bc754b648d
-  servername: portal.gifmems.com
-  client-fingerprint: firefox
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +45,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +53,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇰🇿 哈萨克斯坦 (Kazakhstan) 01(机房) - xiaohe
+  - 🎵 🇳🇴 挪威 (Norway) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

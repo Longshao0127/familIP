@@ -7,12 +7,16 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "hysteria2",
       "tag": "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-      "server": "static.28.210.29.2.clients.your-server.de",
-      "server_port": 25565,
-      "method": "chacha20-ietf-poly1305",
-      "password": "C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc"
+      "server": "media.embrofree.org",
+      "server_port": 443,
+      "password": "713142c9-ad09-4894-b35c-645423f3f6c9",
+      "tls": {
+        "enabled": true,
+        "server_name": "media.embrofree.org",
+        "insecure": true
+      }
     },
     {
       "type": "vless",
@@ -29,12 +33,43 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+      "server": "static.28.210.29.2.clients.your-server.de",
+      "server_port": 25565,
+      "method": "chacha20-ietf-poly1305",
+      "password": "C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc"
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe",
+      "server": "static.58.252.109.65.clients.your-server.de",
+      "server_port": 443,
+      "uuid": "2b696acb-1311-4ab7-b832-b376d29dca27",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.170.55.238.62.clients.your-server.de",
+        "insecure": false,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe"
       ]
     },
     {
@@ -42,7 +77,9 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe",
-        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe"
+        "🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 03(机房) - xiaohe",
+        "🎵 🇫🇮 芬兰 (Finland) 04(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

@@ -25,6 +25,18 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  server: 38.60.230.151
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3a1c6827-72a1-4d1c-9413-44109ff815f4
+  tls: true
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+    short-id: 2da72ce6
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
+- name: 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
   server: 150.95.109.109
   port: 2086
   udp: true
@@ -37,6 +49,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -45,6 +58,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -53,5 +67,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
