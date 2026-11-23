@@ -24,13 +24,13 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇮🇩 印尼 (Indonesia) 01 - xiaohe
-  server: i1tr.mateflora.com
+- name: 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
+  server: xvxn1hkzf.mateflora.com
   port: 443
   udp: true
   type: trojan
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  sni: i1tr.mateflora.com
+  sni: xvxn1hkzf.mateflora.com
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -38,7 +38,7 @@ proxy-groups:
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,7 +46,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+  - 🎵 🇻🇳 越南 (Vietnam) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

@@ -17,46 +17,6 @@
     {
       "type": "shadowsocks",
       "tag": "🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe",
-      "server": "5.188.181.201",
-      "server_port": 9030,
-      "method": "aes-256-cfb",
-      "password": "GeregetR8cvQHzYr"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe",
-      "server": "5.188.181.201",
-      "server_port": 9040,
-      "method": "aes-256-cfb",
-      "password": "p9z5BVADH2YFs3MN"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe",
-      "server": "5.188.181.201",
-      "server_port": 9011,
-      "method": "aes-256-cfb",
-      "password": "M3t2ZEQcMGRWBjRa"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe",
-      "server": "5.188.181.201",
-      "server_port": 9001,
-      "method": "aes-256-cfb",
-      "password": "UkXRsXvR6buDMG2Y"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe",
-      "server": "5.188.181.201",
-      "server_port": 9014,
-      "method": "aes-256-cfb",
-      "password": "KnJGad3FqTvjqbaX"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe",
       "server": "167.17.71.167",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -64,37 +24,77 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 08(机房) - xiaohe",
+      "tag": "🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe",
       "server": "66.163.118.103",
       "server_port": 19999,
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
-      "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 09(机房) - xiaohe",
-      "server": "5.188.181.201",
-      "server_port": 9025,
-      "method": "aes-256-cfb",
-      "password": "XPtzA9sCug3SPR4c"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 10(机房) - xiaohe",
-      "server": "5.188.181.201",
-      "server_port": 9042,
-      "method": "aes-256-cfb",
-      "password": "S7KwUu7yBy58S3Ga"
-    },
-    {
       "type": "trojan",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 11(机房) - xiaohe",
-      "server": "66.163.118.251",
+      "tag": "🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe",
+      "server": "66.163.118.115",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "resources.discovergreatjobsandadvanceyourcareer.com",
+        "server_name": "discovergreatjobsandadvanceyourcareer.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe",
+      "server": "66.163.118.131",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.discovergreatjobsandadvanceyourcareer.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe",
+      "server": "66.163.118.40",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.discovergreatjobsandadvanceyourcareer.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe",
+      "server": "66.163.118.166",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.discovergreatjobsandadvanceyourcareer.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇪🇸 西班牙 (Spain) 08(机房) - xiaohe",
+      "server": "66.163.118.62",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "courses.discovergreatjobsandadvanceyourcareer.com",
         "insecure": false
       }
     },
@@ -110,10 +110,7 @@
         "🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe",
         "🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe",
         "🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 08(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 09(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 10(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 11(机房) - xiaohe"
+        "🎵 🇪🇸 西班牙 (Spain) 08(机房) - xiaohe"
       ]
     },
     {
@@ -127,10 +124,7 @@
         "🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe",
         "🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe",
         "🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 08(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 09(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 10(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 11(机房) - xiaohe"
+        "🎵 🇪🇸 西班牙 (Spain) 08(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

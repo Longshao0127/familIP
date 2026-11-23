@@ -24,26 +24,29 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇩🇰 丹麦 (Denmark) 01(机房) - xiaohe
-  server: 135.136.33.134
-  port: 8443
+- name: 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
+  server: 47.254.167.157
+  port: 443
   udp: true
-  type: vless
-  uuid: 9a597d68-6688-4046-bf24-a5a541e115e0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU
-    short-id: f8d0271b4b5f9efc
-  servername: www.apple.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇩🇰 丹麦 (Denmark) 01(机房) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +54,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇩🇰 丹麦 (Denmark) 01(机房) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +62,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇩🇰 丹麦 (Denmark) 01(机房) - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
 rules:
 - MATCH,PROXIES

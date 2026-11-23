@@ -26,29 +26,11 @@ unified-delay: true
 proxies:
 - name: 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
   server: 217.30.10.70
-  port: 9020
+  port: 9064
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: BNmAXXxAHYpTRdzu
-- name: 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
-  server: 217.30.10.70
-  port: 9018
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: fG2artUmHfNT2cX7
-- name: 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
-  server: 45.194.66.177
-  port: 443
-  udp: true
-  type: vless
-  uuid: 352a250d-080b-47b5-b7db-f9f8fa31c551
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 31tawwo0.virtual-network.lol
-  skip-cert-verify: false
-  client-fingerprint: firefox
+  password: cp8pRSUAyLhTfVWH
 proxy-groups:
 - name: PROXIES
   type: select
@@ -56,8 +38,6 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -66,8 +46,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,7 +54,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 02(机房) - xiaohe
-  - 🎵 🇵🇱 波兰 (Poland) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES
