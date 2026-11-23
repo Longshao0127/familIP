@@ -7,26 +7,25 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe",
-      "server": "38.110.1.246",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto"
+      "type": "vless",
+      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
+      "server": "45.86.60.174",
+      "server_port": 16443,
+      "uuid": "13e541f3-d09d-4633-89df-8513db0ced20"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
