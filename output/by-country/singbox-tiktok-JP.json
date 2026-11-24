@@ -63,12 +63,12 @@
     {
       "type": "hysteria2",
       "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
-      "server": "8.211.175.236",
-      "server_port": 8443,
-      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
+      "server": "8.209.247.109",
+      "server_port": 443,
+      "password": "usqmqUKJFIlCmvkCNSY64L3k",
       "tls": {
         "enabled": true,
-        "server_name": "8.211.175.236",
+        "server_name": "bing.com",
         "insecure": true
       }
     },
@@ -131,14 +131,6 @@
     {
       "type": "shadowsocks",
       "tag": "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
-      "server": "149.22.87.240",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe",
       "server": "149.22.87.241",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -146,39 +138,35 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe",
       "server": "149.22.87.204",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe",
-      "server": "84.247.155.196",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv"
-    },
-    {
       "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe",
       "server": "94.177.131.113",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "tls": {
         "enabled": true,
         "server_name": "kuruish.org",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe",
-      "server": "84.247.155.196",
-      "server_port": 80,
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv"
+      "tag": "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe",
+      "server": "149.22.87.240",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "selector",
@@ -194,9 +182,7 @@
         "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe"
       ]
     },
     {
@@ -212,9 +198,7 @@
         "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 08(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 09(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 11(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 12(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 10(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
