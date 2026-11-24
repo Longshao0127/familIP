@@ -10,9 +10,9 @@
       "type": "shadowsocks",
       "tag": "🇵🇱 波兰 (Poland) 01 - xiaohe",
       "server": "217.30.10.70",
-      "server_port": 9064,
+      "server_port": 9037,
       "method": "aes-256-cfb",
-      "password": "cp8pRSUAyLhTfVWH"
+      "password": "TN2YqghxeFDKZfLU"
     },
     {
       "type": "selector",

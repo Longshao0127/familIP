@@ -25,6 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
+  server: 196.196.148.76
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: VZS639V1i-35g7VXb9EoTYL-Srm7858sxcvFAunncmA
+    short-id: 8d0d0679f42ffd98
+  servername: 8a2e72t.nl20.h1clayd.shop
+  client-fingerprint: firefox
+- name: 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
   server: 185.95.231.156
   port: 443
   udp: true
@@ -41,8 +54,18 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
+  - 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -52,6 +75,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
+  - 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,5 +84,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇮🇱 以色列 (Israel) 01(机房) - xiaohe
+  - 🎵 🇮🇱 以色列 (Israel) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

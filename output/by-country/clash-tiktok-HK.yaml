@@ -25,53 +25,48 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe
-  server: ibsdsf.df6h451rh.xin
+  server: 5641sdds.df6h451rh.xin
   port: 443
   udp: true
   type: anytls
-  password: 2902c46c8493
-  sni: docs.microsoft.com
+  password: 0324fbc29561
+  sni: images.ctfassets.net
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
-  server: turn.gosthk.site
-  port: 57180
-  udp: true
-  type: anytls
-  password: c698e777-2ede-446c-aa76-04ea46070e43
-  sni: turn.gosthk.site
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   server: 202.146.222.174
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
+  sni: 202.146.222.174
   skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
-  server: 202.146.222.89
-  port: 443
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
+  server: 152.32.254.68
+  port: 5010
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.89
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  sni: nas.aizhzo.com
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: "https://t.me/wangcai2ð\x9F\x87"
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vk.com
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  server: 27.124.5.86
-  port: 8388
-  udp: true
-  type: ss
-  cipher: 2022-blake3-aes-256-gcm
-  password: j4DddfVh3zON1s3Wfbmdn2WWhLCWAaOJyKqdeKvxh4A=
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
   server: 213.176.92.148
   port: 40647
   udp: true
@@ -92,7 +87,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -101,7 +95,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -110,9 +103,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -126,7 +117,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -134,6 +124,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe

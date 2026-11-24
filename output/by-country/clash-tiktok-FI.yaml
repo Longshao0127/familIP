@@ -24,29 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
-  server: 47.254.167.157
+- name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  server: 31.76.77.231
   port: 443
   udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  type: vless
+  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PMtmgfkxpREXi51S_EUUi3KbYauQLjGD6c_llKRk8H4
+    short-id: cc85fc7134024405
+  servername: www.google.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇩🇪 德国 (Germany) 01 (移动家宽) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

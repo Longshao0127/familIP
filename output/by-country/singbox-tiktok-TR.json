@@ -1,0 +1,62 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "route": {
+    "final": "select"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "14eccb4f-ca88-4732-b191-d8daacf63448",
+      "tls": {
+        "enabled": true,
+        "server_name": "sinavm3.soft10.ir",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/SiNAVM-SiNAVM-SiNAVM-SiNAVM",
+        "headers": {
+          "Host": "sinavm3.soft10.ir"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

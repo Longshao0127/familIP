@@ -26,11 +26,11 @@ unified-delay: true
 proxies:
 - name: 🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe
   server: 217.30.10.70
-  port: 9064
+  port: 9037
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: cp8pRSUAyLhTfVWH
+  password: TN2YqghxeFDKZfLU
 proxy-groups:
 - name: PROXIES
   type: select

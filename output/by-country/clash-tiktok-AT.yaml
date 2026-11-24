@@ -25,13 +25,25 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
+  server: 144.31.131.73
+  port: 443
+  udp: true
+  type: vless
+  uuid: 534a0469-a507-4fec-b9a1-f648864e5da0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: QQgfv5J_fvr_v7GrfflVOb9ZRvBf66qfRzGWS8EKxQw
+  servername: aura2.fastlaplegends.org
+  client-fingerprint: firefox
+- name: 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
   server: 82.110.60.9
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
+- name: 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
   server: 154.47.19.225
   port: 1270
   udp: true
@@ -46,10 +58,20 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
   - 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
+  - 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +81,7 @@ proxy-groups:
   proxies:
   - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
   - 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
+  - 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -68,5 +91,6 @@ proxy-groups:
   proxies:
   - 🎵 🇦🇹 奥地利 (Austria) 01(机房) - xiaohe
   - 🎵 🇦🇹 奥地利 (Austria) 02(机房) - xiaohe
+  - 🎵 🇦🇹 奥地利 (Austria) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

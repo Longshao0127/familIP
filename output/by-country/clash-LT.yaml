@@ -24,21 +24,31 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: chatgpt.com
+- name: 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
+  server: 84.32.209.54
   port: 443
   udp: true
   type: vless
-  uuid: 55b3fd10-3658-40a2-8951-ec90932d1d30
+  uuid: f69e272f-e0e5-4e9d-b180-5be63930cde9
+  flow: xtls-rprx-vision
   tls: true
-  servername: sinavm2.soft10.ir
-  skip-cert-verify: false
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: 868419504747f6de
+  servername: lt.memepn.com
+  client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
+  server: 84.32.209.118
+  port: 443
+  udp: true
+  type: vless
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  tls: true
+  reality-opts:
+    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
+    short-id: a7d309e4c16b825f
+  servername: api-dns-gw.galioncc.com
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM
-    headers:
-      Host: sinavm2.soft10.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,7 +56,8 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,7 +65,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,7 +73,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +82,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 01 - xiaohe
+  - 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
 rules:
 - MATCH,PROXIES

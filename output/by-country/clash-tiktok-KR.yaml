@@ -30,7 +30,7 @@ proxies:
   udp: true
   type: hysteria2
   password: 1671a252e2a97dc2bda4e515475931da
-  sni: www.bing.com
+  sni: 132.226.226.189
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 02(机房) - xiaohe
   server: 152.70.237.123
@@ -38,7 +38,7 @@ proxies:
   udp: true
   type: hysteria2
   password: maintell
-  sni: 152.70.237.123
+  sni: bing.com
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
   server: 152.69.231.175
@@ -54,7 +54,7 @@ proxies:
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: css.rbxcdn.com
+  sni: 'off'
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   server: 140.238.2.250
@@ -73,21 +73,13 @@ proxies:
   network: ws
   ws-opts:
     path: /
-    headers:
-      Host: 152.69.226.63
 - name: 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
-  server: dddz-4-z.473221.xyz
-  port: 43118
+  server: 211.178.105.134
+  port: 6123
   udp: true
-  type: vless
-  uuid: 5807f1c4-b50e-4ec0-8d01-274045da0da5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: p0crO-ZNRjb07T_GGy9JdkXTjei3-D9f6s2ZzCo2gx8
-    short-id: 1a70fe8d4b05
-  servername: v1-dy.ixigua.com
-  client-fingerprint: firefox
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
 proxy-groups:
 - name: PROXIES
   type: select
