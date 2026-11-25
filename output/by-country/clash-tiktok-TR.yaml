@@ -24,21 +24,27 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  server: 172.64.155.209
-  port: 443
+- name: 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
+  server: v2new.nimbaha9.ir
+  port: 8080
   udp: true
   type: vless
-  uuid: 14eccb4f-ca88-4732-b191-d8daacf63448
-  tls: true
-  servername: sinavm3.soft10.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 308230a0-0097-4158-98d7-8f09bf339d60
   network: ws
   ws-opts:
-    path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM
+    path: /XDS45
     headers:
-      Host: sinavm3.soft10.ir
+      Host: v2new.nimbaha9.ir
+- name: 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
+  server: 143.246.136.128
+  port: 50738
+  udp: true
+  type: vless
+  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  tls: true
+  servername: turkey-ip1.mmdaqaorg.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -46,7 +52,8 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,7 +61,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,7 +69,8 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +78,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe
+  - 🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

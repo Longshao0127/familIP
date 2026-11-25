@@ -17,26 +17,26 @@
     {
       "type": "shadowsocks",
       "tag": "🎵 🇨🇦 加拿大 (Canada) 02(机房) - xiaohe",
-      "server": "149.22.95.183",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vmess",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 03(机房) - xiaohe",
-      "server": "134.195.196.211",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto"
+      "server": "51.79.49.116",
+      "server_port": 8882,
+      "method": "aes-256-gcm",
+      "password": "kDWvXYZoTBcGkC4"
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 04(机房) - xiaohe",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 03(机房) - xiaohe",
       "server": "137.184.174.93",
       "server_port": 8080,
       "method": "rc4-md5",
       "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "vmess",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 04(机房) - xiaohe",
+      "server": "134.195.196.211",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto"
     },
     {
       "type": "shadowsocks",
@@ -47,20 +47,76 @@
       "password": "zDNVedRFPQexG9v"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🎵 🇨🇦 加拿大 (Canada) 06(机房) - xiaohe",
-      "server": "66.163.113.9",
+      "server": "149.22.95.183",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 07(机房) - xiaohe",
+      "server": "kuruish.org",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "tls": {
         "enabled": true,
         "server_name": "kuruish.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe",
+      "server": "216.152.147.74",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.connectingpeoplewithgreatjobs.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe",
+      "server": "216.152.147.152",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.connectingpeoplewithgreatjobs.com",
         "insecure": false
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe",
+      "server": "51.222.12.127",
+      "server_port": 445,
+      "method": "aes-256-gcm",
+      "password": "zDNVedRFPQexG9v"
+    },
+    {
+      "type": "trojan",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 11(机房) - xiaohe",
+      "server": "216.152.147.48",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "courses.connectingpeoplewithgreatjobs.com",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 07(机房) - xiaohe",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 12(机房) - xiaohe",
       "server": "209.200.246.148",
       "server_port": 443,
       "uuid": "ca52e2b6-fb9f-4dac-b6dc-49da9923f251",
@@ -80,51 +136,6 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe",
-      "server": "92.246.138.161",
-      "server_port": 443,
-      "uuid": "42c83523-9f96-41b2-82d6-2edb71a4ac19",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "q88k7v7gi0pg.img-assets.world",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jFqwGpIrZSPqlvF4XglDWhsuHxljBLeiaMtESLsZsVk",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe",
-      "server": "51.222.12.127",
-      "server_port": 445,
-      "method": "aes-256-gcm",
-      "password": "zDNVedRFPQexG9v"
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe",
-      "server": "148.113.196.75",
-      "server_port": 8443,
-      "uuid": "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504",
-      "tls": {
-        "enabled": true,
-        "server_name": "ov-canada1.09vpn.com",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vless/"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -138,7 +149,9 @@
         "🎵 🇨🇦 加拿大 (Canada) 07(机房) - xiaohe",
         "🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe",
         "🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe",
-        "🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe"
+        "🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe",
+        "🎵 🇨🇦 加拿大 (Canada) 11(机房) - xiaohe",
+        "🎵 🇨🇦 加拿大 (Canada) 12(机房) - xiaohe"
       ]
     },
     {
@@ -154,7 +167,9 @@
         "🎵 🇨🇦 加拿大 (Canada) 07(机房) - xiaohe",
         "🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe",
         "🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe",
-        "🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe"
+        "🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe",
+        "🎵 🇨🇦 加拿大 (Canada) 11(机房) - xiaohe",
+        "🎵 🇨🇦 加拿大 (Canada) 12(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

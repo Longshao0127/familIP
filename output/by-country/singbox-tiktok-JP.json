@@ -7,46 +7,11 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 01(机房) - xiaohe",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "tls": {
-        "enabled": true,
-        "server_name": "jp3.yohototo.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/tyxyws",
-        "headers": {
-          "Host": "jp3.yohototo.top"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 01(机房) - xiaohe",
       "server": "8.211.175.236",
       "server_port": 8443,
       "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
-      "tls": {
-        "enabled": true,
-        "server_name": "8.211.175.236",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
-      "server": "129.225.181.46",
-      "server_port": 8443,
-      "password": "oracle_hy2_pass_2026",
       "tls": {
         "enabled": true,
         "server_name": "bing.com",
@@ -54,16 +19,35 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
-      "server": "149.22.87.241",
+      "type": "vless",
+      "tag": "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
+      "server": "149.28.29.156",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
+      "uuid": "aa1a9052-720f-4bb0-92be-21b6baf9f386",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0",
+          "short_id": "e535df57"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "itunes.apple.com"
+        }
+      }
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
       "server": "149.22.87.204",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -71,32 +55,19 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
       "server": "149.22.87.240",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
     },
     {
-      "type": "vless",
-      "tag": "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
-      "server": "158.101.151.157",
+      "type": "shadowsocks",
+      "tag": "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
+      "server": "149.22.87.241",
       "server_port": 443,
-      "uuid": "66171cbe-0b4b-4b24-99f6-d5a822f4dc9a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.microsoft.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8",
-          "short_id": "684c7531e599dec0"
-        }
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "selector",
@@ -107,9 +78,7 @@
         "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe"
       ]
     },
     {
@@ -120,9 +89,7 @@
         "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

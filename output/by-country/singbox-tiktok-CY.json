@@ -9,7 +9,7 @@
     {
       "type": "vless",
       "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
-      "server": "132.243.242.97",
+      "server": "132.243.242.246",
       "server_port": 9543,
       "uuid": "920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
       "flow": "xtls-rprx-vision",
@@ -18,7 +18,7 @@
         "server_name": "storage.yandexcloud.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,

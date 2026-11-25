@@ -2,37 +2,38 @@
   "platform": "linux",
   "history": [
     {
-      "time": "2026-11-25T07:59:12.771993+00:00",
+      "time": "2026-11-25T21:29:28.590683+00:00",
       "stage": "after_prefilter",
-      "before": 3322,
-      "after": 3322,
+      "before": 3254,
+      "after": 3254,
       "front_proxy": false
     },
     {
-      "time": "2026-11-25T08:04:58.139313+00:00",
+      "time": "2026-11-25T21:34:26.392601+00:00",
       "stage": "after_liveness",
-      "tested": 3322,
-      "alive": 517
+      "tested": 3254,
+      "alive": 520
     },
     {
-      "time": "2026-11-25T08:13:59.396938+00:00",
+      "time": "2026-11-25T21:42:54.059874+00:00",
       "stage": "ok",
-      "total": 322,
-      "residential": 0,
-      "tiktok": 260,
+      "total": 341,
+      "residential": 6,
+      "tiktok": 274,
       "cn": {
-        "tested": 115,
-        "ok": 15,
-        "bad": 100,
-        "err": 5,
-        "cn_total": 35
+        "tested": 112,
+        "ok": 25,
+        "bad": 87,
+        "err": 8,
+        "cn_total": 46
       },
-      "elapsed": 909.4
+      "elapsed": 829.3
     }
   ],
   "node_fail_reasons": {
-    "liveness_fail": 2806,
-    "check_fail": 2
+    "liveness_fail": 2734,
+    "check_fail": 1,
+    "port_not_ready": 1
   },
   "err_sample": "liveness: ConnectionError: SOCKSHTTPConnectionPool(host='connectivitycheck.gstatic.com', port=80): Max retries exceeded with url: /generate_204 (Caused by NewConnectionError(\"SOCKSConnection(host='connectivityc"
 }
