@@ -35,7 +35,7 @@ proxies:
     public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
     short-id: 6bdc8320
   servername: www.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

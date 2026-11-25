@@ -24,30 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  server: 5641sdds.df6h451rh.xin
-  port: 443
+- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  server: 132.243.242.97
+  port: 9543
   udp: true
-  type: anytls
-  password: 0324fbc29561
-  sni: images.ctfassets.net
-  skip-cert-verify: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: 123abcdf
+  servername: storage.yandexcloud.net
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -55,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -63,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

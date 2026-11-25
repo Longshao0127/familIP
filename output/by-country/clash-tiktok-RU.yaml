@@ -25,18 +25,20 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
-  server: 200.169.179.233
+  server: 147.45.175.81
   port: 443
   udp: true
   type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   tls: true
-  servername: vps3.nemnogogo.com
+  servername: xsru2.freeddns.org
   skip-cert-verify: false
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
+  network: ws
+  ws-opts:
+    path: /wsru
+    headers:
+      Host: xsru2.freeddns.org
 proxy-groups:
 - name: PROXIES
   type: select

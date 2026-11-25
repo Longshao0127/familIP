@@ -25,6 +25,19 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  server: 157.180.98.124
+  port: 49659
+  udp: true
+  type: vless
+  uuid: 88a558b1-9645-42f3-89e5-341570d8486d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs
+    short-id: 81959fce
+  servername: apple.com
+  client-fingerprint: chrome
+- name: 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
   server: 31.76.77.231
   port: 443
   udp: true
@@ -44,6 +57,7 @@ proxy-groups:
   - AUTO-TCP
   - AUTO
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -52,6 +66,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -60,5 +75,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇮 芬兰 (Finland) 01(机房) - xiaohe
+  - 🎵 🇫🇮 芬兰 (Finland) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES

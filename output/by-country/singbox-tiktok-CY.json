@@ -8,26 +8,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇮🇶 IQ 01 - xiaohe",
-      "server": "196.245.52.183",
-      "server_port": 443,
-      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
+      "server": "132.243.242.97",
+      "server_port": 9543,
+      "uuid": "920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "15b171g.nl7.h1clayd.click",
+        "server_name": "storage.yandexcloud.net",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
-          "short_id": "50a749f0eccb628c"
+          "public_key": "M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc",
+          "short_id": "123abcdf"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "5b79e8a94241"
       }
     },
     {
@@ -35,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 - xiaohe"
+        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

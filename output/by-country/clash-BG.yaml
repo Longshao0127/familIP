@@ -24,37 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇮🇶 IQ 01 - xiaohe
-  server: 196.245.52.183
+- name: 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
+  server: 195.123.226.21
   port: 443
   udp: true
   type: vless
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  uuid: 6589c320-db68-43cd-a273-b46299bab355
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
-    short-id: 50a749f0eccb628c
-  servername: 15b171g.nl7.h1clayd.click
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 5b79e8a94241
+    public-key: rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo
+    short-id: 77bb0d07bddbc832
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
-  - 🇮🇶 IQ 01 - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇮🇶 IQ 01 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -62,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇶 IQ 01 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -70,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇮🇶 IQ 01 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
 rules:
 - MATCH,PROXIES

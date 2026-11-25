@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
-  server: 132.243.242.115
+  server: 132.243.242.97
   port: 9543
   udp: true
   type: vless
@@ -36,7 +36,7 @@ proxies:
     public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
     short-id: 123abcdf
   servername: storage.yandexcloud.net
-  client-fingerprint: safari
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

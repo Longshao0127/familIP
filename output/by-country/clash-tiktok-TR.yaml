@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  server: 188.114.98.0
+  server: 172.64.155.209
   port: 443
   udp: true
   type: vless

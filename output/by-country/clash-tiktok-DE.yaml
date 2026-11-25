@@ -25,84 +25,100 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe
+  server: 195.110.15.216
+  port: 31652
+  udp: true
+  type: vless
+  uuid: 2da03bdf-8af3-4207-96c7-d70e0dd22c36
+- name: 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
   server: 47.85.227.36
   port: 443
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
-- name: 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
-  server: 195.110.15.216
-  port: 31652
-  udp: true
-  type: vless
-  uuid: 2da03bdf-8af3-4207-96c7-d70e0dd22c36
 - name: 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
-  server: birchbark.gerqix.online
-  port: 443
+  server: 172.64.150.205
+  port: 2083
   udp: true
   type: vless
-  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  uuid: bd6c11e0-0233-4fb1-ba97-8d5f16d7155f
   tls: true
-  servername: birchbark.gerqix.online
+  servername: site.check-looks.space
   skip-cert-verify: false
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de7.v1
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: site.check-looks.space
 - name: 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
-  server: vellum.filnex.baby
+  server: 193.168.140.175
   port: 443
   udp: true
   type: vless
   uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   tls: true
-  servername: rookery.moltex.click
+  servername: inlay.merlano.monster
   skip-cert-verify: false
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de3.v1
+  network: ws
+  ws-opts:
+    path: /api/de3/stream
+    headers:
+      Host: inlay.merlano.monster
 - name: 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
-  server: 72.56.238.135
+  server: mintleaf.moltex.click
   port: 443
   udp: true
   type: vless
   uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
   tls: true
-  servername: silverfen.elvano.website
+  servername: mintleaf.moltex.click
   skip-cert-verify: false
   client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /api/de4/stream
     headers:
-      Host: sundial.filnex.baby
+      Host: mintleaf.moltex.click
 - name: 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
+  server: rowanberry.moltex.click
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  tls: true
+  servername: rowanberry.moltex.click
+  skip-cert-verify: false
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /api/de7/stream
+    headers:
+      Host: rowanberry.moltex.click
+- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
   server: 185.176.204.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
+  server: 146.70.20.147
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
   server: 169.150.210.233
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
-  server: 94.103.168.62
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 92a188aa-2e86-4557-bd30-b2079a70f824
-  tls: true
-  servername: uuyjnfbv.localip.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
   server: 94.103.168.169
   port: 2087
   udp: true
@@ -112,20 +128,7 @@ proxies:
   servername: ytsdnol.localip.ir
   skip-cert-verify: false
   client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
-  server: 146.70.20.147
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
 - name: 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
-  server: leviko-de1011.shopingggg.ir
-  port: 50955
-  udp: true
-  type: vless
-  uuid: 5ab065b0-2c7a-45a0-829d-9af9af7d8e05
-- name: 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
   server: 94.159.98.82
   port: 2053
   udp: true
@@ -136,8 +139,15 @@ proxies:
   servername: 94.159.98.82
   skip-cert-verify: false
   client-fingerprint: firefox
+- name: 🎵 🇩🇪 德国 (Germany) 12(机房) - xiaohe
+  server: 35.178.82.244
+  port: 443
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
 - name: 🎵 🇩🇪 德国 (Germany) 13(机房) - xiaohe
-  server: 146.103.42.78
+  server: 132.243.242.115
   port: 9543
   udp: true
   type: vless
@@ -148,7 +158,7 @@ proxies:
     public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
     short-id: 123abcdf
   servername: storage.yandexcloud.net
-  client-fingerprint: chrome
+  client-fingerprint: safari
 - name: 🎵 🇩🇪 德国 (Germany) 14(机房) - xiaohe
   server: 176.98.176.60
   port: 443
@@ -161,19 +171,6 @@ proxies:
   skip-cert-verify: false
   client-fingerprint: firefox
 - name: 🎵 🇩🇪 德国 (Germany) 15(机房) - xiaohe
-  server: 82.39.171.12
-  port: 443
-  udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe
   server: leviko-de8799.shopingggg.ir
   port: 9543
   udp: true
@@ -186,43 +183,57 @@ proxies:
     short-id: 123abcdf
   servername: storage.yandexcloud.net
   client-fingerprint: firefox
-- name: 🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe
-  server: 194.135.34.118
-  port: 8443
+- name: 🎵 🇩🇪 德国 (Germany) 16(机房) - xiaohe
+  server: 82.39.171.12
+  port: 443
   udp: true
   type: vless
-  uuid: 020f7f86-a559-4366-8d2d-c6f81d6bbe5f
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
   tls: true
-  servername: web.hosttcp.fun
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  servername: yahoo.com
+  client-fingerprint: chrome
+- name: 🎵 🇩🇪 德国 (Germany) 17(机房) - xiaohe
+  server: uuyjnfbv.localip.ir
+  port: 2087
+  udp: true
+  type: vless
+  uuid: 92a188aa-2e86-4557-bd30-b2079a70f824
+  tls: true
+  servername: uuyjnfbv.localip.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
+  server: 81.200.158.26
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
+  tls: true
+  servername: fernglade.gerqix.online
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de1.v1
+- name: 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
+  server: 77.73.71.200
+  port: 443
+  udp: true
+  type: vless
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  tls: true
+  servername: lagoon.gerqix.online
   skip-cert-verify: false
   client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /api/v4/media/session
-- name: 🎵 🇩🇪 德国 (Germany) 18(机房) - xiaohe
-  server: 195.206.235.234
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-    short-id: 6976d670818644cc
-  servername: 4935e4t.de25.h1clayd.click
-  client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 19(机房) - xiaohe
-  server: 191.217.215.228
-  port: 2053
-  udp: true
-  type: vless
-  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 191.217.215.228
-  skip-cert-verify: false
-  client-fingerprint: firefox
+    path: /api/de5/stream
+    headers:
+      Host: lagoon.gerqix.online
 proxy-groups:
 - name: PROXIES
   type: select
@@ -261,6 +272,7 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204

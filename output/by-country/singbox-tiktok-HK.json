@@ -7,32 +7,44 @@
   },
   "outbounds": [
     {
-      "type": "anytls",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe",
-      "server": "5641sdds.df6h451rh.xin",
+      "type": "hysteria2",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe",
+      "server": "202.146.222.174",
       "server_port": 443,
-      "password": "0324fbc29561",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "images.ctfassets.net",
+        "server_name": "https%3a%2f%2ft.me%2foneclickvpnkeys",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
-      "server": "202.146.222.174",
+      "server": "202.146.222.29",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "202.146.222.174",
+        "server_name": "https://t.me/wangcai2рҹүёрҹүі",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
+      "server": "202.146.222.89",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/clashv8",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
       "server": "152.32.254.68",
       "server_port": 5010,
       "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
@@ -47,27 +59,18 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
-      "server": "202.146.222.29",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
+      "type": "vmess",
       "tag": "🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe",
-      "server": "202.146.222.89",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "insecure": true
+      "server": "47.244.120.197",
+      "server_port": 23026,
+      "uuid": "b9de1bc9-baa7-41ac-86f7-ccd59695cb21",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/arki",
+        "headers": {
+          "Host": "47.244.120.197"
+        }
       }
     },
     {
@@ -83,7 +86,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe",
+        "🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",
@@ -95,7 +98,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe",
+        "🎵 🇭🇰 中国香港 (Hong Kong) 01(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 02(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe",
         "🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe",

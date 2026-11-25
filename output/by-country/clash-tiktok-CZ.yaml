@@ -50,6 +50,19 @@ proxies:
     short-id: 123abcdf
   servername: storage.yandexcloud.net
   client-fingerprint: firefox
+- name: 🎵 🇨🇿 捷克 (Czech) 03(机房) - xiaohe
+  server: leviko-nl2962.shopingggg.ir
+  port: 9543
+  udp: true
+  type: vless
+  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: 123abcdf
+  servername: storage.yandexcloud.net
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -58,6 +71,7 @@ proxy-groups:
   - AUTO
   - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
   - 🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -67,6 +81,7 @@ proxy-groups:
   proxies:
   - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
   - 🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 03(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,5 +91,6 @@ proxy-groups:
   proxies:
   - 🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe
   - 🎵 🇨🇿 捷克 (Czech) 02(机房) - xiaohe
+  - 🎵 🇨🇿 捷克 (Czech) 03(机房) - xiaohe
 rules:
 - MATCH,PROXIES

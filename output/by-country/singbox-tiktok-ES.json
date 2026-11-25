@@ -17,34 +17,6 @@
     {
       "type": "trojan",
       "tag": "🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe",
-      "server": "66.163.118.203",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "blog.discovergreatjobsandadvanceyourcareer.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe",
-      "server": "66.163.118.115",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "discovergreatjobsandadvanceyourcareer.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe",
       "server": "66.163.118.131",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -55,64 +27,12 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe",
-      "server": "66.163.118.251",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "resources.discovergreatjobsandadvanceyourcareer.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe",
-      "server": "66.163.118.166",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.discovergreatjobsandadvanceyourcareer.com",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe",
-      "server": "13.143.239.66",
-      "server_port": 443,
-      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
-      "tls": {
-        "enabled": true,
-        "server_name": "b3cd32g.es9.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "7efBhLzPwoTtEC1GlukCdiTllobUfa2_XuAKNSLJx30",
-          "short_id": "e7cffac9f8cfb434"
-        }
-      },
-      "transport": {
-        "type": "grpc"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇪🇸 西班牙 (Spain) 01(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe"
+        "🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe"
       ]
     },
     {
@@ -120,12 +40,7 @@
       "tag": "auto",
       "outbounds": [
         "🎵 🇪🇸 西班牙 (Spain) 01(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 03(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 04(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 05(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 06(机房) - xiaohe",
-        "🎵 🇪🇸 西班牙 (Spain) 07(机房) - xiaohe"
+        "🎵 🇪🇸 西班牙 (Spain) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
