@@ -25,14 +25,55 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - xiaohe
-  server: 8.211.175.236
-  port: 8443
+  server: vl-x2.qz10086.top
+  port: 38105
+  udp: true
+  type: vless
+  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: y0p1yI8OoWqcOE4XEv7ueudaSOOc5UIb5yFyA3SstD8
+    short-id: 7e7e8c23
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 02 - xiaohe
+  server: 172.67.217.240
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: 🇯🇵 日本 (Japan) 03 - xiaohe
+  server: 213.183.41.31
+  port: 8463
+  udp: true
+  type: vless
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  tls: true
+  servername: share.plumstatic.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /ws
+- name: 🇯🇵 日本 (Japan) 04 - xiaohe
+  server: 8.209.247.109
+  port: 443
   udp: true
   type: hysteria2
-  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  password: usqmqUKJFIlCmvkCNSY64L3k
   sni: bing.com
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 02 - xiaohe
+- name: 🇯🇵 日本 (Japan) 05 - xiaohe
   server: 149.28.29.156
   port: 443
   udp: true
@@ -49,22 +90,30 @@ proxies:
     path: /ws
     headers:
       Host: itunes.apple.com
-- name: 🇯🇵 日本 (Japan) 03 - xiaohe
+- name: 🇯🇵 日本 (Japan) 06 - xiaohe
+  server: 8.211.175.236
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  sni: 8.211.175.236
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 07 - xiaohe
   server: 149.22.87.204
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 04 - xiaohe
-  server: 149.22.87.240
+- name: 🇯🇵 日本 (Japan) 08 - xiaohe
+  server: 149.22.87.241
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 05 - xiaohe
-  server: 149.22.87.241
+- name: 🇯🇵 日本 (Japan) 09 - xiaohe
+  server: 149.22.87.240
   port: 443
   udp: true
   type: ss
@@ -74,6 +123,7 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - AUTO-UDP
@@ -82,6 +132,20 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - xiaohe
   - 🇯🇵 日本 (Japan) 04 - xiaohe
   - 🇯🇵 日本 (Japan) 05 - xiaohe
+  - 🇯🇵 日本 (Japan) 06 - xiaohe
+  - 🇯🇵 日本 (Japan) 07 - xiaohe
+  - 🇯🇵 日本 (Japan) 08 - xiaohe
+  - 🇯🇵 日本 (Japan) 09 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇯🇵 日本 (Japan) 01 - xiaohe
+  - 🇯🇵 日本 (Japan) 02 - xiaohe
+  - 🇯🇵 日本 (Japan) 03 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -89,10 +153,13 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🇯🇵 日本 (Japan) 01 - xiaohe
   - 🇯🇵 日本 (Japan) 02 - xiaohe
   - 🇯🇵 日本 (Japan) 03 - xiaohe
-  - 🇯🇵 日本 (Japan) 04 - xiaohe
   - 🇯🇵 日本 (Japan) 05 - xiaohe
+  - 🇯🇵 日本 (Japan) 07 - xiaohe
+  - 🇯🇵 日本 (Japan) 08 - xiaohe
+  - 🇯🇵 日本 (Japan) 09 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -105,6 +172,10 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - xiaohe
   - 🇯🇵 日本 (Japan) 04 - xiaohe
   - 🇯🇵 日本 (Japan) 05 - xiaohe
+  - 🇯🇵 日本 (Japan) 06 - xiaohe
+  - 🇯🇵 日本 (Japan) 07 - xiaohe
+  - 🇯🇵 日本 (Japan) 08 - xiaohe
+  - 🇯🇵 日本 (Japan) 09 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -112,6 +183,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇯🇵 日本 (Japan) 01 - xiaohe
+  - 🇯🇵 日本 (Japan) 04 - xiaohe
+  - 🇯🇵 日本 (Japan) 06 - xiaohe
 rules:
 - MATCH,PROXIES

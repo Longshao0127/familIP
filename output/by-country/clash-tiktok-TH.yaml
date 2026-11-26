@@ -24,26 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
-  server: 132.243.242.246
-  port: 9543
+- name: 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  server: 47.87.64.133
+  port: 18565
   udp: true
-  type: vless
-  uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: 123abcdf
-  servername: storage.yandexcloud.net
-  client-fingerprint: edge
+  type: vmess
+  uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51,7 +46,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +54,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe
+  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

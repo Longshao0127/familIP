@@ -8,15 +8,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe",
-      "server": "v2new.nimbaha9.ir",
-      "server_port": 8080,
-      "uuid": "308230a0-0097-4158-98d7-8f09bf339d60",
+      "tag": "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
+      "server": "172.64.155.209",
+      "server_port": 443,
+      "uuid": "14eccb4f-ca88-4732-b191-d8daacf63448",
+      "tls": {
+        "enabled": true,
+        "server_name": "sinavm3.soft10.ir",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/XDS45",
+        "path": "/SiNAVM-SiNAVM-SiNAVM-SiNAVM",
         "headers": {
-          "Host": "v2new.nimbaha9.ir"
+          "Host": "sinavm3.soft10.ir"
         }
       }
     },
@@ -45,7 +57,7 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe",
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
         "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe"
       ]
     },
@@ -53,7 +65,7 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇹🇷 土耳其 (Turkey) 01(移动) - xiaohe",
+        "🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe",
         "🎵 🇹🇷 土耳其 (Turkey) 02(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",

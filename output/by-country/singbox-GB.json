@@ -27,62 +27,20 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
-      "server": "chatgpt.com",
-      "server_port": 443,
-      "uuid": "55b3fd10-3658-40a2-8951-ec90932d1d30",
-      "tls": {
-        "enabled": true,
-        "server_name": "sinavm2.soft10.ir",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/SiNAVM-SiNAVM-SiNAVM-SiNAVM",
-        "headers": {
-          "Host": "sinavm2.soft10.ir"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
       "server": "128.254.186.190",
       "server_port": 13337,
       "password": "900c8c92-1979-4c7c-8f2f-63e87d53d8fe",
       "tls": {
         "enabled": true,
         "server_name": "mother-earth.fyi",
-        "insecure": false,
-        "alpn": [
-          "h3"
-        ]
+        "insecure": true
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
-      "server": "185.176.206.9",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 - xiaohe",
-      "server": "38.114.120.221",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 06 - xiaohe",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
       "server": "158.173.24.73",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -90,7 +48,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 07 - xiaohe",
+      "tag": "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
       "server": "142.202.51.22",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -98,31 +56,31 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 08 - xiaohe",
-      "server": "146.70.61.37",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
+      "tag": "🇬🇧 英国 (United Kingdom) 05 - xiaohe",
+      "server": "185.176.206.9",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 09 - xiaohe",
-      "server": "98.98.142.161",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
+      "tag": "🇬🇧 英国 (United Kingdom) 06 - xiaohe",
+      "server": "141.98.101.178",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 10 - xiaohe",
-      "server": "98.98.207.163",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
+      "tag": "🇬🇧 英国 (United Kingdom) 07 - xiaohe",
+      "server": "38.114.120.221",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 11 - xiaohe",
+      "tag": "🇬🇧 英国 (United Kingdom) 08 - xiaohe",
       "server": "51.38.71.147",
       "server_port": 8443,
       "uuid": "c08f0056-7a6d-4931-813b-aaa3cdd00aed",
@@ -141,8 +99,16 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 09 - xiaohe",
+      "server": "146.70.61.37",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
       "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 12 - xiaohe",
+      "tag": "🇬🇧 英国 (United Kingdom) 10 - xiaohe",
       "server": "138.124.125.193",
       "server_port": 10444,
       "uuid": "e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4",
@@ -160,6 +126,22 @@
           "short_id": "8debcf36f1cc69ff"
         }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 11 - xiaohe",
+      "server": "98.98.207.163",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 12 - xiaohe",
+      "server": "98.98.142.161",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "vless",
@@ -185,6 +167,21 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇬🇧 英国 (United Kingdom) 14 - xiaohe",
+      "server": "57.129.132.223",
+      "server_port": 80,
+      "uuid": "a25cbf11-2908-4a1b-a3a8-9a571777dca3",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess/",
+        "headers": {
+          "Host": "google.com"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -201,7 +198,8 @@
         "🇬🇧 英国 (United Kingdom) 10 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 11 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 12 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 13 - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 13 - xiaohe",
+        "🇬🇧 英国 (United Kingdom) 14 - xiaohe"
       ]
     },
     {
@@ -220,7 +218,8 @@
         "🇬🇧 英国 (United Kingdom) 10 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 11 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 12 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 13 - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 13 - xiaohe",
+        "🇬🇧 英国 (United Kingdom) 14 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

@@ -8,22 +8,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe",
-      "server": "132.243.242.246",
-      "server_port": 9543,
-      "uuid": "920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇵🇱 波兰 (Poland) 01 - xiaohe",
+      "server": "devcdn.icu",
+      "server_port": 443,
+      "uuid": "b432a23a-acff-425c-bf69-70480cd6ed09",
       "tls": {
         "enabled": true,
-        "server_name": "storage.yandexcloud.net",
+        "server_name": "devcdn.icu",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc",
-          "short_id": "123abcdf"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/edge/chunk/b2265efffa29/",
+        "headers": {
+          "Host": "devcdn.icu"
         }
       }
     },
@@ -32,14 +37,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
+        "🇵🇱 波兰 (Poland) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇨🇾 塞浦路斯 (Cyprus) 01(机房) - xiaohe"
+        "🇵🇱 波兰 (Poland) 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

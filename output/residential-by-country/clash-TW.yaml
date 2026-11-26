@@ -25,6 +25,22 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  server: er8u54dh.df6h451rh.xin
+  port: 443
+  udp: true
+  type: anytls
+  password: 2902c46c8493
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  server: a54ge.df6h451rh.xin
+  port: 443
+  udp: true
+  type: anytls
+  password: 0324fbc29561
+  sni: docs.microsoft.com
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
   server: mfjh645drfj1dr6j5.df6h451rh.xin
   port: 443
   udp: true
@@ -32,7 +48,7 @@ proxies:
   password: 0324fbc29561
   sni: px.ads.linkedin.com
   skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
   server: rtifgjdr.df6h451rh.xin
   port: 443
   udp: true
@@ -49,6 +65,8 @@ proxy-groups:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -58,6 +76,8 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -67,6 +87,8 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -76,5 +98,7 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

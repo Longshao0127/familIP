@@ -1,0 +1,62 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "route": {
+    "final": "select"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe",
+      "server": "devcdn.icu",
+      "server_port": 443,
+      "uuid": "b432a23a-acff-425c-bf69-70480cd6ed09",
+      "tls": {
+        "enabled": true,
+        "server_name": "devcdn.icu",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/edge/chunk/b2265efffa29/",
+        "headers": {
+          "Host": "devcdn.icu"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

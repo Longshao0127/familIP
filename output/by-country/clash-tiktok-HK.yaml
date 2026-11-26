@@ -41,19 +41,6 @@ proxies:
   sni: docs.microsoft.com
   skip-cert-verify: true
 - name: 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
-  server: 116.213.43.43
-  port: 11106
-  udp: true
-  type: vless
-  uuid: 2e7bd251-52be-4ffa-b79e-108e1fe07185
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: -13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns
-    short-id: da12e31124830d42
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   server: 152.32.254.68
   port: 5010
   udp: true
@@ -63,50 +50,44 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2ð\x9f\x87¨ð\x9f\x87³
-  skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   server: 202.146.222.89
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.89
+  sni: https%3a%2f%2ft.me%2fclashv8%f0%9f%87%a8%f0%9f%87%b3
   skip-cert-verify: true
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: t.me
+  skip-cert-verify: true
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
   server: 213.176.92.148
   port: 40647
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-- name: 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
-  server: 8.210.92.38
-  port: 443
+- name: 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
+  server: uk.fusetea.ir
+  port: 154
   udp: true
-  type: vless
-  uuid: 4fc9dc3d-0d57-49e7-9bc0-e323165241bf
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vhu6gifBQ8-hRzW1gqKFkEXDlQbf6Ex8kKj1FcxhmzA
-    short-id: d78318845237d9a9
-  servername: www.ebay.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: eCUs1n3b2Fh9b6WATvkNILLBzYbruQ_X
 proxy-groups:
 - name: PROXIES
   type: select
@@ -123,7 +104,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -133,7 +113,6 @@ proxy-groups:
   proxies:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(家宽) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -143,9 +122,8 @@ proxy-groups:
   proxies:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 01(家宽) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 02(家宽) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -161,7 +139,6 @@ proxy-groups:
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 08(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 09(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -169,9 +146,9 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
+  - 🎵 🇭🇰 中国香港 (Hong Kong) 03(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 04(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 05(机房) - xiaohe
   - 🎵 🇭🇰 中国香港 (Hong Kong) 06(机房) - xiaohe
-  - 🎵 🇭🇰 中国香港 (Hong Kong) 07(机房) - xiaohe
 rules:
 - MATCH,PROXIES

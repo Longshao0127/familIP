@@ -7,19 +7,23 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe",
-      "server": "159.13.55.48",
-      "server_port": 20000,
-      "password": "b42d90fa667942aebc734d60",
+      "type": "vless",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe",
+      "server": "213.183.45.23",
+      "server_port": 8450,
+      "uuid": "eb62cabf-5901-403a-aa0c-b1d9ed1b346d",
       "tls": {
         "enabled": true,
-        "server_name": "hy2-au2.whuiy.xyz",
-        "insecure": false
+        "server_name": "fonts.plumstatic.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
-      "obfs": {
-        "type": "salamander",
-        "password": "b42d90fa667942aebc734d60"
+      "transport": {
+        "type": "ws",
+        "path": "/ws"
       }
     },
     {
@@ -27,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe"
+        "🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇦🇺 澳大利亚 (Australia) 01(机房) - xiaohe"
+        "🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",
