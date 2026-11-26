@@ -24,21 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
-  server: 47.87.64.133
-  port: 18565
+- name: 🎵 🇬🇷 希腊 (Greece) 01(机房) - xiaohe
+  server: leviko-gr9245.shopingggg.ir
+  port: 443
   udp: true
-  type: vmess
-  uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
+    short-id: 94acb54627612d43
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  - 🎵 🇬🇷 希腊 (Greece) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -46,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  - 🎵 🇬🇷 希腊 (Greece) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe
+  - 🎵 🇬🇷 希腊 (Greece) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

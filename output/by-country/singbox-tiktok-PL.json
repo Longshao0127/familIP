@@ -9,26 +9,21 @@
     {
       "type": "vless",
       "tag": "🎵 🇵🇱 波兰 (Poland) 01(机房) - xiaohe",
-      "server": "devcdn.icu",
+      "server": "48.102.207.172",
       "server_port": 443,
-      "uuid": "b432a23a-acff-425c-bf69-70480cd6ed09",
+      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "devcdn.icu",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "www.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/edge/chunk/b2265efffa29/",
-        "headers": {
-          "Host": "devcdn.icu"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "iZOSshApMLZQ_qeN8ra7h_y9ig2P5yHHiKcN_6kxNmU",
+          "short_id": "3a75d125d1a41392"
         }
       }
     },
