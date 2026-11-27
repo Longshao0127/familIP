@@ -19,44 +19,8 @@
       }
     },
     {
-      "type": "anytls",
+      "type": "hysteria2",
       "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe",
-      "server": "rtifgjdr.df6h451rh.xin",
-      "server_port": 443,
-      "password": "2902c46c8493",
-      "tls": {
-        "enabled": true,
-        "server_name": "docs.microsoft.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "anytls",
-      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
-      "server": "er8u54dh.df6h451rh.xin",
-      "server_port": 443,
-      "password": "2902c46c8493",
-      "tls": {
-        "enabled": true,
-        "server_name": "px.ads.linkedin.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe",
-      "server": "103.115.109.49",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "https",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 05(机房) - xiaohe",
       "server": "160.187.100.109",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
@@ -67,15 +31,25 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
+      "server": "103.115.109.49",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/oneclickvpnkeys",
+        "insecure": true
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🎵 🇹🇼 中国台湾 (Taiwan) 01(家宽) - xiaohe",
         "🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 05(机房) - xiaohe"
+        "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe"
       ]
     },
     {
@@ -84,9 +58,7 @@
       "outbounds": [
         "🎵 🇹🇼 中国台湾 (Taiwan) 01(家宽) - xiaohe",
         "🎵 🇹🇼 中国台湾 (Taiwan) 02(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 04(机房) - xiaohe",
-        "🎵 🇹🇼 中国台湾 (Taiwan) 05(机房) - xiaohe"
+        "🎵 🇹🇼 中国台湾 (Taiwan) 03(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

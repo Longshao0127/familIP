@@ -32,20 +32,13 @@ proxies:
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
 - name: 🎵 🇨🇦 加拿大 (Canada) 02(机房) - xiaohe
-  server: 51.79.49.116
-  port: 8882
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 🎵 🇨🇦 加拿大 (Canada) 03(机房) - xiaohe
   server: 149.22.95.183
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🎵 🇨🇦 加拿大 (Canada) 04(机房) - xiaohe
+- name: 🎵 🇨🇦 加拿大 (Canada) 03(机房) - xiaohe
   server: 23.162.200.198
   port: 18000
   udp: true
@@ -53,6 +46,13 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
+- name: 🎵 🇨🇦 加拿大 (Canada) 04(机房) - xiaohe
+  server: 51.222.12.127
+  port: 445
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
 - name: 🎵 🇨🇦 加拿大 (Canada) 05(机房) - xiaohe
   server: 51.222.141.125
   port: 445
@@ -75,38 +75,6 @@ proxies:
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
 - name: 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
-  server: 134.195.196.211
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-- name: 🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe
-  server: 216.152.147.48
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-- name: 🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe
-  server: 216.152.147.89
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇦 加拿大 (Canada) 11(机房) - xiaohe
-  server: 216.152.147.201
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: resources.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇦 加拿大 (Canada) 12(机房) - xiaohe
   server: 209.200.246.148
   port: 443
   udp: true
@@ -118,16 +86,8 @@ proxies:
     public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
     short-id: f98843107912e782
   servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🎵 🇨🇦 加拿大 (Canada) 13(机房) - xiaohe
-  server: 216.152.147.93
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: connectingpeoplewithgreatjobs.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇦 加拿大 (Canada) 14(机房) - xiaohe
+  client-fingerprint: chrome
+- name: 🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe
   server: kuruish.org
   port: 443
   udp: true
@@ -136,44 +96,14 @@ proxies:
   tls: true
   servername: kuruish.org
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🎵 🇨🇦 加拿大 (Canada) 15(机房) - xiaohe
-  server: leviko-ca4436.shopingggg.ir
-  port: 443
+- name: 🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe
+  server: 134.195.196.211
+  port: 18000
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  server: 51.222.12.127
-  port: 445
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: zDNVedRFPQexG9v
-- name: 🎵 🇨🇦 加拿大 (Canada) 17(机房) - xiaohe
-  server: 216.152.147.85
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: false
-- name: 🎵 🇨🇦 加拿大 (Canada) 18(机房) - xiaohe
-  server: 51.222.200.165
-  port: 5000
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🎵 🇨🇦 加拿大 (Canada) 19(机房) - xiaohe
-  server: 51.79.85.185
-  port: 8118
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -190,15 +120,6 @@ proxy-groups:
   - 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   - 🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe
   - 🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 11(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 12(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 13(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 14(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 15(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 17(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 18(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 19(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -216,15 +137,6 @@ proxy-groups:
   - 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   - 🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe
   - 🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 11(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 12(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 13(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 14(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 15(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 17(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 18(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 19(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -242,14 +154,5 @@ proxy-groups:
   - 🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe
   - 🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe
   - 🎵 🇨🇦 加拿大 (Canada) 10(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 11(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 12(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 13(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 14(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 15(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 16(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 17(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 18(机房) - xiaohe
-  - 🎵 🇨🇦 加拿大 (Canada) 19(机房) - xiaohe
 rules:
 - MATCH,PROXIES

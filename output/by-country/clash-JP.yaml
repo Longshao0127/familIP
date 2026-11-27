@@ -25,7 +25,24 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - xiaohe
-  server: 104.16.0.1
+  server: 198.13.53.39
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8f21c635-ef0a-4b05-8356-f44d463b6e34
+  tls: true
+  reality-opts:
+    public-key: xxPVgbxguyYuVIml6Eh6ZGcDLO1z0OWKZXfDdUGFv1k
+    short-id: 7a7cc838
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
+- name: 🇯🇵 日本 (Japan) 02 - xiaohe
+  server: 104.21.33.59
   port: 443
   udp: true
   type: vless
@@ -33,33 +50,13 @@ proxies:
   tls: true
   servername: jp3.yohototo.top
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: 🇯🇵 日本 (Japan) 02 - xiaohe
-  server: 213.183.41.31
-  port: 8463
-  udp: true
-  type: vless
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  tls: true
-  servername: share.plumstatic.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
 - name: 🇯🇵 日本 (Japan) 03 - xiaohe
-  server: 8.209.247.109
-  port: 443
-  udp: true
-  type: hysteria2
-  password: usqmqUKJFIlCmvkCNSY64L3k
-  sni: bing.com
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 04 - xiaohe
   server: 8.211.175.236
   port: 8443
   udp: true
@@ -67,6 +64,23 @@ proxies:
   password: u63SxILNwtrQZ7Y1ZrFaZfsA
   sni: bing.com
   skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 04 - xiaohe
+  server: 149.28.29.156
+  port: 443
+  udp: true
+  type: vless
+  uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+  tls: true
+  reality-opts:
+    public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+    short-id: e535df57
+  servername: itunes.apple.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: itunes.apple.com
 - name: 🇯🇵 日本 (Japan) 05 - xiaohe
   server: 149.22.87.240
   port: 443
@@ -88,6 +102,16 @@ proxies:
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
+- name: 🇯🇵 日本 (Japan) 08 - xiaohe
+  server: 50.7.159.242
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8840fac2-5361-4cb6-b887-cd1b95092394
+  tls: true
+  servername: jp.reddotcorp.org
+  skip-cert-verify: false
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -103,6 +127,7 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05 - xiaohe
   - 🇯🇵 日本 (Japan) 06 - xiaohe
   - 🇯🇵 日本 (Japan) 07 - xiaohe
+  - 🇯🇵 日本 (Japan) 08 - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -121,9 +146,11 @@ proxy-groups:
   proxies:
   - 🇯🇵 日本 (Japan) 01 - xiaohe
   - 🇯🇵 日本 (Japan) 02 - xiaohe
+  - 🇯🇵 日本 (Japan) 04 - xiaohe
   - 🇯🇵 日本 (Japan) 05 - xiaohe
   - 🇯🇵 日本 (Japan) 06 - xiaohe
   - 🇯🇵 日本 (Japan) 07 - xiaohe
+  - 🇯🇵 日本 (Japan) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -138,6 +165,7 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 05 - xiaohe
   - 🇯🇵 日本 (Japan) 06 - xiaohe
   - 🇯🇵 日本 (Japan) 07 - xiaohe
+  - 🇯🇵 日本 (Japan) 08 - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -146,6 +174,5 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇯🇵 日本 (Japan) 03 - xiaohe
-  - 🇯🇵 日本 (Japan) 04 - xiaohe
 rules:
 - MATCH,PROXIES

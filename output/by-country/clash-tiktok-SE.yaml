@@ -25,14 +25,27 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
+  server: ws.dhafhdtjdti.site
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9f749472-c636-4c5a-af51-7f8feefaac81
+  tls: true
+  servername: ws.dhafhdtjdti.site
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   server: 138.199.55.243
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
-  server: leviko-se3307.shopingggg.ir
+- name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  server: 62.93.166.184
   port: 1270
   udp: true
   type: vmess
@@ -42,7 +55,7 @@ proxies:
   tls: true
   servername: xmfhlpy.com
   skip-cert-verify: false
-- name: 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+- name: 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
   server: 138.124.86.230
   port: 48115
   udp: true
@@ -51,7 +64,6 @@ proxies:
   tls: true
   servername: 138-124-86-230.sslip.io
   skip-cert-verify: false
-  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
@@ -59,11 +71,21 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -74,6 +96,7 @@ proxy-groups:
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -84,5 +107,6 @@ proxy-groups:
   - 🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe
   - 🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe
+  - 🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe
 rules:
 - MATCH,PROXIES

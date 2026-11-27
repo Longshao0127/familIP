@@ -8,22 +8,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe",
-      "server": "109.248.17.252",
+      "tag": "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe",
+      "server": "195.58.46.231",
       "server_port": 443,
-      "uuid": "9000a7f3-df2a-49a8-ae56-3e7777bd32f7",
+      "uuid": "bbb945a6-7d16-4099-b802-d3a7ccebd3ca",
       "tls": {
         "enabled": true,
-        "server_name": "v4.clequinix.globalinetforallalwaysandneverbanyoubelieveme.com",
-        "insecure": false,
+        "server_name": "node43.lmdscdn.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "PVlnR_I9tZ8hKhOHW6ySpSofhsaShcBQ_JV2-0TePVA",
+          "short_id": "b8abb26d3cfadcfb"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "v4-clequinix-globalinetforallalwaysandneverbanyoubelieveme-com"
+        "service_name": "livestreamcontent"
       }
     },
     {
@@ -31,14 +35,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe"
+        "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe"
+        "🎵 🇹🇭 泰国 (Thailand) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

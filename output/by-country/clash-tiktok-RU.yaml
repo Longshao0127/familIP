@@ -24,23 +24,26 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
-  server: 143.246.136.128
-  port: 50738
+- name: 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
+  server: 147.45.175.81
+  port: 443
   udp: true
   type: vless
-  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   tls: true
-  servername: turkey-ip1.mmdaqaorg.xyz
+  servername: xssite.webredirect.org
   skip-cert-verify: false
   client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-ru
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO-TCP
   - AUTO
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -48,7 +51,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -56,6 +59,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇹🇷 土耳其 (Turkey) 01(机房) - xiaohe
+  - 🎵 🇷🇺 俄罗斯 (Russia) 01(机房) - xiaohe
 rules:
 - MATCH,PROXIES

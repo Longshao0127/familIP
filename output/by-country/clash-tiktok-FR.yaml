@@ -25,19 +25,6 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇫🇷 法国 (France) 01(机房) - xiaohe
-  server: 213.183.45.23
-  port: 8454
-  udp: true
-  type: vless
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  tls: true
-  servername: store.plumstatic.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 🎵 🇫🇷 法国 (France) 02(机房) - xiaohe
   server: 188.114.99.137
   port: 80
   udp: true
@@ -48,97 +35,64 @@ proxies:
     path: /
     headers:
       Host: suh.cryptofront.uk
-- name: 🎵 🇫🇷 法国 (France) 03(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 02(机房) - xiaohe
   server: 13.36.234.11
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 13.36.234.11
+  sni: vpn-fr-001.fastervpn.world
   skip-cert-verify: true
-- name: 🎵 🇫🇷 法国 (France) 04(机房) - xiaohe
-  server: 62.210.7.139
-  port: 60111
-  udp: true
-  type: hysteria2
-  password: github.com/Alvin9999-newpac/fanqiang
-  sni: …
-  skip-cert-verify: true
-- name: 🎵 🇫🇷 法国 (France) 05(机房) - xiaohe
-  server: 198.244.201.129
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 06(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 03(机房) - xiaohe
   server: 198.244.202.215
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 07(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 04(机房) - xiaohe
+  server: 198.244.201.129
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇫🇷 法国 (France) 05(机房) - xiaohe
   server: 167.17.64.22
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 08(机房) - xiaohe
-  server: 167.17.64.175
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 09(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 06(机房) - xiaohe
   server: 38.109.228.110
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 10(机房) - xiaohe
-  server: 167.17.64.27
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 11(机房) - xiaohe
-  server: 57.129.83.85
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 12(机房) - xiaohe
-  server: 23.162.152.22
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 07(机房) - xiaohe
   server: 172.99.189.142
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
-  server: 138.124.70.41
-  port: 14430
+- name: 🎵 🇫🇷 法国 (France) 08(机房) - xiaohe
+  server: 23.162.152.22
+  port: 19999
   udp: true
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 138.124.70.41
-- name: 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇫🇷 法国 (France) 09(机房) - xiaohe
+  server: 167.17.64.27
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇫🇷 法国 (France) 10(机房) - xiaohe
   server: 62.210.91.10
   port: 23576
   udp: true
@@ -151,7 +105,20 @@ proxies:
     short-id: '01'
   servername: fuck.rkn
   client-fingerprint: chrome
-- name: 🎵 🇫🇷 法国 (France) 16(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 11(机房) - xiaohe
+  server: 62.210.91.2
+  port: 23576
+  udp: true
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  client-fingerprint: chrome
+- name: 🎵 🇫🇷 法国 (France) 12(机房) - xiaohe
   server: 152.228.139.33
   port: 51671
   udp: true
@@ -166,7 +133,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc_common3
-- name: 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
+- name: 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
   server: 152.228.139.33
   port: 35108
   udp: true
@@ -181,6 +148,22 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-common3
+- name: 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
+  server: 167.17.64.175
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
+  server: 138.124.70.41
+  port: 14430
+  udp: true
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  network: ws
+  ws-opts:
+    path: /vless
 proxy-groups:
 - name: PROXIES
   type: select
@@ -204,8 +187,6 @@ proxy-groups:
   - 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 16(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -214,7 +195,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇷 法国 (France) 01(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 02(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -223,7 +203,8 @@ proxy-groups:
   lazy: false
   proxies:
   - 🎵 🇫🇷 法国 (France) 01(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 02(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 03(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 04(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 05(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 06(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 07(机房) - xiaohe
@@ -235,8 +216,6 @@ proxy-groups:
   - 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 16(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -259,8 +238,6 @@ proxy-groups:
   - 🎵 🇫🇷 法国 (France) 13(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 14(机房) - xiaohe
   - 🎵 🇫🇷 法国 (France) 15(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 16(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 17(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -268,7 +245,6 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇫🇷 法国 (France) 03(机房) - xiaohe
-  - 🎵 🇫🇷 法国 (France) 04(机房) - xiaohe
+  - 🎵 🇫🇷 法国 (France) 02(机房) - xiaohe
 rules:
 - MATCH,PROXIES
