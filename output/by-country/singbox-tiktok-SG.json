@@ -27,24 +27,20 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🎵 🇸🇬 新加坡 (Singapore) 02(机房) - xiaohe",
-      "server": "172.67.199.12",
-      "server_port": 443,
-      "password": "963A4918-A630-29DA-A873-093CDF8AD784",
+      "server": "141.193.213.21",
+      "server_port": 8443,
+      "uuid": "4d8d9640-7cc7-4c55-ba54-6ce0d1709541",
       "tls": {
         "enabled": true,
-        "server_name": "lingering-fire-1fe9.vpnetwork3567.workers.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ]
+        "server_name": "matrix.learnpodedu.com",
+        "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/",
         "headers": {
-          "Host": "lingering-fire-1fe9.vpnetwork3567.workers.dev"
+          "Host": "matrix.learnpodedu.com"
         }
       }
     },
@@ -76,37 +72,29 @@
       "password": "f87376e17da040ed04c9665ce8972930",
       "tls": {
         "enabled": true,
-        "server_name": "off",
+        "server_name": "www.bing.com",
         "insecure": true
       }
     },
     {
       "type": "shadowsocks",
       "tag": "🎵 🇸🇬 新加坡 (Singapore) 05(机房) - xiaohe",
-      "server": "149.88.106.74",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "server": "68.183.235.122",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
       "type": "shadowsocks",
       "tag": "🎵 🇸🇬 新加坡 (Singapore) 06(机房) - xiaohe",
-      "server": "149.88.107.74",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 07(机房) - xiaohe",
-      "server": "15.235.182.183",
+      "server": "15.235.164.133",
       "server_port": 19999,
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "vmess",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 08(机房) - xiaohe",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 07(机房) - xiaohe",
       "server": "149.88.23.202",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
@@ -114,8 +102,16 @@
     },
     {
       "type": "shadowsocks",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 08(机房) - xiaohe",
+      "server": "149.88.106.74",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🎵 🇸🇬 新加坡 (Singapore) 09(机房) - xiaohe",
-      "server": "15.235.164.133",
+      "server": "15.235.182.183",
       "server_port": 19999,
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
@@ -123,30 +119,54 @@
     {
       "type": "shadowsocks",
       "tag": "🎵 🇸🇬 新加坡 (Singapore) 10(机房) - xiaohe",
+      "server": "149.88.107.74",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 11(机房) - xiaohe",
+      "server": "68.183.227.4",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe",
       "server": "68.183.235.240",
       "server_port": 8080,
       "method": "rc4-md5",
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
-      "type": "vmess",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 11(机房) - xiaohe",
-      "server": "149.88.23.207",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto"
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 12(机房) - xiaohe",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe",
       "server": "149.88.107.47",
       "server_port": 19999,
       "method": "aes-256-gcm",
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
+      "type": "shadowsocks",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 14(机房) - xiaohe",
+      "server": "68.183.227.236",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe",
+      "server": "128.1.186.73",
+      "server_port": 8080,
+      "method": "rc4-md5",
+      "password": "14fFPrbezE3HDZzsMOr6"
+    },
+    {
       "type": "vless",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe",
       "server": "47.84.226.221",
       "server_port": 443,
       "uuid": "49b91402-f8e3-4390-9d7b-b7eddc2684a4",
@@ -167,7 +187,7 @@
     },
     {
       "type": "vless",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 14(机房) - xiaohe",
+      "tag": "🎵 🇸🇬 新加坡 (Singapore) 17(机房) - xiaohe",
       "server": "139.162.27.96",
       "server_port": 2096,
       "uuid": "6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2",
@@ -186,32 +206,6 @@
         "headers": {
           "Host": "free-server.techsonic.dev"
         }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe",
-      "server": "170.114.45.6",
-      "server_port": 80,
-      "uuid": "9ce32242-557a-4d18-864d-c9c385b3dfa4",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "matrix.learnpodedu.com"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe",
-      "server": "43.156.36.253",
-      "server_port": 443,
-      "password": "WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0",
-      "tls": {
-        "enabled": true,
-        "server_name": "43.156.36.253",
-        "insecure": true
       }
     },
     {
@@ -234,7 +228,8 @@
         "🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe",
         "🎵 🇸🇬 新加坡 (Singapore) 14(机房) - xiaohe",
         "🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe",
-        "🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe"
+        "🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe",
+        "🎵 🇸🇬 新加坡 (Singapore) 17(机房) - xiaohe"
       ]
     },
     {
@@ -256,7 +251,8 @@
         "🎵 🇸🇬 新加坡 (Singapore) 13(机房) - xiaohe",
         "🎵 🇸🇬 新加坡 (Singapore) 14(机房) - xiaohe",
         "🎵 🇸🇬 新加坡 (Singapore) 15(机房) - xiaohe",
-        "🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe"
+        "🎵 🇸🇬 新加坡 (Singapore) 16(机房) - xiaohe",
+        "🎵 🇸🇬 新加坡 (Singapore) 17(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

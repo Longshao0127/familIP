@@ -9,40 +9,7 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-      "server": "172.67.199.12",
-      "server_port": 443,
-      "uuid": "963A4918-A630-29DA-A873-093CDF8AD784",
-      "tls": {
-        "enabled": true,
-        "server_name": "still-bar-5702.vpnetwork3567.workers.dev",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "still-bar-5702.vpnetwork3567.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
-      "server": "raha.ertebatgoostar.ir",
-      "server_port": 80,
-      "uuid": "8c49bed5-dbb2-4c0d-a2f1-2577b12c6c66",
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 - xiaohe",
-      "server": "leviko-tr3795.shopingggg.ir",
+      "server": "143.246.136.128",
       "server_port": 50738,
       "uuid": "56665684-5ac0-4ba9-9d49-8b258fb57974",
       "tls": {
@@ -64,18 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 03 - xiaohe"
+        "🇹🇷 土耳其 (Turkey) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 03 - xiaohe"
+        "🇹🇷 土耳其 (Turkey) 01 - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

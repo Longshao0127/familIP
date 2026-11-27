@@ -9,17 +9,13 @@
     {
       "type": "vless",
       "tag": "🎵 🇯🇵 日本 (Japan) 01(机房) - xiaohe",
-      "server": "104.21.219.160",
+      "server": "104.16.0.1",
       "server_port": 443,
       "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
       "tls": {
         "enabled": true,
         "server_name": "jp3.yohototo.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "insecure": false
       },
       "transport": {
         "type": "ws",
@@ -30,28 +26,52 @@
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
+      "server": "213.183.41.31",
+      "server_port": 8463,
+      "uuid": "eb62cabf-5901-403a-aa0c-b1d9ed1b346d",
+      "tls": {
+        "enabled": true,
+        "server_name": "share.plumstatic.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
+      "server": "8.209.247.109",
+      "server_port": 443,
+      "password": "usqmqUKJFIlCmvkCNSY64L3k",
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
       "server": "8.211.175.236",
       "server_port": 8443,
       "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
       "tls": {
         "enabled": true,
-        "server_name": "8.211.175.236",
+        "server_name": "bing.com",
         "insecure": true
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
-      "server": "149.22.87.241",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
       "server": "149.22.87.240",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -59,8 +79,16 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
+      "tag": "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
       "server": "149.22.87.204",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe",
+      "server": "149.22.87.241",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
@@ -74,7 +102,9 @@
         "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
+        "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
+        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe"
       ]
     },
     {
@@ -85,7 +115,9 @@
         "🎵 🇯🇵 日本 (Japan) 02(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 03(机房) - xiaohe",
         "🎵 🇯🇵 日本 (Japan) 04(机房) - xiaohe",
-        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe"
+        "🎵 🇯🇵 日本 (Japan) 05(机房) - xiaohe",
+        "🎵 🇯🇵 日本 (Japan) 06(机房) - xiaohe",
+        "🎵 🇯🇵 日本 (Japan) 07(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

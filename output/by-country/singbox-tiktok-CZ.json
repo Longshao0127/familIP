@@ -8,23 +8,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🎵 🇬🇷 希腊 (Greece) 01(机房) - xiaohe",
-      "server": "leviko-gr9245.shopingggg.ir",
+      "tag": "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe",
+      "server": "109.248.17.252",
       "server_port": 443,
-      "uuid": "8f704ed6-9a1a-4d04-94dd-1bff501716de",
-      "flow": "xtls-rprx-vision",
+      "uuid": "9000a7f3-df2a-49a8-ae56-3e7777bd32f7",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "v4.clequinix.globalinetforallalwaysandneverbanyoubelieveme.com",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4",
-          "short_id": "94acb54627612d43"
+          "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "v4-clequinix-globalinetforallalwaysandneverbanyoubelieveme-com"
       }
     },
     {
@@ -32,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🎵 🇬🇷 希腊 (Greece) 01(机房) - xiaohe"
+        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🎵 🇬🇷 希腊 (Greece) 01(机房) - xiaohe"
+        "🎵 🇨🇿 捷克 (Czech) 01(机房) - xiaohe"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "5m",

@@ -25,18 +25,12 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
-  server: 213.183.41.31
-  port: 8459
+  server: 151.241.19.29
+  port: 19999
   udp: true
-  type: vless
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  tls: true
-  servername: photos.plumstatic.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /ws
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   server: 151.241.19.36
   port: 19999
@@ -45,12 +39,14 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
-  server: 151.241.19.29
-  port: 19999
+  server: uae.unixzone.us
+  port: 22573
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  network: ws
+  ws-opts:
+    path: /
 - name: 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
   server: 95.174.68.188
   port: 14430
@@ -66,21 +62,12 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-CN
   - AUTO-TCP
   - AUTO
   - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 02(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 03(机房) - xiaohe
   - 🎵 🇦🇪 阿联酋 (UAE) 04(机房) - xiaohe
-- name: AUTO-CN
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🎵 🇦🇪 阿联酋 (UAE) 01(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204

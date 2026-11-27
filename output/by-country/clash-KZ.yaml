@@ -24,34 +24,21 @@ profile:
 tcp-concurrent: true
 unified-delay: true
 proxies:
-- name: 🇬🇷 希腊 (Greece) 01 - xiaohe
-  server: leviko-gr9245.shopingggg.ir
-  port: 443
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
+  server: 194.87.224.137
+  port: 15443
   udp: true
-  type: vless
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4
-    short-id: 94acb54627612d43
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: lvu_3390f238bef4e3058ac47c87473755cf_07cd5acf7265adf5c1210040ca46facf:np2.1.HJjJucZ0-OZZUq5Njkl48v1gYx7ol9rXjxYXZUxrQdM
+  sni: n9.neproxy.net
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
-  - AUTO-TCP
   - AUTO
-  - 🇬🇷 希腊 (Greece) 01 - xiaohe
-- name: AUTO-TCP
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  lazy: false
-  proxies:
-  - 🇬🇷 希腊 (Greece) 01 - xiaohe
+  - AUTO-UDP
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -59,6 +46,14 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🇬🇷 希腊 (Greece) 01 - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
 rules:
 - MATCH,PROXIES

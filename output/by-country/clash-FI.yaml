@@ -25,29 +25,28 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  server: mail1.besttotaldns.com
+  server: 92.38.145.145
   port: 443
   udp: true
   type: vless
-  uuid: da14e323-6af7-406f-a5c2-1eb7975ada8b
-  flow: xtls-rprx-vision
+  uuid: 3f734801-dacb-418f-b1e7-340427940c77
   tls: true
-  servername: mail1.besttotaldns.com
+  servername: gcore.com
   skip-cert-verify: false
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /dl
+    headers:
+      Host: app1.gptban.com
 - name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
-  server: 2.27.203.38
+  server: 4f070970.con.metricdraft.tech
   port: 443
   udp: true
-  type: vless
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Xuy5y3WGJjkxyUtkhiY87dwndv4fuD45gO64TWnlThI
-    short-id: fd0cc2b3ac52deb8
-  servername: www.google.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 030e421e-9317-4cb8-8fbe-a07a565ad3db
+  sni: 4f070970.con.metricdraft.tech
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +54,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - AUTO-UDP
   - 🇫🇮 芬兰 (Finland) 01 - xiaohe
   - 🇫🇮 芬兰 (Finland) 02 - xiaohe
 - name: AUTO-CN
@@ -65,7 +65,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 02 - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -74,7 +73,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -83,6 +81,14 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇫🇮 芬兰 (Finland) 01 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 02 - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🇫🇮 芬兰 (Finland) 02 - xiaohe
 rules:
 - MATCH,PROXIES

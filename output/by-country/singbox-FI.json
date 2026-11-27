@@ -9,43 +9,36 @@
     {
       "type": "vless",
       "tag": "🇫🇮 芬兰 (Finland) 01 - xiaohe",
-      "server": "mail1.besttotaldns.com",
+      "server": "92.38.145.145",
       "server_port": 443,
-      "uuid": "da14e323-6af7-406f-a5c2-1eb7975ada8b",
-      "flow": "xtls-rprx-vision",
+      "uuid": "3f734801-dacb-418f-b1e7-340427940c77",
       "tls": {
         "enabled": true,
-        "server_name": "mail1.besttotaldns.com",
+        "server_name": "gcore.com",
         "insecure": false,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dl",
+        "headers": {
+          "Host": "app1.gptban.com"
         }
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇫🇮 芬兰 (Finland) 02 - xiaohe",
-      "server": "2.27.203.38",
+      "server": "4f070970.con.metricdraft.tech",
       "server_port": 443,
-      "uuid": "e894c08a-fecc-46f5-bf03-c95d0274c79d",
-      "flow": "xtls-rprx-vision",
+      "password": "030e421e-9317-4cb8-8fbe-a07a565ad3db",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Xuy5y3WGJjkxyUtkhiY87dwndv4fuD45gO64TWnlThI",
-          "short_id": "fd0cc2b3ac52deb8"
-        }
+        "server_name": "4f070970.con.metricdraft.tech",
+        "insecure": false
       }
     },
     {
