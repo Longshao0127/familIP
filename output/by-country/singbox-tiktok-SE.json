@@ -7,28 +7,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe",
-      "server": "ws.dhafhdtjdti.site",
-      "server_port": 2053,
-      "uuid": "9f749472-c636-4c5a-af51-7f8feefaac81",
-      "tls": {
-        "enabled": true,
-        "server_name": "ws.dhafhdtjdti.site",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe",
+      "tag": "🎵 🇸🇪 瑞典 (Sweden) 01(机房) - xiaohe",
       "server": "138.199.55.243",
       "server_port": 19999,
       "method": "aes-256-gcm",
@@ -36,7 +16,7 @@
     },
     {
       "type": "vmess",
-      "tag": "🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe",
+      "tag": "🎵 🇸🇪 瑞典 (Sweden) 02(机房) - xiaohe",
       "server": "62.93.166.184",
       "server_port": 1270,
       "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
@@ -49,6 +29,20 @@
     },
     {
       "type": "vless",
+      "tag": "🎵 🇸🇪 瑞典 (Sweden) 03(机房) - xiaohe",
+      "server": "5.178.109.174",
+      "server_port": 14430,
+      "uuid": "80de563a-cac8-40ea-8cb0-4cb082dd92f9",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "5.178.109.174"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🎵 🇸🇪 瑞典 (Sweden) 04(机房) - xiaohe",
       "server": "138.124.86.230",
       "server_port": 48115,
@@ -56,7 +50,11 @@
       "tls": {
         "enabled": true,
         "server_name": "138-124-86-230.sslip.io",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
         "type": "grpc",

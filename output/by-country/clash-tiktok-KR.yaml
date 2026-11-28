@@ -30,7 +30,7 @@ proxies:
   udp: true
   type: hysteria2
   password: 1671a252e2a97dc2bda4e515475931da
-  sni: 'off'
+  sni: www.bing.com
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 02(机房) - xiaohe
   server: 152.70.237.123
@@ -38,7 +38,7 @@ proxies:
   udp: true
   type: hysteria2
   password: maintell
-  sni: 152.70.237.123
+  sni: bing.com
   skip-cert-verify: true
 - name: 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
   server: 152.69.231.175
@@ -48,18 +48,13 @@ proxies:
   password: 1beb216e3f60aea9555dae60d219a5ca
   sni: 152.69.231.175
   skip-cert-verify: true
-- name: 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
-  server: 130.94.30.242
-  port: 443
+- name: 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
+  server: 49.254.204.133
+  port: 1774
   udp: true
-  type: vless
-  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
-  tls: true
-  reality-opts:
-    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
-    short-id: 2da72ce6
-  servername: navi.bankrate.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-256-cfb
+  password: 1234!@#$
 - name: 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   server: 140.238.2.250
   port: 443
@@ -69,13 +64,6 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
-  server: 211.178.105.134
-  port: 6123
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
   server: 152.69.226.63
   port: 25555
   udp: true
@@ -94,10 +82,9 @@ proxy-groups:
   - 🎵 🇰🇷 韩国 (South Korea) 01(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 02(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
 - name: AUTO-TCP
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -105,10 +92,9 @@ proxy-groups:
   tolerance: 50
   lazy: false
   proxies:
-  - 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -119,10 +105,9 @@ proxy-groups:
   - 🎵 🇰🇷 韩国 (South Korea) 01(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 02(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 03(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 04(机房) - xiaohe
+  - 🎵 🇰🇷 韩国 (South Korea) 04(家宽) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 05(机房) - xiaohe
   - 🎵 🇰🇷 韩国 (South Korea) 06(机房) - xiaohe
-  - 🎵 🇰🇷 韩国 (South Korea) 07(机房) - xiaohe
 - name: AUTO-UDP
   type: url-test
   url: http://www.gstatic.com/generate_204

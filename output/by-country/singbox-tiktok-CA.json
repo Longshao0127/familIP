@@ -23,12 +23,12 @@
       "password": "shadowsocks"
     },
     {
-      "type": "vmess",
+      "type": "shadowsocks",
       "tag": "🎵 🇨🇦 加拿大 (Canada) 03(机房) - xiaohe",
-      "server": "23.162.200.198",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto"
+      "server": "51.222.141.125",
+      "server_port": 445,
+      "method": "aes-256-gcm",
+      "password": "zDNVedRFPQexG9v"
     },
     {
       "type": "shadowsocks",
@@ -41,23 +41,23 @@
     {
       "type": "shadowsocks",
       "tag": "🎵 🇨🇦 加拿大 (Canada) 05(机房) - xiaohe",
-      "server": "51.222.141.125",
-      "server_port": 445,
-      "method": "aes-256-gcm",
-      "password": "zDNVedRFPQexG9v"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 06(机房) - xiaohe",
-      "server": "138.197.141.58",
+      "server": "137.184.174.93",
       "server_port": 8080,
       "method": "rc4-md5",
       "password": "14fFPrbezE3HDZzsMOr6"
     },
     {
+      "type": "vmess",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 06(机房) - xiaohe",
+      "server": "23.162.200.198",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto"
+    },
+    {
       "type": "shadowsocks",
       "tag": "🎵 🇨🇦 加拿大 (Canada) 07(机房) - xiaohe",
-      "server": "137.184.174.93",
+      "server": "138.197.141.58",
       "server_port": 8080,
       "method": "rc4-md5",
       "password": "14fFPrbezE3HDZzsMOr6"
@@ -65,35 +65,26 @@
     {
       "type": "vless",
       "tag": "🎵 🇨🇦 加拿大 (Canada) 08(机房) - xiaohe",
-      "server": "209.200.246.148",
-      "server_port": 443,
-      "uuid": "ca52e2b6-fb9f-4dac-b6dc-49da9923f251",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk",
-          "short_id": "f98843107912e782"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe",
-      "server": "kuruish.org",
+      "server": "66.163.113.9",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
       "tls": {
         "enabled": true,
         "server_name": "kuruish.org",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🎵 🇨🇦 加拿大 (Canada) 09(机房) - xiaohe",
+      "server": "51.222.200.165",
+      "server_port": 5000,
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC"
     },
     {
       "type": "vmess",

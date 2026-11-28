@@ -25,6 +25,20 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🇦🇹 奥地利 (Austria) 01 - xiaohe
+  server: 104.21.44.113
+  port: 443
+  udp: true
+  type: vless
+  uuid: 963A4918-A630-29DA-A873-093CDF8AD784
+  tls: true
+  servername: ancient-haze-d203.vpnetwork3567.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ancient-haze-d203.vpnetwork3567.workers.dev
+- name: 🇦🇹 奥地利 (Austria) 02 - xiaohe
   server: 82.110.60.9
   port: 19999
   udp: true
@@ -35,8 +49,18 @@ proxy-groups:
 - name: PROXIES
   type: select
   proxies:
+  - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - 🇦🇹 奥地利 (Austria) 01 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
+- name: AUTO-CN
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
 - name: AUTO-TCP
   type: url-test
@@ -46,6 +70,7 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -54,5 +79,6 @@ proxy-groups:
   lazy: false
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
 rules:
 - MATCH,PROXIES

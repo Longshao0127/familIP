@@ -25,7 +25,7 @@ tcp-concurrent: true
 unified-delay: true
 proxies:
 - name: 🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe
-  server: 104.17.70.206
+  server: 104.27.97.42
   port: 8443
   udp: true
   type: vless
@@ -55,27 +55,54 @@ proxies:
     headers:
       Host: bookend.filnex.baby
 - name: 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  server: 135.126.21.107
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 6ac6d17d-040c-4fab-940e-8f5d72c3fed6
+  sni: de2-balance.rezproffx.ru
+  skip-cert-verify: false
+- name: 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
+  server: 135.126.21.106
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 6ac6d17d-040c-4fab-940e-8f5d72c3fed6
+  sni: de1-balance.rezproffx.ru
+  skip-cert-verify: true
+- name: 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
   server: 185.176.204.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
   server: 146.70.20.147
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
   server: 169.150.210.233
   port: 8080
   udp: true
   type: ss
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
+  server: 191.217.215.186
+  port: 2053
+  udp: true
+  type: vless
+  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ekb.eg
+  skip-cert-verify: true
+  client-fingerprint: firefox
+- name: 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
   server: 191.217.215.228
   port: 2096
   udp: true
@@ -89,7 +116,20 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: st3b6e5.rumedia-cdn.com
-- name: 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
+- name: 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
+  server: ifi1.modemjibi.com
+  port: 993
+  udp: true
+  type: vless
+  uuid: 17ead557-8407-42ae-b9a1-f11a869f99c6
+  tls: true
+  servername: ifi1.modemjibi.com.
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+- name: 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
   server: 82.39.171.12
   port: 443
   udp: true
@@ -102,13 +142,6 @@ proxies:
     short-id: c39cc7310a
   servername: yahoo.com
   client-fingerprint: chrome
-- name: 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
-  server: 57.129.113.16
-  port: 8388
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: NcAXc0UZI6yQJE1p8QmOv8
 proxy-groups:
 - name: PROXIES
   type: select
@@ -116,6 +149,7 @@ proxy-groups:
   - AUTO-CN
   - AUTO-TCP
   - AUTO
+  - AUTO-UDP
   - 🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
@@ -124,6 +158,9 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
 - name: AUTO-CN
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -142,12 +179,13 @@ proxy-groups:
   proxies:
   - 🎵 🇩🇪 德国 (Germany) 01(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 02(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
-  - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 05(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -163,5 +201,17 @@ proxy-groups:
   - 🎵 🇩🇪 德国 (Germany) 06(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 07(机房) - xiaohe
   - 🎵 🇩🇪 德国 (Germany) 08(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 09(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 10(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 11(机房) - xiaohe
+- name: AUTO-UDP
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  lazy: false
+  proxies:
+  - 🎵 🇩🇪 德国 (Germany) 03(机房) - xiaohe
+  - 🎵 🇩🇪 德国 (Germany) 04(机房) - xiaohe
 rules:
 - MATCH,PROXIES
